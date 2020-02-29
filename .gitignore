@@ -9,8 +9,15 @@ bone_raw/
 'bone tumors (edited).xlsx'      
 __pycache__/
 'bone tumors.xlsx'               
-chopIDs.csv/
 sequence_summary.csv
 'Matching game.xlsx'
 features/
-
+.DS_Store
+.ipynb_checkpoints/
+Matching game.xlsx
+Pipfile
+bone tumors (edited).xlsx
+bone tumors.xlsx
+chopIDs.csv
+data_dir/
+~$bone tumors (edited).xlsx

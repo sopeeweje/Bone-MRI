@@ -1,3 +1,5 @@
+Naming runs - DATE_TIME_MODEL
+
 **Quality Assurance**
 1. Place all raw files (folders for each patient containing image volumes of various sequences) into one directory
 2. Run ***qa.py***. This file will generate a directory of png files to manually scan through to look for abnormalities. Place the IDs of subjects that have abnormal images into the "SKIP" list in ***filenames.py***. 

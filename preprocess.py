@@ -42,7 +42,7 @@ def preprocess_pack(reference, images_w_segmentations, use_n4_bias=False, use_re
 #    if use_n4_bias:
 #        reference = n4_bias_correction(reference)
     for (image, segmentation) in images_w_segmentations:
-#        image = image.astype(float)
+        image = image.astype(float)
 #        if use_n4_bias:
 #            image = n4_bias_correction(image)
 #        if use_registration:

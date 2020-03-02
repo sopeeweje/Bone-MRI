@@ -75,13 +75,8 @@ def run(files, out, use_n4_bias=False, use_registration=False):
                 nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T1, IMAGE)), t1_nrrd)
                 nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T1, SEGMENTATION)), t1_seg_nrrd)
                 print("#" * 40)
-<<<<<<< HEAD
-	    else:
-		print("Image already preprocessed!")
-=======
             else:
                 print("This image has been preprocessed!")
->>>>>>> 95bfc2a3bea8d5ad32424724a4d1513adbc9c19a
         except Exception as e:
             print()
             print("Exception occurred for: {}\n{}".format(index, e))
@@ -106,13 +101,8 @@ def run(files, out, use_n4_bias=False, use_registration=False):
                 nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T1C, IMAGE)), t1c_nrrd)
                 nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T1C, SEGMENTATION)), t1c_seg_nrrd)
                 print("#" * 40)
-<<<<<<< HEAD
-	    else:
-                print("Image already preprocessed!")
-=======
             else:
                 print("This image has been preprocessed!")
->>>>>>> 95bfc2a3bea8d5ad32424724a4d1513adbc9c19a
         except Exception as e:
             print()
             print("Exception occurred for: {}\n{}".format(index, e))
@@ -155,14 +145,8 @@ def run(files, out, use_n4_bias=False, use_registration=False):
                 nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T2, IMAGE)), out_t2_image)
                 nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T2, SEGMENTATION)), out_t2_seg)
                 print("#" * 80)
-<<<<<<< HEAD
-	    else:
-                print("Image already preprocessed!")
-=======
             else:
                 print("This image has been preprocessed!")
-
->>>>>>> 95bfc2a3bea8d5ad32424724a4d1513adbc9c19a
         except Exception as e:
             print()
             print("Exception occurred for: {}\n{}".format(index, e))

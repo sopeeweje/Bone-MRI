@@ -56,7 +56,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     #skip for now
     if parameters["t2"]:
-        convnet = efn.EfficientNetB7(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -71,7 +71,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     if parameters["t1"]:
         # init ResNet
-        convnet = efn.EfficientNetB7(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -86,7 +86,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         
     if parameters["t1c"]:
         # init ResNet
-        convnet = efn.EfficientNetB7(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -178,7 +178,7 @@ def train(model, training, validation, run_id, monitor):
     )
     early = EarlyStopping(
         monitor=monitor,
-        min_delta=0,
+        min_delta=0.5,
         patience=config.PATIENCE,
         verbose=1,
         mode='auto',

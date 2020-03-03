@@ -168,8 +168,7 @@ def plot_precision_recall(labels, results, experts=[]):
         "recall": stats["TPR"][1],
     }]
     if len(experts) > 0:
-        points = [
-            *points, *[{
+        points = [*points, *[{
                 "name": e["name"],
                 "precision": e["PPV"][1],
                 "recall": e["TPR"][1],

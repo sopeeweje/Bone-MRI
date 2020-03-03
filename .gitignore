@@ -17,7 +17,6 @@ features/
 .DS_Store
 .ipynb_checkpoints/
 Matching game.xlsx
-Pipfile
 bone tumors (edited).xlsx
 bone tumors.xlsx
 chopIDs.csv

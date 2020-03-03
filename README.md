@@ -25,9 +25,12 @@ Naming runs - DATE_TIME_MODEL
 3. Imports data_gen from ***data.py***. Note that clinical features age and sex are currently suppressed. This file formats a number of different data inputs - using T1 images only, using T2 images only, using T1 + clinical features, using T2 + clinical features, using T1 and T2 images, using just clinical features, using everything. It also sorts the data into training, testing, and validation sets; it can take presorts (from bone_features.csv) or randomly sorted according to designated fractions.
 4. Explode_parameters function. Creates a dictionary containing each combination of hyperparameters to be tested. A single execution of ***run.py*** runs each possible combination.
 
-Running in terminal
+**Running in terminal**
 nohup sh run.sh DATE_TIME_ARCHITECTURE_DATA > my.log 2>&1 & #Executing run in background
 echo $! > save_pid.txt #Saving process ID for run so you can kill it necessary (kill -9 processID). Alternatively run killall -u sopeeweje to make sure you get everything.
+ssh jupyter notebook
+https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/
+https://amber-md.github.io/pytraj/latest/tutorials/remote_jupyter_notebook
 
 **xrun.sh**
 

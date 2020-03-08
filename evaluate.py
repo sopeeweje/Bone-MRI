@@ -237,6 +237,7 @@ def plot_learning_curve(results):
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.legend(loc='upper right')
+    return fig
 
 def plot_confusion_matrix_ensemble(labels, predictions, class_labels):
     fig, ax = plt.subplots()

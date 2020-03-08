@@ -232,7 +232,7 @@ def plot_learning_curve(results):
     validation_loss = results.history["val_loss"]
     training_loss = results.history["loss"]
     fig, ax = plt.subplots()
-    ax.plot(training loss)
+    ax.plot(training_loss)
     ax.plot(validation_loss)
     plt.xlabel('Epoch')
     plt.ylabel('Loss')

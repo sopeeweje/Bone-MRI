@@ -237,7 +237,7 @@ def plot_learning_curve(results):
     ax.plot(validation_loss)
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
-    plt.legend(loc='upper right')
+    plt.legend(['training','validation'],loc='upper right')
     return fig
 
 def plot_confusion_matrix_ensemble(labels, predictions, class_labels):

@@ -291,6 +291,9 @@ class Dataset(object):
         if len(inputs) == 1:
             inputs = inputs[0]
         return (inputs, labels)
+    
+    def get_names(self):
+        return self.names
 
 def outcome_feature(row):
     label = row["outcome"]

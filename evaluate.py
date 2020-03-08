@@ -228,6 +228,16 @@ def plot_confusion_matrix(data, results):
     plt.ylabel('label', axes=ax)
     return fig
 
+def plot_learning_curve(results):
+    validation_loss = results.history["val_loss"]
+    training_loss = results.history["loss"]
+    fig, ax = plt.subplots()
+    ax.plot(training loss)
+    ax.plot(validation_loss)
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.legend(loc='upper right')
+
 def plot_confusion_matrix_ensemble(labels, predictions, class_labels):
     fig, ax = plt.subplots()
     cm_data = confusion_matrix(labels, predictions)

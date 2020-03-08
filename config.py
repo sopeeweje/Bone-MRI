@@ -9,8 +9,7 @@ import logging
 class Config(object):
     IMAGE_SIZE = 200
 
-    # Should change trials to 10
-    TRIALS = 10
+    TRIALS = 1
     BATCH_SIZE = 16
 
     EPOCHS = 500

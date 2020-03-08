@@ -229,7 +229,7 @@ def plot_confusion_matrix(data, results):
     return fig
 
 def plot_learning_curve(results):
-    history = json.loads(results)
+    history = json.loads(results.history)
     validation_loss = history["val_loss"]
     training_loss = history["loss"]
     fig, ax = plt.subplots()

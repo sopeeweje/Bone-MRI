@@ -13,7 +13,7 @@ from keras import backend as K
 
 import numpy as np
 import evaluate
-from data import xdata
+from data_gen import xdata
 
 from config import config
 
@@ -225,13 +225,12 @@ if __name__ == '__main__':
 
     # splitting the initial training and holdout test sets
     f = pandas.read_pickle(config.FEATURES)
+    #put_In_Training = pandas.read_csv(config.MULTIPLE_LESIONS)
+    #df_List = list(put_In_Training['ID'])
+    #multiple = f[f['patient'].isin(df_List)]
+    #multiple_y = multiple[FLAGS.label].values
 
-    put_In_Training = pandas.read_csv(config.MULTIPLE_LESIONS)
-    df_List = list(put_In_Training['ID'])
-    multiple = f[f['patient'].isin(df_List)]
-    multiple_y = multiple[FLAGS.label].values
-
-    new_df = f[~f.patient.isin(df_List)]
+    new_df = f #[~f.patient.isin(df_List)]
     y = new_df[FLAGS.label].values
 
     # set up the k-fold process
@@ -244,10 +243,9 @@ if __name__ == '__main__':
         # get the training and testing set for the fold
         X_train, testing = new_df.iloc[train_index], new_df.iloc[test_index]
         y_train, y_test = y[train_index], y[test_index]
-
         #append multiple lesions into training/validation
-        X_train = X_train.append(multiple, ignore_index=False)
-        y_train = numpy.concatenate((y_train, multiple_y))
+        #X_train = X_train.append(multiple, ignore_index=False)
+        #y_train = numpy.concatenate((y_train, multiple_y))
 
         # split the training into training and validation
         training, validation, result_train, result_test = train_test_split(X_train, y_train, test_size=config.SPLIT_TRAINING_INTO_VALIDATION, stratify=y_train, random_state=int(split) % 2 ** 32)

@@ -1,5 +1,5 @@
 {
-  "dropout": [0],
+  "dropout": [0, 0.1, 0.5],
   "optimizer": [
     "sgd-001-0.9-nesterov"
   ],

@@ -240,6 +240,18 @@ def plot_learning_curve(results):
     plt.legend(['training','validation'],loc='upper right')
     return fig
 
+def plot_accuracy_curve(results):
+    history = json.loads(results.history)
+    validation_acc = history["val_accuracy"]
+    training_acc = history["accuracy"]
+    fig, ax = plt.subplots()
+    ax.plot(training_acc)
+    ax.plot(validation_acc)
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.legend(['training','validation'],loc='upper right')
+    return fig
+
 def plot_confusion_matrix_ensemble(labels, predictions, class_labels):
     fig, ax = plt.subplots()
     cm_data = confusion_matrix(labels, predictions)

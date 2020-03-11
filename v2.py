@@ -178,7 +178,7 @@ def train(model, training, validation, run_id, monitor):
     )
     early = EarlyStopping(
         monitor=monitor,
-        min_delta=0.5,
+        min_delta=0,
         patience=config.PATIENCE,
         verbose=1,
         mode='auto',

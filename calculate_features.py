@@ -138,7 +138,7 @@ def normalize_column(df, column=""):
     df[column] = pandas.Series(x_scaled, index=df.index)
     return df
 
-def features(df, int_bias='pos', modality=['t1','t2','t1c','pd'], filetype = 'segMask_tumor.nrrd'):
+def features(df, int_bias='neg', modality=['t1','t2','t1c','pd'], filetype = 'segMask_tumor.nrrd'):
     """
     get all of the clinical features you will actually be using
     modality and filetype don't matter, just need one per patient

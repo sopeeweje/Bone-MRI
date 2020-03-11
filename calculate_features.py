@@ -144,7 +144,7 @@ def features(df, int_bias='neg', modality=['t1','t2','t1c','pd'], filetype = 'se
     modality and filetype don't matter, just need one per patient
     """
     df = df.drop_duplicates(["patientID","modality","filename"], 'first')
-    df = df[df.filename==filetype][["patientID", "outcome_"+int_bias, "sort", "volume"]]#[["patientID","age", "sex", "outcome_"+int_bias, "sort", "volume"]]
+    df = df[df.filename==filetype][["patientID", "outcome_"+config.OUTCOME_BIAS, "sort", "volume"]] #[["patientID","age", "sex", "outcome_"+int_bias, "sort", "volume"]]
     df = df.drop_duplicates(["patientID"], 'first')
     df["outcome"] = df.pop("outcome_"+int_bias) #rename outcome key to just "outcome"
     df = df.set_index("patientID")

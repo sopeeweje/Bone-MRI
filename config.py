@@ -16,6 +16,7 @@ class Config(object):
     PATIENCE = 50
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
+    OUTCOME_BIAS = "neg"
 
     EXPERTS = "/Users/feyisope/Documents/Radiology-ML/test/Ovarian_Experts.csv" #check
 

@@ -12,11 +12,11 @@ class Config(object):
     TRIALS = 3
     BATCH_SIZE = 16
 
-    EPOCHS = 500
-    PATIENCE = 50
+    EPOCHS = 1000
+    PATIENCE = 1000
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
-    OUTCOME_BIAS = "neg"
+    OUTCOME_BIAS = "pos"
 
     EXPERTS = "/Users/feyisope/Documents/Radiology-ML/test/Ovarian_Experts.csv" #check
 

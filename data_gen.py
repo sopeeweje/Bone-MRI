@@ -397,7 +397,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         yield images, features, labels, name
 
 def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outcome", input_form="all"):
-    f = pandas.read_pickle(config.FEATURES)
+    f = pandas.read_pickle(config.FEATURES) #CSV with
     train_fraction = 1 - validation_fraction - test_fraction
     input_form_map = {
         "all": lambda f: f[f.index.isin(available['t1']).isin(available['t2']).isin(available['t1c'])],
@@ -411,9 +411,10 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
         "t1c-features": lambda f: f[f.index.isin(available['t1c'])],
         "features": lambda f: f
         }
-
+    print(f)
     f = input_form_map[input_form](f)
     remaining = f.copy()
+    print(f)
 
     sort_dict = {
         "train": train_fraction,

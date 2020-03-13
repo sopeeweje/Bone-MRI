@@ -601,7 +601,6 @@ def xdata(fold_number,
     #holdout_test.to_csv(os.path.join(config.CROSSVAL_DIR, fold_string + "-{}-kholdouttest.csv".format(str(seed))))
 
     # loading of the features - this is supposed to be the bottleneck, but seems to be pretty fast when I was testing it; refactor later
-    print(train)
     train_images, train_features, train_labels, train_names = relist(generate_from_features(train, input_form=input_form, label_form=label_form, verbose=verbose))
     validation_images, validation_features, validation_labels, validation_names = relist(generate_from_features(validation, input_form=input_form, label_form=label_form, verbose=verbose))
     test_images, test_features, test_labels, test_names = relist(generate_from_features(test, input_form=input_form, label_form=label_form, verbose=verbose))

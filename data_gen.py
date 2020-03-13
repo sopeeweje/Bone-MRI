@@ -382,6 +382,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
             continue
         
         try:
+            print("Does this patient have T1C available? " + str(index in available['t1c']))
             if parameters["t1c"] and index in available['t1c']: 
                 if verbose:
                     print(SHAPES_OUTPUT.format("t1c"))
@@ -589,7 +590,7 @@ def xdata(fold_number,
           train_augment=True,
           validation_augment=False,
           test_augment=False,
-          verbose=True
+          verbose=False
           ):
 
     #save the data in each set for the fold run

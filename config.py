@@ -37,7 +37,7 @@ class Config(object):
     TRAIN_DIR = os.path.join(DATA, "train")
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")
-    CROSSVAL_DIR = os.path.join(OUTPUT, "crossval")
+    CROSSVAL_DIR = os.path.join(DATA, "crossval")
 
     FEATURES_DIR = "/home/sopeeweje/bone_master/features"
     NRRD_FEATURES = os.path.join(FEATURES_DIR, "nrrd-features.pkl")

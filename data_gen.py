@@ -397,7 +397,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         yield images, features, labels, name
 
 def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outcome", input_form="all"):
-    f = pandas.read_pickle(config.FEATURES) #CSV with
+    f = pandas.read_pickle(config.FEATURES) #CSV with all training features for all available patients
     train_fraction = 1 - validation_fraction - test_fraction
     input_form_map = {
         "all": lambda f: f[f.index.isin(available['t1']).isin(available['t2']).isin(available['t1c'])],
@@ -411,8 +411,8 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
         "t1c-features": lambda f: f[f.index.isin(available['t1c'])],
         "features": lambda f: f
         }
-    print(f)
-    f = input_form_map[input_form](f)
+
+    f = input_form_map[input_form](f) #CSV with all training features for patients with given imaging modality
     remaining = f.copy()
     print(f)
 
@@ -423,12 +423,12 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     }
 
     # calculate goal numbers for train/validation/test by label properties
-    labels = f[label_form].unique()
+    labels = f[label_form].unique() # 1 (malignant) or 0 (benign)
     goal_sort = dict()
     for l in labels:
-        label_fraction = len(remaining[remaining[label_form] == l])/len(remaining)
+        label_fraction = len(remaining[remaining[label_form] == l])/len(remaining) # no. pts. with given label/total no. of pts. = % benign (ex.)
         for s in ["train", "validation", "test"]:
-            goal_sort[(l, s)] = int(len(remaining) * label_fraction * sort_dict[s])
+            goal_sort[(l, s)] = int(len(remaining) * label_fraction * sort_dict[s]) #ex. goal_sort[(benign, train)] = total no. of pts. * %benign * %train
 
     all_train = list()
     all_validation = list()
@@ -440,7 +440,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     }
 
     # get preassigned sorts
-    train = f[f["sort"] == "train"]
+    train = f[f["sort"] == "train"] #all patients pre-assigned to training dataset
     validation = f[f["sort"] == "validation"]
     test = f[f["sort"] == "test"]
     presort_dict = {
@@ -471,7 +471,16 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     # append any left over
     all_train.append(remaining)
 
-    train = pandas.concat(all_train)
+    print("Training points = " + len(all_train))
+    print("Benign: " + all_train[all_train[label_form] == 0] + ", Malignant: " + all_train[all_train[label_form] == 1])
+    print("")
+    print("Validation points = " + len(all_validation))
+    print("Benign: " + all_validation[all_validation[label_form] == 0] + ", Malignant: " + all_validation[all_validation[label_form] == 1])
+    print("")
+    print("Testing points = " + len(all_test))
+    print("Benign: " + all_test[all_test[label_form] == 0] + ", Malignant: " + all_test[all_test[label_form] == 1])
+
+train = pandas.concat(all_train)
     validation = pandas.concat(all_validation)
     test = pandas.concat(all_test)
 

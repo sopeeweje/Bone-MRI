@@ -37,6 +37,7 @@ class Config(object):
     TRAIN_DIR = os.path.join(DATA, "train")
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")
+    CROSSVAL_DIR = os.path.join(OUTPUT, "crossval")
 
     FEATURES_DIR = "/home/sopeeweje/bone_master/features"
     NRRD_FEATURES = os.path.join(FEATURES_DIR, "nrrd-features.pkl")
@@ -50,7 +51,6 @@ class Config(object):
     MODEL_DIR = os.path.join(OUTPUT, "models")
     STDOUT_DIR = os.path.join(OUTPUT, "stdout")
     STDERR_DIR = os.path.join(OUTPUT, "stderr")
-    DATASET_RECORDS = os.path.join(OUTPUT, "datasets")
 
     MAIN_TEST_HOLDOUT = 0.2
     NUMBER_OF_FOLDS = 4

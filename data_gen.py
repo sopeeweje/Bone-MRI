@@ -592,10 +592,10 @@ def xdata(fold_number,
 
     #save the data in each set for the fold run
     fold_string = 'fold-' + str(fold_number)
-    train.to_csv(os.path.join(config.DATASET_RECORDS, fold_string + "-{}-ktrain.csv".format(str(seed))))
-    validation.to_csv(os.path.join(config.DATASET_RECORDS, fold_string + "-{}-kvalidation.csv".format(str(seed))))
-    test.to_csv(os.path.join(config.DATASET_RECORDS, fold_string + "-{}-ktest.csv".format(str(seed))))
-    #holdout_test.to_csv(os.path.join(config.DATASET_RECORDS, fold_string + "-{}-kholdouttest.csv".format(str(seed))))
+    train.to_csv(os.path.join(config.CROSSVAL_DIR, fold_string + "-{}-ktrain.csv".format(str(seed))))
+    validation.to_csv(os.path.join(config.CROSSVAL_DIR, fold_string + "-{}-kvalidation.csv".format(str(seed))))
+    test.to_csv(os.path.join(config.CROSSVAL_DIR, fold_string + "-{}-ktest.csv".format(str(seed))))
+    #holdout_test.to_csv(os.path.join(config.CROSSVAL_DIR, fold_string + "-{}-kholdouttest.csv".format(str(seed))))
 
     # loading of the features - this is supposed to be the bottleneck, but seems to be pretty fast when I was testing it; refactor later
     train_images, train_features, train_labels, train_names = relist(generate_from_features(train, input_form=input_form, label_form=label_form, verbose=verbose))
@@ -642,4 +642,4 @@ def xdata(fold_number,
     return train_generator, validation_generator, test_generator  # , holdout_test_generator
 
 if __name__ == '__main__':
-    xdata(uuid.uuid4())
+    data(uuid.uuid4())

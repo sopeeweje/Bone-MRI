@@ -588,7 +588,7 @@ def xdata(fold_number,
           train_augment=True,
           validation_augment=False,
           test_augment=False,
-          verbose=False
+          verbose=True
           ):
 
     #save the data in each set for the fold run

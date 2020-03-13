@@ -229,8 +229,19 @@ if __name__ == '__main__':
     #df_List = list(put_In_Training['ID'])
     #multiple = f[f['patient'].isin(df_List)]
     #multiple_y = multiple[FLAGS.label].values
-
-    new_df = f #[~f.patient.isin(df_List)]
+    input_form_map = {
+        "all": lambda f: f[f.index.isin(available['t1']).isin(available['t2']).isin(available['t1c'])],
+        "t1": lambda f: f[f.index.isin(available['t1'])],
+        "t2": lambda f: f[f.index.isin(available['t2'])],
+        "t1c": lambda f: f[f.index.isin(available['t1c'])],
+        "t1-t2": lambda f: f[f.index.isin(available['t1']) & f.index.isin(available['t2'])],
+        "t1c-t2": lambda f: f[f.index.isin(available['t1c']) & f.index.isin(available['t2'])],
+        "t1-features": lambda f: f[f.index.isin(available['t1'])],
+        "t2-features": lambda f: f[f.index.isin(available['t2'])],
+        "t1c-features": lambda f: f[f.index.isin(available['t1c'])],
+        "features": lambda f: f
+    }
+    new_df = input_form_map[FLAGS.form](f) #[~f.patient.isin(df_List)]
     y = new_df[FLAGS.label].values
 
     # set up the k-fold process

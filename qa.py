@@ -162,6 +162,6 @@ def processFiles(path):
             
 
 #Test code
-path = "/Volumes/external/bone_master/bone_raw"
+path = "/home/sopeeweje/bone_master/bone_raw"
 processFiles(path)
 

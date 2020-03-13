@@ -474,14 +474,14 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     validation = pandas.concat(all_validation)
     test = pandas.concat(all_test)
 
-    print("Training points = " + str(len(train)))
-    print("Benign: " + str(len(train[train[label_form] == 0])) + ", Malignant: " + str(len(train[train[label_form] == 1])))
-    print("")
-    print("Validation points = " + str(len(validation)))
-    print("Benign: " + str(len(validation[validation[label_form] == 0])) + ", Malignant: " + str(len(validation[validation[label_form] == 1])))
-    print("")
-    print("Testing points = " + str(len(test)))
-    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Malignant: " + str(len(test[test[label_form] == 1])))
+#    print("Training points = " + str(len(train)))
+#    print("Benign: " + str(len(train[train[label_form] == 0])) + ", Malignant: " + str(len(train[train[label_form] == 1])))
+#    print("")
+#    print("Validation points = " + str(len(validation)))
+#    print("Benign: " + str(len(validation[validation[label_form] == 0])) + ", Malignant: " + str(len(validation[validation[label_form] == 1])))
+#    print("")
+#    print("Testing points = " + str(len(test)))
+#    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Malignant: " + str(len(test[test[label_form] == 1])))
 
     train.to_csv(os.path.join(config.TRAIN_DIR, "{}-train.csv".format(str(seed))))
     validation.to_csv(os.path.join(config.VALIDATION_DIR, "{}-validation.csv".format(str(seed))))
@@ -642,4 +642,4 @@ def xdata(fold_number,
     return train_generator, validation_generator, test_generator  # , holdout_test_generator
 
 if __name__ == '__main__':
-    data(uuid.uuid4())
+    xdata(uuid.uuid4())

@@ -169,6 +169,7 @@ with open(config.SEQ_AVAIL) as seq_avail:
        available['t1'].append(row[1])
        available['t2'].append(row[2])
        available['t1c'].append(row[3])
+print(available['t1c'])
 
 class Features(Iterator):
     def __init__(self, features, shuffle, seed):

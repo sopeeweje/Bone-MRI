@@ -78,7 +78,6 @@ def features_input(t1, t2, t1c, features, labels):
 
 def t1c_features_input(t1, t2, t1c, features, labels):
     t1c_image = np.array(t1c)
-    print(t1c_image)
     t1c_image = np.rollaxis(t1c_image, 0, 3)
     return (None, None, t1c_image), features, labels
 
@@ -162,18 +161,13 @@ available = {}
 with open(config.SEQ_AVAIL) as seq_avail:
    reader = csv.reader(seq_avail)
    headers = next(reader, None)
-   index = 0
-   map = {}
    for h in headers:
        available[h] = []
-       map[h] = index
-       index += 1
    for row in reader:
        available['pd'].append(row[0])
        available['t1'].append(row[1])
-       available['t2'].append(row[2])
-       available['t1c'].append(row[3])
-print(headers)
+       available['t1c'].append(row[2])
+       available['t2'].append(row[3])
 
 class Features(Iterator):
     def __init__(self, features, shuffle, seed):

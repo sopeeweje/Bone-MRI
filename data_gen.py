@@ -355,7 +355,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         t1c_masked = None
         
         try:
-            if (parameters["t1"] and index in available['t1']) #or parameters["features"]: # load in case of features so that files that error out aren't included in analysis
+            if (parameters["t1"] and index in available['t1']): #or parameters["features"]: # load in case of features so that files that error out aren't included in analysis
                 if verbose:
                     print(SHAPES_OUTPUT.format("t1"))
                 t1_masked = load_image(t1_image_file, t1_seg_file, verbose=verbose)

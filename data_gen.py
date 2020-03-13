@@ -162,14 +162,18 @@ available = {}
 with open(config.SEQ_AVAIL) as seq_avail:
    reader = csv.reader(seq_avail)
    headers = next(reader, None)
+   index = 0
+   map = {}
    for h in headers:
        available[h] = []
+       map[h] = index
+       index += 1
    for row in reader:
        available['pd'].append(row[0])
        available['t1'].append(row[1])
        available['t2'].append(row[2])
        available['t1c'].append(row[3])
-print(available['t1c'])
+print(headers)
 
 class Features(Iterator):
     def __init__(self, features, shuffle, seed):

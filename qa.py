@@ -20,7 +20,7 @@ import os #interacting with terminal
 from segmentation import calculate_largest_slice, select_slice, bounding_box, crop, resize #file with segmentation functions
 from config import config #configuration file
 import matplotlib.pyplot as plt
-from path import Path #path = wrapper for os.path
+#from path import Path #path = wrapper for os.path
 from filenames import SKIP
 import csv
 import itertools

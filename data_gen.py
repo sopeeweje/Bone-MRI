@@ -471,14 +471,14 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     # append any left over
     all_train.append(remaining)
 
-    print("Training points = " + len(all_train))
-    print("Benign: " + all_train[all_train[label_form] == 0] + ", Malignant: " + all_train[all_train[label_form] == 1])
+    print("Training points = " + str(len(all_train)))
+    print("Benign: " + str(len(all_train[all_train[label_form] == 0])) + ", Malignant: " + str(len(all_train[all_train[label_form] == 1])))
     print("")
-    print("Validation points = " + len(all_validation))
-    print("Benign: " + all_validation[all_validation[label_form] == 0] + ", Malignant: " + all_validation[all_validation[label_form] == 1])
+    print("Validation points = " + str(len(all_validation)))
+    print("Benign: " + str(len(all_validation[all_validation[label_form] == 0])) + ", Malignant: " + str(len(all_validation[all_validation[label_form] == 1])))
     print("")
-    print("Testing points = " + len(all_test))
-    print("Benign: " + all_test[all_test[label_form] == 0] + ", Malignant: " + all_test[all_test[label_form] == 1])
+    print("Testing points = " + str(len(all_test)))
+    print("Benign: " + str(len(all_test[all_test[label_form] == 0])) + ", Malignant: " + str(len(all_test[all_test[label_form] == 1])))
 
     train = pandas.concat(all_train)
     validation = pandas.concat(all_validation)

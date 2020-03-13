@@ -472,6 +472,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     all_train.append(remaining)
 
     print("Training points = " + str(len(all_train)))
+    print(all_train)
     #print("Benign: " + str(len(all_train[all_train[label_form] == 0])) + ", Malignant: " + str(len(all_train[all_train[label_form] == 1])))
     print("")
     print("Validation points = " + str(len(all_validation)))

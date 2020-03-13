@@ -342,6 +342,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
     parameters = INPUT_FORM_PARAMETERS[input_form]
 
     for index, row in tqdm(df.iterrows(), total=len(df)):
+        print(index)
         t1_image_file = os.path.join(source, "{}-{}-{}".format(index, T1, IMAGE))
         t1_seg_file = os.path.join(source, "{}-{}-{}".format(index, T1, SEGMENTATION))
         t2_image_file = os.path.join(source, "{}-{}-{}".format(index, T2, IMAGE))

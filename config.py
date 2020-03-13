@@ -9,11 +9,11 @@ import logging
 class Config(object):
     IMAGE_SIZE = 200
 
-    TRIALS = 3
+    TRIALS = 10
     BATCH_SIZE = 16
 
-    EPOCHS = 1000
-    PATIENCE = 1000
+    EPOCHS = 500
+    PATIENCE = 100
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
     OUTCOME_BIAS = "pos"

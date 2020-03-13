@@ -249,10 +249,6 @@ if __name__ == '__main__':
 
         # split the training into training and validation
         training, validation, result_train, result_test = train_test_split(X_train, y_train, test_size=config.SPLIT_TRAINING_INTO_VALIDATION, stratify=y_train, random_state=int(split) % 2 ** 32)
-        print(training)
-        print(validation)
-        print(testing)
-        print(split)
         # get the data
         # training_data, validation_data, testing_data, holdout_test_data = xdata(fold_number, training, validation, testing, holdout_test, split, input_form=FLAGS.form, label_form=FLAGS.label)
         training_data, validation_data, testing_data = xdata(fold_number, training, validation, testing, split, input_form=FLAGS.form, label_form=FLAGS.label)

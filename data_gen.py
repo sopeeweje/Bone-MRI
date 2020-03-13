@@ -477,11 +477,11 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     print("Training points = " + str(len(train)))
     print("Benign: " + str(len(train[train[label_form] == 0])) + ", Malignant: " + str(len(train[train[label_form] == 1])))
     print("")
-    print("Validation points = " + str(len(all_validation)))
+    print("Validation points = " + str(len(validation)))
     print("Benign: " + str(len(validation[validation[label_form] == 0])) + ", Malignant: " + str(len(validation[validation[label_form] == 1])))
     print("")
     print("Testing points = " + str(len(test)))
-    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Malignant: " + str(len(test[all_test[label_form] == 1])))
+    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Malignant: " + str(len(test[test[label_form] == 1])))
 
     train.to_csv(os.path.join(config.TRAIN_DIR, "{}-train.csv".format(str(seed))))
     validation.to_csv(os.path.join(config.VALIDATION_DIR, "{}-validation.csv".format(str(seed))))

@@ -243,6 +243,10 @@ if __name__ == '__main__':
         # get the training and testing set for the fold
         X_train, testing = new_df.iloc[train_index], new_df.iloc[test_index]
         y_train, y_test = y[train_index], y[test_index]
+        print(X_train)
+        print(testing)
+        print(y_train)
+        print(y_test)
         #append multiple lesions into training/validation
         #X_train = X_train.append(multiple, ignore_index=False)
         #y_train = numpy.concatenate((y_train, multiple_y))

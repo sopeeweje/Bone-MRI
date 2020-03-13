@@ -480,7 +480,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     print("Testing points = " + len(all_test))
     print("Benign: " + all_test[all_test[label_form] == 0] + ", Malignant: " + all_test[all_test[label_form] == 1])
 
-train = pandas.concat(all_train)
+    train = pandas.concat(all_train)
     validation = pandas.concat(all_validation)
     test = pandas.concat(all_test)
 

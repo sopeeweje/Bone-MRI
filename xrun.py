@@ -229,6 +229,17 @@ if __name__ == '__main__':
     #df_List = list(put_In_Training['ID'])
     #multiple = f[f['patient'].isin(df_List)]
     #multiple_y = multiple[FLAGS.label].values
+    available = {}
+    with open(config.SEQ_AVAIL) as seq_avail:
+        reader = csv.reader(seq_avail)
+        headers = next(reader, None)
+        for h in headers:
+            available[h] = []
+        for row in reader:
+            available['pd'].append(row[0])
+            available['t1'].append(row[1])
+            available['t1c'].append(row[2])
+            available['t2'].append(row[3])
     input_form_map = {
         "all": lambda f: f[f.index.isin(available['t1']).isin(available['t2']).isin(available['t1c'])],
         "t1": lambda f: f[f.index.isin(available['t1'])],

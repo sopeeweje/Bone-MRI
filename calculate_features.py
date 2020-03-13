@@ -138,13 +138,13 @@ def normalize_column(df, column=""):
     df[column] = pandas.Series(x_scaled, index=df.index)
     return df
 
-def features(df, int_bias='neg', modality=['t1','t2','t1c','pd'], filetype = 'segMask_tumor.nrrd'):
+def features(df, int_bias=config.OUTCOME_BIAS, modality=['t1','t2','t1c','pd'], filetype = 'segMask_tumor.nrrd'):
     """
     get all of the clinical features you will actually be using
     modality and filetype don't matter, just need one per patient
     """
     df = df.drop_duplicates(["patientID","modality","filename"], 'first')
-    df = df[df.filename==filetype][["patientID", "outcome_"+config.OUTCOME_BIAS, "sort", "volume"]] #[["patientID","age", "sex", "outcome_"+int_bias, "sort", "volume"]]
+    df = df[df.filename==filetype][["patientID", "outcome_"+int_bias, "sort", "volume"]] #[["patientID","age", "sex", "outcome_"+int_bias, "sort", "volume"]]
     df = df.drop_duplicates(["patientID"], 'first')
     df["outcome"] = df.pop("outcome_"+int_bias) #rename outcome key to just "outcome"
     df = df.set_index("patientID")

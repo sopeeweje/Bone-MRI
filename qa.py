@@ -112,13 +112,18 @@ def processFiles(path):
             print("Patient: " + patientID)
             patient_views = os.listdir(path + "/" + source + "/" + data_patient)
             
+            duplicate = 0
             for view in patient_views:
                 if view == '.DS_Store':
                     continue
                 old_view = view
                 ''.join(e for e in view if e.isalnum()) #use for non-CHOP files
                 view = view.split(" ")[0]
-                os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view)
+                try:
+                    os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view)
+                except:
+                    os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view+"-"+str(duplicate))
+                    duplicate += 1
                 try:
                     if patientID not in available_sequences[view]:
                         available_sequences[view].append(patientID) 

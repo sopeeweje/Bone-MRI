@@ -159,7 +159,7 @@ def class_weight(training):
     raw_counts = dict(zip(unique, counts))
     return { k: len(training.classes)/v for k, v in raw_counts.items() }
 
-def train(model, training, validation, run_id, monitor):
+def train(model, training, validation, run_id, monitor, hyperparameters):
     # callbacks
     checkpoint = ModelCheckpoint(
         os.path.join(
@@ -211,12 +211,12 @@ def run(run_id=None, mode='normal', loaded_data=None, split_id=None, input_form=
             training, validation, test = loaded_data
         model_instance = model(input_form, aux_size=training.features_size, hyperparameters=hyperparameters)
         # return trained model
-        return train(model_instance, training, validation, run_id, 'val_loss')
+        return train(model_instance, training, validation, run_id, 'val_loss', hyperparameters=hyperparameters)
     elif mode == 'cross':
         # training, validation, test, holdout_test = loaded_data
         training, validation, test = loaded_data
         model_instance = model(input_form, aux_size=training.features_size, hyperparameters=hyperparameters)
-        return train(model_instance, training, validation, run_id, 'val_loss')
+        return train(model_instance, training, validation, run_id, 'val_loss', hyperparameters=hyperparameters)
 
 
 if __name__ == '__main__':

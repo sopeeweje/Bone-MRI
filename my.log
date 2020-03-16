@@ -1,0 +1,4862 @@
+nohup: ignoring input
+/home/sopeeweje/bone_master/segmentation.py:70: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if vector == "none":
+working on china001 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china001
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china002 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china002
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china003 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china004 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china005 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china006 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china007 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china008 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china009 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china010 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china011 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china011
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-011/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-011/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china011
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china012 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china013 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china014 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china015 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china016 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china017 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china018 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china019 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china019
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china020 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china021 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china022 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china022
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china023 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-023/t1/segMask_tumor.nrrd
+                
+
+Exception occurred for: china023
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-023/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-023/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-023/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china023
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china024 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china024
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-024/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-024/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china024
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china025 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china026 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china026
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china027 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china027
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china028 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china029 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china030 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china030
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china031 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china031
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china032 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china033 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china034 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china035 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china035
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china036 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china037 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china038 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china038
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china039 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china039
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china040 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china040
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china041 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china041
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china042 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china043 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china044 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china045 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china046 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china046
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china047 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china048 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china048
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-048/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese benign bone tumor/bone-china-048/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china048
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china049 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china049
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china050 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china050
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china051 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china052 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china052
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china053 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china054 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china055 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china055
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china056 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china056
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china057 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china057
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china058 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china058
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china059 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china060 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china061 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china062 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china063 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china064 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china065 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china066 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china066
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china067 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china067
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china068 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china069 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china070 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china071 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china072 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china072
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china073 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china074 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china075 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china076 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china077 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china078 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china079 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china079
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china080 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china081 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china082 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china083 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china084 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china085 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china085
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china086 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china087 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china088 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china088
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china089 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china090 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china090
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china091 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china091
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china092 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china093 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china094 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china095 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china095
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-095/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-095/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china095
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china096 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china096
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-096/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-096/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china096
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china097 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-097/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-097/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: china097
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china098 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china098
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-098/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-098/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china098
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china099 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china099
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china100 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china101 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china102 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china102
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-102/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-102/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china102
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china103 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china104 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china105 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china106 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china107 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china108 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china109 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china110 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china111 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china111
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-111/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-111/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china111
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china112 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china113 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china114 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china115 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china116 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china117 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china117
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china118 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china119 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china120 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china121 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china122 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china123 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china124 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china125 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china126 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china127 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china128 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china129 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china130 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china131 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china132 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china133 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china133
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china134 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china134
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china135 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china136 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china137 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china138 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china139 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china140 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china141 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china141
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china142 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china143 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china144 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china145 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china146 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china147 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china147
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china148 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china149 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china150 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china151 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china152 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china152
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china153 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china153
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china154 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china155 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china156 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china157 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china158 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china159 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china160 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china161 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china162 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china163 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china164 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china165 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china166 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china167 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china167
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-167/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-167/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-167/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china167
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china168 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china169 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china170 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china171 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china172 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china172
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-172/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-172/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china172
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china173 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china174 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china175 ----------------------------------------
+For using T1 input
+using files:
+                t1: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-175/t1/imagingVolume.nrrd
+                t1 seg: nan
+                
+
+Exception occurred for: china175
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-175/t1c/segMask_tumor.nrrd
+                
+
+Exception occurred for: china175
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-175/t1/imagingVolume.nrrd
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-175/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese intermediate bone tumor/bone-china-175/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china175
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china176 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china176
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china177 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china178 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-178/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-178/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: china178
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china179 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china180 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china181 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china182 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china184 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china184
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china186 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china187 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china188 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-188/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-188/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-188/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-188/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (384, 384, 25)
+                        t2 seg: (384, 384, 25)
+                    
+
+Exception occurred for: china188
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on china189 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-189/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-189/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-189/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-189/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (256, 192, 30)
+                        t2 seg: (256, 192, 30)
+                    
+
+Exception occurred for: china189
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on china190 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china190
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china191 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china191
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-191/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-191/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china191
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china192 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-192/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-192/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-192/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-192/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (256, 256, 25)
+                        t2 seg: (256, 256, 25)
+                    
+
+Exception occurred for: china192
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on china193 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-193/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-193/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-193/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-193/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (320, 320, 21)
+                        t2 seg: (320, 320, 21)
+                    
+
+Exception occurred for: china193
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on china194 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china195 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china196 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china196
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china197 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china197
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-197/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-197/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china197
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china198 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-198/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-198/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-198/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-198/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (320, 320, 20)
+                        t2 seg: (320, 320, 20)
+                    
+
+Exception occurred for: china198
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on china199 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china200 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-200/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-200/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: china200
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china201 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china202 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china203 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china204 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china206 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china206
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china208 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china209 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china210 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china211 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china212 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china213 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china215 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china216 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china216
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china217 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china221 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china222 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china223 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china225 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china226 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china228 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: china228
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on china229 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china231 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china232 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china233 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china234 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china235 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china236 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: china236
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-236/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Chinese malignant bone tumor/bone-china-236/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: china236
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on china241 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china242 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on china243 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-10 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-100 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55255755/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55255755/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/CHOP/55255755/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55255755/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (2, 512, 512, 40)
+                        t2 seg: (512, 512, 40)
+                    
+
+Exception occurred for: chop-100
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-101 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-102 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-103 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-104 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-104
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-105 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-105
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55403574/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55403574/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-105
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-106 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-107 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-107
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-108 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-109 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-11 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/56226396/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/56226396/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-11
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-110 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-112 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: chop-112
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-112
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/CHOP/55577407/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55577407/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: chop-112
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-113 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-113
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-114 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-115 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-116 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-117 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-118 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-119 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-119
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-120 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-120
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-121 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-122 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-123 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-124 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-124
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-125 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-126 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-126
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-127 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-128 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-129 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-13 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: chop-13
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-13
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-130 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-131 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-132 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-132
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-133 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-133
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-134 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-134
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-135 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-135
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-136 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: chop-136
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-136
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/CHOP/56208464/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/56208464/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: chop-136
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-137 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-138 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-139 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-14 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-14
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-140 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-140
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-141 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-141
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-142 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-142
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-143 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-144 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-15 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-15
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-16 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-16
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-17 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-17
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-18 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-19 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-2 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-20 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-21 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-22 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-23 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-24 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-24
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-25 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-25
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-27 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-28 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-29 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-30 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-30
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-31 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-31
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-32 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/02386069/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/02386069/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-32
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-33 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-34 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-34
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-35 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-35
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-36 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-37 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-37
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/02680696/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/02680696/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-37
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-38 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-38
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-39 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55379979/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55379979/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-39
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-4 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55589038/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55589038/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-4
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-40 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-40
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-41 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55394662/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55394662/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-41
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-42 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55519800/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55519800/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-42
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-43 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-43
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-44 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-45 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-46 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: chop-46
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-46
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/CHOP/55806951/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55806951/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: chop-46
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-47 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-48 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-49 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-50 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: chop-50
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/CHOP/55614654/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55614654/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: chop-50
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-51 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-52 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55773414/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55773414/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-52
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-53 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-54 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-55 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-56 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-56
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-57 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-57
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-58 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-58
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-59 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-59
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-6 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-60 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-61 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-61
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-62 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-62
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-63 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-63
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/02664801/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/02664801/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-63
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-64 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-64
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-65 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55137866/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55137866/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55137866/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: chop-65
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-66 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55283562/t1 sag fs/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55283562/t1 sag fs/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/CHOP/55283562/t2 ax fs/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55283562/t2 ax fs/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (2, 512, 512, 37)
+                        t2 seg: (512, 512, 37)
+                    
+
+Exception occurred for: chop-66
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-67 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-68 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-69 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-7 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-70 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-70
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-71 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-71
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-72 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-73 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-73
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55810965/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55810965/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-73
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-74 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/CHOP/55918777/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/CHOP/55918777/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: chop-74
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on chop-75 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-76 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-77 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-77
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-78 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-78
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-79 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-79
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-8 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-80 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-81 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-81
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-83 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-84 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-85 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-85
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-86 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-86
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-87 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-87
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-88 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-88
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on chop-89 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-9 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-90 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-91 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-92 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-93 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-94 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-95 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-96 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-97 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-98 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on chop-99 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: chop-99
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-001 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-002 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-003 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: penn-003
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-003/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-003/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: penn-003
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-004 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-004
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-005 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-006 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-007 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-007
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-008 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: penn-008
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-008/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-008/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: penn-008
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-009 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: penn-009
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-009/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-009/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: penn-009
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-010 ----------------------------------------
+For using T1 input
+using files:
+                t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-010/t1/imagingVolume.nrrd
+                t1 seg: nan
+                
+
+Exception occurred for: penn-010
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-010/t1/imagingVolume.nrrd
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-010/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-010/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: penn-010
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-011 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-012 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: penn-012
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: penn-012
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-013 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-014 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-015 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-016 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-016/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-016/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: penn-016
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-017 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-017
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-018 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-018
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-019 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-019
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-020 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-021 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-022 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-022/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-022/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-022/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-022/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (256, 256, 22)
+                        t2 seg: (256, 256, 22)
+                    
+
+Exception occurred for: penn-022
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-023 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: penn-023
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-023/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-023/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: penn-023
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-024 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-025 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-025/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-025/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: penn-025
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-026 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-028 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-028
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-030 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-030
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-031 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-033 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-034 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-036 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-036
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-037 ----------------------------------------
+For using T1 input
+using files:
+                t1: nan
+                t1 seg: nan
+                
+
+Exception occurred for: penn-037
+integer argument expected, got float
+No T1 available
+########################################
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: nan
+                        t1 seg: nan
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-037/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-037/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: penn-037
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-038 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-039 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-040 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-040
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-041 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-042 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-042
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-044 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-044
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-045 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-046 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-047 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-048 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-048
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-048/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-048/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: penn-048
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-049 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-049
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-050 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-051 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-051/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-051/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: nan
+                        
+
+Exception occurred for: penn-051
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-052 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-053 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-054 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-056 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-056/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-056/t1/segMask_tumor.nrrd
+                        t2: nan
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-056/t2/segMask_tumor.nrrd
+                        
+
+Exception occurred for: penn-056
+integer argument expected, got float
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-057 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-058 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-059 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-061 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-061
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-062 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-062
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-063 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-063
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-064 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+using files:
+                        t1: /home/sopeeweje/bone_master/bone_raw/Penn/penn-064/t1/imagingVolume.nrrd
+                        t1 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-064/t1/segMask_tumor.nrrd
+                        t2: /home/sopeeweje/bone_master/bone_raw/Penn/penn-064/t2/imagingVolume.nrrd
+                        t2 seg: /home/sopeeweje/bone_master/bone_raw/Penn/penn-064/t2/segMask_tumor.nrrd
+                        
+START SHAPES
+                        t2: (480, 480, 24)
+                        t2 seg: (480, 480, 24)
+                    
+
+Exception occurred for: penn-064
+Exception thrown in SimpleITK HistogramMatchingImageFilter_Execute: /tmp/SimpleITK-build/SimpleITK-build/Code/BasicFilters/src/sitkHistogramMatchingImageFilter.cxx:111:
+sitk::ERROR: Image2 for HistogramMatchingImageFilter doesn't match type or dimension!
+No T2 available, or no T1 available for registration
+################################################################################
+working on penn-065 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-067 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-068 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-069 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-070 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-071 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-073 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-073
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-074 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-074
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-075 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-076 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-079 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-082 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-082
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-083 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+using files:
+                t1c: nan
+                t1c seg: nan
+                
+
+Exception occurred for: penn-083
+integer argument expected, got float
+No T1C available
+########################################
+For using T2 input
+This image has been preprocessed!
+working on penn-084 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-087 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+working on penn-089 ----------------------------------------
+For using T1 input
+This image has been preprocessed!
+For using T1C input
+This image has been preprocessed!
+For using T2 input
+This image has been preprocessed!
+Using TensorFlow backend.
+/home/sopeeweje/.local/share/virtualenvs/bone_master-xLR2Nuxv/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/sopeeweje/.local/share/virtualenvs/bone_master-xLR2Nuxv/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/sopeeweje/.local/share/virtualenvs/bone_master-xLR2Nuxv/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/sopeeweje/.local/share/virtualenvs/bone_master-xLR2Nuxv/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/sopeeweje/.local/share/virtualenvs/bone_master-xLR2Nuxv/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/sopeeweje/.local/share/virtualenvs/bone_master-xLR2Nuxv/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Traceback (most recent call last):
+  File "xrun.py", line 216, in <module>
+    parameters = json.load(f)
+  File "/usr/lib/python3.6/json/__init__.py", line 299, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 6 column 1 (char 170)

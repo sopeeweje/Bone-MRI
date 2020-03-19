@@ -1,4 +1,3 @@
-#EfficientNetB7
 import os
 import numpy as np
 import math
@@ -55,6 +54,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
     DEEP_DENSE_TOP = hyperparameters.get("deep-dense-top", True)
     CONVNET_FREEZE_PERCENT = hyperparameters.get("convnet-freeze-percent", 0.0)
 
+    #skip for now
     if parameters["t2"]:
         convnet = efn.EfficientNetB7(
             weights="imagenet",
@@ -70,7 +70,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         outputs.append(out)
 
     if parameters["t1"]:
-        # init EfficientNet
+        # init ResNet
         convnet = efn.EfficientNetB7(
             weights="imagenet",
             include_top=False,
@@ -85,7 +85,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         outputs.append(out)
         
     if parameters["t1c"]:
-        # init EfficientNet
+        # init ResNet
         convnet = efn.EfficientNetB7(
             weights="imagenet",
             include_top=False,
@@ -159,7 +159,7 @@ def class_weight(training):
     raw_counts = dict(zip(unique, counts))
     return { k: len(training.classes)/v for k, v in raw_counts.items() }
 
-def train(model, training, validation, run_id, monitor):
+def train(model, training, validation, run_id, monitor, hyperparameters):
     # callbacks
     checkpoint = ModelCheckpoint(
         os.path.join(
@@ -178,7 +178,7 @@ def train(model, training, validation, run_id, monitor):
     )
     early = EarlyStopping(
         monitor=monitor,
-        min_delta=0.5,
+        min_delta=0,
         patience=config.PATIENCE,
         verbose=1,
         mode='auto',
@@ -211,12 +211,12 @@ def run(run_id=None, mode='normal', loaded_data=None, split_id=None, input_form=
             training, validation, test = loaded_data
         model_instance = model(input_form, aux_size=training.features_size, hyperparameters=hyperparameters)
         # return trained model
-        return train(model_instance, training, validation, run_id, 'val_loss')
+        return train(model_instance, training, validation, run_id, 'val_loss', hyperparameters=hyperparameters)
     elif mode == 'cross':
         # training, validation, test, holdout_test = loaded_data
         training, validation, test = loaded_data
         model_instance = model(input_form, aux_size=training.features_size, hyperparameters=hyperparameters)
-        return train(model_instance, training, validation, run_id, 'val_loss')
+        return train(model_instance, training, validation, run_id, 'val_loss', hyperparameters=hyperparameters)
 
 
 if __name__ == '__main__':

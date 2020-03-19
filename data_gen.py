@@ -511,7 +511,7 @@ def data(seed=None,
         test_augment=False,
         validation_split=config.VALIDATION_SPLIT,
         test_split=config.TEST_SPLIT,
-        verbose=True,
+        verbose=False,
         ):
     train, validation, test = sort(validation_split, test_split, seed, label_form, input_form)
     train_images, train_features, train_labels, train_names = relist(generate_from_features(train, input_form=input_form, label_form=label_form, verbose=verbose))

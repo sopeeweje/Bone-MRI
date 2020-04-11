@@ -1,7 +1,6 @@
 save_pid.txt
 ants/                       
-migrations/
-bone_features.csv               
+migrations/             
 nohup.out
 bone_qa/                        
 output/

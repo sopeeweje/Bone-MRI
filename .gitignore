@@ -2,7 +2,8 @@ save_pid.txt
 ants/                       
 migrations/             
 nohup.out
-bone_qa/                        
+bone_qa/
+bone_features.csv 
 output/
 bone_raw/                   
 '~$bone tumors (edited).xlsx'

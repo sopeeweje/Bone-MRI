@@ -1,6 +1,6 @@
 migrations/             
 bone_qa/
-output/
+output/models
 bone_raw/                       
 __pycache__/
 features/

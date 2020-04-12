@@ -355,10 +355,14 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         t1c_masked = None
         
         try:
-            if (parameters["t1"] and index in available['t1']): #or parameters["features"]: # load in case of features so that files that error out aren't included in analysis
+            print("Does this patient have T1 available? " + str(index in available['t1']))
+            if parameters["t1"] and index in available['t1']:
+                print("I'm doing the thing.")
                 if verbose:
                     print(SHAPES_OUTPUT.format("t1"))
                 t1_masked = load_image(t1_image_file, t1_seg_file, verbose=verbose)
+            else:
+                continue
         except Exception as e:
             print()
             print("#" * 80)
@@ -368,10 +372,14 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
             continue
             
         try:
+            print("Does this patient have T2 available? " + str(index in available['t2']))
             if parameters["t2"] and index in available['t2']:
+                print("I'm doing the thing.")
                 if verbose:
                     print(SHAPES_OUTPUT.format("t2"))
                 t2_masked = load_image(t2_image_file, t2_seg_file, verbose=verbose)
+            else:
+                continue
         except Exception as e:
             print()
             print("#" * 80)

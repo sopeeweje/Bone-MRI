@@ -23,11 +23,11 @@ class Config(object):
     SECRET = "example secret key"
     LOG_LEVEL = logging.DEBUG
 
-    CHOP_IDS = '/home/sopeeweje/bone_master/chopIDs.csv'
+    CHOP_IDS = 'chopIDs.csv'
 
     RAW_NRRD_ROOT = "bone_raw/"
     RAW_FEATURES = "bone_features.csv"
-    SEQ_AVAIL = "equence_summary.csv" #which patients have which sequences
+    SEQ_AVAIL = "sequence_summary.csv" #which patients have which sequences
 
     DATA = "data_dir/"
     PREPROCESSED_DIR = os.path.join(DATA, "preprocessed")

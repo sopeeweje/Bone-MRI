@@ -17,8 +17,6 @@ class Config(object):
     TEST_SPLIT = 0.1
     OUTCOME_BIAS = "pos"
 
-    EXPERTS = "/Users/feyisope/Documents/Radiology-ML/test/Ovarian_Experts.csv" #check
-
     DEVELOPMENT = True
     DEBUG = True
     PRINT_SQL = False
@@ -27,25 +25,25 @@ class Config(object):
 
     CHOP_IDS = '/home/sopeeweje/bone_master/chopIDs.csv'
 
-    RAW_NRRD_ROOT = "/home/sopeeweje/bone_master/bone_raw"
-    RAW_FEATURES = "/home/sopeeweje/bone_master/bone_features.csv"
-    SEQ_AVAIL = "/home/sopeeweje/bone_master/sequence_summary.csv" #which patients have which sequences
+    RAW_NRRD_ROOT = "bone_raw/"
+    RAW_FEATURES = "bone_features.csv"
+    SEQ_AVAIL = "equence_summary.csv" #which patients have which sequences
 
-    DATA = "/home/sopeeweje/bone_master/data_dir"
+    DATA = "data_dir/"
     PREPROCESSED_DIR = os.path.join(DATA, "preprocessed")
     TRAIN_DIR = os.path.join(DATA, "train")
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")
     CROSSVAL_DIR = os.path.join(DATA, "crossval")
 
-    FEATURES_DIR = "/home/sopeeweje/bone_master/features"
+    FEATURES_DIR = "features/"
     NRRD_FEATURES = os.path.join(FEATURES_DIR, "nrrd-features.pkl")
     FEATURES = os.path.join(FEATURES_DIR, "training-features.pkl")
     PREPROCESS = os.path.join(FEATURES_DIR, "preprocess.pkl")
 
     INPUT_FORM = "t1c-features"
 
-    OUTPUT = "/home/sopeeweje/bone_master/output"
+    OUTPUT = "output/"
     DB_URL = "sqlite:///{}/results.db".format(OUTPUT)
     MODEL_DIR = os.path.join(OUTPUT, "models")
     STDOUT_DIR = os.path.join(OUTPUT, "stdout")

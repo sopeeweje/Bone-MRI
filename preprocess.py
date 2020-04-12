@@ -111,49 +111,49 @@ def run(files, out, use_n4_bias=False, use_registration=False):
         
         #for using T2
         print("For using T2 input")
-            #try:
-        if not ("{}-{}-{}".format(index, T2, IMAGE) in os.listdir(config.PREPROCESSED_DIR)):
-            t1 = row.to_frame().loc["path", T1, IMAGE][0]
-            t1_seg = row.to_frame().loc["path", T1, SEGMENTATION][0]
-            t2 = row.to_frame().loc["path", T2, IMAGE][0]
-            t2_seg = row.to_frame().loc["path", T2, SEGMENTATION][0]
-            
-            print("""using files:
-                    t1: {}
-                    t1 seg: {}
-                    t2: {}
-                    t2 seg: {}
-                    """.format(t1, t1_seg, t2, t2_seg))
-
-            t1_nrrd, _ = nrrd.read(t1)
-            t1_seg_nrrd, _ = nrrd.read(t1_seg)
-            t2_nrrd, _ = nrrd.read(t2)
-            t2_seg_nrrd, _ = nrrd.read(t2_seg)
-            print("""START SHAPES
-                    t2: {}
-                    t2 seg: {}
-                """.format(t2_nrrd.shape, t2_seg_nrrd.shape))
-
-            _, out_t2 = preprocess_pack(t1_nrrd, [(t2_nrrd, t2_seg_nrrd)], use_n4_bias, use_registration)
-            out_t2_image = out_t2[0][0]
-            out_t2_seg = out_t2[0][1]
-
-            print("""END SHAPES
-                    t2: {}
-                    t2 seg: {}
-                """.format(out_t2_image.shape, out_t2_seg.shape))
-            nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T2, IMAGE)), out_t2_image)
-            nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T2, SEGMENTATION)), out_t2_seg)
+        try:
+            if not ("{}-{}-{}".format(index, T2, IMAGE) in os.listdir(config.PREPROCESSED_DIR)):
+                t1 = row.to_frame().loc["path", T1, IMAGE][0]
+                t1_seg = row.to_frame().loc["path", T1, SEGMENTATION][0]
+                t2 = row.to_frame().loc["path", T2, IMAGE][0]
+                t2_seg = row.to_frame().loc["path", T2, SEGMENTATION][0]
+                
+                print("""using files:
+                        t1: {}
+                        t1 seg: {}
+                        t2: {}
+                        t2 seg: {}
+                        """.format(t1, t1_seg, t2, t2_seg))
+    
+                t1_nrrd, _ = nrrd.read(t1)
+                t1_seg_nrrd, _ = nrrd.read(t1_seg)
+                t2_nrrd, _ = nrrd.read(t2)
+                t2_seg_nrrd, _ = nrrd.read(t2_seg)
+                print("""START SHAPES
+                        t2: {}
+                        t2 seg: {}
+                    """.format(t2_nrrd.shape, t2_seg_nrrd.shape))
+    
+                _, out_t2 = preprocess_pack(t1_nrrd, [(t2_nrrd, t2_seg_nrrd)], use_n4_bias, use_registration)
+                out_t2_image = out_t2[0][0]
+                out_t2_seg = out_t2[0][1]
+    
+                print("""END SHAPES
+                        t2: {}
+                        t2 seg: {}
+                    """.format(out_t2_image.shape, out_t2_seg.shape))
+                nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T2, IMAGE)), out_t2_image)
+                nrrd.write(os.path.join(out, "{}-{}-{}".format(index, T2, SEGMENTATION)), out_t2_seg)
+                print("#" * 80)
+            else:
+                print("This image has been preprocessed!")
+        except Exception as e:
+            print()
+            print("Exception occurred for: {}\n{}".format(index, e))
+            print("No T2 available, or no T1 available for registration")
             print("#" * 80)
-        else:
-            print("This image has been preprocessed!")
-        #except Exception as e:
-        #print()
-        #print("Exception occurred for: {}\n{}".format(index, e))
-        #print("No T2 available, or no T1 available for registration")
-        #print("#" * 80)
             
-#continue
+            continue
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

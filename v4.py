@@ -60,6 +60,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
+	    dropout_rate = 0.5
         )
         for layer in convnet.layers:
             layer.name = "{}_t2".format(layer.name)
@@ -70,11 +71,11 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         outputs.append(out)
 
     if parameters["t1"]:
-        # init ResNet
         convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
+	    dropout_rate = 0.5
         )
         for layer in convnet.layers:
             layer.name = "{}_t1".format(layer.name)
@@ -90,6 +91,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
+            dropout_rate = 0.5
         )
         for layer in convnet.layers:
             layer.name = "{}_t1c".format(layer.name)

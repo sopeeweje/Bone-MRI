@@ -69,8 +69,8 @@ def processFiles(path):
     Param: path to raw images
     Returns: all png's to folder to look through for QA
     """
-    save_path = "/home/sopeeweje/bone_master/bone_qa"
-    chopIDs = open("/home/sopeeweje/bone_master/chopIDs.csv")
+    save_path = "bone_qa/"
+    chopIDs = open("chopIDs.csv")
     chopIDs_list = list(csv.reader(chopIDs))
     chopIDs_dict = {}
     
@@ -167,6 +167,6 @@ def processFiles(path):
             
 
 #Test code
-path = "/home/sopeeweje/bone_master/bone_raw"
+path = "bone_raw/"
 processFiles(path)
 

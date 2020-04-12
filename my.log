@@ -4,11 +4,15 @@ Traceback (most recent call last):
     from sklearn import preprocessing as sklearn_preprocessing
 ModuleNotFoundError: No module named 'sklearn'
 Traceback (most recent call last):
-  File "preprocess.py", line 10, in <module>
-    from filenames import IMAGE, SEGMENTATION, T1, T2, T1C
-  File "/home/user1/Documents/Bone-MRI/filenames.py", line 33, in <module>
-    reader = csv.reader(open(config.CHOP_IDS))
-FileNotFoundError: [Errno 2] No such file or directory: '/home/sopeeweje/bone_master/chopIDs.csv'
+  File "preprocess.py", line 173, in <module>
+    run(FLAGS.preprocess, FLAGS.out, FLAGS.n4, FLAGS.registration)
+  File "preprocess.py", line 55, in run
+    f = pandas.read_pickle(files)
+  File "/home/user1/.local/share/virtualenvs/Bone-MRI-iLizu8rs/lib/python3.6/site-packages/pandas/io/pickle.py", line 170, in read_pickle
+    f, fh = get_handle(fp_or_buf, "rb", compression=compression, is_text=False)
+  File "/home/user1/.local/share/virtualenvs/Bone-MRI-iLizu8rs/lib/python3.6/site-packages/pandas/io/common.py", line 434, in get_handle
+    f = open(path_or_buf, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'features/preprocess.pkl'
 Using TensorFlow backend.
 /home/user1/.local/share/virtualenvs/Bone-MRI-iLizu8rs/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -35,14 +39,8 @@ Using TensorFlow backend.
 /home/user1/.local/share/virtualenvs/Bone-MRI-iLizu8rs/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
 Traceback (most recent call last):
-  File "run.py", line 8, in <module>
-    from models import models
-  File "/home/user1/Documents/Bone-MRI/models.py", line 2, in <module>
-    import v2
-  File "/home/user1/Documents/Bone-MRI/v2.py", line 17, in <module>
-    from data_gen import data, INPUT_FORM_PARAMETERS
-  File "/home/user1/Documents/Bone-MRI/data_gen.py", line 20, in <module>
-    from filenames import IMAGE, SEGMENTATION, T1, T2, T1C
-  File "/home/user1/Documents/Bone-MRI/filenames.py", line 33, in <module>
-    reader = csv.reader(open(config.CHOP_IDS))
-FileNotFoundError: [Errno 2] No such file or directory: '/home/sopeeweje/bone_master/chopIDs.csv'
+  File "run.py", line 15, in <module>
+    import evaluate
+  File "/home/user1/Documents/Bone-MRI/evaluate.py", line 7, in <module>
+    from vis.visualization import visualize_cam, visualize_saliency, overlay
+ModuleNotFoundError: No module named 'vis.visualization'

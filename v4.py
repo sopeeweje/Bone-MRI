@@ -57,7 +57,6 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
     #skip for now
     if parameters["t2"]:
         convnet = efn.EfficientNetB0(
-	    dropout_rate = 0.5,
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3)
@@ -72,7 +71,6 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     if parameters["t1"]:
         convnet = efn.EfficientNetB0(
-	    dropout_rate = 0.5,
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3)
@@ -88,7 +86,6 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
     if parameters["t1c"]:
         # init ResNet
         convnet = efn.EfficientNetB0(
-	    dropout_rate = 0.5,
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3)
@@ -127,6 +124,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         out = concatenate([out, aux_input])
 
     out = BatchNormalization()(out)
+    out = Dropout(rate=DROPOUT)(out)
     predictions = Dense(1, activation="sigmoid", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
 
     # creating the final model

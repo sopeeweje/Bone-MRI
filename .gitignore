@@ -1,23 +1,9 @@
-save_pid.txt
-ants/                       
 migrations/             
-nohup.out
 bone_qa/
-bone_features.csv 
 output/
-bone_raw/                   
-'~$bone tumors (edited).xlsx'
-'bone tumors (edited).xlsx'      
+bone_raw/                       
 __pycache__/
-'bone tumors.xlsx'               
-sequence_summary.csv
-'Matching game.xlsx'
 features/
 .DS_Store
 .ipynb_checkpoints/
-Matching game.xlsx
-bone tumors (edited).xlsx
-bone tumors.xlsx
-chopIDs.csv
 data_dir/
-~$bone tumors (edited).xlsx

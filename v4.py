@@ -1,15 +1,17 @@
 import os
 import numpy as np
 import math
-from keras import applications, optimizers
+from keras import applications
+from keras import optimizers
 from keras.models import Sequential, Model
-from keras.layers import Dropout, Flatten, Dense, Input, concatenate
+from keras.layers import Dropout, Flatten, Dense, Input, concatenate, GlobalAveragePooling2D
 from keras import backend as k
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler, TensorBoard, EarlyStopping
 from keras.layers.normalization import BatchNormalization
 from keras.regularizers import l1_l2
 import efficientnet.keras as efn
 import datetime as datetime
+
 
 from config import config
 from data_gen import data, INPUT_FORM_PARAMETERS
@@ -37,10 +39,10 @@ def apply_layer_freeze(convnet, percent=0.0):
 
 def model(input_form="all", aux_size=0, hyperparameters=dict()):
     print("using the following hyperparameters: {}".format(hyperparameters))
-    
+
     if input_form == "features":
         return features_model(aux_size, hyperparameters)
-    
+
     parameters = INPUT_FORM_PARAMETERS[input_form]
 
     inputs = list()
@@ -49,48 +51,51 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
     #retreiving the hyperparameters
     DROPOUT = hyperparameters.get("dropout", 0.5) #get "dropout" entry, else return 0.5
     OPTIMIZER = hyperparameters.get("optimizer", "sgd-0001-0.9")
-    DEEP_DENSE_TOP = hyperparameters.get("deep-dense-top", False)
-    CONVNET_FREEZE_PERCENT = hyperparameters.get("convnet-freeze-percent", 0.5)
-    
-    if parameters["t1c"]:
-        convnet = efn.EfficientNetB0(
-            weights="imagenet",
-            include_top=False,
-            input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
-            pooling='avg'
-        )
-        for layer in convnet.layers:
-            layer.name = "{}_t1c".format(layer.name)
-        apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
-        out = convnet.output
-        inputs.append(convnet.input)
-        outputs.append(out)
-    
-    if parameters["t1"]:
-        convnet = efn.EfficientNetB0(
-            weights="imagenet",
-            include_top=False,
-            input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
-            pooling='avg'
-        )
-        for layer in convnet.layers:
-            layer.name = "{}_t1".format(layer.name)
-        apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
-        out = convnet.output
-        inputs.append(convnet.input)
-        outputs.append(out)
-        
+    DEEP_DENSE_TOP = hyperparameters.get("deep-dense-top", True)
+    CONVNET_FREEZE_PERCENT = hyperparameters.get("convnet-freeze-percent", 0.0)
+
+    #skip for now
     if parameters["t2"]:
         convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
-            pooling='avg'
         )
         for layer in convnet.layers:
             layer.name = "{}_t2".format(layer.name)
         apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
         out = convnet.output
+        out = GlobalAveragePooling2D()(out)
+        inputs.append(convnet.input)
+        outputs.append(out)
+
+    if parameters["t1"]:
+        # init ResNet
+        convnet = efn.EfficientNetB0(
+            weights="imagenet",
+            include_top=False,
+            input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
+        )
+        for layer in convnet.layers:
+            layer.name = "{}_t1".format(layer.name)
+        apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
+        out = convnet.output
+        out = GlobalAveragePooling2D()(out)
+        inputs.append(convnet.input)
+        outputs.append(out)
+        
+    if parameters["t1c"]:
+        # init ResNet
+        convnet = efn.EfficientNetB0(
+            weights="imagenet",
+            include_top=False,
+            input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
+        )
+        for layer in convnet.layers:
+            layer.name = "{}_t1c".format(layer.name)
+        apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
+        out = convnet.output
+        out = GlobalAveragePooling2D()(out)
         inputs.append(convnet.input)
         outputs.append(out)
 
@@ -113,16 +118,13 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         out = BatchNormalization()(out)
         out = Dropout(rate=DROPOUT)(out)
         out = Dense(16, activation="relu", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
-        out = BatchNormalization()(out)
-        out = Dropout(rate=DROPOUT)(out)
 
     if parameters["features"]:
         aux_input = Input(shape=(aux_size,), name='aux_input')
         inputs.append(aux_input)
         out = concatenate([out, aux_input])
 
-#out = Dense(16, activation="relu", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
-#out = BatchNormalization()(out)
+    out = BatchNormalization()(out)
     predictions = Dense(1, activation="sigmoid", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
 
     # creating the final model
@@ -146,9 +148,9 @@ def features_model(aux_size, hyperparameters):
     predictions = Dense(1, kernel_regularizer=reg, activation="sigmoid")(aux_input)
     model = Model(inputs=aux_input, outputs=predictions)
     model.compile(
-                  loss="binary_crossentropy",
-                  optimizer=OPTIMIZERS[OPTIMIZER](),
-                  metrics=["accuracy"])
+        loss="binary_crossentropy",
+        optimizer=OPTIMIZERS[OPTIMIZER](),
+        metrics=["accuracy"])
     return model
 
 def class_weight(training):

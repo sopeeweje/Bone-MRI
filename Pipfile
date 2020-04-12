@@ -12,6 +12,7 @@ tensorflow = {version = "==1.14.0"}
 tensorflow-gpu = {version = "<1.13.0"}
 keras_applications = "*"
 keras = "*"
+keras-vis = "*"
 efficientnet = "*"
 sklearn = "*"
 

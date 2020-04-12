@@ -116,6 +116,13 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         out = BatchNormalization()(out)
         out = Dropout(rate=DROPOUT)(out)
 
+    if parameters["features"]:
+        aux_input = Input(shape=(aux_size,), name='aux_input')
+        inputs.append(aux_input)
+        out = concatenate([out, aux_input])
+
+#out = Dense(16, activation="relu", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
+#out = BatchNormalization()(out)
     predictions = Dense(1, activation="sigmoid", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
 
     # creating the final model

@@ -106,6 +106,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     out = Dense(256, activation="relu", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
     out = BatchNormalization()(out)
+    out = Dropout(rate=DROPOUT)(out)
 
     if DEEP_DENSE_TOP:
         out = Dropout(rate=DROPOUT)(out)

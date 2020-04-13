@@ -354,50 +354,62 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         t2_masked = None
         t1c_masked = None
         
-        try:
-            print("Does this patient have T1 available? " + str(index in available['t1']))
-            if parameters["t1"] and index in available['t1']:
-                print("I'm doing the thing.")
-                if verbose:
-                    print(SHAPES_OUTPUT.format("t1"))
-                t1_masked = load_image(t1_image_file, t1_seg_file, verbose=verbose)
-        except Exception as e:
-            print()
-            print("#" * 80)
-            print("Exception occurred for: {}\n{}".format(row, e))
-            print("T1 image unavailable")
-            print(traceback.format_exc())
-            continue
-            
-        try:
-            print("Does this patient have T2 available? " + str(index in available['t2']))
-            if parameters["t2"] and index in available['t2']:
-                print("I'm doing the thing.")
-                if verbose:
-                    print(SHAPES_OUTPUT.format("t2"))
-                t2_masked = load_image(t2_image_file, t2_seg_file, verbose=verbose)
-        except Exception as e:
-            print()
-            print("#" * 80)
-            print("Exception occurred for: {}\n{}".format(row, e))
-            print("T2 image unavailable")
-            print(traceback.format_exc())
-            continue
+        if parameters["t1"]:
+            try:
+                print("Does this patient have T1 available? " + str(index in available['t1']))
+                if index in available['t1']:
+                    print("I'm doing the thing.")
+                    if verbose:
+                        print(SHAPES_OUTPUT.format("t1"))
+                    t1_masked = load_image(t1_image_file, t1_seg_file, verbose=verbose)
+                else:
+                    print("T1 image unavailable")
+                    continue
+            except Exception as e:
+                print()
+                print("#" * 80)
+                print("Exception occurred for: {}\n{}".format(row, e))
+                print("T1 image unavailable")
+                print(traceback.format_exc())
+                continue
         
-        try:
-            print("Does this patient have T1C available? " + str(index in available['t1c']))
-            if parameters["t1c"] and index in available['t1c']:
-                print("I'm doing the thing.")
-                if verbose:
-                    print(SHAPES_OUTPUT.format("t1c"))
-                t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
-        except Exception as e:
-            print()
-            print("#" * 80)
-            print("Exception occurred for: {}\n{}".format(row, e))
-            print("T1C image unavailable")
-            print(traceback.format_exc())
-            continue
+        if parameters["t2"]:
+            try:
+                print("Does this patient have T2 available? " + str(index in available['t2']))
+                if index in available['t2']:
+                    print("I'm doing the thing.")
+                    if verbose:
+                        print(SHAPES_OUTPUT.format("t2"))
+                    t2_masked = load_image(t2_image_file, t2_seg_file, verbose=verbose)
+                else:
+                    print("T2 image unavailable")
+                    continue
+            except Exception as e:
+                print()
+                print("#" * 80)
+                print("Exception occurred for: {}\n{}".format(row, e))
+                print("T2 image unavailable")
+                print(traceback.format_exc())
+                continue
+
+        if parameters["t1c"]:
+            try:
+                print("Does this patient have T1C available? " + str(index in available['t1c']))
+                if index in available['t1c']:
+                    print("I'm doing the thing.")
+                    if verbose:
+                        print(SHAPES_OUTPUT.format("t1c"))
+                    t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
+                else:
+                    print("T1C image unavailable")
+                    continue
+            except Exception as e:
+                print()
+                print("#" * 80)
+                print("Exception occurred for: {}\n{}".format(row, e))
+                print("T1C image unavailable")
+                print(traceback.format_exc())
+                continue
             
         labels, features, name = get_label_features(row, label=label_form)
         images, features, labels = input_data_form(t1_masked, t2_masked, t1c_masked, features, labels, input_form=input_form)

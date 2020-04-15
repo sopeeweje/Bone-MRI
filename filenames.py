@@ -23,7 +23,7 @@ SKIP = ["china-011", #error
         "china-108", #error
         "china-149", #error
         "china-172", #error
-        "penn-027", #error
+        #"penn-027", #error
         "02671505", #error
         "55283562", #error
         "02290525", #no data

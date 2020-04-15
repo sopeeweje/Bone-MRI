@@ -97,7 +97,6 @@ def processFiles(path):
         print("Number of patients: " + str(num_patients))
         completed = 0
         threshold = 10
-        num_penn = 1
         
         for data_patient in data_source: #for each patient
             if data_patient == '.DS_Store' or data_patient in SKIP:
@@ -107,8 +106,6 @@ def processFiles(path):
                 patientID = chopIDs_dict[data_patient]
             elif source == "Penn":
                 patientID = data_patient
-                os.rename(path+"/"+source+"/"+data_patient,path+"/"+source+"/"+data_patient[:-3]+str(num_penn))
-                num_penn += 1
             else:
                 patientID = data_patient.replace("bone","").replace("-","")
                 
@@ -170,6 +167,6 @@ def processFiles(path):
             
 
 #Test code
-path = "bone_raw/"
+path = "bone_raw"
 processFiles(path)
 

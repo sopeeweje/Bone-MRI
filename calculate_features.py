@@ -173,7 +173,6 @@ def run(folder, features_files, out, save=True, nrrd_pickle="", features_pickle=
             **get_image_features(n) #nrrd volume (1)
         } for n in nrrds])
     all_features = filter_filenames(all_features)
-    #all_features = normalize_column(all_features, column="age")
     all_features = normalize_column(all_features, column="volume")
     
     features_to_use = features(all_features)

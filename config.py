@@ -50,7 +50,7 @@ class Config(object):
     STDERR_DIR = os.path.join(OUTPUT, "stderr")
 
     MAIN_TEST_HOLDOUT = 0.2
-    NUMBER_OF_FOLDS = 10
+    NUMBER_OF_FOLDS = 4
     SPLIT_TRAINING_INTO_VALIDATION = 0.1
 
 

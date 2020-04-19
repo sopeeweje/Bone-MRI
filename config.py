@@ -15,7 +15,7 @@ class Config(object):
     PATIENCE = 100
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
-    OUTCOME_BIAS = "pos"
+    OUTCOME_BIAS = "neg"
 
     DEVELOPMENT = True
     DEBUG = True

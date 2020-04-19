@@ -204,10 +204,17 @@ def plot_roc_curve(labels, probabilities, experts=[], name="model"):
         } for e in experts ])
         sns.scatterplot(data=experts_data, x="FPR", y="TPR", hue="name", ax=ax)
     fpr, tpr = calculate_roc_curve(labels, probabilities)
-    ax.plot([0, 1], [0, 1], linestyle='--')
-    ax.plot(fpr, tpr)
-    ax.text(1, 0, s="auc={:.3f}".format(auc), horizontalalignment='right', verticalalignment='bottom')
-    ax.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+    ax.plot([0, 1], [0, 1], linestyle='--', color="black")
+    #ax.grid(False)
+    ax.set_frame_on(True)
+    ax.set_xlim([0,1])
+    ax.set_ylim([0,1])
+    ax.plot(fpr, tpr, label="Malignant vs. Not malignant - AUC = {:.3f}".format(auc), color="red")
+    ax.set_xlabel("1-Specificity")
+    ax.set_ylabel("Sensitivity")
+    #ax.text(1, 0, s="auc={:.3f}".format(auc), horizontalalignment='right', verticalalignment='bottom')
+    ax.legend(frameon=False,facecolor=None)#bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+    ax.set_facecolor("white")
     return fig
 
 def plot_confusion_matrix(data, results):

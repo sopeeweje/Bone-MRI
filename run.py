@@ -19,9 +19,9 @@ from config import config
 
 def test_model(model, train, validation, test):
 
-    loss, accuracy = model.evaluate_generator(validation, steps=math.ceil(len(validation)))
-    train_loss, train_accuracy = model.evaluate_generator(train, steps=math.ceil(len(train)))#/config.BATCH_SIZE))
-    test_loss, test_accuracy = model.evaluate_generator(test, steps=math.ceil(len(test)))
+    loss, accuracy = model.evaluate_generator(validation, steps=math.ceil(len(validation)/config.BATCH_SIZE))
+    train_loss, train_accuracy = model.evaluate_generator(train, steps=math.ceil(len(train)/config.BATCH_SIZE))
+    test_loss, test_accuracy = model.evaluate_generator(test, steps=math.ceil(len(test)/config.BATCH_SIZE))
 
     train.reset()
     validation.reset()
@@ -59,11 +59,11 @@ def characterize_data(data):
     return characterization
 
 def run(model, description, input_form, label_form="outcome", split_id=None, loaded_data=None, hyperparameters=dict()):
-    run_id = "62ae5184-e6b8-4dba-a92b-9ea7663b912e"#uuid4()
+    run_id = uuid4()
     if split_id is None:
         split_id = run_id
 
-    #history = model.run(run_id, mode='normal', input_form=input_form, loaded_data=loaded_data, label_form=label_form, hyperparameters=hyperparameters)
+    history = model.run(run_id, mode='normal', input_form=input_form, loaded_data=loaded_data, label_form=label_form, hyperparameters=hyperparameters)
     #K.clear_session()
 
     model_instance = evaluate.load(os.path.join(
@@ -98,7 +98,7 @@ def run(model, description, input_form, label_form="outcome", split_id=None, loa
         input_form,
         label=label_form,
         hyperparameters=hyperparameters,
-        history=[],
+        history=history,
         **results
         )
     db.session.add(result)

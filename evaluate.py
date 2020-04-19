@@ -18,7 +18,7 @@ def load(filepath):
     return load_model(filepath)
 
 def get_results(model, data):
-    results = model.predict_generator(data, steps=math.ceil(len(data)))#/config.BATCH_SIZE))
+    results = model.predict_generator(data, steps=math.ceil(len(data)/config.BATCH_SIZE))
     data.reset()
     return results
 

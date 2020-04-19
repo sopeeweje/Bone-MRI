@@ -61,12 +61,12 @@ def characterize_data(data):
     return characterization
 
 def run(model, description, input_form, label_form="outcome", split_id=None, loaded_data=None, hyperparameters=dict()):
-    run_id = uuid4()
+    run_id = "62ae5184-e6b8-4dba-a92b-9ea7663b912e"#uuid4()
     if split_id is None:
         split_id = run_id
 
-    history = model.run(run_id, mode='normal', input_form=input_form, loaded_data=loaded_data, label_form=label_form, hyperparameters=hyperparameters)
-    K.clear_session()
+    #history = model.run(run_id, mode='normal', input_form=input_form, loaded_data=loaded_data, label_form=label_form, hyperparameters=hyperparameters)
+    #K.clear_session()
 
     model_instance = evaluate.load(os.path.join(
         config.MODEL_DIR,
@@ -100,7 +100,7 @@ def run(model, description, input_form, label_form="outcome", split_id=None, loa
         input_form,
         label=label_form,
         hyperparameters=hyperparameters,
-        history=history,
+        history=[],
         **results
         )
     db.session.add(result)

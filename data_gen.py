@@ -431,7 +431,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
         "features": lambda f: f
         }
 
-    f = input_form_map[input_form](f) #CSV with all training features for patients with given imaging modality
+    #f = input_form_map[input_form](f) #CSV with all training features for patients with given imaging modality
     remaining = f.copy()
 
     sort_dict = {

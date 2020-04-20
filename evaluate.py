@@ -205,7 +205,7 @@ def plot_roc_curve(labels, probabilities, experts=[], name="model"):
         sns.scatterplot(data=experts_data, x="FPR", y="TPR", hue="name", ax=ax)
     fpr, tpr = calculate_roc_curve(labels, probabilities)
     ax.plot([0, 1], [0, 1], linestyle='--', color="black")
-    #ax.grid(False)
+    #ax.get_tightbbox()
     ax.set_frame_on(True)
     #ax.set_xlim([0,1])
     #ax.set_ylim([0,1])

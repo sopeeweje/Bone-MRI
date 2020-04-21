@@ -31,6 +31,7 @@ arguments = {'--folder': (str, config.RAW_NRRD_ROOT, 'all nrrd files folder dire
 clinical_feature_functions = {
     "outcome_pos": lambda f: 1 if f["category"] == "Malignant" else 0, #positive bias = intermediate is benign
     "outcome_neg": lambda f: 1 if f["category"] == "Malignant" or f["category"] == "Intermediate" else 0, #negative bias = intermediate is malignant
+    "outcome_3": lambda f: 2 if f["category"] == "Malignant" else 1 if f["category"] == "Intermediate" else 0, #2-mal, 1-int, 0-ben
     #"age": lambda f: int(f["age"]),
     #"sex": lambda f: 1 if f["sex"] == "male" else 0,
     "sort": lambda f: f["sort"]
@@ -90,18 +91,22 @@ def get_filename_features(path):
     """
     split_path = path.split(os.sep)
     try:
-        if split_path[-4] == "CHOP":
-            filename = split_path[-1]
-            modality = split_path[-2].split()[0]
-            patientID = CHOP[split_path[-3]]
-        elif split_path[-4] == "Penn":
-            filename = split_path[-1]
-            modality = split_path[-2].split()[0]
-            patientID = split_path[-3]
-        else:
-            filename = split_path[-1]
-            modality = split_path[-2]
-            patientID = split_path[-3].replace("bone-","").replace("-","")
+#        if split_path[-4] == "CHOP":
+#            filename = split_path[-1]
+#            modality = split_path[-2].split()[0]
+#            patientID = split_path[-3]
+#            #patientID = CHOP[split_path[-3]]
+#        elif split_path[-4] == "Penn":
+#            filename = split_path[-1]
+#            modality = split_path[-2].split()[0]
+#            patientID = split_path[-3]
+#        else:
+#            filename = split_path[-1]
+#            modality = split_path[-2]
+#            patientID = split_path[-3].replace("bone-","").replace("-","")
+        filename = split_path[-1]
+        modality = split_path[-2]
+        patientID = split_path[-3].replace("bone-","").replace("-","")
         return {
             "patientID": patientID,
             "modality": modality,
@@ -138,7 +143,7 @@ def normalize_column(df, column=""):
     df[column] = pandas.Series(x_scaled, index=df.index)
     return df
 
-def features(df, int_bias=config.OUTCOME_BIAS, modality=['t1','t2','t1c','pd'], filetype = 'segMask_tumor.nrrd'):
+def features(df, int_bias=config.OUTCOME_BIAS, filetype = 'segMask_tumor.nrrd'):
     """
     get all of the clinical features you will actually be using
     modality and filetype don't matter, just need one per patient
@@ -146,7 +151,7 @@ def features(df, int_bias=config.OUTCOME_BIAS, modality=['t1','t2','t1c','pd'], 
     df = df.drop_duplicates(["patientID","modality","filename"], 'first')
     df = df[df.filename==filetype][["patientID", "outcome_"+int_bias, "sort", "volume"]] #[["patientID","age", "sex", "outcome_"+int_bias, "sort", "volume"]]
     df = df.drop_duplicates(["patientID"], 'first')
-    df["outcome"] = df.pop("outcome_"+int_bias) #rename outcome key to just "outcome"
+    #df["outcome"] = df.pop("outcome_"+int_bias) #rename outcome key to just "outcome"
     df = df.set_index("patientID")
     df = df.dropna()
     return df

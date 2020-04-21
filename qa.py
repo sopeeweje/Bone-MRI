@@ -95,20 +95,22 @@ def processFiles(path):
         data_source = os.listdir(path + "/" + source) #all patients from particular source 
         num_patients = float(len(data_source))
         print("Number of patients: " + str(num_patients))
-        completed = 0
-        threshold = 10
+#        completed = 0
+#        threshold = 10
         
         for data_patient in data_source: #for each patient
             if data_patient == '.DS_Store' or data_patient in SKIP:
                 continue
             
-            if source == "CHOP":
-                patientID = chopIDs_dict[data_patient]
-            elif source == "Penn":
-                patientID = data_patient
-            else:
-                patientID = data_patient.replace("bone","").replace("-","")
-                
+#            if source == "CHOP":
+#                patientID = chopIDs_dict[data_patient]
+#            elif source == "Penn":
+#                patientID = data_patient
+#            else:
+#                patientID = data_patient.replace("bone","").replace("-","")
+            
+            patientID = data_patient.replace("bone","").replace("-","")
+            
             print("Patient: " + patientID)
             patient_views = os.listdir(path + "/" + source + "/" + data_patient)
             
@@ -130,34 +132,34 @@ def processFiles(path):
                 except:
                     print(view)
                 
-                new_image_path = save_path+"/"+patientID+"/"+view
-                os.makedirs(new_image_path)
-                
-                imageVolume = path + "/" + source + "/" + data_patient + "/" + view + "/" + "imagingVolume.nrrd"
-                segMask = path + "/" + source + "/" + data_patient + "/" + view + "/" + "segMask_tumor.nrrd"
-                if not (os.path.isfile(imageVolume) and os.path.isfile(segMask)):
-                    continue
-                try:
-                    images = [load_image(imageVolume, segMask, i) for i in range(3)]
-                except:
-                    messed_up.append(data_patient)
-                    continue
-              
-                if source != "CHOP":
-                # use for non CHOP files
-                    plt.imsave(new_image_path+"/"+patientID+"_"+view+"_"+"0.png", images[0])
-                    plt.imsave(new_image_path+"/"+patientID+"_"+view+"_"+"1.png", images[1])
-                    plt.imsave(new_image_path+"/"+patientID+"_"+view+"_"+"2.png", images[2])
-                
-                if source == "CHOP":
-                # use for CHOP files
-                    plt.imsave(new_image_path+"/"+patientID+"_"+view.split(" ")[0]+"_"+"0.png", images[0])
-                    plt.imsave(new_image_path+"/"+patientID+"_"+view.split(" ")[0]+"_"+"1.png", images[1])
-                    plt.imsave(new_image_path+"/"+patientID+"_"+view.split(" ")[0]+"_"+"2.png", images[2])
-                completed = completed + 1
-                if completed/num_patients*100 > threshold:
-                    print(str(threshold) + "% complete")
-                    threshold = threshold + 10
+#                new_image_path = save_path+"/"+patientID+"/"+view
+#                os.makedirs(new_image_path)
+#                
+#                imageVolume = path + "/" + source + "/" + data_patient + "/" + view + "/" + "imagingVolume.nrrd"
+#                segMask = path + "/" + source + "/" + data_patient + "/" + view + "/" + "segMask_tumor.nrrd"
+#                if not (os.path.isfile(imageVolume) and os.path.isfile(segMask)):
+#                    continue
+#                try:
+#                    images = [load_image(imageVolume, segMask, i) for i in range(3)]
+#                except:
+#                    messed_up.append(data_patient)
+#                    continue
+#              
+#                if source != "CHOP":
+#                # use for non CHOP files
+#                    plt.imsave(new_image_path+"/"+patientID+"_"+view+"_"+"0.png", images[0])
+#                    plt.imsave(new_image_path+"/"+patientID+"_"+view+"_"+"1.png", images[1])
+#                    plt.imsave(new_image_path+"/"+patientID+"_"+view+"_"+"2.png", images[2])
+#                
+#                if source == "CHOP":
+#                # use for CHOP files
+#                    plt.imsave(new_image_path+"/"+patientID+"_"+view.split(" ")[0]+"_"+"0.png", images[0])
+#                    plt.imsave(new_image_path+"/"+patientID+"_"+view.split(" ")[0]+"_"+"1.png", images[1])
+#                    plt.imsave(new_image_path+"/"+patientID+"_"+view.split(" ")[0]+"_"+"2.png", images[2])
+#                completed = completed + 1
+#                if completed/num_patients*100 > threshold:
+#                    print(str(threshold) + "% complete")
+#                    threshold = threshold + 10
                 
     keys = sorted(available_sequences.keys())
     with open(config.SEQ_AVAIL, "w") as outfile:

@@ -17,6 +17,7 @@
 
 import nrrd #libary to read and write NRRD files into and from numpy arrays (nrrd - multi-dimensional image file type)
 import os #interacting with terminal
+import shutil
 from segmentation import calculate_largest_slice, select_slice, bounding_box, crop, resize #file with segmentation functions
 from config import config #configuration file
 import matplotlib.pyplot as plt
@@ -78,7 +79,7 @@ def processFiles(path):
         chopIDs_dict[combo[1]] = combo[0]
     messed_up = []
     
-    available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[]}
+    available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[], 'none':[]}
     
     print("Loading images...")
     
@@ -87,8 +88,10 @@ def processFiles(path):
         return
     
     data_all = os.listdir(path) #all sources of data (ex. PENN, China, CHOP)
-    
+    total_patients = 0
+    num_sources = 0
     for source in data_all:
+        num_sources+=1
         if source == '.DS_Store':
             continue
         print("Current source: "+ source)
@@ -99,43 +102,40 @@ def processFiles(path):
 #        threshold = 10
         
         for data_patient in data_source: #for each patient
-            if data_patient == '.DS_Store' or data_patient in SKIP:
+            total_patients += 1
+            if data_patient == '.DS_Store' or data_patient == '._.DS_Store':#or data_patient in SKIP:
                 continue
             
-#            if source == "CHOP":
-#                patientID = chopIDs_dict[data_patient]
-#            elif source == "Penn":
-#                patientID = data_patient
-#            else:
-#                patientID = data_patient.replace("bone","").replace("-","")
+            patientID = data_patient #.replace("bone","").replace("-","")
             
-            patientID = data_patient.replace("bone","").replace("-","")
-            
-            print("Patient: " + patientID)
+#            print("Patient: " + patientID)
             patient_views = os.listdir(path + "/" + source + "/" + data_patient)
-            
+            added_views = 0
             duplicate = 0
             for view in patient_views:
                 if view == '.DS_Store':
                     continue
                 old_view = view
-                view = view.split("-")[0]
-                ''.join(e for e in view if e.isalnum()) #use for non-CHOP files
+#                view = view.split("-")[0]
                 for char in view:
                     if char not in ["t", "1", "2", "c", "p", "d", "w", "i"]:
-                          view = view.replace(char, "")
-#                view = view.split(" ")[0]
+                         view = view.replace(char,"")
+                #''.join(e for e in view if (e in ["t", "1", "2", "c", "p", "d", "w", "i"])) #use for non-CHOP files
                 try:
                     os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view)
                 except:
-                    continue
+                    shutil.rmtree(path+"/"+source+"/"+data_patient+"/"+old_view)
 #                    os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view+"-"+"alt_view"+str(duplicate))
 #                    duplicate += 1
                 try:
                     if patientID not in available_sequences[view]:
-                        available_sequences[view].append(patientID) 
+                        available_sequences[view].append(patientID)
+                        added_views += 1 
                 except:
-                    print(view)              
+                    print(patientID)
+                    print(view)
+            if not added_views:
+                available_sequences['none'].append(patientID)           
 #                new_image_path = save_path+"/"+patientID+"/"+view
 #                os.makedirs(new_image_path)
 #                
@@ -166,6 +166,11 @@ def processFiles(path):
 #                    threshold = threshold + 10
                 
     keys = sorted(available_sequences.keys())
+    print("total sources = {}".format(str(num_sources)))
+    print("total patients = {}".format(str(total_patients)))
+    print("%t1 = {}%".format(str(len(available_sequences["t1"])/total_patients*100)))
+    print("%t2 = {}%".format(str(len(available_sequences["t2"])/total_patients*100)))
+    print("%t1c = {}%".format(str(len(available_sequences["t1c"])/total_patients*100)))
     with open(config.SEQ_AVAIL, "w") as outfile:
        writer = csv.writer(outfile, delimiter = ",")
        writer.writerow(keys)
@@ -173,6 +178,6 @@ def processFiles(path):
             
 
 #Test code
-path = "/home/user1/Documents/Bone-MRI/bone_raw"
+path = "/home/user1/Downloads/bone_raw"#"/home/user1/Documents/Bone-MRI/bone_raw"
 processFiles(path)
 

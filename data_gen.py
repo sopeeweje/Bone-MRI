@@ -337,7 +337,7 @@ def mask_image_percentile(image, segmentation, percentile=100, axis=2):
 
     masked = image * segmentation
     masked = resize(masked, (config.IMAGE_SIZE, config.IMAGE_SIZE))
-    plt.imsave("data_gen_images/" + str(uuid.uuid4()) + ".png", masked)
+    #plt.imsave("data_gen_images/" + str(uuid.uuid4()) + ".png", masked)
     return masked
 
 

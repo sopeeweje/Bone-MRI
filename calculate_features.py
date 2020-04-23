@@ -29,11 +29,11 @@ arguments = {'--folder': (str, config.RAW_NRRD_ROOT, 'all nrrd files folder dire
 
 #lambda functions to derive each clinical feature
 clinical_feature_functions = {
-    "outcome_pos": lambda f: 1 if f["category"] == "Malignant" else 0, #positive bias = intermediate is benign
-    "outcome_neg": lambda f: 1 if f["category"] == "Malignant" or f["category"] == "Intermediate" else 0, #negative bias = intermediate is malignant
-    "outcome_3": lambda f: 2 if f["category"] == "Malignant" else 1 if f["category"] == "Intermediate" else 0, #2-mal, 1-int, 0-ben
-    #"age": lambda f: int(f["age"]),
-    #"sex": lambda f: 1 if f["sex"] == "male" else 0,
+    "outcome_pos": lambda f: 1 if f["category"] == "2" else 0, #positive bias = intermediate is benign
+    "outcome_neg": lambda f: 1 if f["category"] == "2" or f["category"] == "1" else 0, #negative bias = intermediate is malignant
+    "outcome_3": lambda f: int(f["category"]) #2-mal, 1-int, 0-ben
+    "age": lambda f: int(f["age"]),
+    "sex": lambda f: 1 if f["sex"] == "M" else 0,
     "sort": lambda f: f["sort"]
 }
 
@@ -174,7 +174,7 @@ def run(folder, features_files, out, save=True, nrrd_pickle="", features_pickle=
     all_features = pandas.DataFrame(
         [{
             **get_filename_features(n), #patientID, modality, filename, path (4)
-            **get_clinical_features(feat, n), #outcome_pos, outcome_neg, age, sex (3)
+            **get_clinical_features(feat, n), #outcome_pos, outcome_neg, outcome_3, age, sex (3)
             **get_image_features(n) #nrrd volume (1)
         } for n in nrrds])
     all_features = filter_filenames(all_features)

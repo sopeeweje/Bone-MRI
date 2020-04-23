@@ -1,614 +1,1177 @@
-patientID,category,sort
-china001,Benign,-
-china002,Malignant,-
-china003,Malignant,-
-china004,Malignant,-
-china005,Benign,-
-china006,Benign,-
-china007,Benign,-
-china008,Benign,-
-china009,Malignant,-
-china010,Malignant,-
-china100,Malignant,-
-china101,Malignant,-
-china102,Malignant,-
-china103,Malignant,-
-china104,Malignant,-
-china105,Malignant,-
-china107,Benign,-
-china109,Malignant,-
-china110,Benign,-
-china111,Malignant,-
-china112,Benign,-
-china113,Malignant,-
-china114,Benign,-
-china115,Malignant,-
-china116,Malignant,-
-china117,Benign,-
-china118,Malignant,-
-china119,Malignant,-
-china012,Malignant,-
-china120,Benign,-
-china121,Malignant,-
-china122,Benign,-
-china123,Malignant,-
-china124,Malignant,-
-china125,Benign,-
-china126,Malignant,-
-china127,Malignant,-
-china128,Malignant,-
-china129,Benign,-
-china013,Malignant,-
-china130,Malignant,-
-china131,Benign,-
-china132,Benign,-
-china133,Benign,-
-china134,Malignant,-
-china135,Benign,-
-china136,Malignant,-
-china137,Benign,-
-china138,Benign,-
-china139,Malignant,-
-china014,Malignant,-
-china140,Malignant,-
-china141,Benign,-
-china142,Malignant,-
-china143,Benign,-
-china144,Malignant,-
-china145,Benign,-
-china146,Malignant,-
-china147,Malignant,-
-china148,Malignant,-
-china015,Benign,-
-china150,Benign,-
-china151,Malignant,-
-china152,Malignant,-
-china153,Malignant,-
-china154,Benign,-
-china155,Malignant,-
-china156,Benign,-
-china157,Benign,-
-china016,Malignant,-
-china017,Malignant,-
-china018,Malignant,-
-china019,Benign,-
-china020,Benign,-
-china021,Malignant,-
-china022,Malignant,-
-china023,Benign,-
-china024,Malignant,-
-china025,Malignant,-
-china027,Malignant,-
-china028,Malignant,-
-china029,Malignant,-
-china030,Benign,-
-china031,Malignant,-
-china032,Benign,-
-china033,Malignant,-
-china034,Malignant,-
-china035,Malignant,-
-china036,Malignant,-
-china037,Malignant,-
-china038,Malignant,-
-china040,Malignant,-
-china041,Malignant,-
-china042,Malignant,-
-china043,Malignant,-
-china044,Malignant,-
-china045,Malignant,-
-china046,Malignant,-
-china047,Malignant,-
-china048,Malignant,-
-china049,Benign,-
-china050,Malignant,-
-china051,Benign,-
-china052,Benign,-
-china053,Malignant,-
-china054,Malignant,-
-china055,Benign,-
-china056,Malignant,-
-china057,Malignant,-
-china058,Malignant,-
-china059,Benign,-
-china060,Benign,-
-china061,Benign,-
-china062,Malignant,-
-china063,Malignant,-
-china064,Malignant,-
-china065,Benign,-
-china066,Benign,-
-china067,Benign,-
-china068,Malignant,-
-china070,Malignant,-
-china071,Malignant,-
-china072,Benign,-
-china073,Benign,-
-china074,Malignant,-
-china075,Malignant,-
-china076,Benign,-
-china077,Malignant,-
-china078,Benign,-
-china079,Benign,-
-china080,Malignant,-
-china081,Benign,-
-china082,Malignant,-
-china083,Benign,-
-china084,Malignant,-
-china085,Benign,-
-china086,Benign,-
-china087,Malignant,-
-china088,Malignant,-
-china089,Malignant,-
-china090,Malignant,-
-china092,Benign,-
-china093,Benign,-
-china094,Malignant,-
-china095,Malignant,-
-china096,Malignant,-
-china097,Malignant,-
-china098,Malignant,-
-china099,Benign,-
-penn-002,Benign,-
-penn-003,Malignant,-
-penn-004,Malignant,-
-penn-005,Intermediate,-
-penn-006,Intermediate,-
-penn-007,Benign,-
-penn-008,Benign,-
-penn-009,Benign,-
-penn-010,Malignant,-
-penn-011,Malignant,-
-penn-012,Benign,-
-penn-013,Malignant,-
-penn-014,Malignant,-
-penn-015,Intermediate,-
-penn-016,Benign,-
-penn-017,Intermediate,-
-penn-018,Malignant,-
-penn-019,Malignant,-
-penn-020,Malignant,-
-penn-021,Malignant ,-
-penn-022,Malignant,-
-penn-023,Malignant,-
-penn-024,Malignant,-
-penn-025,Benign,-
-penn-026,Malignant,-
-penn-027,Benign,-
-penn-028,Intermediate,-
-penn-029,Malignant,-
-penn-030,Malignant,-
-penn-031,Benign,-
-penn-032,Intermediate,-
-penn-033,Malignant,-
-penn-034,Malignant,-
-penn-035,Malignant,-
-penn-036,Benign,-
-penn-037,Benign,-
-penn-038,Benign,-
-penn-039,Intermediate,-
-penn-040,Benign,-
-penn-041,Malignant,-
-penn-042,Intermediate,-
-penn-043,Benign,-
-penn-044,Malignant,-
-penn-045,Benign,-
-penn-046,Benign,-
-penn-047,Benign,-
-penn-048,Malignant,-
-penn-049,Benign,-
-penn-050,intermediate,-
-penn-051,Malignant,-
-penn-052,Malignant,-
-penn-053,Intermediate,-
-penn-054,Benign,-
-penn-055,Malignant,-
-penn-056,Benign,-
-penn-057,Intermediate,-
-penn-058,Intermediate,-
-penn-059,Malignant,-
-penn-060,Malignant,-
-penn-061,Intermediate,-
-penn-062,Intermediate,-
-penn-063,Malignant,-
-penn-064,Malignant,-
-penn-065,Malignant,-
-penn-066,Malignant,-
-penn-067,Intermediate,-
-penn-068,Intermediate,-
-penn-069,Malignant,-
-penn-070,Intermediate,-
-penn-071,Benign,-
-penn-072,Malignant,-
-penn-073,Malignant,-
-penn-074,Benign,-
-penn-075,Malignant,-
-penn-076,Intermediate,-
-penn-077,Malignant,-
-penn-078,Benign,-
-penn-079,Benign,-
-penn92,Benign,-
-penn93,Benign,-
-penn94,Benign,-
-penn95,Benign,-
-penn96,Benign,-
-penn97,Benign,-
-penn98,Benign,-
-penn99,Benign,-
-penn108,Benign,-
-penn109,Benign,-
-penn110,Benign,-
-penn111,Benign,-
-penn112,Benign,-
-penn113,Benign,-
-penn114,Benign,-
-penn115,Benign,-
-penn116,Benign,-
-penn117,Benign,-
-penn118,Benign,-
-penn119,Malignant,-
-penn120,Malignant,-
-penn121,Malignant,-
-penn122,Malignant,-
-penn123,Malignant,-
-penn124,Malignant,-
-penn125,Malignant,-
-penn126,Malignant,-
-penn127,Malignant,-
-penn128,Malignant,-
-penn129,Benign,-
-penn130,Benign,-
-penn131,Benign,-
-penn132,Benign,-
-penn133,Benign,-
-penn134,Benign,-
-penn135,Benign,-
-penn136,Benign,-
-penn137,Benign,-
-penn138,Benign,-
-penn139,Benign,-
-penn140,Benign,-
-penn141,Benign,-
-penn142,Benign,-
-penn143,Benign,-
-penn144,Benign,-
-penn145,Benign,-
-penn146,Benign,-
-penn147,Benign,-
-penn148,Benign,-
-penn149,Benign,-
-penn150,Benign,-
-penn151,Benign,-
-penn152,Benign,-
-penn153,Benign,-
-penn154,Benign,-
-penn155,Benign,-
-penn156,Benign,-
-penn157,Benign,-
-penn158,Benign,-
-penn159,Benign,-
-penn160,Malignant,-
-penn161,Malignant,-
-penn162,Malignant,-
-penn163,Malignant,-
-penn164,Malignant,-
-penn165,Malignant,-
-penn166,Malignant,-
-penn167,Malignant,-
-penn168,Malignant,-
-penn169,Malignant,-
-penn170,Malignant,-
-penn171,Malignant,-
-penn172,Malignant,-
-penn173,Malignant,-
-penn174,Malignant,-
-penn175,Malignant,-
-penn176,Malignant,-
-penn177,Malignant,-
-penn178,Malignant,-
-penn179,Malignant,-
-penn180,Malignant,-
-penn181,Malignant,-
-penn182,Malignant,-
-penn183,Malignant,-
-penn184,Malignant,-
-penn185,Malignant,-
-penn186,Malignant,-
-penn187,Malignant,-
-penn188,Malignant,-
-penn189,Malignant,-
-penn190,Malignant,-
-penn191,Malignant,-
-penn192,Malignant,-
-penn193,Malignant,-
-penn194,Malignant,-
-penn195,Malignant,-
-penn196,Malignant,-
-penn197,Malignant,-
-penn198,Malignant,-
-penn199,Malignant,-
-penn200,Malignant,-
-penn201,Malignant,-
-penn202,Malignant,-
-penn203,Malignant,-
-penn204,Malignant,-
-penn205,Malignant,-
-penn206,Malignant,-
-penn207,Malignant,-
-penn208,Malignant,-
-penn209,Malignant,-
-penn210,Malignant,-
-penn211,Malignant,-
-penn212,Malignant,-
-penn213,Malignant,-
-penn214,Malignant,-
-penn215,Malignant,-
-penn216,Malignant,-
-penn217,Malignant,-
-penn218,Malignant,-
-penn219,Malignant,-
-penn220,Malignant,-
-penn221,Malignant,-
-penn222,Malignant,-
-penn223,Malignant,-
-penn224,Malignant,-
-penn225,Malignant,-
-penn226,Malignant,-
-penn227,Malignant,-
-penn228,Malignant,-
-penn229,Malignant,-
-penn230,Malignant,-
-penn231,Malignant,-
-penn232,Malignant,-
-penn233,Malignant,-
-penn234,Malignant,-
-penn235,Malignant,-
-penn236,Malignant,-
-penn237,Malignant,-
-penn238,Malignant,-
-penn239,Malignant,-
-penn240,Malignant,-
-penn241,Malignant,-
-penn242,Malignant,-
-penn243,Malignant,-
-penn244,Malignant,-
-penn245,Malignant,-
-penn246,Malignant,-
-penn247,Malignant,-
-penn248,Malignant,-
-penn249,Malignant,-
-penn250,Malignant,-
-penn251,Malignant,-
-penn252,Malignant,-
-penn253,Malignant,-
-penn254,Malignant,-
-penn255,Malignant,-
-penn256,Malignant,-
-penn257,Malignant,-
-penn258,Malignant,-
-penn259,Malignant,-
-penn260,Malignant,-
-penn261,Malignant,-
-penn262,Malignant,-
-penn263,Malignant,-
-penn264,Malignant,-
-penn265,Malignant,-
-penn266,Malignant,-
-penn267,Malignant,-
-penn268,Malignant,-
-penn269,Malignant,-
-penn270,Malignant,-
-penn271,Malignant,-
-penn272,Malignant,-
-penn273,Malignant,-
-penn274,Intermediate,-
-penn275,Intermediate,-
-penn276,Intermediate,-
-penn277,Intermediate,-
-penn278,Intermediate,-
-penn279,Intermediate,-
-penn280,Intermediate,-
-penn281,Intermediate,-
-penn282,Intermediate,-
-penn283,Intermediate,-
-penn284,Intermediate,-
-penn285,Benign,-
-penn286,Benign,-
-penn287,Benign,-
-penn288,Benign,-
-penn289,Benign,-
-penn290,Benign,-
-penn291,Benign,-
-penn292,Benign,-
-penn293,Benign,-
-penn294,Benign,-
-penn363,Malignant,-
-penn364,Malignant,-
-penn365,Malignant,-
-penn366,Malignant,-
-penn367,Malignant,-
-penn368,Malignant,-
-penn369,Malignant,-
-penn370,Malignant,-
-penn371,Malignant,-
-penn372,Malignant,-
-penn373,Malignant,-
-penn374,Malignant,-
-penn375,Malignant,-
-penn376,Malignant,-
-penn377,Malignant,-
-penn378,Malignant,-
-penn379,Malignant,-
-penn380,Malignant,-
-penn381,Malignant,-
-penn382,Malignant,-
-penn383,Malignant,-
-penn384,Malignant,-
-penn385,Malignant,-
-penn386,Malignant,-
-penn387,Malignant,-
-penn388,Malignant,-
-penn389,Malignant,-
-penn390,Malignant,-
-penn391,Malignant,-
-penn392,Malignant,-
-penn393,Malignant,-
-penn394,Malignant,-
-penn395,Malignant,-
-penn396,Malignant,-
-penn397,Malignant,-
-penn398,Malignant,-
-penn399,Malignant,-
-penn400,Malignant,-
-01113990,Benign,-
-01870396,Benign,-
-01934386,Malignant,-
-01946424,Benign,-
-02041613-1,Intermediate,-
-02041613-2,Benign,-
-02041785,Benign,-
-02049078,Benign,-
-02069099,Malignant,-
-02109465,Benign,-
-02120480,Benign,-
-02170033,Benign,-
-02184194,Malignant,-
-02272508,Benign,-
-02282292,Benign,-
-02339903,Benign,-
-02340353,Benign,-
-02352365,Benign,-
-02386069,Benign,-
-02445381,Benign,-
-02469581,Benign,-
-02494973,Benign,-
-02527349,Benign,-
-02534229,Benign,-
-02541820,Benign,-
-02558065,Intermediate,-
-02626646,Benign,-
-02640475,Benign,-
-02649341,Benign,-
-02664801,Benign,-
-02666628,Malignant,-
-02677427,Benign,-
-02680696,Benign,-
-55009964,Malignant,-
-55016452,Malignant,-
-55031710,Malignant,-
-55041595,Benign,-
-55061628,Benign,-
-55108764,Malignant,-
-55115779,Benign,-
-55119614,Malignant,-
-55137866,Benign,-
-55162915,Benign,-
-55169999,Benign,-
-55188155,Benign,-
-55204344,Benign,-
-55252195,Benign,-
-55255755,Malignant,-
-55290034,Benign,-
-55311269,Benign,-
-55347706,Benign,-
-55379979,Benign,-
-55383641,Benign,-
-55387134,Malignant,-
-55394662,Benign,-
-55403574,Malignant,-
-55449538,Intermediate,-
-55450192,Benign,-
-55459583,Malignant,-
-55469094,Malignant,-
-55484451,Malignant,-
-55485231,Benign,-
-55504182,Malignant,-
-55517648,Malignant,-
-55519800,Benign,-
-55540648,Benign,-
-55571585-1,Benign,-
-55571585-2,Intermediate,-
-55577407,Malignant,-
-55580504,Malignant,-
-55589038,Intermediate,-
-55598197,Benign,-
-55600865,Benign,-
-55601338,Benign,-
-55614654,Malignant,-
-55626673,Benign,-
-55634742,Malignant,-
-55661264-1,Benign,-
-55661264-2,Intermediate,-
-55661264-3,Benign,-
-55662871,Benign,-
-55674679,Benign,-
-55681087,Benign,-
-55731769,Malignant,-
-55736354,Malignant,-
-55757712,Benign,-
-55770085,Intermediate,-
-55773414,Malignant,-
-55779225,Benign,-
-55789436,Benign,-
-55806951,Benign,-
-55810965,Benign,-
-55827452,Intermediate,-
-55836381,Malignant,-
-55850295,Benign,-
-55891169,Benign,-
-55908833,Benign,-
-55909456,Malignant,-
-55911717,Intermediate,-
-55918777,Benign,-
-55924537,Benign,-
-55928481,Malignant,-
-55934770,Benign,-
-55942866,Benign,-
-56000208,Benign,-
-56002452,Benign,-
-56017640,Benign,-
-56018423,Benign,-
-56052124,Benign,-
-56071766,Malignant,-
-56081412,Malignant,-
-56092841,Benign,-
-56095288,Benign,-
-56102408,Intermediate,-
-56104800,Benign,-
-56105727,Malignant,-
-56130708,Malignant,-
-56134307,Intermediate,-
-56143186,Malignant,-
-56155805,Benign,-
-56156397,Benign,-
-56163714,Benign,-
-56167728,Benign,-
-56171817,Malignant,-
-56178856,Benign,-
-56189395,Benign,-
-56208464,Malignant,-
-56226396,Intermediate,-
-56228108,Intermediate,-
-56276545,Benign,-
-56297744,Benign,-
-56298214,Benign,-
-56338771,Malignant,-
-56339755,Benign,-
-56344842,Benign,-
-56382718,Malignant,-
-hup1,Benign,-
-hup2,Benign,-
-hup3,Benign,-
-hup4,Benign,-
-hup5,Benign,-
-hup6,Benign,-
-hup7,Benign,-
-hup8,Benign,-
-hup9,Benign,-
-hup10,Benign,-
-hup11,Benign,-
-hup12,Benign,-
-hup13,Benign,-
-hup14,Benign,-
-hup15,Benign,-
-hup16,Benign,-
-hup17,Benign,-
+patientID,category,sort,Sex,age
+bone-penn-1,0,-,M,
+bone-penn-2,1,-,,
+bone-penn-3,1,-,M,
+bone-penn-4,0,-,F,
+bone-penn-5,0,-,M,
+bone-penn-6,2,-,M,
+bone-penn-7,0,-,M,
+bone-penn-8,2,-,M,
+bone-penn-9,2,-,F,
+bone-penn-10,2,-,F,
+bone-penn-11,2,-,F,
+bone-penn-12,2,-,M,
+bone-penn-13,2,-,F,
+bone-penn-14,2,-,M,
+bone-penn-15,1,-,F,
+bone-penn-16,0,-,F,
+bone-penn-17,1,-,F,
+bone-penn-18,2,-,,
+bone-penn-19,2,-,,
+bone-penn-20,2,-,,
+bone-penn-21,2,-,,
+bone-penn-22,2,-,,
+bone-penn-23,2,-,M,
+bone-penn-24,2,-,,
+bone-penn-25,0,-,F,
+bone-penn-26,2,-,,
+bone-penn-27,0,-,F,
+bone-penn-28,1,-,M,
+bone-penn-29,2,-,,
+bone-penn-30,2,-,,
+bone-penn-31,0,-,,
+bone-penn-32,1,-,M,
+bone-penn-33,2,-,,
+bone-penn-34,2,-,,
+bone-penn-35,2,-,M,
+bone-penn-36,0,-,M,
+bone-penn-37,0,-,M,
+bone-penn-38,0,-,M,
+bone-penn-39,1,-,,
+bone-penn-40,0,-,F,
+bone-penn-41,2,-,,
+bone-penn-42,1,-,F,
+bone-penn-43,0,-,M,
+bone-penn-44,2,-,,
+bone-penn-45,0,-,M,
+bone-penn-46,0,-,,
+bone-penn-47,0,-,F,
+bone-penn-48,2,-,,
+bone-penn-49,0,-,,
+bone-penn-50,2,-,,
+bone-penn-51,1,-,F,
+bone-penn-52,2,-,,
+bone-penn-53,2,-,,
+bone-penn-54,1,-,M,
+bone-penn-55,2,-,,
+bone-penn-56,0,-,F,
+bone-penn-57,1,-,F,
+bone-penn-58,1,-,F,
+bone-penn-59,2,-,,
+bone-penn-60,2,-,,
+bone-penn-61,1,-,M,
+bone-penn-62,1,-,F,
+bone-penn-63,2,-,,
+bone-penn-64,2,-,,
+bone-penn-65,2,-,,
+bone-penn-66,2,-,F,
+bone-penn-67,1,-,F,
+bone-penn-68,1,-,F,
+bone-penn-69,2,-,M,
+bone-penn-70,1,-,M,
+bone-penn-71,0,-,F,
+bone-penn-72,2,-,M,
+bone-penn-73,2,-,F,
+bone-penn-74,0,-,F,
+bone-penn-75,2,-,M,
+bone-penn-76,1,-,M,
+bone-penn-77,0,-,M,
+bone-penn-78,0,-,M,
+bone-penn-79,2,-,M,
+bone-penn-80,1,-,M,14
+bone-penn-81,1,-,F,17
+bone-penn-82,1,-,M,16
+bone-penn-83,1,-,M,10
+bone-penn-84,1,-,,
+bone-penn-85,1,-,,
+bone-penn-86,1,-,,
+bone-penn-87,1,-,F,11
+bone-penn-88,1,-,,
+bone-penn-89,1,-,,
+bone-penn-90,1,-,,
+bone-penn-91,0,-,,
+bone-penn-92,1,-,,
+bone-penn-93,1,-,,
+bone-penn-94,1,-,,
+bone-penn-95,1,-,,
+bone-penn-96,1,-,,
+bone-penn-97,1,-,,
+bone-penn-98,1,-,,
+bone-penn-99,1,-,,
+bone-penn-100,1,-,,
+bone-penn-101,1,-,,
+bone-penn-102,1,-,,
+bone-penn-103,1,-,,
+bone-penn-104,1,-,,
+bone-penn-105,1,-,,
+bone-penn-106,1,-,,
+bone-penn-107,1,-,,
+bone-penn-108,0,-,,
+bone-penn-109,1,-,,
+bone-penn-110,1,-,,
+bone-penn-111,1,-,,
+bone-penn-112,1,-,,
+bone-penn-113,1,-,,
+bone-penn-114,1,-,,
+bone-penn-115,1,-,,
+bone-penn-116,1,-,,
+bone-penn-117,1,-,,
+bone-penn-118,1,-,,
+bone-penn-119,2,-,,
+bone-penn-120,2,-,,
+bone-penn-121,1,-,,
+bone-penn-122,2,-,,
+bone-penn-123,2,-,,
+bone-penn-124,2,-,,
+bone-penn-125,2,-,,
+bone-penn-126,2,-,,
+bone-penn-127,0,-,,
+bone-penn-128,2,-,,
+bone-penn-129,0,-,,
+bone-penn-130,0,-,,
+bone-penn-131,0,-,,
+bone-penn-132,0,-,,
+bone-penn-133,0,-,,
+bone-penn-134,0,-,,
+bone-penn-135,0,-,,
+bone-penn-136,0,-,,
+bone-penn-137,0,-,,
+bone-penn-138,0,-,,
+bone-penn-139,0,-,,
+bone-penn-140,0,-,,
+bone-penn-141,0,-,,
+bone-penn-142,0,-,,
+bone-penn-143,0,-,,
+bone-penn-144,0,-,,
+bone-penn-145,0,-,,
+bone-penn-146,0,-,,
+bone-penn-147,0,-,,
+bone-penn-148,0,-,,
+bone-penn-149,0,-,,
+bone-penn-150,0,-,,
+bone-penn-151,0,-,,
+bone-penn-152,0,-,,
+bone-penn-153,0,-,,
+bone-penn-154,0,-,,
+bone-penn-155,0,-,,
+bone-penn-156,0,-,,
+bone-penn-157,0,-,,
+bone-penn-158,0,-,,
+bone-penn-159,0,-,,
+bone-penn-160,2,-,,
+bone-penn-161,2,-,,
+bone-penn-162,2,-,,
+bone-penn-163,2,-,,
+bone-penn-164,2,-,,
+bone-penn-165,2,-,,
+bone-penn-166,2,-,,
+bone-penn-167,2,-,,
+bone-penn-168,2,-,,
+bone-penn-169,2,-,,
+bone-penn-170,2,-,,
+bone-penn-171,2,-,,
+bone-penn-172,2,-,,
+bone-penn-173,2,-,,
+bone-penn-174,2,-,,
+bone-penn-175,2,-,,
+bone-penn-176,2,-,,
+bone-penn-177,2,-,,
+bone-penn-178,2,-,,
+bone-penn-179,2,-,,
+bone-penn-180,2,-,,
+bone-penn-181,2,-,,
+bone-penn-182,2,-,,
+bone-penn-183,2,-,,
+bone-penn-184,2,-,,
+bone-penn-185,2,-,,
+bone-penn-186,2,-,,
+bone-penn-187,2,-,,
+bone-penn-188,2,-,,
+bone-penn-189,2,-,,
+bone-penn-190,2,-,,
+bone-penn-191,2,-,,
+bone-penn-192,2,-,,
+bone-penn-193,2,-,,
+bone-penn-194,2,-,,
+bone-penn-195,2,-,,
+bone-penn-196,2,-,,
+bone-penn-197,2,-,,
+bone-penn-198,2,-,,
+bone-penn-199,2,-,,
+bone-penn-200,2,-,,
+bone-penn-201,2,-,,
+bone-penn-202,2,-,,
+bone-penn-203,2,-,,
+bone-penn-204,2,-,,
+bone-penn-205,2,-,,
+bone-penn-206,2,-,,
+bone-penn-207,2,-,,
+bone-penn-208,2,-,,
+bone-penn-209,2,-,,
+bone-penn-210,2,-,,
+bone-penn-211,2,-,,
+bone-penn-212,2,-,,
+bone-penn-213,2,-,,
+bone-penn-214,2,-,,
+bone-penn-215,2,-,,
+bone-penn-216,2,-,,
+bone-penn-217,2,-,,
+bone-penn-218,2,-,,
+bone-penn-219,2,-,,
+bone-penn-220,2,-,,
+bone-penn-221,2,-,,
+bone-penn-222,2,-,,
+bone-penn-223,2,-,,
+bone-penn-224,2,-,,
+bone-penn-225,2,-,,
+bone-penn-226,2,-,,
+bone-penn-227,2,-,,
+bone-penn-228,2,-,,
+bone-penn-229,2,-,,
+bone-penn-230,2,-,,
+bone-penn-231,2,-,,
+bone-penn-232,2,-,,
+bone-penn-233,2,-,,
+bone-penn-234,2,-,,
+bone-penn-235,2,-,,
+bone-penn-236,2,-,,
+bone-penn-237,2,-,,
+bone-penn-238,2,-,,
+bone-penn-239,2,-,,
+bone-penn-240,2,-,,
+bone-penn-241,2,-,,
+bone-penn-242,2,-,,
+bone-penn-243,2,-,,
+bone-penn-244,2,-,,
+bone-penn-245,2,-,,
+bone-penn-246,2,-,,
+bone-penn-247,2,-,,
+bone-penn-248,2,-,,
+bone-penn-249,2,-,,
+bone-penn-250,2,-,,
+bone-penn-251,2,-,,
+bone-penn-252,2,-,,
+bone-penn-253,2,-,,
+bone-penn-254,2,-,,
+bone-penn-255,2,-,,
+bone-penn-256,2,-,,
+bone-penn-257,2,-,,
+bone-penn-258,2,-,,
+bone-penn-259,2,-,,
+bone-penn-260,2,-,,
+bone-penn-261,2,-,,
+bone-penn-262,2,-,,
+bone-penn-263,2,-,,
+bone-penn-264,2,-,,
+bone-penn-265,2,-,,
+bone-penn-266,2,-,,
+bone-penn-267,2,-,,
+bone-penn-268,2,-,,
+bone-penn-269,2,-,,
+bone-penn-270,2,-,,
+bone-penn-271,2,-,,
+bone-penn-272,2,-,,
+bone-penn-273,2,-,,
+bone-penn-274,0,-,,
+bone-penn-275,1,-,,
+bone-penn-276,1,-,,
+bone-penn-277,1,-,,
+bone-penn-278,1,-,,
+bone-penn-279,1,-,,
+bone-penn-280,1,-,,
+bone-penn-281,0,-,,
+bone-penn-282,1,-,,
+bone-penn-283,1,-,,
+bone-penn-284,1,-,,
+bone-penn-285,0,-,,
+bone-penn-286,1,-,,
+bone-penn-287,0,-,,
+bone-penn-288,1,-,,
+bone-penn-289,0,-,,
+bone-penn-290,1,-,,
+bone-penn-291,1,-,,
+bone-penn-292,1,-,,
+bone-penn-293,1,-,,
+bone-penn-294,1,-,,
+bone-penn-295,1,-,F,7
+bone-penn-296,0,-,M,8
+bone-penn-297,1,-,F,9
+bone-penn-298,2,-,F,11
+bone-penn-299,1,-,M,12
+bone-penn-300,2,-,F,18
+bone-penn-301,2,-,F,17
+bone-penn-302,0,-,M,1.65
+bone-penn-303,0,-,F,13
+bone-penn-304,0,-,M,13
+bone-penn-305,2,-,M,4
+bone-penn-306,2,-,,
+bone-penn-307,2,-,,
+bone-penn-308,2,-,,
+bone-penn-309,2,-,,
+bone-penn-310,2,-,,
+bone-penn-311,2,-,,
+bone-penn-312,0,-,,
+bone-penn-313,1,-,,
+bone-penn-314,2,-,,
+bone-penn-315,0,-,,
+bone-penn-316,2,-,,
+bone-penn-317,1,-,,
+bone-penn-318,2,-,,
+bone-penn-319,0,-,,
+bone-penn-320,0,-,,
+bone-penn-321,1,-,,
+bone-penn-322,1,-,,
+bone-penn-323,0,-,,
+bone-penn-324,2,-,,
+bone-penn-325,1,-,,
+bone-penn-326,0,-,,
+bone-penn-327,1,-,,
+bone-penn-328,0,-,,
+bone-penn-329,0,-,,
+bone-penn-330,1,-,,
+bone-penn-331,0,-,,
+bone-penn-332,1,-,,
+bone-penn-333,1,-,,
+bone-penn-334,1,-,,
+bone-penn-335,1,-,,
+bone-penn-336,1,-,,
+bone-penn-337,1,-,,
+bone-penn-338,0,-,,
+bone-penn-339,1,-,,
+bone-penn-340,2,-,,
+bone-penn-341,1,-,,
+bone-penn-342,2,-,,
+bone-penn-343,0,-,,
+bone-penn-344,1,-,,
+bone-penn-345,2,-,,
+bone-penn-346,1,-,,
+bone-penn-347,0,-,,
+bone-penn-348,0,-,,
+bone-penn-349,0,-,,
+bone-penn-350,,-,,
+bone-penn-351,0,-,M,18
+bone-penn-352,0,-,M,18
+bone-penn-353,,-,,
+bone-penn-354,2,-,F,17
+bone-penn-355,2,-,M,15
+bone-penn-356,2,-,M,18
+bone-penn-357,,-,,
+bone-penn-358,,-,,
+bone-penn-359,,-,M,17
+bone-penn-360,,-,,
+bone-penn-361,0,-,M,17
+bone-penn-362,1,-,M,9
+bone-penn-363,2,-,M,3
+bone-penn-364,2,-,F,4
+bone-penn-365,2,-,F,9
+bone-penn-366,2,-,F,5
+bone-penn-367,2,-,F,11
+bone-penn-368,2,-,M,0.94
+bone-penn-369,1,-,M,2
+bone-penn-370,2,-,F,11
+bone-penn-371,2,-,M,11
+bone-penn-372,2,-,M,3
+bone-penn-373,2,-,F,14
+bone-penn-374,1,-,F,5
+bone-penn-375,0,-,M,11
+bone-penn-376,2,-,M,10
+bone-penn-377,2,-,F,18
+bone-penn-378,2,-,M,26
+bone-penn-379,2,-,M,16
+bone-penn-380,2,-,M,13
+bone-penn-381,1,-,M,7
+bone-penn-382,1,-,M,19
+bone-penn-383,1,-,M,17
+bone-penn-384,1,-,F,9
+bone-penn-385,1,-,F,14
+bone-penn-386,2,-,F,15
+bone-penn-387,2,-,M,14
+bone-penn-388,2,-,M,10
+bone-penn-389,2,-,F,13
+bone-penn-390,2,-,F,18
+bone-penn-391,0,-,M,11
+bone-penn-392,1,-,M,3
+bone-penn-393,2,-,M,13
+bone-penn-394,2,-,F,9
+bone-penn-395,2,-,M,12
+bone-penn-396,1,-,F,10
+bone-penn-397,1,-,M,12
+bone-penn-398,,-,,
+bone-penn-399,,-,,
+bone-penn-400,,-,,
+bone-penn-401,1,-,,
+bone-penn-402,,-,,
+bone-penn-403,1,-,,
+bone-penn-404,,-,,
+bone-penn-405,2,-,,
+bone-penn-406,1,-,,
+bone-penn-407,2,-,,
+bone-penn-408,,-,,
+bone-penn-409,,-,,
+bone-penn-410,,-,,
+bone-penn-411,,-,,
+bone-penn-412,,-,,
+bone-penn-413,1,-,,
+bone-penn-414,2,-,,
+bone-penn-415,,-,,
+bone-penn-416,,-,,
+bone-penn-417,0,-,,
+bone-penn-418,2,-,,
+bone-penn-419,,-,,
+bone-penn-420,,-,,
+bone-penn-421,0,-,,
+bone-penn-422,2,-,,
+bone-penn-423,1,-,,
+bone-penn-424,,-,,
+bone-penn-425,2,-,,
+bone-penn-426,,-,,
+bone-penn-427,,-,,
+bone-penn-428,,-,,
+bone-penn-429,2,-,,
+bone-penn-430,,-,,
+bone-penn-431,,-,,
+bone-penn-432,2,-,,
+bone-penn-433,2,-,,
+bone-penn-434,,-,,
+bone-penn-435,1,-,,
+bone-penn-436,,-,,
+bone-penn-437,,-,,
+bone-penn-438,,-,,
+bone-penn-439,2,-,,
+bone-penn-440,,-,,
+bone-penn-441,,-,,
+bone-penn-442,,-,,
+bone-penn-443,,-,,
+bone-penn-444,,-,,
+bone-penn-445,,-,,
+bone-penn-446,1,-,,
+bone-penn-447,,-,,
+bone-penn-448,,-,,
+bone-penn-449,,-,,
+bone-penn-450,,-,,
+bone-penn-451,,-,,
+bone-penn-452,1,-,M,9
+bone-penn-453,1,-,F,6
+bone-penn-454,1,-,M,16
+bone-penn-455,0,-,M,20
+bone-penn-456,0,-,M,14
+bone-penn-457,0,-,F,15
+bone-penn-458,2,-,F,10
+bone-penn-459,0,-,F,16
+bone-penn-460,2,-,F,13
+bone-penn-461,2,-,F,15
+bone-penn-462,1,-,M,20
+bone-penn-463,2,-,F,1.93
+bone-penn-464,2,-,F,11
+bone-penn-465,2,-,M,14
+bone-penn-466,2,-,M,16
+bone-penn-467,2,-,M,6
+bone-penn-468,0,-,M,9
+bone-penn-469,2,-,F,14
+bone-penn-470,2,-,M,4
+bone-penn-471,0,-,M,13
+bone-penn-472,2,-,M,18
+bone-penn-473,0,-,M,22
+bone-penn-474,0,-,F,13
+bone-penn-475,2,-,F,14
+bone-penn-476,0,-,M,1.65
+bone-penn-477,2,-,F,17
+bone-penn-478,1,-,M,7
+bone-penn-479,2,-,F,18
+bone-penn-480,1,-,M,0.06
+bone-penn-481,1,-,M,7
+bone-penn-482,1,-,M,5
+bone-penn-483,2,-,F,16
+bone-penn-484,1,-,M,12
+bone-penn-485,1,-,F,17
+bone-penn-486,2,-,F,11
+bone-penn-487,1,-,F,4
+bone-penn-488,1,-,M,2
+bone-penn-489,1,-,M,8
+bone-penn-490,0,-,M,18
+bone-penn-491,0,-,M,19
+bone-penn-492,1,-,F,9
+bone-penn-493,2,-,M,13
+bone-penn-494,0,-,F,16
+bone-penn-495,0,-,M,6
+bone-penn-496,1,-,M,2
+bone-penn-497,0,-,F,7
+bone-penn-498,1,-,M,4
+bone-penn-499,2,-,M,11
+bone-penn-500,0,-,M,15
+bone-penn-501,1,-,M,16
+bone-penn-502,0,-,M,8
+bone-penn-503,0,-,M,17
+bone-penn-504,1,-,M,10
+bone-penn-505,0,-,F,15
+bone-penn-506,0,-,M,17
+bone-penn-507,2,-,F,15
+bone-penn-508,0,-,M,5
+bone-penn-509,0,-,F,12
+bone-penn-510,1,-,F,7
+bone-penn-511,2,-,F,8
+bone-penn-512,1,-,M,17
+bone-penn-513,0,-,M,14
+bone-penn-514,2,-,F,16
+bone-penn-515,1,-,M,14
+bone-penn-516,1,-,M,15
+bone-penn-517,1,-,M,14
+bone-penn-518,1,-,M,15
+bone-penn-519,1,-,M,14
+bone-penn-520,1,-,F,13
+bone-penn-521,1,-,F,12
+bone-penn-522,1,-,M,13
+bone-penn-523,1,-,M,19
+bone-penn-524,1,-,M,15
+bone-penn-525,1,-,M,13
+bone-penn-526,1,-,F,15
+bone-penn-527,1,-,F,17
+bone-penn-528,1,-,M,12
+bone-penn-529,1,-,M,6
+bone-penn-530,1,-,M,16
+bone-penn-531,2,-,M,16
+bone-penn-532,1,-,M,15
+bone-penn-533,1,-,M,13
+bone-penn-534,1,-,M,17
+bone-penn-535,1,-,F,11
+bone-penn-536,1,-,M,18
+bone-penn-537,1,-,F,17
+bone-penn-538,1,-,M,18
+bone-penn-539,1,-,M,10
+bone-penn-540,1,-,M,16
+bone-penn-541,1,-,F,17
+bone-penn-542,1,-,M,1.35
+bone-penn-543,2,-,M,20
+bone-penn-544,2,-,F,14
+bone-penn-545,1,-,M,8
+bone-penn-546,2,-,M,18
+bone-penn-547,1,-,M,16
+bone-penn-548,0,-,,
+bone-penn-549,0,-,,
+bone-penn-550,0,-,,
+bone-penn-551,0,-,,
+bone-penn-552,0,-,,
+bone-penn-553,0,-,,
+bone-penn-554,0,-,,
+bone-penn-555,0,-,,
+bone-penn-556,0,-,,
+bone-penn-557,0,-,,
+bone-penn-558,0,-,,
+bone-penn-559,0,-,,
+bone-penn-560,0,-,,
+bone-penn-561,0,-,,
+bone-penn-562,0,-,,
+bone-penn-563,0,-,,
+bone-penn-564,0,-,,
+bone-penn-565,0,-,,
+bone-penn-566,0,-,,
+bone-penn-567,0,-,,
+bone-penn-568,0,-,,
+bone-penn-569,0,-,,
+bone-penn-570,1,-,F,15
+bone-penn-571,1,-,F,13
+bone-penn-572,1,-,F,9
+bone-penn-573,0,-,M,9
+bone-penn-574,1,-,M,6
+bone-penn-575,1,-,F,15
+bone-penn-576,1,-,F,16
+bone-penn-577,1,-,F,3
+bone-penn-578,1,-,F,20
+bone-penn-579,1,-,M,7
+bone-penn-580,1,-,F,12
+bone-penn-581,1,-,F,7
+bone-penn-582,1,-,F,9
+bone-penn-583,1,-,M,6
+bone-penn-584,1,-,F,6
+bone-penn-585,1,-,F,20
+bone-penn-586,0,-,M,10
+bone-penn-587,1,-,M,21
+bone-penn-588,1,-,M,15
+bone-penn-589,1,-,F,11
+bone-penn-590,1,-,M,3
+bone-penn-591,0,-,M,4
+bone-penn-592,1,-,F,9
+bone-penn-593,1,-,M,14
+bone-penn-594,1,-,M,6
+bone-penn-595,1,-,F,6
+bone-penn-596,2,-,F,13
+bone-penn-597,2,-,F,13
+bone-penn-598,2,-,F,23
+bone-penn-599,2,-,M,4
+bone-penn-600,2,-,M,11
+bone-penn-601,2,-,M,7
+bone-penn-602,2,-,F,3
+bone-penn-603,2,-,F,6
+bone-penn-604,2,-,M,17
+bone-penn-605,2,-,M,1.95
+bone-penn-606,2,-,M,5
+bone-penn-607,2,-,F,10
+bone-penn-608,2,-,F,11
+bone-penn-609,2,-,M,12
+bone-penn-610,2,-,M,23
+bone-penn-611,2,-,F,5
+bone-penn-612,0,-,F,4
+bone-penn-613,1,-,M,2
+bone-penn-614,2,-,F,10
+bone-penn-615,2,-,F,5
+bone-penn-616,2,-,M,10
+bone-penn-617,2,-,F,17
+bone-penn-618,2,-,M,16
+bone-penn-619,1,-,M,5
+bone-penn-620,2,-,F,10
+bone-penn-621,2,-,M,21
+bone-penn-622,2,-,M,16
+bone-penn-623,2,-,M,18
+bone-penn-624,2,-,M,16
+bone-penn-625,2,-,M,0.94
+bone-penn-626,2,-,F,11
+bone-penn-627,2,-,F,6
+bone-penn-628,2,-,F,14
+bone-penn-629,2,-,F,11
+bone-penn-630,1,-,F,8
+bone-penn-631,2,-,F,5
+bone-penn-632,2,-,F,4
+bone-penn-633,2,-,M,14
+bone-penn-634,2,-,F,8
+bone-penn-635,2,-,M,14
+bone-penn-636,2,-,F,14
+bone-penn-637,2,-,M,16
+bone-penn-638,2,-,F,14
+bone-penn-639,2,-,M,19
+bone-penn-640,2,-,M,6
+bone-penn-641,2,-,F,9
+bone-penn-642,2,-,F,8
+bone-penn-643,2,-,F,4
+bone-penn-644,2,-,M,3
+bone-penn-645,2,-,M,7
+bone-penn-646,2,-,F,11
+bone-penn-647,2,-,M,5
+bone-penn-648,2,-,M,20
+bone-penn-649,2,-,M,22
+bone-penn-650,2,-,M,20
+bone-penn-651,2,-,M,16
+bone-penn-652,2,-,F,8
+bone-penn-653,2,-,M,16
+bone-penn-654,2,-,M,3
+bone-china-001,0,-,F,20
+bone-china-002,0,-,M,70
+bone-china-003,0,-,F,29
+bone-china-004,0,-,M,23
+bone-china-005,0,-,F,45
+bone-china-006,0,-,F,14
+bone-china-007,0,-,M,37
+bone-china-008,0,-,M,46
+bone-china-009,0,-,F,47
+bone-china-010,0,-,M,52
+bone-china-011,0,-,F,16
+bone-china-012,0,-,F,33
+bone-china-013,0,-,M,24
+bone-china-014,0,-,M,2
+bone-china-015,0,-,M,15
+bone-china-016,0,-,M,17
+bone-china-017,0,-,F,41
+bone-china-018,0,-,M,13
+bone-china-019,0,-,M,12
+bone-china-020,0,-,F,48
+bone-china-021,0,-,M,24
+bone-china-022,0,-,F,43
+bone-china-023,0,-,M,53
+bone-china-024,0,-,M,27
+bone-china-025,0,-,M,43
+bone-china-026,0,-,M,12
+bone-china-027,0,-,M,37
+bone-china-028,0,-,M,5
+bone-china-029,0,-,M,7
+bone-china-030,0,-,M,25
+bone-china-031,0,-,F,56
+bone-china-032,0,-,M,41
+bone-china-033,0,-,M,51
+bone-china-034,0,-,F,63
+bone-china-035,0,-,M,18
+bone-china-036,0,-,M,16
+bone-china-037,0,-,F,14
+bone-china-038,0,-,M,26
+bone-china-039,0,-,M,62
+bone-china-040,0,-,M,29
+bone-china-041,0,-,F,23
+bone-china-042,0,-,M,14
+bone-china-043,0,-,F,46
+bone-china-044,0,-,M,32
+bone-china-045,0,-,M,40
+bone-china-046,0,-,F,10
+bone-china-047,0,-,M,10
+bone-china-048,0,-,F,10
+bone-china-049,0,-,M,16
+bone-china-050,0,-,F,49
+bone-china-051,0,-,M,22
+bone-china-052,0,-,F,20
+bone-china-053,0,-,F,10
+bone-china-054,0,-,F,34
+bone-china-055,0,-,F,9
+bone-china-056,0,-,M,12
+bone-china-057,0,-,M,47
+bone-china-058,0,-,M,45
+bone-china-059,0,-,F,48
+bone-china-060,0,-,M,40
+bone-china-061,0,-,F,62
+bone-china-062,0,-,M,30
+bone-china-063,0,-,M,52
+bone-china-064,0,-,M,29
+bone-china-065,0,-,F,21
+bone-china-066,0,-,F,38
+bone-china-067,0,-,F,37
+bone-china-068,0,-,M,8
+bone-china-069,0,-,M,13
+bone-china-070,0,-,F,22
+bone-china-071,0,-,M,22
+bone-china-072,0,-,M,66
+bone-china-073,0,-,M,49
+bone-china-074,0,-,M,30
+bone-china-075,0,-,M,13
+bone-china-076,0,-,M,67
+bone-china-077,0,-,F,43
+bone-china-078,0,-,M,17
+bone-china-079,0,-,F,25
+bone-china-080,0,-,F,10
+bone-china-081,0,-,F,35
+bone-china-082,0,-,M,27
+bone-china-083,0,-,F,43
+bone-china-084,0,-,M,28
+bone-china-085,0,-,F,45
+bone-china-086,0,-,F,39
+bone-china-087,0,-,F,41
+bone-china-088,0,-,M,8
+bone-china-089,0,-,M,6
+bone-china-090,0,-,M,36
+bone-china-091,1,-,F,19
+bone-china-092,1,-,M,6
+bone-china-093,1,-,F,10
+bone-china-094,1,-,M,31
+bone-china-095,1,-,F,27
+bone-china-096,1,-,M,49
+bone-china-097,1,-,F,50
+bone-china-098,1,-,F,61
+bone-china-099,1,-,F,11
+bone-china-100,1,-,M,4
+bone-china-101,1,-,M,34
+bone-china-102,1,-,M,29
+bone-china-103,1,-,M,45
+bone-china-104,1,-,M,37
+bone-china-105,1,-,M,12
+bone-china-106,1,-,M,15
+bone-china-107,1,-,M,67
+bone-china-108,1,-,M,21
+bone-china-109,1,-,F,7
+bone-china-110,1,-,M,25
+bone-china-111,1,-,F,47
+bone-china-112,1,-,M,27
+bone-china-113,1,-,M,32
+bone-china-114,1,-,F,25
+bone-china-115,1,-,F,65
+bone-china-116,1,-,F,
+bone-china-117,1,-,M,22
+bone-china-118,1,-,M,43
+bone-china-119,1,-,F,16
+bone-china-120,1,-,M,54
+bone-china-121,1,-,F,25
+bone-china-122,1,-,F,27
+bone-china-123,1,-,M,13
+bone-china-124,1,-,M,25
+bone-china-125,1,-,M,29
+bone-china-126,1,-,M,29
+bone-china-127,1,-,F,51
+bone-china-128,1,-,F,18
+bone-china-129,1,-,F,22
+bone-china-130,1,-,F,43
+bone-china-131,1,-,M,8
+bone-china-132,1,-,M,26
+bone-china-133,1,-,M,24
+bone-china-134,1,-,F,11
+bone-china-135,1,-,M,25
+bone-china-136,1,-,M,51
+bone-china-137,1,-,M,49
+bone-china-138,1,-,M,55
+bone-china-139,1,-,F,48
+bone-china-140,1,-,F,52
+bone-china-141,1,-,F,53
+bone-china-142,1,-,M,35
+bone-china-143,1,-,M,51
+bone-china-144,1,-,F,53
+bone-china-145,1,-,M,44
+bone-china-146,1,-,M,34
+bone-china-147,1,-,F,29
+bone-china-148,1,-,F,24
+bone-china-149,1,-,F,13
+bone-china-150,1,-,F,16
+bone-china-151,1,-,F,21
+bone-china-152,1,-,F,12
+bone-china-153,1,-,F,25
+bone-china-154,1,-,M,16
+bone-china-155,1,-,F,67
+bone-china-156,1,-,M,21
+bone-china-157,1,-,M,48
+bone-china-158,1,-,M,45
+bone-china-159,1,-,F,66
+bone-china-160,1,-,F,15
+bone-china-161,1,-,F,22
+bone-china-162,1,-,M,14
+bone-china-163,1,-,M,16
+bone-china-164,1,-,F,21
+bone-china-165,1,-,F,49
+bone-china-166,1,-,M,43
+bone-china-167,1,-,F,25
+bone-china-168,1,-,M,62
+bone-china-169,1,-,F,25
+bone-china-170,1,-,M,8
+bone-china-171,1,-,F,47
+bone-china-172,1,-,M,57
+bone-china-173,1,-,M,44
+bone-china-174,1,-,F,32
+bone-china-175,1,-,F,13
+bone-china-176,2,-,F,14
+bone-china-177,2,-,M,16
+bone-china-178,2,-,M,37
+bone-china-179,2,-,F,10
+bone-china-180,2,-,F,9
+bone-china-181,2,-,M,16
+bone-china-182,2,-,F,15
+bone-china-183,2,-,F,11
+bone-china-184,2,-,M,21
+bone-china-185,2,-,F,57
+bone-china-186,2,-,F,7
+bone-china-187,2,-,M,53
+bone-china-188,2,-,M,24
+bone-china-189,2,-,F,12
+bone-china-190,2,-,F,65
+bone-china-191,2,-,F,37
+bone-china-192,2,-,M,19
+bone-china-193,2,-,M,15
+bone-china-194,2,-,F,12
+bone-china-195,2,-,F,70
+bone-china-196,2,-,M,33
+bone-china-197,2,-,M,76
+bone-china-198,2,-,M,13
+bone-china-199,2,-,M,53
+bone-china-200,2,-,F,
+bone-china-201,2,-,M,32
+bone-china-202,2,-,F,42
+bone-china-203,2,-,F,15
+bone-china-204,2,-,M,62
+bone-china-205,2,-,M,52
+bone-china-206,2,-,M,81
+bone-china-207,2,-,F,18
+bone-china-208,2,-,M,21
+bone-china-209,2,-,M,19
+bone-china-210,2,-,M,19
+bone-china-211,2,-,M,18
+bone-china-212,2,-,M,8
+bone-china-213,2,-,M,15
+bone-china-214,2,-,M,63
+bone-china-215,2,-,M,12
+bone-china-216,2,-,M,88
+bone-china-217,2,-,M,17
+bone-china-218,2,-,M,40
+bone-china-219,2,-,F,66
+bone-china-220,2,-,M,17
+bone-china-221,2,-,M,74
+bone-china-222,2,-,M,15
+bone-china-223,2,-,M,17
+bone-china-224,2,-,M,50
+bone-china-225,2,-,M,12
+bone-china-226,2,-,F,12
+bone-china-227,2,-,M,20
+bone-china-228,2,-,M,67
+bone-china-229,2,-,M,14
+bone-china-230,2,-,M,69
+bone-china-231,2,-,F,45
+bone-china-232,2,-,F,49
+bone-china-233,2,-,M,63
+bone-china-234,2,-,M,19
+bone-china-235,2,-,M,21
+bone-china-236,2,-,M,47
+bone-china-237,2,-,F,33
+bone-china-238,2,-,F,11
+bone-china-239,2,-,F,17
+bone-china-240,2,-,M,45
+bone-china-241,2,-,F,61
+bone-china-242,2,-,F,41
+bone-china-243,2,-,F,43
+bone-china-244,2,-,M,16
+bone-china-245,2,-,F,14
+bone-china-246,2,-,F,62
+bone-china-247,2,-,F,11
+bone-hup-2,2,-,M  ,
+bone-hup-3,1,-,M  ,
+bone-hup-22,2,-,M  ,
+bone-hup-23,2,-,M  ,
+bone-hup-30,1,-,M  ,
+bone-hup-39,2,-,F  ,
+bone-hup-48,1,-,F  ,
+bone-hup-50,1,-,M  ,
+bone-hup-51,1,-,M  ,
+bone-hup-52,2,-,F  ,
+bone-hup-53,2,-,F  ,
+bone-hup-54,2,-,F  ,
+bone-hup-55,2,-,F  ,
+bone-hup-56,2,-,M  ,
+bone-hup-57,2,-,F  ,
+bone-hup-58,2,-,F  ,
+bone-hup-59,2,-,F  ,
+bone-hup-60,2,-,M  ,
+bone-hup-61,2,-,F  ,9
+bone-hup-62,2,-,M  ,
+bone-hup-63,2,-,F  ,
+bone-hup-64,,-,,
+bone-hup-65,2,-,F  ,
+bone-hup-66,2,-,F  ,
+bone-hup-67,2,-,F  ,
+bone-hup-68,2,-,F  ,
+bone-hup-69,2,-,F  ,
+bone-hup-70,2,-,M  ,
+bone-hup-71,2,-,F  ,
+bone-hup-72,2,-,M  ,
+bone-hup-73,2,-,F  ,
+bone-hup-74,2,-,F  ,
+bone-hup-75,2,-,F  ,
+bone-hup-76,2,-,F  ,
+bone-hup-77,2,-,M  ,
+bone-hup-78,2,-,F  ,
+bone-hup-79,2,-,M  ,
+bone-hup-80,2,-,F  ,
+bone-hup-81,2,-,F  ,
+bone-hup-82,2,-,F  ,
+bone-hup-83,2,-,F  ,
+bone-hup-84,2,-,M  ,
+bone-hup-85,2,-,F  ,
+bone-hup-86,2,-,M  ,
+bone-hup-87,2,-,M  ,
+bone-hup-88,2,-,M  ,
+bone-hup-89,2,-,M  ,
+bone-hup-90,2,-,F  ,
+bone-hup-91,2,-,F  ,
+bone-hup-92,2,-,F  ,
+bone-hup-93,2,-,F  ,
+bone-hup-94,2,-,M  ,
+bone-hup-95,2,-,F  ,
+bone-hup-96,2,-,M  ,
+bone-hup-97,2,-,F  ,
+bone-hup-98,2,-,M  ,
+bone-hup-99,2,-,M  ,
+bone-hup-100,2,-,F  ,
+bone-hup-101,2,-,F  ,
+bone-hup-102,2,-,M  ,
+bone-hup-103,2,-,M  ,
+bone-hup-104,2,-,F  ,
+bone-hup-105,2,-,F  ,
+bone-hup-106,2,-,F  ,
+bone-hup-107,2,-,M  ,
+bone-hup-108,2,-,M  ,
+bone-hup-109,2,-,M  ,
+bone-hup-110,2,-,M  ,
+bone-hup-111,2,-,M  ,
+bone-hup-112,2,-,F  ,
+bone-hup-113,2,-,M  ,
+bone-hup-114,2,-,M  ,
+bone-hup-115,2,-,F  ,
+bone-hup-116,0,-,,
+bone-hup-117,0,-,,
+bone-hup-118,2,-,,
+bone-hup-119,1,-,,
+bone-hup-120,1,-,,
+bone-hup-121,1,-,,
+bone-hup-122,1,-,,
+bone-hup-123,1,-,,
+bone-hup-124,0,-,,
+bone-hup-125,1,-,,
+bone-hup-126,1,-,,
+bone-hup-127,2,-,,
+bone-hup-128,1,-,,
+bone-hup-129,1,-,,
+bone-hup-130,1,-,,
+bone-hup-131,0,-,,
+bone-hup-132,2,-,,
+bone-hup-133,2,-,,
+bone-hup-134,0,-,,
+bone-hup-135,0,-,,
+bone-hup-136,1,-,,
+bone-hup-137,0,-,,
+bone-hup-138,2,-,,
+bone-hup-139,0,-,,
+bone-hup-140,0,-,,
+bone-hup-141,2,-,,
+bone-hup-142,0,-,,
+bone-hup-143,1,-,,
+bone-hup-144,2,-,,
+bone-hup-145,0,-,,
+bone-hup-146,0,-,,
+bone-hup-147,0,-,,
+bone-hup-148,2,-,,
+bone-hup-149,2,-,,
+bone-hup-150,0,-,,
+bone-hup-151,0,-,,
+bone-hup-152,1,-,,
+bone-hup-153,2,-,,
+bone-hup-154,1,-,,
+bone-hup-155,0,-,,
+bone-hup-156,2,-,,
+bone-hup-157,0,-,,
+bone-hup-158,1,-,,
+bone-hup-159,0,-,,
+bone-hup-160,2,-,,
+bone-hup-161,0,-,,
+bone-hup-162,2,-,,
+bone-hup-163,0,-,,
+bone-hup-164,2,-,F  ,
+bone-hup-165,2,-,F  ,
+bone-hup-166,2,-,F  ,
+bone-hup-167,2,-,M  ,
+bone-hup-168,2,-,M  ,
+bone-hup-169,2,-,M  ,
+bone-hup-170,2,-,F  ,
+bone-hup-171,2,-,F  ,
+bone-hup-172,2,-,F  ,
+bone-hup-173,2,-,M  ,
+bone-hup-174,2,-,F  ,
+bone-hup-175,2,-,M  ,
+bone-hup-176,2,-,F  ,
+bone-hup-177,2,-,F  ,
+bone-hup-178,,-,,
+bone-hup-179,2,-,M  ,
+bone-hup-180,2,-,M  ,
+bone-hup-181,2,-,M  ,
+bone-hup-182,2,-,M  ,
+bone-hup-183,2,-,M  ,
+bone-hup-184,2,-,F  ,
+bone-hup-185,2,-,F  ,
+bone-hup-186,2,-,F  ,
+bone-hup-187,2,-,M  ,
+bone-hup-188,2,-,M  ,
+bone-hup-189,2,-,M  ,
+bone-hup-190,2,-,F  ,
+bone-hup-191,2,-,M  ,
+bone-hup-192,2,-,M  ,
+bone-hup-193,2,-,M  ,
+bone-hup-194,2,-,M  ,
+bone-hup-195,2,-,M  ,
+bone-hup-196,2,-,M  ,
+bone-hup-197,2,-,M  ,
+bone-hup-198,2,-,M  ,
+bone-hup-199,2,-,M  ,
+bone-hup-200,2,-,F  ,
+bone-hup-201,2,-,M  ,
+bone-hup-202,2,-,M  ,
+bone-hup-203,2,-,M  ,
+bone-hup-204,2,-,F  ,
+bone-hup-205,2,-,M  ,
+bone-hup-206,,-,,
+bone-hup-207,2,-,M  ,
+bone-hup-208,2,-,M  ,
+bone-hup-209,2,-,F  ,
+bone-hup-210,2,-,M  ,
+bone-hup-211,2,-,M  ,
+bone-hup-212,2,-,F  ,
+bone-hup-213,2,-,F  ,
+bone-hup-214,2,-,F  ,
+bone-hup-215,,-,F  ,
+bone-hup-216,2,-,F  ,
+bone-hup-217,,-,,
+bone-hup-218,2,-,F  ,
+bone-hup-219,2,-,M  ,
+bone-hup-220,2,-,M  ,
+bone-hup-221,2,-,F  ,
+bone-hup-222,2,-,F  ,
+bone-hup-223,2,-,M  ,
+bone-hup-224,2,-,F  ,
+bone-hup-225,2,-,M  ,
+bone-hup-226,2,-,M  ,
+bone-hup-227,2,-,M  ,
+bone-hup-228,2,-,M  ,
+bone-hup-229,2,-,F  ,
+bone-hup-230,2,-,M  ,
+bone-hup-231,2,-,M  ,
+bone-hup-232,2,-,F  ,
+bone-hup-233,,-,,
+bone-hup-234,2,-,M  ,
+bone-hup-235,2,-,M  ,
+bone-hup-236,2,-,F  ,
+bone-hup-237,2,-,F  ,
+bone-hup-238,2,-,F  ,
+bone-hup-239,2,-,M  ,
+bone-hup-240,2,-,F  ,
+bone-hup-241,2,-,M  ,
+bone-hup-242,,-,,
+bone-hup-243,2,-,F  ,
+bone-hup-244,2,-,F  ,
+bone-hup-245,2,-,M  ,
+bone-hup-246,2,-,M  ,
+bone-hup-247,2,-,M  ,
+bone-hup-248,2,-,M  ,
+bone-hup-249,2,-,M  ,
+bone-hup-252,2,-,F  ,
+bone-hup-253,,-,,
+bone-hup-257,0,-,M  ,
+bone-hup-258,1,-,M  ,
+bone-hup-261,2,-,F  ,
+bone-hup-262,2,-,F  ,
+bone-hup-263,2,-,F  ,
+bone-hup-264,0,-,M  ,
+bone-hup-265,0,-,M  ,
+bone-hup-266,0,-,M  ,
+bone-hup-267,1,-,M  ,
+bone-hup-268,,-,,
+bone-hup-269,0,-,M  ,
+bone-hup-271,0,-,F  ,
+bone-hup-272,0,-,M  ,
+bone-hup-273,2,-,F  ,
+bone-hup-274,0,-,F  ,
+bone-hup-275,0,-,M  ,
+bone-hup-276,0,-,F  ,
+bone-hup-277,2,-,M  ,
+bone-hup-278,1,-,M  ,
+bone-hup-279,2,-,M  ,
+bone-hup-280,,-,,
+bone-hup-281,0,-,M  ,
+bone-hup-282,,-,,
+bone-hup-283,2,-,F  ,
+bone-hup-284,2,-,M  ,
+bone-hup-287,0,-,M  ,
+bone-hup-290,0,-,M  ,
+bone-hup-291,0,-,M  ,
+bone-hup-292,0,-,,
+bone-hup-293,0,-,F  ,
+bone-hup-294,0,-,M  ,
+bone-hup-295,0,-,F  ,
+bone-hup-296,0,-,M  ,
+bone-hup-297,0,-,M  ,
+bone-hup-298,0,-,F  ,
+bone-hup-299,0,-,F  ,
+bone-hup-300,0,-,M  ,
+bone-hup-301,0,-,M  ,
+bone-hup-302,0,-,M  ,
+bone-hup-303,0,-,M  ,
+bone-hup-304,0,-,M  ,
+bone-hup-305,0,-,F  ,
+bone-hup-306,0,-,M  ,
+bone-hup-307,0,-,M  ,
+bone-hup-308,0,-,F  ,
+bone-hup-309,0,-,F  ,
+bone-hup-310,0,-,M  ,
+bone-hup-311,0,-,M  ,
+bone-hup-312,0,-,F  ,
+bone-hup-313,0,-,M  ,
+bone-hup-314,0,-,F  ,
+bone-hup-315,0,-,M  ,
+bone-hup-316,0,-,M  ,
+bone-hup-317,0,-,M  ,
+bone-hup-318,0,-,M  ,
+bone-hup-319,0,-,F  ,
+bone-hup-320,0,-,M  ,
+bone-hup-321,0,-,M  ,
+bone-hup-322,0,-,M  ,
+bone-hup-324,0,-,M  ,
+bone-hup-325,0,-,M  ,
+bone-hup-326,0,-,M  ,
+bone-hup-327,0,-,M  ,
+bone-hup-328,0,-,M  ,
+bone-hup-329,0,-,M  ,
+bone-hup-330,0,-,M  ,

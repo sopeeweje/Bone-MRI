@@ -79,7 +79,7 @@ def processFiles(path):
         chopIDs_dict[combo[1]] = combo[0]
     messed_up = []
     
-    available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[], 'none':[]}
+    available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[], 'none':[], 't2-t1c':[]}
     
     print("Loading images...")
     
@@ -183,6 +183,11 @@ def processFiles(path):
 #                    threshold = threshold + 10
                 
     keys = sorted(available_sequences.keys())
+    t1c_available = available_sequences['t1c']
+    t2_available = available_sequences['t2']
+    for patient in t1c_available:
+       if patient in t2_available:
+            available_sequences['t2-t1c'].append(patient)
     print("total sources = {}".format(str(num_sources)))
     print("total patients = {}".format(str(total_patients)))
     print("%t1 = {}%".format(str(len(available_sequences["t1"])/total_patients*100)))

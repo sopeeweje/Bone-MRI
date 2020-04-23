@@ -166,10 +166,10 @@ with open(config.SEQ_AVAIL) as seq_avail:
    for h in headers:
        available[h] = []
    for row in reader:
-       available['pd'].append(row[0])
-       available['t1'].append(row[1])
-       available['t1c'].append(row[2])
-       available['t2'].append(row[3])
+       available['pd'].append(row[1])
+       available['t1'].append(row[2])
+       available['t1c'].append(row[3])
+       available['t2'].append(row[4])
 
 class Features(Iterator):
     def __init__(self, features, shuffle, seed):

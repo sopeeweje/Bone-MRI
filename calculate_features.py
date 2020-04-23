@@ -32,8 +32,8 @@ clinical_feature_functions = {
     "outcome_pos": lambda f: 1 if f["category"] == "2" else 0, #positive bias = intermediate is benign
     "outcome_neg": lambda f: 1 if f["category"] == "2" or f["category"] == "1" else 0, #negative bias = intermediate is malignant
     "outcome_3": lambda f: int(f["category"]), #2-mal, 1-int, 0-ben
-    "age": lambda f: int(f["age"]),
-    "sex": lambda f: 1 if f["sex"] == "M" else 0,
+#    "age": lambda f: int(f["age"]),
+#    "sex": lambda f: 1 if f["sex"] == "M" else 0,
     "sort": lambda f: f["sort"]
 }
 
@@ -106,7 +106,7 @@ def get_filename_features(path):
 #            patientID = split_path[-3].replace("bone-","").replace("-","")
         filename = split_path[-1]
         modality = split_path[-2]
-        patientID = split_path[-3].replace("bone-","").replace("-","")
+        patientID = split_path[-3]
         return {
             "patientID": patientID,
             "modality": modality,

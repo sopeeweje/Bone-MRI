@@ -119,19 +119,23 @@ def processFiles(path):
                 if view == '.DS_Store':
                     continue
                 old_view = view
+                view = view.split("-")[0]
                 ''.join(e for e in view if e.isalnum()) #use for non-CHOP files
-                view = view.split(" ")[0]
+                for char in view:
+                    if char not in ["t", "1", "2", "c", "p", "d", "w", "i"]:
+                          view = view.replace(char, "")
+#                view = view.split(" ")[0]
                 try:
                     os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view)
                 except:
-                    os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view+"-"+str(duplicate))
-                    duplicate += 1
+                    continue
+#                    os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view+"-"+"alt_view"+str(duplicate))
+#                    duplicate += 1
                 try:
                     if patientID not in available_sequences[view]:
                         available_sequences[view].append(patientID) 
                 except:
-                    print(view)
-                
+                    print(view)              
 #                new_image_path = save_path+"/"+patientID+"/"+view
 #                os.makedirs(new_image_path)
 #                
@@ -169,6 +173,6 @@ def processFiles(path):
             
 
 #Test code
-path = "bone_raw"
+path = "/home/user1/Documents/Bone-MRI/bone_raw"
 processFiles(path)
 

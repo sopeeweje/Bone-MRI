@@ -12,7 +12,9 @@ import csv
 from shutil import rmtree
 from collections import defaultdict
 from keras.preprocessing.image import ImageDataGenerator, Iterator
+from keras.utils import to_categorical
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 from segmentation import calculate_percentile_slice, select_slice, bounding_box, crop, resize, calculate_volume
 from config import config
@@ -183,7 +185,7 @@ class Features(Iterator):
         return self._get_batches_of_transformed_samples(index_array)
 
 class Dataset(object):
-    def __init__(self, images, features, labels, names, augment=False, shuffle=False, seed=None, input_form="all"):
+    def __init__(self, images, features, labels, names, augment=False, shuffle=False, seed=None, input_form="all", three=False):
         self.shuffle = shuffle
         self.seed = seed
         self.augment = augment
@@ -206,6 +208,8 @@ class Dataset(object):
 
         unique, index, inverse, counts = np.unique(self.labels, return_index=True, return_inverse=True, return_counts=True)
         self.y = inverse
+        if three:
+            self.y = to_categorical(inverse)
         self.classes = inverse
         self.class_indices = { u: i for i, u in enumerate(unique) }
 
@@ -250,7 +254,7 @@ class Dataset(object):
                     y=self.y,
                     batch_size=config.BATCH_SIZE,
                     shuffle=self.shuffle,
-                    seed=hash(self.seed) % 2**32 ,
+                    seed=hash(self.seed) % 2**32,
                     )
             
         if self.parameters["t1c"]:
@@ -259,7 +263,7 @@ class Dataset(object):
                     y=self.y,
                     batch_size=config.BATCH_SIZE,
                     shuffle=self.shuffle,
-                    seed=hash(self.seed) % 2**32 ,
+                    seed=hash(self.seed) % 2**32,
                     )
             
         self.labels_generator = Features(self.y, self.shuffle, self.seed)
@@ -295,18 +299,20 @@ class Dataset(object):
     def get_names(self):
         return self.names
 
-def outcome_feature(row):
-    label = row["outcome"]
+def outcome_feature(row, label):
+    label = row[label]
     features = [ row[f] for f in clinical_features ]
     return label, features
 
 LABEL_FORMS = {
-    "outcome": outcome_feature,
+    "outcome_3": outcome_feature,
+    "outcome_pos": outcome_feature,
+    "outcome_neg": outcome_feature
 }
 
 def get_label_features(row, label="outcome"):
     """returns label, features, sample name"""
-    return (*LABEL_FORMS[label](row), row.name)
+    return (*LABEL_FORMS[label](row, label), row.name)
 
 def input_data_form(t1, t2, t1c, features, labels, input_form=config.INPUT_FORM):
     images, features, labels = INPUT_FORMS[input_form](t1, t2, t1c, features, labels)
@@ -331,6 +337,7 @@ def mask_image_percentile(image, segmentation, percentile=100, axis=2):
 
     masked = image * segmentation
     masked = resize(masked, (config.IMAGE_SIZE, config.IMAGE_SIZE))
+    plt.imsave("data_gen_images/" + str(uuid.uuid4()) + ".png", masked)
     return masked
 
 
@@ -458,7 +465,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     }
 
     # get preassigned sorts
-    train = f[f["sort"] == "train"] #all patients pre-assigned to training dataset
+    train = f[f["sort"] == "train"] #all patients pre-assigned to training 
     validation = f[f["sort"] == "validation"]
     test = f[f["sort"] == "test"]
     presort_dict = {
@@ -536,6 +543,16 @@ def data(seed=None,
     validation_features = relist(validation_features)
     test_features = relist(test_features)
 
+    #train_labels = make_labels(train_labels, label_form)
+    #print(train_labels.shape)
+    #validation_labels = make_labels(validation_labels, label_form)
+    #print(validation_labels.shape)
+    #test_labels = make_labels(test_labels, label_form)
+    #print(test_labels.shape)
+    three = (label_form == "outcome_3")
+    print(len(train_images)/len(train))
+    print(len(test_images)/len(test))
+    print(len(validation_images)/len(validation))
     train_generator = Dataset(
             train_images,
             train_features,
@@ -545,6 +562,7 @@ def data(seed=None,
             shuffle=train_shuffle,
             input_form=input_form,
             seed=seed,
+            three=three
         )
     validation_generator = Dataset(
             validation_images,
@@ -555,6 +573,7 @@ def data(seed=None,
             shuffle=validation_shuffle,
             input_form=input_form,
             seed=seed,
+            three=three,
         )
     test_generator = Dataset(
             test_images,
@@ -565,6 +584,7 @@ def data(seed=None,
             shuffle=test_shuffle,
             input_form=input_form,
             seed=seed,
+            three=three
         )
     return train_generator, validation_generator, test_generator
 
@@ -627,6 +647,12 @@ def xdata(fold_number,
     test_features = relist(test_features)
     # holdouttest_features = relist(holdouttest_features)
 
+    train_labels = make_labels(train_labels, label_form)
+    validation_labels = make_labels(validation_labels, label_form)
+    tests_labels = make_labels(test_labels, label_form)
+
+    three = (label_form == "outcome_3")
+
     train_generator = Dataset(
             train_images,
             train_features,
@@ -636,6 +662,7 @@ def xdata(fold_number,
             shuffle=train_shuffle,
             input_form=input_form,
             seed=seed,
+            three=three
         )
     validation_generator = Dataset(
             validation_images,
@@ -646,6 +673,7 @@ def xdata(fold_number,
             shuffle=validation_shuffle,
             input_form=input_form,
             seed=seed,
+            three=three
         )
     test_generator = Dataset(
             test_images,
@@ -656,6 +684,7 @@ def xdata(fold_number,
             shuffle=test_shuffle,
             input_form=input_form,
             seed=seed,
+            three=three
         )
     # holdout_test_generator = Dataset(holdouttest_images,holdouttest_features,holdouttest_labels,holdouttest_names,augment=test_augment,shuffle=test_shuffle,input_form=input_form,seed=seed,)
     return train_generator, validation_generator, test_generator  # , holdout_test_generator

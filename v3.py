@@ -16,7 +16,7 @@ import datetime as datetime
 from config import config
 from data_gen import data, INPUT_FORM_PARAMETERS
 
-MODEL_NAME = "v3"
+MODEL_NAME = "v2"
 
 OPTIMIZERS = {
     "sgd-01-0.9": lambda: optimizers.SGD(lr=0.01, momentum=0.9),
@@ -56,7 +56,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     #skip for now
     if parameters["t2"]:
-        convnet = efn.EfficientNetB7(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -71,7 +71,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     if parameters["t1"]:
         # init ResNet
-        convnet = efn.EfficientNetB7(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -86,7 +86,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         
     if parameters["t1c"]:
         # init ResNet
-        convnet = efn.EfficientNetB7(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -106,6 +106,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     out = Dense(256, activation="relu", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
     out = BatchNormalization()(out)
+    out = Dropout(rate=DROPOUT)(out)
 
     if DEEP_DENSE_TOP:
         out = Dropout(rate=DROPOUT)(out)
@@ -126,7 +127,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     out = Dense(16, activation="relu", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
     out = BatchNormalization()(out)
-    predictions = Dense(1, activation="sigmoid", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
+    predictions = Dense(3, activation="softmax", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
 
     # creating the final model
     if len(inputs) > 1:
@@ -136,7 +137,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     # compile the model
     model.compile(
-        loss="binary_crossentropy",
+        loss="categorical_crossentropy",
         optimizer=OPTIMIZERS[OPTIMIZER](),
         metrics=["accuracy"])
 

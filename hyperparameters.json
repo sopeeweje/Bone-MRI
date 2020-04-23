@@ -1,7 +1,7 @@
 {
     "dropout": [0.3],
-    "optimizer": ["sgd-001-0.9-nesterov"],
+    "optimizer": ["adam","sgd-001-0.9-nesterov"],
     "deep-dense-top": [false],
-    "convnet-freeze-percent": [0]
+    "convnet-freeze-percent": [0.5]
 }
 

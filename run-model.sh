@@ -1,5 +1,12 @@
-#pipenv run python run.py --description $1 --model v2 --form t1 --label outcome --hyperparameters hyperparameters.json --split bf7b9854-626a-4613-916a-1e09ed013067
+pipenv run python run.py --description $1 --model v2 --form t2 --label outcome_pos --hyperparameters hyperparameters_long.json --trials 3 --split fa6c10e6-a6d7-478e-9a3e-e3925f448f15
 
-pipenv run python run.py --description $1 --model v2 --form t1c --label outcome_pos --hyperparameters hyperparameters.json --trials 10 #--split 46ea3109-a0d3-4e27-9e0b-22f09d2f2fd7
+pipenv run python run.py --description $1 --model v2 --form t2 --label outcome_neg --hyperparameters hyperparameters_long.json --trials 3 --split 0bab6177-e60c-4a85-8deb-e1cb5526af4f
 
-#pipenv run python run.py --description $1 --model v2 --form t2 --label outcome --hyperparameters hyperparameters.json --split 86aaf946-fb7d-4402-b725-b9959e0f004a
+pipenv run python run.py --description $1 --model v3 --form t2 --label outcome_3 --hyperparameters hyperparameters_long.json --trials 3 --split 4dc253c8-34ce-4273-b495-27d2885ebadf
+
+pipenv run python run.py --description $1 --model v2 --form t1c --label outcome_pos --hyperparameters hyperparameters_long.json --trials 3 --split fa6c10e6-a6d7-478e-9a3e-e3925f448f15
+
+pipenv run python run.py --description $1 --model v2 --form t1c --label outcome_neg --hyperparameters hyperparameters_long.json --trials 3 --split 0bab6177-e60c-4a85-8deb-e1cb5526af4f
+
+pipenv run python run.py --description $1 --model v3 --form t1c --label outcome_3 --hyperparameters hyperparameters_long.json --trials 3 --split 4dc253c8-34ce-4273-b495-27d2885ebadf
+

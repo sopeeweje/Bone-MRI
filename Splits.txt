@@ -1,8 +1,4 @@
-T1C, int->ben: 46ea3109-a0d3-4e27-9e0b-22f09d2f2fd7
-T2, int->ben: 86aaf946-fb7d-4402-b725-b9959e0f004a
-T1, int->ben: bf7b9854-626a-4613-916a-1e09ed013067
-
-T1C, int->mal: fd123dc0-4782-4e27-9b23-1163991af52f
-T2, int->mal: 9f3b5b96-a4eb-4a3a-8bd2-2cfda01c1994
-T1, int->mal: a28187b5-c825-4352-8265-e1ccf4695d3d
+outcome_pos: fa6c10e6-a6d7-478e-9a3e-e3925f448f15
+outcome_neg: 0bab6177-e60c-4a85-8deb-e1cb5526af4f
+outcome_3: 4dc253c8-34ce-4273-b495-27d2885ebadf
 

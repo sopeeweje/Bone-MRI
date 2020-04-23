@@ -116,6 +116,21 @@ def processFiles(path):
                 if view == '.DS_Store':
                     continue
                 old_view = view
+                
+                try:
+                    files = os.listdir(path+"/"+source+"/"+data_patient+"/"+old_view)
+                    if not (("imagingVolume.nrrd" in files) and ("segMask_tumor.nrrd" in files)):
+                       if "segMask_GTV.nrrd" in files:
+                           os.rename(path+"/"+source+"/"+data_patient+"/"+old_view+"/"+"segMask_GTV.nrrd", path+"/"+source+"/"+data_patient+"/"+old_view+"/"+"segMask_tumor.nrrd")
+                       elif "imagingVolume.nhdr" in files:
+                           os.rename(path+"/"+source+"/"+data_patient+"/"+old_view+"/"+"imagingVolume.nhdr", path+"/"+source+"/"+data_patient+"/"+old_view+"/"+"imagingVolume.nrrd")
+                       elif "imageVolume.nrrd" in files:
+                           os.rename(path+"/"+source+"/"+data_patient+"/"+old_view+"/"+"imageVolume.nrrd", path+"/"+source+"/"+data_patient+"/"+old_view+"/"+"imagingVolume.nrrd")
+                       else:
+                           print("{}, {}".format(patientID, old_view))
+                except:
+                    pass
+
 #                view = view.split("-")[0]
                 for char in view:
                     if char not in ["t", "1", "2", "c", "p", "d", "w", "i"]:
@@ -132,8 +147,10 @@ def processFiles(path):
                         available_sequences[view].append(patientID)
                         added_views += 1 
                 except:
-                    print(patientID)
-                    print(view)
+                    pass
+                    #print(patientID)
+                    #print(view)
+                
             if not added_views:
                 available_sequences['none'].append(patientID)           
 #                new_image_path = save_path+"/"+patientID+"/"+view
@@ -178,6 +195,6 @@ def processFiles(path):
             
 
 #Test code
-path = "/home/user1/Downloads/bone_raw"#"/home/user1/Documents/Bone-MRI/bone_raw"
+path = "/home/user1/Documents/Bone-MRI/bone_raw"
 processFiles(path)
 

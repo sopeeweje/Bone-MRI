@@ -79,7 +79,7 @@ def processFiles(path):
         chopIDs_dict[combo[1]] = combo[0]
     messed_up = []
     
-    available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[], 'none':[], 't2-t1c':[]}
+    available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[], 'none':[], 't2-t1c':[], 't2-t1':[]}
     
     print("Loading images...")
     
@@ -139,7 +139,10 @@ def processFiles(path):
                 try:
                     os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view)
                 except:
-                    shutil.rmtree(path+"/"+source+"/"+data_patient+"/"+old_view)
+                    if os.path.isdir(path+"/"+source+"/"+data_patient+"/"+old_view):
+                        shutil.rmtree(path+"/"+source+"/"+data_patient+"/"+old_view)
+                    else:
+                        os.remove(path+"/"+source+"/"+data_patient+"/"+old_view)
 #                    os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view+"-"+"alt_view"+str(duplicate))
 #                    duplicate += 1
                 try:
@@ -183,11 +186,15 @@ def processFiles(path):
 #                    threshold = threshold + 10
                 
     keys = sorted(available_sequences.keys())
+    t1_available = available_sequences['t1']
     t1c_available = available_sequences['t1c']
     t2_available = available_sequences['t2']
-    for patient in t1c_available:
-       if patient in t2_available:
+    for patient in t2_available:
+       if patient in t1c_available:
             available_sequences['t2-t1c'].append(patient)
+       if patient in t1_available:
+            available_sequences['t2-t1'].append(patient)
+    keys = sorted(available_sequences.keys())
     print("total sources = {}".format(str(num_sources)))
     print("total patients = {}".format(str(total_patients)))
     print("%t1 = {}%".format(str(len(available_sequences["t1"])/total_patients*100)))

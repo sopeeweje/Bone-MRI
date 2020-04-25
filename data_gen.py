@@ -170,7 +170,8 @@ with open(config.SEQ_AVAIL) as seq_avail:
        available['t1'].append(row[2])
        available['t1c'].append(row[3])
        available['t2'].append(row[4])
-       available['t2-t1c'].append(row[5])
+       available['t2-t1'].append(row[5])
+       available['t2-t1c'].append(row[6])
 
 class Features(Iterator):
     def __init__(self, features, shuffle, seed):
@@ -489,7 +490,13 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
 
     # sort remaining lesions
     for l in labels:
-        for s in ["train", "validation", "test"]:
+        s = "test"
+        label_set = remaining[remaining[label_form] == l]
+        label_set = label_set[label_set.index.isin(available['t2-t1c'])]
+        label_set = label_set.sample(n = min(goal_sort[(l, s)], len(label_set)), random_state=(int(seed) % 2 ** 32))
+        remaining = remaining.drop(label_set.index)
+        sorted_dict[s].append(label_set)
+        for s in ["train", "validation"]:
             label_set = remaining[remaining[label_form] == l]
             label_set = label_set.sample(n = min(goal_sort[(l, s)], len(label_set)), random_state=(int(seed) % 2 ** 32))
             remaining = remaining.drop(label_set.index)
@@ -502,13 +509,13 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     test = pandas.concat(all_test)
 
     print("Training points = " + str(len(train)))
-    print("Benign: " + str(len(train[train[label_form] == 0])) + ", Malignant: " + str(len(train[train[label_form] == 1])))
+    print("Benign: " + str(len(train[train[label_form] == 0])) + ", Intermediate: " + str(len(train[train[label_form] == 1])) + ", Malignant: " + str(len(train[train[label_form] == 2])))
     print("")
     print("Validation points = " + str(len(validation)))
-    print("Benign: " + str(len(validation[validation[label_form] == 0])) + ", Malignant: " + str(len(validation[validation[label_form] == 1])))
+    print("Benign: " + str(len(validation[validation[label_form] == 0])) + ", Intermediate: " + str(len(validation[validation[label_form] == 1])) + ", Malignant: " + str(len(validation[validation[label_form] == 2])))
     print("")
     print("Testing points = " + str(len(test)))
-    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Malignant: " + str(len(test[test[label_form] == 1])))
+    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Intermediate: " + str(len(test[test[label_form] == 1])) + ", Malignant: " + str(len(test[test[label_form] == 2])))
 
     train.to_csv(os.path.join(config.TRAIN_DIR, "{}-train.csv".format(str(seed))))
     validation.to_csv(os.path.join(config.VALIDATION_DIR, "{}-validation.csv".format(str(seed))))

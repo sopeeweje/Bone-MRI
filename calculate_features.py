@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+3#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Fri Oct 25 16:25:26 2019
@@ -61,6 +61,28 @@ def get_features_dict(file="/Volumes/external/bone_master/bone_features.csv", id
                 #{patient1: {'PatientID':patient1, 'Age':50, 'Weight':200...},
                 # patient2: {'PatientID':patient2, 'Age':67, 'Weight':143...}}
     return by_patientID
+
+def all_features(files=["./features.csv"], id_name="patientID"):
+    by_file = list()
+    for filename in files:
+        with open(filename) as f:
+            l = [ {k: v for k, v in row.items() } for row in csv.DictReader(f, skipinitialspace=True )]
+            by_accession = { d[id_name]: d for d in l }
+            by_file.append(by_accession)
+    id_sets = [ set(f.keys()) for f in by_file ]
+    union = id_sets[0]
+    for ids in id_sets:
+        union = union | ids
+    combined = dict()
+    for i in union:
+        c = dict()
+        for by_accession in by_file:
+            c = {
+                **c,
+                **by_accession[i],
+        }
+        combined[i] = c
+    return combined
 
 def get_all_nrrds(folder="/Volumes/external/bone_master/bone_raw"):
     """

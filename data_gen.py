@@ -492,7 +492,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     for l in labels:
         s = "test"
         label_set = remaining[remaining[label_form] == l]
-        label_set = label_set[label_set.index.isin(available['t2-t1c'])]
+        label_set = label_set[label_set.index.isin(available['t2-t1'])]
         label_set = label_set.sample(n = min(goal_sort[(l, s)], len(label_set)), random_state=(int(seed) % 2 ** 32))
         remaining = remaining.drop(label_set.index)
         sorted_dict[s].append(label_set)

@@ -1,7 +1,8 @@
 from config import config
-from data import data, xdata, load_from_features
+from data_gen import data, xdata, load_from_features
 from keras.models import load_model
 from keras import backend as K
+import efficientnet.keras
 import math
 from uuid import uuid4, UUID
 

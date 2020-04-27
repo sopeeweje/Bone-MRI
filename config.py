@@ -17,6 +17,8 @@ class Config(object):
     TEST_SPLIT = 0.1
     OUTCOME_BIAS = "pos"
 
+    EXPERTS = "experts.csv"
+
     DEVELOPMENT = True
     DEBUG = True
     PRINT_SQL = False

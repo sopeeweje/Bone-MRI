@@ -15,6 +15,7 @@ keras = "*"
 keras-vis = "*"
 efficientnet = "*"
 sklearn = "*"
+tabulate = "*"
 
 pillow = "*"
 yapf = "*"

@@ -366,7 +366,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         if parameters["t1"]:
             try:
                 print("Does this patient have T1 available? " + str(index in available['t1']))
-                if (index in available['t1']):# and (index in available['t2']):
+                if (index in available['t1']):
                     print("I'm doing the thing.")
                     if verbose:
                         print(SHAPES_OUTPUT.format("t1"))
@@ -385,7 +385,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         if parameters["t2"]:
             try:
                 print("Does this patient have T2 available? " + str(index in available['t2']))
-                if (index in available['t2']):# and (index in available['t1']):
+                if (index in available['t2']):
                     print("I'm doing the thing.")
                     if verbose:
                         print(SHAPES_OUTPUT.format("t2"))

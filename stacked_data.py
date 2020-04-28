@@ -91,6 +91,7 @@ def stacked_data(
         training_fixed[result.input_form] = tf
         validation[result.input_form] = v
         test[result.input_form] = te
+    print(validation)
     # generate labels
     train_labels = list()
     training_fixed_labels = list()
@@ -99,11 +100,14 @@ def stacked_data(
     first_training = list(training.values())[0]
     first_training_fixed = list(training_fixed.values())[0]
     first_validation = list(validation.values())[0]
+    print(first_validation)
     first_test = list(test.values())[0]
     for _ in range(epochs):
         train_labels += first_training.next()[1].tolist()
     for _ in range(math.ceil(len(first_validation)/config.BATCH_SIZE)):
-        validation_labels += first_validation.next()[1].tolist()
+        add = first_validation.next()[1].tolist()
+        print(add)
+        validation_labels += add
     for _ in range(math.ceil(len(first_training_fixed)/config.BATCH_SIZE)):
         training_fixed_labels += first_training_fixed.next()[1].tolist()
     for _ in range(math.ceil(len(first_test)/config.BATCH_SIZE)):
@@ -122,6 +126,7 @@ def stacked_data(
         t = training[result.input_form]
         tf = training_fixed[result.input_form]
         v = validation[result.input_form]
+        print(len(v))
         te = test[result.input_form]
         train_predictions.append(model.predict_generator(t, steps=epochs).flatten())
         train_fixed_predictions.append(model.predict_generator(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())

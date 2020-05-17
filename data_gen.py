@@ -366,7 +366,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         if parameters["t1"]:
             try:
                 print("Does this patient have T1 available? " + str(index in available['t1']))
-                if (index in available['t1']):
+                if (index in available['t1']) and (index in available['t2']):
                     print("I'm doing the thing.")
                     if verbose:
                         print(SHAPES_OUTPUT.format("t1"))
@@ -385,7 +385,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
         if parameters["t2"]:
             try:
                 print("Does this patient have T2 available? " + str(index in available['t2']))
-                if (index in available['t2']):
+                if (index in available['t2']) and (index in available['t1']):
                     print("I'm doing the thing.")
                     if verbose:
                         print(SHAPES_OUTPUT.format("t2"))
@@ -432,15 +432,17 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
         "t1": lambda f: f[f.index.isin(available['t1'])],
         "t2": lambda f: f[f.index.isin(available['t2'])],
         "t1c": lambda f: f[f.index.isin(available['t1c'])],
-        "t1-t2": lambda f: f[f.index.isin(available['t1']) & f.index.isin(available['t2'])],
+        "t2-t1": lambda f: f[f.index.isin(available['t2-t1'])],
         "t1c-t2": lambda f: f[f.index.isin(available['t1c']) & f.index.isin(available['t2'])],
         "t1-features": lambda f: f[f.index.isin(available['t1'])],
         "t2-features": lambda f: f[f.index.isin(available['t2'])],
         "t1c-features": lambda f: f[f.index.isin(available['t1c'])],
         "features": lambda f: f
         }
-
-    #f = input_form_map[input_form](f) #CSV with all training features for patients with given imaging modality
+    print(len(f))
+    f = input_form_map["t2-t1"](f) #CSV with all training features for patients with given imaging modality
+    print(len(f))
+    return
     remaining = f.copy()
 
     sort_dict = {
@@ -490,13 +492,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
 
     # sort remaining lesions
     for l in labels:
-        s = "test"
-        label_set = remaining[remaining[label_form] == l]
-        label_set = label_set[label_set.index.isin(available['t2-t1'])]
-        label_set = label_set.sample(n = min(goal_sort[(l, s)], len(label_set)), random_state=(int(seed) % 2 ** 32))
-        remaining = remaining.drop(label_set.index)
-        sorted_dict[s].append(label_set)
-        for s in ["train", "validation"]:
+        for s in ["train", "validation", "test"]:
             label_set = remaining[remaining[label_form] == l]
             label_set = label_set.sample(n = min(goal_sort[(l, s)], len(label_set)), random_state=(int(seed) % 2 ** 32))
             remaining = remaining.drop(label_set.index)

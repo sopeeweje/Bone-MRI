@@ -131,11 +131,9 @@ def processFiles(path):
                 except:
                     pass
 
-#                view = view.split("-")[0]
                 for char in view:
                     if char not in ["t", "1", "2", "c", "p", "d", "w", "i"]:
                          view = view.replace(char,"")
-                #''.join(e for e in view if (e in ["t", "1", "2", "c", "p", "d", "w", "i"])) #use for non-CHOP files
                 try:
                     os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view)
                 except:
@@ -143,8 +141,6 @@ def processFiles(path):
                         shutil.rmtree(path+"/"+source+"/"+data_patient+"/"+old_view)
                     else:
                         os.remove(path+"/"+source+"/"+data_patient+"/"+old_view)
-#                    os.rename(path+"/"+source+"/"+data_patient+"/"+old_view, path+"/"+source+"/"+data_patient+"/"+view+"-"+"alt_view"+str(duplicate))
-#                    duplicate += 1
                 try:
                     if patientID not in available_sequences[view]:
                         available_sequences[view].append(patientID)

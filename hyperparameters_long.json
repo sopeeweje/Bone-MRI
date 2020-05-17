@@ -1,7 +1,0 @@
-{
-    "dropout": [0.3],
-    "optimizer": ["adam"],
-    "deep-dense-top": [true],
-    "convnet-freeze-percent": [0]
-}
-

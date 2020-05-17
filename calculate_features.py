@@ -113,19 +113,6 @@ def get_filename_features(path):
     """
     split_path = path.split(os.sep)
     try:
-#        if split_path[-4] == "CHOP":
-#            filename = split_path[-1]
-#            modality = split_path[-2].split()[0]
-#            patientID = split_path[-3]
-#            #patientID = CHOP[split_path[-3]]
-#        elif split_path[-4] == "Penn":
-#            filename = split_path[-1]
-#            modality = split_path[-2].split()[0]
-#            patientID = split_path[-3]
-#        else:
-#            filename = split_path[-1]
-#            modality = split_path[-2]
-#            patientID = split_path[-3].replace("bone-","").replace("-","")
         filename = split_path[-1]
         modality = split_path[-2]
         patientID = split_path[-3]
@@ -171,9 +158,8 @@ def features(df, filetype = 'segMask_tumor.nrrd'):
     modality and filetype don't matter, just need one per patient
     """
     df = df.drop_duplicates(["patientID","modality","filename"], 'first')
-    df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "sort", "volume"]] #[["patientID","age", "sex", "outcome_"+int_bias, "sort", "volume"]]
+    df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "sort", "volume"]]
     df = df.drop_duplicates(["patientID"], 'first')
-    #df["outcome"] = df.pop("outcome_"+int_bias) #rename outcome key to just "outcome"
     df = df.set_index("patientID")
     df = df.dropna()
     return df

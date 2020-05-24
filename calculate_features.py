@@ -116,12 +116,13 @@ def get_filename_features(path):
         filename = split_path[-1]
         modality = split_path[-2]
         patientID = split_path[-3]
-        return {
+        features = {
             "patientID": patientID,
             "modality": modality,
             "filename": filename,
             "path": path,
         }
+        return features
     except:
         return {
             "patientID": "skipped",
@@ -158,7 +159,7 @@ def features(df, filetype = 'segMask_tumor.nrrd'):
     modality and filetype don't matter, just need one per patient
     """
     df = df.drop_duplicates(["patientID","modality","filename"], 'first')
-    df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "sort", "volume"]]
+    df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "sort"]]#, "volume"]]
     df = df.drop_duplicates(["patientID"], 'first')
     df = df.set_index("patientID")
     df = df.dropna()
@@ -182,11 +183,11 @@ def run(folder, features_files, out, save=True, nrrd_pickle="", features_pickle=
     all_features = pandas.DataFrame(
         [{
             **get_filename_features(n), #patientID, modality, filename, path (4)
-            **get_clinical_features(feat, n), #outcome_pos, outcome_neg, outcome_3, age, sex (3)
-            **get_image_features(n) #nrrd volume (1)
+            **get_clinical_features(feat, n)#, #outcome_pos, outcome_neg, outcome_3, age, sex (3)
+            #**get_image_features(n) #nrrd volume (1)
         } for n in nrrds])
     all_features = filter_filenames(all_features)
-    all_features = normalize_column(all_features, column="volume")
+    #all_features = normalize_column(all_features, column="volume")
     
     features_to_use = features(all_features)
     to_preprocess = preprocessing(all_features)

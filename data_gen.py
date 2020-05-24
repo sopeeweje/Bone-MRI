@@ -23,7 +23,7 @@ from filenames import IMAGE, SEGMENTATION, T1, T2, T1C
 
 clinical_features = [
     #"age",
-    "volume",
+    #"volume"
     #"sex"
 ]
 
@@ -442,7 +442,6 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     print(len(f))
     f = input_form_map["t2-t1"](f) #CSV with all training features for patients with given imaging modality
     print(len(f))
-    return
     remaining = f.copy()
 
     sort_dict = {
@@ -547,16 +546,10 @@ def data(seed=None,
     validation_features = relist(validation_features)
     test_features = relist(test_features)
 
-    #train_labels = make_labels(train_labels, label_form)
-    #print(train_labels.shape)
-    #validation_labels = make_labels(validation_labels, label_form)
-    #print(validation_labels.shape)
-    #test_labels = make_labels(test_labels, label_form)
-    #print(test_labels.shape)
     three = (label_form == "outcome_3")
-    print(len(train_images)/len(train))
-    print(len(test_images)/len(test))
-    print(len(validation_images)/len(validation))
+    print(len(train_images))
+    print(len(test_images))
+    print(len(validation_images))
     train_generator = Dataset(
             train_images,
             train_features,

@@ -1,1203 +1,1197 @@
-patientID,category,sort,Sex,age,MRN,description,location
-bone-penn-001,0,-,M,,,periosteal chondroma with osseous metaplasia,right thumb-distal phalangeal tuft of the first digit
-bone-penn-002,1,-,,,,giant cell tumor of bone,"epidural mass, vertebral body of c7 "
-bone-penn-003,1,-,M,,,giant cell tumor of the bone,right proximal tibia
-bone-penn-004,0,-,F,,,osteochondroma,"scalpula, left"
-bone-penn-005,0,-,M,,,osteochondroma,right proximal humerus
-bone-penn-006,2,-,M,,,chordoma ,retroclival 
-bone-penn-007,0,-,M,,,enchondroma,right third finger proximal phalanx head
-bone-penn-008,2,-,M,,,ewing's sarcoma in bone,"bone, left fibula      & ankle, left lateral malleolus"
-bone-penn-009,2,-,F,,,chordoma,"craniocervical junction,"
-bone-penn-010,2,-,F,,,chordoma,"craniocervical junction,"
-bone-penn-011,2,-,F,,,chordoma,clivus
-bone-penn-012,2,-,M,,,chordoma ,retroclival 
-bone-penn-013,2,-,F,,,chordoma,petroclival mass 
-bone-penn-014,2,-,M,,,chordoma,clival
-bone-penn-015,1,-,F,,,giant cell tumor of the bone,left femoral head
-bone-penn-016,0,-,F,,,osteochondroma,left pubic bone
-bone-penn-017,1,-,F,,,giant cell tumor of bone,"tibial, right distal"
-bone-penn-018,2,-,,,,clear cell chondrosarcoma ,"right upper extremity: proximal left humeral head involving the epiphysis crossing the physis to the metaphysis,"
-bone-penn-019,2,-,,,,primary bone diffuse large b-cell lymphoma involving the left tibia ,left proximal tibia
-bone-penn-020,2,-,,,,"osteosarcoma, high grade.","tibia, left,"
-bone-penn-021,2,-,,,,"dedifferentiated  chondrosarcoma, high grade, ",right chest wall 
-bone-penn-022,2,-,,,,osteosarcoma ,hip:  proximal right femur with intra-articular soft tissue extension. 
-bone-penn-023,2,-,M,,,metastatic chondrosarcoma(ii),left t9-10 rib interspace& left chest wall mass
-bone-penn-024,2,-,,,,chordoma,skull base : spans the superior aspect of the clivus and the right side of the sella. 
-bone-penn-025,0,-,F,,,peri-osteochondroma, right long finger
-bone-penn-026,2,-,,,,large b-cell lymphoma ,bone lesion in mid to distal femur 
-bone-penn-027,0,-,F,,,enchondroma,right 5th proximal phalanx
-bone-penn-028,1,-,M,,,chondromyxoid fibroma,"elbow, right-proximal ulnar diaphyseal"
-bone-penn-029,2,-,,,,chordoma ,anterior aspect of the distal sacrum 
-bone-penn-030,2,-,,,,ameloblastoma ,left mandible extending to the angle the mandible
-bone-penn-031,0,-,,,,osteoid osteoma ,right proximal tibia 
-bone-penn-032,1,-,M,,,giant cell tumor of bone,left medial cuneiform bone
-bone-penn-033,2,-,,,,chordoma ,clival mass predominantly right-sided that extends into the prepontine cistern. 
-bone-penn-034,2,-,,,,chordoma,clivus
-bone-penn-035,2,-,M,,,chordoma,"cervical vertebrae, c4, "
-bone-penn-036,0,-,M,,,synovial chondromatosis,right hip synovium
-bone-penn-037,0,-,M,,,enchondroma,left second proximal phalanx
-bone-penn-038,0,-,M,,,osteoid osteoma,left pedicle of l4
-bone-penn-039,1,-,,,,giant cell tumor with secondary aneurysmal bone cyst. ,right anterosuperior calcaneus 
-bone-penn-040,0,-,F,,,enchondroma, left long finger
-bone-penn-041,2,-,,,,chondroblastic osteosarcoma,left pelvic 
-bone-penn-042,1,-,F,,,giant cell tumor of bone,right distal radius
-bone-penn-043,0,-,M,,,osteochondroma,proximal medial right tibia
-bone-penn-044,2,-,,,,"diffuse large b-cell lymphoma, with soft tissue mass in the left proximal tibia ",large marrow replacing lesion with its epicenter in the proximal tibial metadiaphysis which measures 
-bone-penn-045,0,-,M,,,enchondroma, right fourth middle phalanx
-bone-penn-046,0,-,,,,pedunculated osteochondroma ,"posterior superior right iliac crest, "
-bone-penn-047,0,-,F,,,osteochondroma, left 1st metatarsal
-bone-penn-048,2,-,,,,"osteosarcoma, high-grade","leg, right, above knee amputation:_distal right femoral diaphysis and metaphysis"
-bone-penn-049,0,-,,,,hemangioma ,t6 lesion
-bone-penn-050,2,-,,,,chordoma ,clivus
-bone-penn-051,1,-,F,,,giant cell tumor of the bone,"patella, left"
-bone-penn-052,2,-,,,,chordoma,extra-axial prepontine mass 
-bone-penn-053,2,-,,,,chondrosarcoma,left scapula
-bone-penn-054,1,-,M,,,giant cell tumor of the bone, right distal radius
-bone-penn-055,2,-,,,,chondroma,l3: posterior aspect 
-bone-penn-056,0,-,F,,,enchondroma,proximal two thirds of the second proximal phalanx
-bone-penn-057,1,-,F,,,giant cell tumor of bone, prox fibular 
-bone-penn-058,1,-,F,,,giant cell tumor of bone,right proximal tibia
-bone-penn-059,2,-,,,,"osteosarcoma , conventional type",: right distal femur 
-bone-penn-060,2,-,,,,chordoma,clival 
-bone-penn-061,1,-,M,,,giant cell tumor of bone,eft distal radius
-bone-penn-062,1,-,F,,,giant cell tumor of bone, t1
-bone-penn-063,2,-,,,,lymphoma ,extensive osseous abnormality in the lateral left hip and the left side of the bony pelvis and more mild disease the right iliac crest.
-bone-penn-064,2,-,,,,osteosarcoma , right tibia: proximal tibial cortex
-bone-penn-065,2,-,,,,chordoma, large central skull base neoplasm centered at the clivus
-bone-penn-066,2,-,F,,,chordoma,"spine, cervical spine, extradural c2-3 tumor, excisional biopsy"
-bone-penn-067,1,-,F,,,giant cell tumor of bone, left elbow
-bone-penn-068,1,-,F,,,giant cell tumor of bone,left distal femur
-bone-penn-069,2,-,M,,,chordoma with necrosis,sacral tumor
-bone-penn-070,1,-,M,,,"chondrosarcoma, conventional hyaline type, grade 1-2",right iliac bone
-bone-penn-071,0,-,F,,,osteochondroma with fracture site," right medial aspect 
-of the distal femur"
-bone-penn-072,2,-,M,,,"chondrosarcoma, low grade (who classification grade i)",left inferior aspect of the sacral ala
-bone-penn-073,2,-,F,,,epithelioid hemangioendothelioma,distal right femoral diaphysis
-bone-penn-074,0,-,F,,,osteochondroma,lateral and proximal aspect of the fibular shaft
-bone-penn-075,2,-,M,,,"osteosarcoma, chondroblastic type, 1 grade","sacrum, right, ct guided biopsy"
-bone-penn-076,1,-,M,,,epithelioid hemangioma,left acromion
-bone-penn-077,0,-,M,,,osteochondroma,lesser trochanter of the left femur 
-bone-penn-078,0,-,M,,,osteoid osteoma,right distal fourth digit
-bone-penn-079,2,-,M,,,chordoma, c2 
-bone-penn-080,1,test,M,14,,chondroblastoma,right upper tibia
-bone-penn-081,1,-,F,17,,chondroblastoma,right humerus
-bone-penn-082,1,-,M,16,,chondroblastoma,left ilium
-bone-penn-083,1,-,M,10,,chondroblastoma,right distal femur
-bone-penn-084,1,-,,,,chondroblastoma.,
-bone-penn-085,1,-,,,,chondroblastoma,
-bone-penn-086,1,-,,,,chondroblastoma,
-bone-penn-087,1,-,F,11,,chondromyxoid fibroma,right proximal tibia
-bone-penn-088,1,-,,,,chondroblastoma,
-bone-penn-089,1,-,,,,chondroblastoma ,
-bone-penn-090,1,-,,,,chondroblastoma ,
-bone-penn-091,0,-,,,,epithelioid hemangioma,
-bone-penn-092,1,-,,,,chondroblastoma,
-bone-penn-093,1,-,,,,chondroblastoma,
-bone-penn-094,1,-,,,,giant cell reparative granuloma,
-bone-penn-095,1,-,,,,chondroblastoma,
-bone-penn-096,1,-,,,,chondroblastoma,
-bone-penn-097,1,-,,,,chondroblastoma,
-bone-penn-098,1,-,,,,chondroblastoma.,
-bone-penn-099,1,-,,,,chondroblastoma,
-bone-penn-100,1,-,,,,chondroblastoma,
-bone-penn-101,1,-,,,,chondroblastoma ,
-bone-penn-102,1,test,,,,chondroblastoma,
-bone-penn-103,1,test,,,,chondroblastoma.,
-bone-penn-104,1,-,,,,chondroblastoma,
-bone-penn-105,1,-,,,,chondroblastoma,
-bone-penn-106,1,-,,,,chondroblastoma,
-bone-penn-107,1,-,,,,chondroblastoma,
-bone-penn-108,0,-,,,,fibrous dysplasia,
-bone-penn-109,1,-,,,,atypical giant cell-rich neoplasm,
-bone-penn-110,1,-,,,,chondromyxoid fibroma,
-bone-penn-111,1,-,,,,chondromyxoid fibroma,
-bone-penn-112,1,-,,,,giant cell tumor ,
-bone-penn-113,1,-,,,,chondromyxoid fibroma,
-bone-penn-114,1,-,,,,chondroma,
-bone-penn-115,1,-,,,,chondroma,
-bone-penn-116,1,-,,,,chondromyxoid fibroma,
-bone-penn-117,1,test,,,,=LOWER(B118),
-bone-penn-118,1,-,,,,chondromyxoid fibroma,
-bone-penn-119,2,-,,,,ewing sarcoma,
-bone-penn-120,2,-,,,,ewing sarcoma,
-bone-penn-121,1,-,,,,tenosynovial giant cell tumor,
-bone-penn-122,2,-,,,,mesenchymal chondrosarcoma,
-bone-penn-123,2,-,,,,mesenchymal chondrosarcoma,
-bone-penn-124,2,-,,,,spindle cell myoepithelioma,
-bone-penn-125,2,test,,,,chondrosarcoma,
-bone-penn-126,2,-,,,,chondrosarcoma,
-bone-penn-127,0,-,,,,enchondroma,
-bone-penn-128,2,-,,,,chondrosarcoma,
-bone-penn-129,0,-,,,,enchondroma,
-bone-penn-130,0,-,,,,enchondroma,
-bone-penn-131,0,-,,,,enchondroma,
-bone-penn-132,0,-,,,,enchondroma,
-bone-penn-133,0,-,,,,enchondroma,
-bone-penn-134,0,-,,,,enchondroma,
-bone-penn-135,0,test,,,,enchondroma,
-bone-penn-136,0,-,,,,enchondroma,
-bone-penn-137,0,-,,,,enchondroma,
-bone-penn-138,0,-,,,,enchondroma,
-bone-penn-139,0,-,,,,enchondroma,
-bone-penn-140,0,-,,,,enchondroma,
-bone-penn-141,0,-,,,,enchondroma,
-bone-penn-142,0,-,,,,enchondroma,
-bone-penn-143,0,-,,,,enchondroma,
-bone-penn-144,0,-,,,,enchondroma,
-bone-penn-145,0,test,,,,enchondroma,
-bone-penn-146,0,-,,,,enchondroma,
-bone-penn-147,0,-,,,,enchondroma,
-bone-penn-148,0,-,,,,enchondroma,
-bone-penn-149,0,-,,,,enchondroma,
-bone-penn-150,0,-,,,,enchondroma,
-bone-penn-151,0,-,,,,enchondroma,
-bone-penn-152,0,-,,,,enchondroma,
-bone-penn-153,0,-,,,,enchondroma,
-bone-penn-154,0,-,,,,enchondroma,
-bone-penn-155,0,-,,,,enchondroma,
-bone-penn-156,0,-,,,,enchondroma,
-bone-penn-157,0,-,,,,enchondroma,
-bone-penn-158,0,-,,,,enchondroma,
-bone-penn-159,0,-,,,,enchondroma,
-bone-penn-160,2,-,,,,ewing sarcoma,
-bone-penn-161,2,-,,,,ewing sarcoma,
-bone-penn-162,2,-,,,,ewing sarcoma,
-bone-penn-163,2,-,,,,ewing sarcoma,
-bone-penn-164,2,-,,,,ewing sarcoma,
-bone-penn-165,2,-,,,,ewing sarcoma,
-bone-penn-166,2,-,,,,ewing sarcoma,
-bone-penn-167,2,-,,,,ewing sarcoma,
-bone-penn-168,2,-,,,,ewing sarcoma,
-bone-penn-169,2,-,,,,ewing sarcoma,
-bone-penn-170,2,-,,,,ewing sarcoma,
-bone-penn-171,2,-,,,,ewing sarcoma,
-bone-penn-172,2,-,,,,ewing sarcoma,
-bone-penn-173,2,-,,,,ewing sarcoma,
-bone-penn-174,2,-,,,,ewing sarcoma,
-bone-penn-175,2,test,,,,ewing sarcoma,
-bone-penn-176,2,-,,,,ewing sarcoma,
-bone-penn-177,2,-,,,,ewing sarcoma,
-bone-penn-178,2,-,,,,ewing sarcoma,
-bone-penn-179,2,-,,,,ewing sarcoma,
-bone-penn-180,2,-,,,,ewing sarcoma,
-bone-penn-181,2,-,,,,ewing sarcoma,
-bone-penn-182,2,-,,,,ewing sarcoma,
-bone-penn-183,2,-,,,,ewing sarcoma,
-bone-penn-184,2,test,,,,ewing sarcoma,
-bone-penn-185,2,test,,,,ewing sarcoma,
-bone-penn-186,2,-,,,,ewing sarcoma,
-bone-penn-187,2,-,,,,ewing sarcoma,
-bone-penn-188,2,-,,,,ewing sarcoma,
-bone-penn-189,2,-,,,,ewing sarcoma,
-bone-penn-190,2,-,,,,ewing sarcoma,
-bone-penn-191,2,-,,,,ewing sarcoma,
-bone-penn-192,2,-,,,,ewing sarcoma,
-bone-penn-193,2,-,,,,ewing sarcoma,
-bone-penn-194,2,-,,,,ewing sarcoma,
-bone-penn-195,2,-,,,,ewing sarcoma,
-bone-penn-196,2,-,,,,ewing sarcoma,
-bone-penn-197,2,-,,,,ewing sarcoma,
-bone-penn-198,2,-,,,,ewing sarcoma,
-bone-penn-199,2,-,,,,ewing sarcoma,
-bone-penn-200,2,-,,,,ewing sarcoma,
-bone-penn-201,2,-,,,,ewing sarcoma,
-bone-penn-202,2,test,,,,ewing sarcoma,
-bone-penn-203,2,-,,,,ewing sarcoma,
-bone-penn-204,2,-,,,,ewing sarcoma,
-bone-penn-205,2,-,,,,ewing sarcoma,
-bone-penn-206,2,-,,,,ewing sarcoma,
-bone-penn-207,2,-,,,,ewing sarcoma,
-bone-penn-208,2,test,,,,ewing sarcoma,
-bone-penn-209,2,-,,,,ewing sarcoma,
-bone-penn-210,2,-,,,,ewing sarcoma,
-bone-penn-211,2,-,,,,ewing sarcoma,
-bone-penn-212,2,-,,,,ewing sarcoma,
-bone-penn-213,2,-,,,,ewing sarcoma,
-bone-penn-214,2,-,,,,ewing sarcoma,
-bone-penn-215,2,-,,,,ewing sarcoma,
-bone-penn-216,2,-,,,,ewing sarcoma,
-bone-penn-217,2,-,,,,ewing sarcoma,
-bone-penn-218,2,-,,,,ewing sarcoma,
-bone-penn-219,2,-,,,,ewing sarcoma,
-bone-penn-220,2,-,,,,ewing sarcoma,
-bone-penn-221,2,-,,,,ewing sarcoma,
-bone-penn-222,2,-,,,,ewing sarcoma,
-bone-penn-223,2,-,,,,ewing sarcoma,
-bone-penn-224,2,-,,,,ewing sarcoma,
-bone-penn-225,2,-,,,,ewing sarcoma,
-bone-penn-226,2,-,,,,ewing sarcoma,
-bone-penn-227,2,-,,,,ewing sarcoma,
-bone-penn-228,2,-,,,,ewing sarcoma,
-bone-penn-229,2,test,,,,ewing sarcoma,
-bone-penn-230,2,-,,,,ewing sarcoma,
-bone-penn-231,2,-,,,,ewing sarcoma,
-bone-penn-232,2,-,,,,ewing sarcoma,
-bone-penn-233,2,test,,,,ewing sarcoma,
-bone-penn-234,2,-,,,,ewing sarcoma,
-bone-penn-235,2,-,,,,ewing sarcoma,
-bone-penn-236,2,-,,,,ewing sarcoma,
-bone-penn-237,2,-,,,,ewing sarcoma,
-bone-penn-238,2,-,,,,ewing sarcoma,
-bone-penn-239,2,-,,,,ewing sarcoma,
-bone-penn-240,2,-,,,,ewing sarcoma,
-bone-penn-241,2,-,,,,ewing sarcoma,
-bone-penn-242,2,-,,,,ewing sarcoma,
-bone-penn-243,2,-,,,,ewing sarcoma,
-bone-penn-244,2,-,,,,ewing sarcoma,
-bone-penn-245,2,-,,,,ewing sarcoma,
-bone-penn-246,2,-,,,,ewing sarcoma,
-bone-penn-247,2,-,,,,ewing sarcoma,
-bone-penn-248,2,-,,,,ewing sarcoma,
-bone-penn-249,2,-,,,,ewing sarcoma,
-bone-penn-250,2,-,,,,ewing sarcoma,
-bone-penn-251,2,-,,,,ewing sarcoma,
-bone-penn-252,2,-,,,,ewing sarcoma,
-bone-penn-253,2,-,,,,ewing sarcoma,
-bone-penn-254,2,-,,,,ewing sarcoma,
-bone-penn-255,2,-,,,,ewing sarcoma,
-bone-penn-256,2,-,,,,ewing sarcoma,
-bone-penn-257,2,-,,,,ewing sarcoma,
-bone-penn-258,2,-,,,,ewing sarcoma,
-bone-penn-259,2,-,,,,ewing sarcoma,
-bone-penn-260,2,-,,,,ewing sarcoma,
-bone-penn-261,2,-,,,,ewing sarcoma,
-bone-penn-262,2,-,,,,ewing sarcoma,
-bone-penn-263,2,-,,,,ewing sarcoma,
-bone-penn-264,2,-,,,,ewing sarcoma,
-bone-penn-265,2,-,,,,ewing sarcoma,
-bone-penn-266,2,-,,,,ewing sarcoma,
-bone-penn-267,2,-,,,,ewing sarcoma,
-bone-penn-268,2,-,,,,ewing sarcoma,
-bone-penn-269,2,-,,,,ewing sarcoma,
-bone-penn-270,2,-,,,,ewing sarcoma,
-bone-penn-271,2,test,,,,ewing sarcoma,
-bone-penn-272,2,-,,,,ewing sarcoma,
-bone-penn-273,2,-,,,,ewing sarcoma,
-bone-penn-274,0,-,,,,central giant cell granuloma,
-bone-penn-275,1,-,,,,giant cell tumor ,
-bone-penn-276,1,-,,,,giant cell tumor of bone.,
-bone-penn-277,1,-,,,,aneurysmal bone cyst,
-bone-penn-278,1,-,,,,aneurysmal bone cyst ,
-bone-penn-279,1,-,,,,giant cell tumor of bone,
-bone-penn-280,1,-,,,,giant cell reparative granuloma,
-bone-penn-281,0,-,,,,inclusion body fibromatosis,
-bone-penn-282,1,-,,,,aneurysmal bone cyst,
-bone-penn-283,1,-,,,,aneurysmal bone cyst,
-bone-penn-284,1,-,,,,aneurysmal bone cyst,
-bone-penn-285,0,-,,,,osteoid osteoma.,
-bone-penn-286,1,-,,,,aneurysmal bone cyst,
-bone-penn-287,0,-,,,,osteoid osteoma,
-bone-penn-288,1,-,,,,osteoblastoma,
-bone-penn-289,0,-,,,,synovial chondromatosis.,
-bone-penn-290,1,test,,,,osteoblastoma.,
-bone-penn-291,1,-,,,,aneurysmal bone cyst,
-bone-penn-292,1,-,,,,chondromyxoid neoplasm with atypical features,
-bone-penn-293,1,-,,,,langerhans cell histiocytosis,
-bone-penn-294,1,-,,,,aneurysmal bone cyst,
-bone-penn-295,1,test,F,7,,aneurysmal bone cyst,left clavicle
-bone-penn-296,0,-,M,8,,extranodal rosai-dorfman disease (chronic) ,left distal femur
-bone-penn-297,1,-,F,9,,langerhans cell histiocytosis,"vertebra, t6"
-bone-penn-298,2,-,F,11,,ewing sarcoma,right ischium
-bone-penn-299,1,-,M,12,,langerhans cell histiocytosis,l5 vertebra
-bone-penn-300,2,-,F,18,,anaplastic large cell lymphoma,right anterior chest wall
-bone-penn-301,2,-,F,17,,telangiectatic osteosarcoma,left femur
-bone-penn-302,0,-,M,1.65,,mesenchymal hamartoma,left chest wall
-bone-penn-303,0,-,F,13,,cellular neurothekeoma,"subcutaneous tissue, left forearm"
-bone-penn-304,0,-,M,13,,osteoid osteoma,right acetabulum 
-bone-penn-305,2,-,M,4,,malignant rhabdoid tumor,cervical spine
-bone-penn-306,2,-,,,,classical hodgkin lymphoma,
-bone-penn-307,2,-,,,,embryonal rhabdomyosarcoma,
-bone-penn-308,2,-,,,,"osteosarcoma, high grade",
-bone-penn-309,2,-,,,, undifferentiated sarcoma,
-bone-penn-310,2,-,,,,pleomorphic liposarcoma,
-bone-penn-311,2,-,,,,sacrococcygeal teratoma,
-bone-penn-312,0,-,,,,extra-axial soft tissue chordoma ,
-bone-penn-313,1,-,,,,langerhans cell histiocytosis,
-bone-penn-314,2,-,,,,osteosarcoma,
-bone-penn-315,0,-,,,,exostosis,
-bone-penn-316,2,-,,,,ewing sarcoma,
-bone-penn-317,1,-,,,,chondroblastoma,
-bone-penn-318,2,-,,,,ewing sarcoma,
-bone-penn-319,0,-,,,,osteoid osteoma,
-bone-penn-320,0,-,,,,osteoid osteoma,
-bone-penn-321,1,-,,,,langerhans cell histiocytosis,
-bone-penn-322,1,-,,,,aneurysmal bone cyst,
-bone-penn-323,0,-,,,,osteoid osteoma,
-bone-penn-324,2,-,,,,ewing sarcoma,
-bone-penn-325,1,-,,,,langerhans cell histiocytosis,
-bone-penn-326,0,test,,,,osteoid osteoma,
-bone-penn-327,1,-,,,,langerhans cell histiocytosis,
-bone-penn-328,0,-,,,,osteoid osteoma,
-bone-penn-329,0,-,,,,periosteal chondroma,
-bone-penn-330,1,-,,,,aneurysmal bone cyst,
-bone-penn-331,0,-,,,,osteoid osteoma,
-bone-penn-332,1,-,,,,langerhans cell histiocytosis ,
-bone-penn-333,1,-,,,,langerhans cell histiocytosis,
-bone-penn-334,1,-,,,,aneurysmal bone cyst,
-bone-penn-335,1,-,,,,aneurysmal bone cyst,
-bone-penn-336,1,-,,,,langerhans cell histiocytosis,
-bone-penn-337,1,-,,,,langerhans cell histiocytosis,
-bone-penn-338,0,-,,,,osteofibrous dysplasia.,
-bone-penn-339,1,-,,,,aneurysmal bone cyst ,
-bone-penn-340,2,-,,,,juxtacortical osteosarcoma,
-bone-penn-341,1,-,,,,"giant cell tumor of bone,",
-bone-penn-342,2,-,,,,"nonossifying fibroma (fibrous cortical defect), ",
-bone-penn-343,0,-,,,,periosteal (juxtacortical) chondroma,
-bone-penn-344,1,-,,,,langerhans cell histiocytosis ,
-bone-penn-345,2,-,,,,low-grade fibromyxoid sarcoma,
-bone-penn-346,1,-,,,,chondroblastoma,
-bone-penn-347,0,-,,,,osteoid osteoma,
-bone-penn-348,0,-,,,,osteoid osteoma,
-bone-penn-349,0,-,,,,osteoid osteoma,
-bone-penn-351,0,-,M,18,,osteoid osteoma or osteoblastoma,
-bone-penn-352,0,-,M,18,,osteoid osteoma or osteoblastoma,
-bone-penn-354,2,-,F,17,,telangiectatic osteosarcoma,
-bone-penn-355,2,-,M,15,,precursor b lymphoblastic leukemia,
-bone-penn-356,2,-,M,18,,osteosarcoma,
-bone-penn-361,0,-,M,17,,osteoid osteoma,
-bone-penn-362,1,-,M,9,,langerhans cell histiocytosis,
-bone-penn-363,2,-,M,3,,"rhabdomyosarcoma, alveolar subtype",
-bone-penn-364,2,-,F,4,,ewing sarcoma,
-bone-penn-365,2,-,F,9,,ewing sarcoma,
-bone-penn-366,2,test,F,5,,conventional (high-grade) osteosarcoma,
-bone-penn-367,2,-,F,11,,metastatic ewing's sarcoma,
-bone-penn-368,2,-,M,0.94,," rhabdomyosarcoma,embryonal subtype ",
-bone-penn-369,1,-,M,2,,langerhans cell histiocytosis,
-bone-penn-370,2,-,F,11,,ewing sarcoma,
-bone-penn-371,2,-,M,11,,ewing sarcoma,
-bone-penn-372,2,-,M,3,,desmoplastic fibroma,
-bone-penn-373,2,-,F,14,,ewing sarcoma,
-bone-penn-374,1,-,F,5,,myofibroma/myofibromatosis,
-bone-penn-375,0,-,M,11,,schwannoma,
-bone-penn-376,2,-,M,10,,ewing sarcoma,
-bone-penn-377,2,-,F,18,,ewing sarcoma,
-bone-penn-378,2,-,M,26,,ewing sarcoma,
-bone-penn-379,2,-,M,16,,conventional (high-grade) osteosarcoma,
-bone-penn-380,2,-,M,13,,ewing sarcoma,
-bone-penn-381,1,-,M,7,,langerhans cell histiocytosis,
-bone-penn-382,1,-,M,19,,langerhans cell histiocytosis,
-bone-penn-383,1,test,M,17,, grade i chondrosarcoma,
-bone-penn-384,1,-,F,9,,aneurysmal bone cyst,
-bone-penn-385,1,-,F,14,,aneurysmal bone cyst,
-bone-penn-386,2,-,F,15,,"osteosarcoma, conventional subtype",
-bone-penn-387,2,test,M,14,,metastatic site of angiosarcoma,
-bone-penn-388,2,-,M,10,,"osteosarcoma, high-grade, with predominantly cartilaginous differentiation. ",
-bone-penn-389,2,test,F,13,,high grade spindle cell sarcoma,
-bone-penn-390,2,-,F,18,,"osteoblastic osteosarcoma, high-grade",
-bone-penn-391,0,-,M,11,,schwannoma,
-bone-penn-392,1,-,M,3,,aneurysmal bone cyst,
-bone-penn-393,2,test,M,13,,"conventional osteosarcoma,",
-bone-penn-394,2,-,F,9,,pleomorphic liposarcoma,
-bone-penn-395,2,-,M,12,,"diffuse large b-cell lymphoma, primary bone marrow lymphoma",
-bone-penn-396,1,-,F,10,,aneurysmal bone cyst.,
-bone-penn-397,1,-,M,12,,aneurysmal bone cyst ,
-bone-penn-401,1,-,,,, grade i chondrosarcoma,
-bone-penn-403,1,-,,,,langerhans cell histiocytosis,
-bone-penn-405,2,-,,,,conventional (high-grade) osteosarcoma,
-bone-penn-406,1,-,,,,"not osteoblastic lesions,but soft tissue lesion. __ct___________________",
-bone-penn-407,2,test,,,,"conventional osteosarcoma, high-grade.",
-bone-penn-413,1,-,,,,langerhans cell histiocytosis,
-bone-penn-414,2,-,,,,embryonal rhabdomyosarcoma,
-bone-penn-417,0,-,,,,__________,
-bone-penn-418,2,-,,,,embryonal rhabdomyosarcoma,
-bone-penn-421,0,-,,,,schwannoma,
-bone-penn-422,2,-,,,,myofibroma/myofibromatosis,
-bone-penn-423,1,-,,,,"osteosarcoma, high-grade",
-bone-penn-425,2,-,,,,_____________,
-bone-penn-429,2,-,,,,"osteosarcoma, conventional type",
-bone-penn-432,2,test,,,,"synovial sarcoma, biphasic",
-bone-penn-433,2,-,,,,osteosarcoma,
-bone-penn-435,1,-,,,,osteoblastoma._________,
-bone-penn-439,2,-,,,,"osteosarcoma, conventional type, high grade",
-bone-penn-446,1,-,,,,desmoplastic fibroma,
-bone-penn-452,1,-,M,9,,langerhans cell histiocytosis,
-bone-penn-453,1,-,F,6,,langerhans cell histiocytosis ,
-bone-penn-454,1,-,M,16,,langerhans cell histiocytosis,
-bone-penn-455,0,-,M,20,,extra-axial soft tissue chordoma ,
-bone-penn-456,0,-,M,14,,osteoid osteoma ,
-bone-penn-457,0,-,F,15,,periosteal (juxtacortical) chondroma,
-bone-penn-458,2,-,F,10,,sacrococcygeal teratoma,
-bone-penn-459,0,-,F,16,,osteoid osteoma,
-bone-penn-460,2,-,F,13,,"nonossifying fibroma (fibrous cortical defect), ",
-bone-penn-461,2,-,F,15,,desmoid type fibromatosis,
-bone-penn-462,1,-,M,20,,"giant cell tumor of bone,",
-bone-penn-463,2,-,F,1.93,, undifferentiated sarcoma,
-bone-penn-464,2,-,F,11,,juxtacortical osteosarcoma,
-bone-penn-465,2,-,M,14,,alveolar rhabdomyosarcoma,
-bone-penn-466,2,-,M,16,,"osteosarcoma, high grade",
-bone-penn-467,2,-,M,6,,embryonal rhabdomyosarcoma,
-bone-penn-468,0,-,M,9,,osteoid osteoma,
-bone-penn-469,2,test,F,14,,classical hodgkin lymphoma,
-bone-penn-470,2,test,M,4,,2 rhabdoid tumor,
-bone-penn-471,0,-,M,13,,osteoid osteoma,
-bone-penn-472,2,-,M,18,,osteosarcoma,
-bone-penn-473,0,-,M,22,,osteofibrous dysplasia.,
-bone-penn-474,0,-,F,13,,cellular neurothekeoma,
-bone-penn-475,2,test,F,14,,ewing sarcoma,
-bone-penn-476,0,-,M,1.65,,mesenchymal hamartoma,
-bone-penn-477,2,-,F,17,,telangiectatic osteosarcoma,
-bone-penn-478,1,-,M,7,,langerhans cell histiocytosis,
-bone-penn-479,2,-,F,18,,anaplastic large cell lymphoma,
-bone-penn-480,1,-,M,0.06,,intramuscular hemangioma,
-bone-penn-481,1,-,M,7,,langerhans cell histiocytosis,
-bone-penn-482,1,-,M,5,,langerhans cell histiocytosis,
-bone-penn-483,2,-,F,16,,"anaplastic large cell lymphoma, alk-positive ",
-bone-penn-484,1,-,M,12,,langerhans cell histiocytosis,
-bone-penn-485,1,-,F,17,,aneurysmal bone cyst,
-bone-penn-486,2,test,F,11,,ewing sarcoma,
-bone-penn-487,1,-,F,4,,aneurysmal bone cyst,
-bone-penn-488,1,-,M,2,,langerhans cell histiocytosis,
-bone-penn-489,1,-,M,8,,langerhans cell histiocytosis ,
-bone-penn-490,0,-,M,18,,osteoid osteoma or osteoblastoma,
-bone-penn-491,0,-,M,19,,osteoid osteoma,
-bone-penn-492,1,-,F,9,,langerhans cell histiocytosis,
-bone-penn-493,2,test,M,13,,ewing sarcoma,
-bone-penn-494,0,-,F,16,,periosteal chondroma,
-bone-penn-495,0,-,M,6,,osteoid osteoma,
-bone-penn-496,1,-,M,2,,langerhans cell histiocytosis,
-bone-penn-497,0,-,F,7,,osteoid osteoma,
-bone-penn-498,1,-,M,4,,langerhans cell histiocytosis,
-bone-penn-499,2,test,M,11,,ewing sarcoma,
-bone-penn-500,0,-,M,15,,osteoid osteoma,
-bone-penn-501,1,-,M,16,,aneurysmal bone cyst,
-bone-penn-502,0,-,M,8,,extranodal rosai-dorfman disease (chronic) ,
-bone-penn-503,0,-,M,17,,osteoid osteoma,
-bone-penn-504,1,-,M,10,,langerhans cell histiocytosis,
-bone-penn-505,0,test,F,15,,osteoid osteoma,
-bone-penn-506,0,-,M,17,, osteoid osteoma,
-bone-penn-507,2,-,F,15,,suggestive of involvement by classical hodgkin lymphoma,
-bone-penn-508,0,-,M,5,,osteoid osteoma,
-bone-penn-509,0,-,F,12,,osteoid osteoma,
-bone-penn-510,1,test,F,7,,aneurysmal bone cyst,
-bone-penn-511,2,-,F,8,,ewing sarcoma,
-bone-penn-512,1,-,M,17,,chondroblastoma,
-bone-penn-513,0,test,M,14,,osteoid osteoma,
-bone-penn-514,2,-,F,16,,ewing sarcoma,
-bone-penn-515,1,-,M,14,,chondroblastoma,
-bone-penn-516,1,-,M,15,,chondroblastoma,
-bone-penn-517,1,-,M,14,,chondroblastoma,
-bone-penn-518,1,-,M,15,,chondroblastoma,
-bone-penn-519,1,test,M,14,,chondroblastoma,
-bone-penn-520,1,-,F,13,,chondroblastoma.,
-bone-penn-521,1,-,F,12,,chondroblastoma,
-bone-penn-522,1,-,M,13,,chondroblastoma ,
-bone-penn-523,1,-,M,19,,chondroblastoma,
-bone-penn-524,1,test,M,15,,chondroblastoma,
-bone-penn-525,1,-,M,13,,chondroblastoma,
-bone-penn-526,1,-,F,15,,chondroblastoma,
-bone-penn-527,1,-,F,17,,chondroblastoma,
-bone-penn-528,1,-,M,12,,chondroblastoma,
-bone-penn-529,1,-,M,6,,giant cell reparative granuloma ,
-bone-penn-530,1,-,M,16,,chondroblastoma,
-bone-penn-531,2,-,M,16,,epithelioid hemangioma,
-bone-penn-532,1,-,M,15,,chondroblastoma,
-bone-penn-533,1,-,M,13,,chondroblastoma ,
-bone-penn-534,1,-,M,17,,chondroblastoma,
-bone-penn-535,1,-,F,11,,chondromyxoid fibroma,
-bone-penn-536,1,-,M,18,,chondroblastoma,
-bone-penn-537,1,-,F,17,,chondroblastoma,
-bone-penn-538,1,-,M,18,,chondroblastoma.,
-bone-penn-539,1,test,M,10,,chondroblastoma,
-bone-penn-540,1,test,M,16,,chondroblastoma,
-bone-penn-541,1,-,F,17,,chondroblastoma,
-bone-penn-542,1,-,M,1.35,,spindle cell myoepithelioma,
-bone-penn-543,2,-,M,20,,mesenchymal chondrosarcoma,
-bone-penn-544,2,test,F,14,,mesenchymal chondrosarcoma,
-bone-penn-545,1,-,M,8,,tenosynovial giant cell tumor,
-bone-penn-546,2,-,M,18,,ewing sarcoma,
-bone-penn-547,1,test,M,16,,myxoid chondrosarcoma ,
-bone-penn-548,0,-,,,,enchondroma,
-bone-penn-549,0,-,,,,enchondroma,
-bone-penn-550,0,-,,,,enchondroma,
-bone-penn-551,0,-,,,,enchondroma,
-bone-penn-552,0,-,,,,enchondroma,
-bone-penn-553,0,-,,,,enchondroma,
-bone-penn-554,0,test,,,,enchondroma,
-bone-penn-555,0,-,,,,enchondroma,
-bone-penn-556,0,-,,,,enchondroma,
-bone-penn-557,0,test,,,,enchondroma,
-bone-penn-558,0,-,,,,enchondroma,
-bone-penn-559,0,test,,,,enchondroma,
-bone-penn-560,0,-,,,,enchondroma,
-bone-penn-561,0,-,,,,enchondroma,
-bone-penn-562,0,-,,,,enchondroma,
-bone-penn-563,0,-,,,,enchondroma,
-bone-penn-564,0,-,,,,enchondroma,
-bone-penn-565,0,-,,,,enchondroma,
-bone-penn-566,0,test,,,,enchondroma,
-bone-penn-567,0,-,,,,enchondroma,
-bone-penn-568,0,-,,,,enchondroma,
-bone-penn-569,0,test,,,,enchondroma,
-bone-penn-570,1,-,F,15,,aneurysmal bone cyst,
-bone-penn-571,1,-,F,13,,aneurysmal bone cyst,
-bone-penn-572,1,-,F,9,,aneurysmal bone cyst,
-bone-penn-573,0,-,M,9,,inclusion body fibromatosis,
-bone-penn-574,1,test,M,6,,giant cell reparative granuloma,
-bone-penn-575,1,-,F,15,,giant cell tumor of bone,
-bone-penn-576,1,-,F,16,,aneurysmal bone cyst ,
-bone-penn-577,1,-,F,3,,aneurysmal bone cyst,
-bone-penn-578,1,-,F,20,,giant cell tumor of bone.,
-bone-penn-579,1,-,M,7,,giant cell rich lesion,
-bone-penn-580,1,-,F,12,,giant cell tumor ,
-bone-penn-581,1,-,F,7,,central giant cell granuloma,
-bone-penn-582,1,test,F,9,,langerhans cell histiocytosis,
-bone-penn-583,1,-,M,6,,chondromyxoid neoplasm with atypical features,
-bone-penn-584,1,-,F,6,,aneurysmal bone cyst,
-bone-penn-585,1,-,F,20,,osteoblastoma.,
-bone-penn-586,0,-,M,10,,synovial chondromatosis.,
-bone-penn-587,1,-,M,21,,osteoblastoma,
-bone-penn-588,1,-,M,15,,osteoblastoma,
-bone-penn-589,1,-,F,11,,osteoblastoma,
-bone-penn-590,1,-,M,3,,langerhans cell histiocytosis.,
-bone-penn-591,0,-,M,4,,osteoid osteoma,
-bone-penn-592,1,-,F,9,,aneurysmal bone cyst,
-bone-penn-593,1,-,M,14,,osteoblastoma,
-bone-penn-594,1,test,M,6,,giant cell reparative granuloma,
-bone-penn-595,1,-,F,6,,osteoid osteoma.,
-bone-penn-596,2,-,F,13,,ewing sarcoma,
-bone-penn-597,2,-,F,13,,ewing sarcoma,
-bone-penn-598,2,-,F,23,,ewing sarcoma,
-bone-penn-599,2,-,M,4,,ewing sarcoma,
-bone-penn-600,2,-,M,11,,ewing sarcoma,
-bone-penn-601,2,-,M,7,,ewing sarcoma,
-bone-penn-602,2,-,F,3,,ewing sarcoma,
-bone-penn-603,2,-,F,6,,ewing sarcoma,
-bone-penn-604,2,-,M,17,,ewing sarcoma,
-bone-penn-605,2,-,M,1.95,,ewing sarcoma,
-bone-penn-606,2,-,M,5,,ewing sarcoma,
-bone-penn-607,2,-,F,10,,ewing sarcoma,
-bone-penn-608,2,-,F,11,,ewing sarcoma,
-bone-penn-609,2,-,M,12,,ewing sarcoma,
-bone-penn-610,2,-,M,23,,ewing sarcoma,
-bone-penn-611,2,-,F,5,,ewing sarcoma,
-bone-penn-612,0,-,F,4,,chordoma,
-bone-penn-613,1,-,M,2,,langerhans cell histiocytosis,
-bone-penn-614,2,-,F,10,,ewing sarcoma,
-bone-penn-615,2,-,F,5,,embryonal rhabdomyosarcoma,
-bone-penn-616,2,-,M,10,,ewing sarcoma,
-bone-penn-617,2,-,F,17,,sclerosing epitheliod fibrosarcoma,
-bone-penn-618,2,-,M,16,,ewing sarcoma,
-bone-penn-619,1,-,M,5,,giant cell tumor ,
-bone-penn-620,2,-,F,10,,ewing sarcoma,
-bone-penn-621,2,-,M,21,,ewing sarcoma,
-bone-penn-622,2,-,M,16,,ewing sarcoma,
-bone-penn-623,2,-,M,18,,ewing sarcoma,
-bone-penn-624,2,-,M,16,,ewing sarcoma,
-bone-penn-625,2,-,M,0.94,," rhabdomyosarcoma,embryonal subtype ",
-bone-penn-626,2,-,F,11,,metastatic ewing's sarcoma,
-bone-penn-627,2,-,F,6,,ewing sarcoma,
-bone-penn-628,2,-,F,14,,ewing sarcoma,
-bone-penn-629,2,-,F,11,,ewing sarcoma,
-bone-penn-630,1,-,F,8,, langerhans cell histiocytosis,
-bone-penn-631,2,-,F,5,,conventional (high-grade) osteosarcoma,
-bone-penn-632,2,-,F,4,,ewing sarcoma,
-bone-penn-633,2,-,M,14,,ewing sarcoma,
-bone-penn-634,2,-,F,8,,ewing sarcoma,
-bone-penn-635,2,-,M,14,,ewing sarcoma,
-bone-penn-636,2,-,F,14,,ewing sarcoma,
-bone-penn-637,2,-,M,16,,ewing sarcoma,
-bone-penn-638,2,test,F,14,,ewing sarcoma,
-bone-penn-639,2,-,M,19,,ewing sarcoma,
-bone-penn-640,2,-,M,6,,ewing sarcoma,
-bone-penn-641,2,-,F,9,,ewing sarcoma,
-bone-penn-642,2,-,F,8,,ewing sarcoma,
-bone-penn-643,2,-,F,4,,ewing sarcoma,
-bone-penn-644,2,-,M,3,,"rhabdomyosarcoma, alveolar subtype",
-bone-penn-645,2,-,M,7,,ewing sarcoma,
-bone-penn-646,2,-,F,11,,ewing sarcoma,
-bone-penn-647,2,-,M,5,,ewing sarcoma,
-bone-penn-648,2,-,M,20,,ewing sarcoma,
-bone-penn-649,2,test,M,22,,ewing sarcoma,
-bone-penn-650,2,-,M,20,,ewing sarcoma,
-bone-penn-651,2,-,M,16,,osteoid osteo,
-bone-penn-652,2,-,F,8,,ewing sarcoma,
-bone-penn-653,2,-,M,16,,ewing sarcoma,
-bone-penn-654,2,-,M,3,,ewing sarcoma,
-bone-china-001,0,-,F,20,,Fibrous histocytomas,
-bone-china-002,0,-,M,70,,Langerhans cell histiocytosis,
-bone-china-003,0,-,F,29,,Osteosarcoma,
-bone-china-004,0,-,M,23,,Langerhans cell histiocytosis,
-bone-china-005,0,-,F,45,,Giant cell of bone,
-bone-china-006,0,-,F,14,,Giant cell of bone,
-bone-china-007,0,test,M,37,,Giant cell of bone,
-bone-china-008,0,-,M,46,,Giant cell of bone,
-bone-china-009,0,-,F,47,,"Chondrosarcoma,grade I",
-bone-china-010,0,-,M,52,,Osteosarcoma,
-bone-china-011,0,-,F,16,,Osteosarcoma,
-bone-china-012,0,test,F,33,,Langerhans cell histiocytosis,
-bone-china-013,0,test,M,24,,Osteosarcoma,
-bone-china-014,0,-,M,2,,Chondroblastoma,
-bone-china-015,0,-,M,15,,Osteosarcoma,
-bone-china-016,0,-,M,17,,Osteosarcoma,
-bone-china-017,0,-,F,41,,Osteosarcoma,
-bone-china-018,0,test,M,13,,Giant cell of bone,
-bone-china-019,0,-,M,12,,Giant cell of bone,
-bone-china-020,0,-,F,48,,Osteosarcoma,
-bone-china-021,0,-,M,24,,Osteosarcoma,
-bone-china-022,0,-,F,43,,Giant cell of bone,
-bone-china-023,0,-,M,53,,Chordoma,
-bone-china-024,0,-,M,27,,Osteosarcoma,
-bone-china-025,0,-,M,43,,Langerhans cell histiocytosis,
-bone-china-026,0,-,M,12,,Plasma cell myeloma,
-bone-china-027,0,-,M,37,,Osteosarcoma,
-bone-china-028,0,-,M,5,,"Chondrosarcoma,grade II,III",
-bone-china-029,0,-,M,7,,Chondroblastoma,
-bone-china-030,0,-,M,25,,"Chondrosarcoma,grade I",
-bone-china-031,0,-,F,56,,Osteoblastoma,
-bone-china-032,0,-,M,41,,Plasma cell myeloma,
-bone-china-033,0,-,M,51,,Langerhans cell histiocytosis,
-bone-china-034,0,-,F,63,,"Chondrosarcoma,grade I",
-bone-china-035,0,-,M,18,,"Chondrosarcoma,grade I",
-bone-china-036,0,-,M,16,,Osteosarcoma,
-bone-china-037,0,-,F,14,,Osteosarcoma,
-bone-china-038,0,-,M,26,,Epithelioid haemangioma,
-bone-china-039,0,-,M,62,,"Chondrosarcoma,grade I",
-bone-china-040,0,-,M,29,,Osteosarcoma,
-bone-china-041,0,-,F,23,,"Chondrosarcoma,grade I",
-bone-china-042,0,-,M,14,,Osteosarcoma,
-bone-china-043,0,-,F,46,,"Chondrosarcoma,grade II,III",
-bone-china-044,0,-,M,32,,Malignancy in giant cell tumor of bone,
-bone-china-045,0,-,M,40,,Chordoma,
-bone-china-046,0,-,F,10,,Osteosarcoma,
-bone-china-047,0,-,M,10,,Adamantinoma,
-bone-china-048,0,-,F,10,,Giant cell of bone,
-bone-china-049,0,-,M,16,,Osteosarcoma,
-bone-china-050,0,-,F,49,,Chondroblastoma,
-bone-china-051,0,-,M,22,,Osteoblastoma,
-bone-china-052,0,-,F,20,,"Chondrosarcoma,grade I",
-bone-china-053,0,-,F,10,,Ewing sarcoma,
-bone-china-054,0,-,F,34,,Chondromyxoid fibroma,
-bone-china-055,0,-,F,9,,Chordoma,
-bone-china-056,0,-,M,12,,"Chondrosarcoma,grade I",
-bone-china-057,0,-,M,47,,Osteosarcoma,
-bone-china-058,0,-,M,45,,Giant cell of bone,
-bone-china-059,0,-,F,48,,Chondromyxoid fibroma,
-bone-china-060,0,-,M,40,,Chondroblastoma,
-bone-china-061,0,-,F,62,,Osteosarcoma,
-bone-china-062,0,-,M,30,,Osteosarcoma,
-bone-china-063,0,test,M,52,,Osteosarcoma,
-bone-china-064,0,test,M,29,,Chondroblastoma,
-bone-china-065,0,-,F,21,,Giant cell of bone,
-bone-china-066,0,-,F,38,,Osteoblastoma,
-bone-china-067,0,test,F,37,,"Chondrosarcoma,grade I",
-bone-china-068,0,-,M,8,,Desmoplastic fibroma of bone,
-bone-china-069,0,-,M,13,,Osteosarcoma,
-bone-china-070,0,-,F,22,,Osteosarcoma,
-bone-china-071,0,-,M,22,,Giant cell of bone,
-bone-china-072,0,-,M,66,,Aneurysmal bone cyst,
-bone-china-073,0,-,M,49,,Langerhans cell histiocytosis,
-bone-china-074,0,-,M,30,,Osteosarcoma,
-bone-china-075,0,-,M,13,,Giant cell of bone,
-bone-china-076,0,-,M,67,,"Chondrosarcoma,grade I",
-bone-china-077,0,-,F,43,,Aneurysmal bone cyst,
-bone-china-078,0,-,M,17,,Chondroblastoma,
-bone-china-079,0,-,F,25,,Osteosarcoma,
-bone-china-080,0,-,F,10,,Giant cell of bone,
-bone-china-081,0,-,F,35,,Osteosarcoma,
-bone-china-082,0,test,M,27,,Giant cell of bone,
-bone-china-083,0,-,F,43,,Osteosarcoma,
-bone-china-084,0,-,M,28,,Aneurysmal bone cyst,
-bone-china-085,0,-,F,45,,Giant cell of bone,
-bone-china-086,0,-,F,39,,Osteosarcoma,
-bone-china-087,0,-,F,41,,Chordoma,
-bone-china-088,0,-,M,8,,Osteosarcoma,
-bone-china-089,0,-,M,6,,Chordoma,
-bone-china-090,0,test,M,36,,Osteoblastoma,
-bone-china-091,1,-,F,19,,Giant cell of bone,
-bone-china-092,1,-,M,6,,Giant cell of bone,
-bone-china-093,1,-,F,10,,Osteosarcoma,
-bone-china-094,1,test,M,31,,"Chondrosarcoma,grade II,III",
-bone-china-095,1,-,F,27,,Fibrosarcoma of bone,
-bone-china-096,1,-,M,49,,Osteosarcoma,
-bone-china-097,1,-,F,50,,Chordoma,
-bone-china-098,1,-,F,61,,Giant cell of bone,
-bone-china-099,1,-,F,11,,Osteosarcoma,
-bone-china-100,1,-,M,4,,Langerhans cell histiocytosis,
-bone-china-101,1,-,M,34,,Osteosarcoma,
-bone-china-102,1,-,M,29,,"Chondrosarcoma,grade I",
-bone-china-103,1,-,M,45,,Chordoma,
-bone-china-104,1,-,M,37,,Osteosarcoma,
-bone-china-105,1,-,M,12,,Osteosarcoma,
-bone-china-106,1,-,M,15,,Giant cell of bone,
-bone-china-107,1,-,M,67,,Osteosarcoma,
-bone-china-108,1,test,M,21,,Chordoma,
-bone-china-109,1,-,F,7,,Chondroblastoma,
-bone-china-110,1,-,M,25,,Giant cell of bone,
-bone-china-111,1,-,F,47,,"Chondrosarcoma,grade I",
-bone-china-112,1,-,M,27,,Chondroblastoma,
-bone-china-113,1,-,M,32,,Osteosarcoma,
-bone-china-114,1,-,F,25,,Chondromyxoid fibroma,
-bone-china-115,1,-,F,65,,Chordoma,
-bone-china-116,1,-,F,,,"Chondrosarcoma,grade II,III",
-bone-china-117,1,-,M,22,,Giant cell of bone,
-bone-china-118,1,-,M,43,,"Chondrosarcoma,grade II,III",
-bone-china-119,1,-,F,16,,Plasma cell myeloma,
-bone-china-120,1,-,M,54,,Chondroblastoma,
-bone-china-121,1,-,F,25,,"Chondrosarcoma,grade I",
-bone-china-122,1,-,F,27,,Osteoblastoma,
-bone-china-123,1,-,M,13,,"Chondrosarcoma,grade I",
-bone-china-124,1,-,M,25,,Osteosarcoma,
-bone-china-125,1,-,M,29,,Giant cell of bone,
-bone-china-126,1,-,M,29,,Osteosarcoma,
-bone-china-127,1,-,F,51,,Chordoma,
-bone-china-128,1,-,F,18,,"Chondrosarcoma,grade I",
-bone-china-129,1,-,F,22,,Aneurysmal bone cyst,
-bone-china-130,1,test,F,43,,Plasma cell myeloma,
-bone-china-131,1,-,M,8,,Giant cell of bone,
-bone-china-132,1,-,M,26,,Chondroblastoma,
-bone-china-133,1,-,M,24,,Giant cell of bone,
-bone-china-134,1,-,F,11,,Osteosarcoma,
-bone-china-135,1,-,M,25,,Aneurysmal bone cyst,
-bone-china-136,1,-,M,51,,Osteosarcoma,
-bone-china-137,1,test,M,49,,Osteoblastoma,
-bone-china-138,1,-,M,55,,Giant cell of bone,
-bone-china-139,1,-,F,48,,Chordoma,
-bone-china-140,1,-,F,52,,Plasma cell myeloma,
-bone-china-141,1,test,F,53,,Osteoblastoma,
-bone-china-142,1,test,M,35,,Malignancy in giant cell tumor of bone,
-bone-china-143,1,-,M,51,,Osteoblastoma,
-bone-china-144,1,-,F,53,,Osteosarcoma,
-bone-china-145,1,-,M,44,,Giant cell of bone,
-bone-china-146,1,-,M,34,,Osteosarcoma,
-bone-china-147,1,-,F,29,,"Chondrosarcoma,grade I",
-bone-china-148,1,-,F,24,,Osteosarcoma,
-bone-china-149,1,-,F,13,,Giant cell of bone,
-bone-china-150,1,test,F,16,,Chondroblastoma,
-bone-china-151,1,-,F,21,,Osteosarcoma,
-bone-china-152,1,-,F,12,,Langerhans cell histiocytosis,
-bone-china-153,1,-,F,25,,"Chondrosarcoma,grade I",
-bone-china-154,1,-,M,16,,Giant cell of bone,
-bone-china-155,1,-,F,67,,Osteosarcoma,
-bone-china-156,1,test,M,21,,Giant cell of bone,
-bone-china-157,1,test,M,48,,Aneurysmal bone cyst,
-bone-china-158,1,-,M,45,,,
-bone-china-159,1,-,F,66,,,
-bone-china-160,1,-,F,15,,,
-bone-china-161,1,-,F,22,,,
-bone-china-162,1,-,M,14,,,
-bone-china-163,1,-,M,16,,,
-bone-china-164,1,-,F,21,,,
-bone-china-165,1,-,F,49,,,
-bone-china-166,1,-,M,43,,,
-bone-china-167,1,-,F,25,,,
-bone-china-168,1,-,M,62,,,
-bone-china-169,1,-,F,25,,,
-bone-china-170,1,-,M,8,,,
-bone-china-171,1,-,F,47,,,
-bone-china-172,1,-,M,57,,,
-bone-china-173,1,-,M,44,,,
-bone-china-174,1,-,F,32,,,
-bone-china-175,1,-,F,13,,,
-bone-china-176,2,-,F,14,,,
-bone-china-177,2,-,M,16,,,
-bone-china-178,2,-,M,37,,,
-bone-china-179,2,-,F,10,,,
-bone-china-180,2,-,F,9,,,
-bone-china-181,2,test,M,16,,,
-bone-china-182,2,test,F,15,,,
-bone-china-183,2,-,F,11,,,
-bone-china-184,2,-,M,21,,,
-bone-china-185,2,-,F,57,,,
-bone-china-186,2,-,F,7,,,
-bone-china-187,2,-,M,53,,,
-bone-china-188,2,-,M,24,,,
-bone-china-189,2,-,F,12,,,
-bone-china-190,2,-,F,65,,,
-bone-china-191,2,-,F,37,,,
-bone-china-192,2,-,M,19,,,
-bone-china-193,2,-,M,15,,,
-bone-china-194,2,-,F,12,,,
-bone-china-195,2,-,F,70,,,
-bone-china-196,2,-,M,33,,,
-bone-china-197,2,-,M,76,,,
-bone-china-198,2,-,M,13,,,
-bone-china-199,2,-,M,53,,,
-bone-china-200,2,-,F,,,,
-bone-china-201,2,-,M,32,,,
-bone-china-202,2,test,F,42,,,
-bone-china-203,2,-,F,15,,,
-bone-china-204,2,-,M,62,,,
-bone-china-205,2,-,M,52,,,
-bone-china-206,2,test,M,81,,,
-bone-china-207,2,-,F,18,,,
-bone-china-208,2,test,M,21,,,
-bone-china-209,2,-,M,19,,,
-bone-china-210,2,-,M,19,,,
-bone-china-211,2,-,M,18,,,
-bone-china-212,2,-,M,8,,,
-bone-china-213,2,-,M,15,,,
-bone-china-214,2,-,M,63,,,
-bone-china-215,2,-,M,12,,,
-bone-china-216,2,-,M,88,,,
-bone-china-217,2,-,M,17,,,
-bone-china-218,2,-,M,40,,,
-bone-china-219,2,-,F,66,,,
-bone-china-220,2,-,M,17,,,
-bone-china-221,2,-,M,74,,,
-bone-china-222,2,-,M,15,,,
-bone-china-223,2,-,M,17,,,
-bone-china-224,2,-,M,50,,,
-bone-china-225,2,-,M,12,,,
-bone-china-226,2,-,F,12,,,
-bone-china-227,2,-,M,20,,,
-bone-china-228,2,-,M,67,,,
-bone-china-229,2,test,M,14,,,
-bone-china-230,2,-,M,69,,,
-bone-china-231,2,-,F,45,,,
-bone-china-232,2,test,F,49,,,
-bone-china-233,2,test,M,63,,,
-bone-china-234,2,-,M,19,,,
-bone-china-235,2,test,M,21,,,
-bone-china-236,2,-,M,47,,,
-bone-china-237,2,-,F,33,,,
-bone-china-238,2,-,F,11,,,
-bone-china-239,2,-,F,17,,,
-bone-china-240,2,-,M,45,,,
-bone-china-241,2,test,F,61,,,
-bone-china-242,2,-,F,41,,,
-bone-china-243,2,-,F,43,,,
-bone-china-244,2,-,M,16,,,
-bone-china-245,2,-,F,14,,,
-bone-china-246,2,-,F,62,,,
-bone-china-247,2,-,F,11,,,
-bone-hup-2,2,-,M  ,,,high grade pleomorphic sarcoma,
+patientID,category,sort,Sex,age,MRN,description
+bone-penn-001,0,-,M,,,periosteal chondroma with osseous metaplasia
+bone-penn-002,1,-,,,,giant cell tumor of bone
+bone-penn-003,1,-,M,,,giant cell tumor of the bone
+bone-penn-004,0,-,F,,,osteochondroma
+bone-penn-005,0,-,M,,,osteochondroma
+bone-penn-006,2,-,M,,,chordoma 
+bone-penn-007,0,-,M,,,enchondroma
+bone-penn-008,2,-,M,,,ewing's sarcoma in bone
+bone-penn-009,2,-,F,,,chordoma
+bone-penn-010,2,-,F,,,chordoma
+bone-penn-011,2,-,F,,,chordoma
+bone-penn-012,2,-,M,,,chordoma 
+bone-penn-013,2,-,F,,,chordoma
+bone-penn-014,2,-,M,,,chordoma
+bone-penn-015,1,-,F,,,giant cell tumor of the bone
+bone-penn-016,0,-,F,,,osteochondroma
+bone-penn-017,1,-,F,,,giant cell tumor of bone
+bone-penn-018,2,-,,,,clear cell chondrosarcoma 
+bone-penn-019,2,-,,,,primary bone diffuse large b-cell lymphoma involving the left tibia 
+bone-penn-020,2,-,,,,"osteosarcoma, high grade."
+bone-penn-021,2,-,,,,"dedifferentiated  chondrosarcoma, high grade, "
+bone-penn-022,2,-,,,,osteosarcoma 
+bone-penn-023,2,-,M,,,metastatic chondrosarcoma(ii)
+bone-penn-024,2,-,,,,chordoma
+bone-penn-025,0,-,F,,,peri-osteochondroma
+bone-penn-026,2,-,,,,large b-cell lymphoma 
+bone-penn-027,0,-,F,,,enchondroma
+bone-penn-028,1,-,M,,,chondromyxoid fibroma
+bone-penn-029,2,-,,,,chordoma 
+bone-penn-030,2,-,,,,ameloblastoma 
+bone-penn-031,0,-,,,,osteoid osteoma 
+bone-penn-032,1,-,M,,,giant cell tumor of bone
+bone-penn-033,2,-,,,,chordoma 
+bone-penn-034,2,-,,,,chordoma
+bone-penn-035,2,-,M,,,chordoma
+bone-penn-036,0,-,M,,,synovial chondromatosis
+bone-penn-037,0,-,M,,,enchondroma
+bone-penn-038,0,-,M,,,osteoid osteoma
+bone-penn-039,1,-,,,,giant cell tumor with secondary aneurysmal bone cyst. 
+bone-penn-040,0,-,F,,,enchondroma
+bone-penn-041,2,-,,,,chondroblastic osteosarcoma
+bone-penn-042,1,-,F,,,giant cell tumor of bone
+bone-penn-043,0,-,M,,,osteochondroma
+bone-penn-044,2,-,,,,"diffuse large b-cell lymphoma, with soft tissue mass in the left proximal tibia "
+bone-penn-045,0,-,M,,,enchondroma
+bone-penn-046,0,-,,,,pedunculated osteochondroma 
+bone-penn-047,0,-,F,,,osteochondroma
+bone-penn-048,2,-,,,,"osteosarcoma, high-grade"
+bone-penn-049,0,-,,,,hemangioma 
+bone-penn-050,2,-,,,,chordoma 
+bone-penn-051,1,-,F,,,giant cell tumor of the bone
+bone-penn-052,2,-,,,,chordoma
+bone-penn-053,2,-,,,,chondrosarcoma
+bone-penn-054,1,-,M,,,giant cell tumor of the bone
+bone-penn-055,2,-,,,,chondroma
+bone-penn-056,0,-,F,,,enchondroma
+bone-penn-057,1,-,F,,,giant cell tumor of bone
+bone-penn-058,1,-,F,,,giant cell tumor of bone
+bone-penn-059,2,-,,,,"osteosarcoma , conventional type"
+bone-penn-060,2,-,,,,chordoma
+bone-penn-061,1,-,M,,,giant cell tumor of bone
+bone-penn-062,1,-,F,,,giant cell tumor of bone
+bone-penn-063,2,-,,,,lymphoma 
+bone-penn-064,2,-,,,,osteosarcoma 
+bone-penn-065,2,-,,,,chordoma
+bone-penn-066,2,-,F,,,chordoma
+bone-penn-067,1,-,F,,,giant cell tumor of bone
+bone-penn-068,1,-,F,,,giant cell tumor of bone
+bone-penn-069,2,-,M,,,chordoma with necrosis
+bone-penn-070,1,-,M,,,"chondrosarcoma, conventional hyaline type, grade 1-2"
+bone-penn-071,0,-,F,,,osteochondroma with fracture site
+bone-penn-072,2,-,M,,,"chondrosarcoma, low grade (who classification grade i)"
+bone-penn-073,2,-,F,,,epithelioid hemangioendothelioma
+bone-penn-074,0,-,F,,,osteochondroma
+bone-penn-075,2,-,M,,,"osteosarcoma, chondroblastic type, 1 grade"
+bone-penn-076,1,-,M,,,epithelioid hemangioma
+bone-penn-077,0,-,M,,,osteochondroma
+bone-penn-078,0,-,M,,,osteoid osteoma
+bone-penn-079,2,-,M,,,chordoma
+bone-penn-080,1,test,M,14,,chondroblastoma
+bone-penn-081,1,-,F,17,,chondroblastoma
+bone-penn-082,1,-,M,16,,chondroblastoma
+bone-penn-083,1,-,M,10,,chondroblastoma
+bone-penn-084,1,-,,,,chondroblastoma.
+bone-penn-085,1,-,,,,chondroblastoma
+bone-penn-086,1,-,,,,chondroblastoma
+bone-penn-087,1,-,F,11,,chondromyxoid fibroma
+bone-penn-088,1,-,,,,chondroblastoma
+bone-penn-089,1,-,,,,chondroblastoma 
+bone-penn-090,1,-,,,,chondroblastoma 
+bone-penn-091,0,-,,,,epithelioid hemangioma
+bone-penn-092,1,-,,,,chondroblastoma
+bone-penn-093,1,-,,,,chondroblastoma
+bone-penn-094,1,-,,,,giant cell reparative granuloma
+bone-penn-095,1,-,,,,chondroblastoma
+bone-penn-096,1,-,,,,chondroblastoma
+bone-penn-097,1,-,,,,chondroblastoma
+bone-penn-098,1,-,,,,chondroblastoma.
+bone-penn-099,1,-,,,,chondroblastoma
+bone-penn-100,1,-,,,,chondroblastoma
+bone-penn-101,1,-,,,,chondroblastoma 
+bone-penn-102,1,test,,,,chondroblastoma
+bone-penn-103,1,test,,,,chondroblastoma.
+bone-penn-104,1,-,,,,chondroblastoma
+bone-penn-105,1,-,,,,chondroblastoma
+bone-penn-106,1,-,,,,chondroblastoma
+bone-penn-107,1,-,,,,chondroblastoma
+bone-penn-108,0,-,,,,fibrous dysplasia
+bone-penn-109,1,-,,,,atypical giant cell-rich neoplasm
+bone-penn-110,1,-,,,,chondromyxoid fibroma
+bone-penn-111,1,-,,,,chondromyxoid fibroma
+bone-penn-112,1,-,,,,giant cell tumor 
+bone-penn-113,1,-,,,,chondromyxoid fibroma
+bone-penn-114,1,-,,,,chondroma
+bone-penn-115,1,-,,,,chondroma
+bone-penn-116,1,-,,,,chondromyxoid fibroma
+bone-penn-117,1,test,,,,1
+bone-penn-118,1,-,,,,chondromyxoid fibroma
+bone-penn-119,2,-,,,,ewing sarcoma
+bone-penn-120,2,-,,,,ewing sarcoma
+bone-penn-121,1,-,,,,tenosynovial giant cell tumor
+bone-penn-122,2,-,,,,mesenchymal chondrosarcoma
+bone-penn-123,2,-,,,,mesenchymal chondrosarcoma
+bone-penn-124,2,-,,,,spindle cell myoepithelioma
+bone-penn-125,2,test,,,,chondrosarcoma
+bone-penn-126,2,-,,,,chondrosarcoma
+bone-penn-127,0,-,,,,enchondroma
+bone-penn-128,2,-,,,,chondrosarcoma
+bone-penn-129,0,-,,,,enchondroma
+bone-penn-130,0,-,,,,enchondroma
+bone-penn-131,0,-,,,,enchondroma
+bone-penn-132,0,-,,,,enchondroma
+bone-penn-133,0,-,,,,enchondroma
+bone-penn-134,0,-,,,,enchondroma
+bone-penn-135,0,test,,,,enchondroma
+bone-penn-136,0,-,,,,enchondroma
+bone-penn-137,0,-,,,,enchondroma
+bone-penn-138,0,-,,,,enchondroma
+bone-penn-139,0,-,,,,enchondroma
+bone-penn-140,0,-,,,,enchondroma
+bone-penn-141,0,-,,,,enchondroma
+bone-penn-142,0,-,,,,enchondroma
+bone-penn-143,0,-,,,,enchondroma
+bone-penn-144,0,-,,,,enchondroma
+bone-penn-145,0,test,,,,enchondroma
+bone-penn-146,0,-,,,,enchondroma
+bone-penn-147,0,-,,,,enchondroma
+bone-penn-148,0,-,,,,enchondroma
+bone-penn-149,0,-,,,,enchondroma
+bone-penn-150,0,-,,,,enchondroma
+bone-penn-151,0,-,,,,enchondroma
+bone-penn-152,0,-,,,,enchondroma
+bone-penn-153,0,-,,,,enchondroma
+bone-penn-154,0,-,,,,enchondroma
+bone-penn-155,0,-,,,,enchondroma
+bone-penn-156,0,-,,,,enchondroma
+bone-penn-157,0,-,,,,enchondroma
+bone-penn-158,0,-,,,,enchondroma
+bone-penn-159,0,-,,,,enchondroma
+bone-penn-160,2,-,,,,ewing sarcoma
+bone-penn-161,2,-,,,,ewing sarcoma
+bone-penn-162,2,-,,,,ewing sarcoma
+bone-penn-163,2,-,,,,ewing sarcoma
+bone-penn-164,2,-,,,,ewing sarcoma
+bone-penn-165,2,-,,,,ewing sarcoma
+bone-penn-166,2,-,,,,ewing sarcoma
+bone-penn-167,2,-,,,,ewing sarcoma
+bone-penn-168,2,-,,,,ewing sarcoma
+bone-penn-169,2,-,,,,ewing sarcoma
+bone-penn-170,2,-,,,,ewing sarcoma
+bone-penn-171,2,-,,,,ewing sarcoma
+bone-penn-172,2,-,,,,ewing sarcoma
+bone-penn-173,2,-,,,,ewing sarcoma
+bone-penn-174,2,-,,,,ewing sarcoma
+bone-penn-175,2,test,,,,ewing sarcoma
+bone-penn-176,2,-,,,,ewing sarcoma
+bone-penn-177,2,-,,,,ewing sarcoma
+bone-penn-178,2,-,,,,ewing sarcoma
+bone-penn-179,2,-,,,,ewing sarcoma
+bone-penn-180,2,-,,,,ewing sarcoma
+bone-penn-181,2,-,,,,ewing sarcoma
+bone-penn-182,2,-,,,,ewing sarcoma
+bone-penn-183,2,-,,,,ewing sarcoma
+bone-penn-184,2,test,,,,ewing sarcoma
+bone-penn-185,2,test,,,,ewing sarcoma
+bone-penn-186,2,-,,,,ewing sarcoma
+bone-penn-187,2,-,,,,ewing sarcoma
+bone-penn-188,2,-,,,,ewing sarcoma
+bone-penn-189,2,-,,,,ewing sarcoma
+bone-penn-190,2,-,,,,ewing sarcoma
+bone-penn-191,2,-,,,,ewing sarcoma
+bone-penn-192,2,-,,,,ewing sarcoma
+bone-penn-193,2,-,,,,ewing sarcoma
+bone-penn-194,2,-,,,,ewing sarcoma
+bone-penn-195,2,-,,,,ewing sarcoma
+bone-penn-196,2,-,,,,ewing sarcoma
+bone-penn-197,2,-,,,,ewing sarcoma
+bone-penn-198,2,-,,,,ewing sarcoma
+bone-penn-199,2,-,,,,ewing sarcoma
+bone-penn-200,2,-,,,,ewing sarcoma
+bone-penn-201,2,-,,,,ewing sarcoma
+bone-penn-202,2,test,,,,ewing sarcoma
+bone-penn-203,2,-,,,,ewing sarcoma
+bone-penn-204,2,-,,,,ewing sarcoma
+bone-penn-205,2,-,,,,ewing sarcoma
+bone-penn-206,2,-,,,,ewing sarcoma
+bone-penn-207,2,-,,,,ewing sarcoma
+bone-penn-208,2,test,,,,ewing sarcoma
+bone-penn-209,2,-,,,,ewing sarcoma
+bone-penn-210,2,-,,,,ewing sarcoma
+bone-penn-211,2,-,,,,ewing sarcoma
+bone-penn-212,2,-,,,,ewing sarcoma
+bone-penn-213,2,-,,,,ewing sarcoma
+bone-penn-214,2,-,,,,ewing sarcoma
+bone-penn-215,2,-,,,,ewing sarcoma
+bone-penn-216,2,-,,,,ewing sarcoma
+bone-penn-217,2,-,,,,ewing sarcoma
+bone-penn-218,2,-,,,,ewing sarcoma
+bone-penn-219,2,-,,,,ewing sarcoma
+bone-penn-220,2,-,,,,ewing sarcoma
+bone-penn-221,2,-,,,,ewing sarcoma
+bone-penn-222,2,-,,,,ewing sarcoma
+bone-penn-223,2,-,,,,ewing sarcoma
+bone-penn-224,2,-,,,,ewing sarcoma
+bone-penn-225,2,-,,,,ewing sarcoma
+bone-penn-226,2,-,,,,ewing sarcoma
+bone-penn-227,2,-,,,,ewing sarcoma
+bone-penn-228,2,-,,,,ewing sarcoma
+bone-penn-229,2,test,,,,ewing sarcoma
+bone-penn-230,2,-,,,,ewing sarcoma
+bone-penn-231,2,-,,,,ewing sarcoma
+bone-penn-232,2,-,,,,ewing sarcoma
+bone-penn-233,2,test,,,,ewing sarcoma
+bone-penn-234,2,-,,,,ewing sarcoma
+bone-penn-235,2,-,,,,ewing sarcoma
+bone-penn-236,2,-,,,,ewing sarcoma
+bone-penn-237,2,-,,,,ewing sarcoma
+bone-penn-238,2,-,,,,ewing sarcoma
+bone-penn-239,2,-,,,,ewing sarcoma
+bone-penn-240,2,-,,,,ewing sarcoma
+bone-penn-241,2,-,,,,ewing sarcoma
+bone-penn-242,2,-,,,,ewing sarcoma
+bone-penn-243,2,-,,,,ewing sarcoma
+bone-penn-244,2,-,,,,ewing sarcoma
+bone-penn-245,2,-,,,,ewing sarcoma
+bone-penn-246,2,-,,,,ewing sarcoma
+bone-penn-247,2,-,,,,ewing sarcoma
+bone-penn-248,2,-,,,,ewing sarcoma
+bone-penn-249,2,-,,,,ewing sarcoma
+bone-penn-250,2,-,,,,ewing sarcoma
+bone-penn-251,2,-,,,,ewing sarcoma
+bone-penn-252,2,-,,,,ewing sarcoma
+bone-penn-253,2,-,,,,ewing sarcoma
+bone-penn-254,2,-,,,,ewing sarcoma
+bone-penn-255,2,-,,,,ewing sarcoma
+bone-penn-256,2,-,,,,ewing sarcoma
+bone-penn-257,2,-,,,,ewing sarcoma
+bone-penn-258,2,-,,,,ewing sarcoma
+bone-penn-259,2,-,,,,ewing sarcoma
+bone-penn-260,2,-,,,,ewing sarcoma
+bone-penn-261,2,-,,,,ewing sarcoma
+bone-penn-262,2,-,,,,ewing sarcoma
+bone-penn-263,2,-,,,,ewing sarcoma
+bone-penn-264,2,-,,,,ewing sarcoma
+bone-penn-265,2,-,,,,ewing sarcoma
+bone-penn-266,2,-,,,,ewing sarcoma
+bone-penn-267,2,-,,,,ewing sarcoma
+bone-penn-268,2,-,,,,ewing sarcoma
+bone-penn-269,2,-,,,,ewing sarcoma
+bone-penn-270,2,-,,,,ewing sarcoma
+bone-penn-271,2,test,,,,ewing sarcoma
+bone-penn-272,2,-,,,,ewing sarcoma
+bone-penn-273,2,-,,,,ewing sarcoma
+bone-penn-274,0,-,,,,central giant cell granuloma
+bone-penn-275,1,-,,,,giant cell tumor 
+bone-penn-276,1,-,,,,giant cell tumor of bone.
+bone-penn-277,1,-,,,,aneurysmal bone cyst
+bone-penn-278,1,-,,,,aneurysmal bone cyst 
+bone-penn-279,1,-,,,,giant cell tumor of bone
+bone-penn-280,1,-,,,,giant cell reparative granuloma
+bone-penn-281,0,-,,,,inclusion body fibromatosis
+bone-penn-282,1,-,,,,aneurysmal bone cyst
+bone-penn-283,1,-,,,,aneurysmal bone cyst
+bone-penn-284,1,-,,,,aneurysmal bone cyst
+bone-penn-285,0,-,,,,osteoid osteoma.
+bone-penn-286,1,-,,,,aneurysmal bone cyst
+bone-penn-287,0,-,,,,osteoid osteoma
+bone-penn-288,1,-,,,,osteoblastoma
+bone-penn-289,0,-,,,,synovial chondromatosis.
+bone-penn-290,1,test,,,,osteoblastoma.
+bone-penn-291,1,-,,,,aneurysmal bone cyst
+bone-penn-292,1,-,,,,chondromyxoid neoplasm with atypical features
+bone-penn-293,1,-,,,,langerhans cell histiocytosis
+bone-penn-294,1,-,,,,aneurysmal bone cyst
+bone-penn-295,1,test,F,7,,aneurysmal bone cyst
+bone-penn-296,0,-,M,8,,extranodal rosai-dorfman disease (chronic) 
+bone-penn-297,1,-,F,9,,langerhans cell histiocytosis
+bone-penn-298,2,-,F,11,,ewing sarcoma
+bone-penn-299,1,-,M,12,,langerhans cell histiocytosis
+bone-penn-300,2,-,F,18,,anaplastic large cell lymphoma
+bone-penn-301,2,-,F,17,,telangiectatic osteosarcoma
+bone-penn-302,0,-,M,1.65,,mesenchymal hamartoma
+bone-penn-303,0,-,F,13,,cellular neurothekeoma
+bone-penn-304,0,-,M,13,,osteoid osteoma
+bone-penn-305,2,-,M,4,,malignant rhabdoid tumor
+bone-penn-306,2,-,,,,classical hodgkin lymphoma
+bone-penn-307,2,-,,,,embryonal rhabdomyosarcoma
+bone-penn-308,2,-,,,,"osteosarcoma, high grade"
+bone-penn-309,2,-,,,, undifferentiated sarcoma
+bone-penn-310,2,-,,,,pleomorphic liposarcoma
+bone-penn-311,2,-,,,,sacrococcygeal teratoma
+bone-penn-312,0,-,,,,extra-axial soft tissue chordoma 
+bone-penn-313,1,-,,,,langerhans cell histiocytosis
+bone-penn-314,2,-,,,,osteosarcoma
+bone-penn-315,0,-,,,,exostosis
+bone-penn-316,2,-,,,,ewing sarcoma
+bone-penn-317,1,-,,,,chondroblastoma
+bone-penn-318,2,-,,,,ewing sarcoma
+bone-penn-319,0,-,,,,osteoid osteoma
+bone-penn-320,0,-,,,,osteoid osteoma
+bone-penn-321,1,-,,,,langerhans cell histiocytosis
+bone-penn-322,1,-,,,,aneurysmal bone cyst
+bone-penn-323,0,-,,,,osteoid osteoma
+bone-penn-324,2,-,,,,ewing sarcoma
+bone-penn-325,1,-,,,,langerhans cell histiocytosis
+bone-penn-326,0,test,,,,osteoid osteoma
+bone-penn-327,1,-,,,,langerhans cell histiocytosis
+bone-penn-328,0,-,,,,osteoid osteoma
+bone-penn-329,0,-,,,,periosteal chondroma
+bone-penn-330,1,-,,,,aneurysmal bone cyst
+bone-penn-331,0,-,,,,osteoid osteoma
+bone-penn-332,1,-,,,,langerhans cell histiocytosis 
+bone-penn-333,1,-,,,,langerhans cell histiocytosis
+bone-penn-334,1,-,,,,aneurysmal bone cyst
+bone-penn-335,1,-,,,,aneurysmal bone cyst
+bone-penn-336,1,-,,,,langerhans cell histiocytosis
+bone-penn-337,1,-,,,,langerhans cell histiocytosis
+bone-penn-338,0,-,,,,osteofibrous dysplasia.
+bone-penn-339,1,-,,,,aneurysmal bone cyst 
+bone-penn-340,2,-,,,,juxtacortical osteosarcoma
+bone-penn-341,1,-,,,,"giant cell tumor of bone,"
+bone-penn-342,2,-,,,,"nonossifying fibroma (fibrous cortical defect), "
+bone-penn-343,0,-,,,,periosteal (juxtacortical) chondroma
+bone-penn-344,1,-,,,,langerhans cell histiocytosis 
+bone-penn-345,2,-,,,,low-grade fibromyxoid sarcoma
+bone-penn-346,1,-,,,,chondroblastoma
+bone-penn-347,0,-,,,,osteoid osteoma
+bone-penn-348,0,-,,,,osteoid osteoma
+bone-penn-349,0,-,,,,osteoid osteoma
+bone-penn-351,0,-,M,18,,osteoid osteoma or osteoblastoma
+bone-penn-352,0,-,M,18,,osteoid osteoma or osteoblastoma
+bone-penn-354,2,-,F,17,,telangiectatic osteosarcoma
+bone-penn-355,2,-,M,15,,precursor b lymphoblastic leukemia
+bone-penn-356,2,-,M,18,,osteosarcoma
+bone-penn-361,0,-,M,17,,osteoid osteoma
+bone-penn-362,1,-,M,9,,langerhans cell histiocytosis
+bone-penn-363,2,-,M,3,,"rhabdomyosarcoma, alveolar subtype"
+bone-penn-364,2,-,F,4,,ewing sarcoma
+bone-penn-365,2,-,F,9,,ewing sarcoma
+bone-penn-366,2,test,F,5,,conventional (high-grade) osteosarcoma
+bone-penn-367,2,-,F,11,,metastatic ewing's sarcoma
+bone-penn-368,2,-,M,0.94,," rhabdomyosarcoma,embryonal subtype "
+bone-penn-369,1,-,M,2,,langerhans cell histiocytosis
+bone-penn-370,2,-,F,11,,ewing sarcoma
+bone-penn-371,2,-,M,11,,ewing sarcoma
+bone-penn-372,2,-,M,3,,desmoplastic fibroma
+bone-penn-373,2,-,F,14,,ewing sarcoma
+bone-penn-374,1,-,F,5,,myofibroma/myofibromatosis
+bone-penn-375,0,-,M,11,,schwannoma
+bone-penn-376,2,-,M,10,,ewing sarcoma
+bone-penn-377,2,-,F,18,,ewing sarcoma
+bone-penn-378,2,-,M,26,,ewing sarcoma
+bone-penn-379,2,-,M,16,,conventional (high-grade) osteosarcoma
+bone-penn-380,2,-,M,13,,ewing sarcoma
+bone-penn-381,1,-,M,7,,langerhans cell histiocytosis
+bone-penn-382,1,-,M,19,,langerhans cell histiocytosis
+bone-penn-383,1,test,M,17,, grade i chondrosarcoma
+bone-penn-384,1,-,F,9,,aneurysmal bone cyst
+bone-penn-385,1,-,F,14,,aneurysmal bone cyst
+bone-penn-386,2,-,F,15,,"osteosarcoma, conventional subtype"
+bone-penn-387,2,test,M,14,,metastatic site of angiosarcoma
+bone-penn-388,2,-,M,10,,"osteosarcoma, high-grade, with predominantly cartilaginous differentiation. "
+bone-penn-389,2,test,F,13,,high grade spindle cell sarcoma
+bone-penn-390,2,-,F,18,,"osteoblastic osteosarcoma, high-grade"
+bone-penn-391,0,-,M,11,,schwannoma
+bone-penn-392,1,-,M,3,,aneurysmal bone cyst
+bone-penn-393,2,test,M,13,,"conventional osteosarcoma,"
+bone-penn-394,2,-,F,9,,pleomorphic liposarcoma
+bone-penn-395,2,-,M,12,,"diffuse large b-cell lymphoma, primary bone marrow lymphoma"
+bone-penn-396,1,-,F,10,,aneurysmal bone cyst.
+bone-penn-397,1,-,M,12,,aneurysmal bone cyst 
+bone-penn-401,1,-,,,, grade i chondrosarcoma
+bone-penn-403,1,-,,,,langerhans cell histiocytosis
+bone-penn-405,2,-,,,,conventional (high-grade) osteosarcoma
+bone-penn-406,1,-,,,,"not osteoblastic lesions,but soft tissue lesion. __ct___________________"
+bone-penn-407,2,test,,,,"conventional osteosarcoma, high-grade."
+bone-penn-413,1,-,,,,langerhans cell histiocytosis
+bone-penn-414,2,-,,,,embryonal rhabdomyosarcoma
+bone-penn-417,0,-,,,,__________
+bone-penn-418,2,-,,,,embryonal rhabdomyosarcoma
+bone-penn-421,0,-,,,,schwannoma
+bone-penn-422,2,-,,,,myofibroma/myofibromatosis
+bone-penn-423,1,-,,,,"osteosarcoma, high-grade"
+bone-penn-425,2,-,,,,_____________
+bone-penn-429,2,-,,,,"osteosarcoma, conventional type"
+bone-penn-432,2,test,,,,"synovial sarcoma, biphasic"
+bone-penn-433,2,-,,,,osteosarcoma
+bone-penn-435,1,-,,,,osteoblastoma._________
+bone-penn-439,2,-,,,,"osteosarcoma, conventional type, high grade"
+bone-penn-446,1,-,,,,desmoplastic fibroma
+bone-penn-452,1,-,M,9,,langerhans cell histiocytosis
+bone-penn-453,1,-,F,6,,langerhans cell histiocytosis 
+bone-penn-454,1,-,M,16,,langerhans cell histiocytosis
+bone-penn-455,0,-,M,20,,extra-axial soft tissue chordoma 
+bone-penn-456,0,-,M,14,,osteoid osteoma 
+bone-penn-457,0,-,F,15,,periosteal (juxtacortical) chondroma
+bone-penn-458,2,-,F,10,,sacrococcygeal teratoma
+bone-penn-459,0,-,F,16,,osteoid osteoma
+bone-penn-460,2,-,F,13,,"nonossifying fibroma (fibrous cortical defect), "
+bone-penn-461,2,-,F,15,,desmoid type fibromatosis
+bone-penn-462,1,-,M,20,,"giant cell tumor of bone,"
+bone-penn-463,2,-,F,1.93,, undifferentiated sarcoma
+bone-penn-464,2,-,F,11,,juxtacortical osteosarcoma
+bone-penn-465,2,-,M,14,,alveolar rhabdomyosarcoma
+bone-penn-466,2,-,M,16,,"osteosarcoma, high grade"
+bone-penn-467,2,-,M,6,,embryonal rhabdomyosarcoma
+bone-penn-468,0,-,M,9,,osteoid osteoma
+bone-penn-469,2,test,F,14,,classical hodgkin lymphoma
+bone-penn-470,2,test,M,4,,2 rhabdoid tumor
+bone-penn-471,0,-,M,13,,osteoid osteoma
+bone-penn-472,2,-,M,18,,osteosarcoma
+bone-penn-473,0,-,M,22,,osteofibrous dysplasia.
+bone-penn-474,0,-,F,13,,cellular neurothekeoma
+bone-penn-475,2,test,F,14,,ewing sarcoma
+bone-penn-476,0,-,M,1.65,,mesenchymal hamartoma
+bone-penn-477,2,-,F,17,,telangiectatic osteosarcoma
+bone-penn-478,1,-,M,7,,langerhans cell histiocytosis
+bone-penn-479,2,-,F,18,,anaplastic large cell lymphoma
+bone-penn-480,1,-,M,0.06,,intramuscular hemangioma
+bone-penn-481,1,-,M,7,,langerhans cell histiocytosis
+bone-penn-482,1,-,M,5,,langerhans cell histiocytosis
+bone-penn-483,2,-,F,16,,"anaplastic large cell lymphoma, alk-positive "
+bone-penn-484,1,-,M,12,,langerhans cell histiocytosis
+bone-penn-485,1,-,F,17,,aneurysmal bone cyst
+bone-penn-486,2,test,F,11,,ewing sarcoma
+bone-penn-487,1,-,F,4,,aneurysmal bone cyst
+bone-penn-488,1,-,M,2,,langerhans cell histiocytosis
+bone-penn-489,1,-,M,8,,langerhans cell histiocytosis 
+bone-penn-490,0,-,M,18,,osteoid osteoma or osteoblastoma
+bone-penn-491,0,-,M,19,,osteoid osteoma
+bone-penn-492,1,-,F,9,,langerhans cell histiocytosis
+bone-penn-493,2,test,M,13,,ewing sarcoma
+bone-penn-494,0,-,F,16,,periosteal chondroma
+bone-penn-495,0,-,M,6,,osteoid osteoma
+bone-penn-496,1,-,M,2,,langerhans cell histiocytosis
+bone-penn-497,0,-,F,7,,osteoid osteoma
+bone-penn-498,1,-,M,4,,langerhans cell histiocytosis
+bone-penn-499,2,test,M,11,,ewing sarcoma
+bone-penn-500,0,-,M,15,,osteoid osteoma
+bone-penn-501,1,-,M,16,,aneurysmal bone cyst
+bone-penn-502,0,-,M,8,,extranodal rosai-dorfman disease (chronic) 
+bone-penn-503,0,-,M,17,,osteoid osteoma
+bone-penn-504,1,-,M,10,,langerhans cell histiocytosis
+bone-penn-505,0,test,F,15,,osteoid osteoma
+bone-penn-506,0,-,M,17,, osteoid osteoma
+bone-penn-507,2,-,F,15,,suggestive of involvement by classical hodgkin lymphoma
+bone-penn-508,0,-,M,5,,osteoid osteoma
+bone-penn-509,0,-,F,12,,osteoid osteoma
+bone-penn-510,1,test,F,7,,aneurysmal bone cyst
+bone-penn-511,2,-,F,8,,ewing sarcoma
+bone-penn-512,1,-,M,17,,chondroblastoma
+bone-penn-513,0,test,M,14,,osteoid osteoma
+bone-penn-514,2,-,F,16,,ewing sarcoma
+bone-penn-515,1,-,M,14,,chondroblastoma
+bone-penn-516,1,-,M,15,,chondroblastoma
+bone-penn-517,1,-,M,14,,chondroblastoma
+bone-penn-518,1,-,M,15,,chondroblastoma
+bone-penn-519,1,test,M,14,,chondroblastoma
+bone-penn-520,1,-,F,13,,chondroblastoma.
+bone-penn-521,1,-,F,12,,chondroblastoma
+bone-penn-522,1,-,M,13,,chondroblastoma 
+bone-penn-523,1,-,M,19,,chondroblastoma
+bone-penn-524,1,test,M,15,,chondroblastoma
+bone-penn-525,1,-,M,13,,chondroblastoma
+bone-penn-526,1,-,F,15,,chondroblastoma
+bone-penn-527,1,-,F,17,,chondroblastoma
+bone-penn-528,1,-,M,12,,chondroblastoma
+bone-penn-529,1,-,M,6,,giant cell reparative granuloma 
+bone-penn-530,1,-,M,16,,chondroblastoma
+bone-penn-531,2,-,M,16,,epithelioid hemangioma
+bone-penn-532,1,-,M,15,,chondroblastoma
+bone-penn-533,1,-,M,13,,chondroblastoma 
+bone-penn-534,1,-,M,17,,chondroblastoma
+bone-penn-535,1,-,F,11,,chondromyxoid fibroma
+bone-penn-536,1,-,M,18,,chondroblastoma
+bone-penn-537,1,-,F,17,,chondroblastoma
+bone-penn-538,1,-,M,18,,chondroblastoma.
+bone-penn-539,1,test,M,10,,chondroblastoma
+bone-penn-540,1,test,M,16,,chondroblastoma
+bone-penn-541,1,-,F,17,,chondroblastoma
+bone-penn-542,1,-,M,1.35,,spindle cell myoepithelioma
+bone-penn-543,2,-,M,20,,mesenchymal chondrosarcoma
+bone-penn-544,2,test,F,14,,mesenchymal chondrosarcoma
+bone-penn-545,1,-,M,8,,tenosynovial giant cell tumor
+bone-penn-546,2,-,M,18,,ewing sarcoma
+bone-penn-547,1,test,M,16,,myxoid chondrosarcoma 
+bone-penn-548,0,-,,,,enchondroma
+bone-penn-549,0,-,,,,enchondroma
+bone-penn-550,0,-,,,,enchondroma
+bone-penn-551,0,-,,,,enchondroma
+bone-penn-552,0,-,,,,enchondroma
+bone-penn-553,0,-,,,,enchondroma
+bone-penn-554,0,test,,,,enchondroma
+bone-penn-555,0,-,,,,enchondroma
+bone-penn-556,0,-,,,,enchondroma
+bone-penn-557,0,test,,,,enchondroma
+bone-penn-558,0,-,,,,enchondroma
+bone-penn-559,0,test,,,,enchondroma
+bone-penn-560,0,-,,,,enchondroma
+bone-penn-561,0,-,,,,enchondroma
+bone-penn-562,0,-,,,,enchondroma
+bone-penn-563,0,-,,,,enchondroma
+bone-penn-564,0,-,,,,enchondroma
+bone-penn-565,0,-,,,,enchondroma
+bone-penn-566,0,test,,,,enchondroma
+bone-penn-567,0,-,,,,enchondroma
+bone-penn-568,0,-,,,,enchondroma
+bone-penn-569,0,test,,,,enchondroma
+bone-penn-570,1,-,F,15,,aneurysmal bone cyst
+bone-penn-571,1,-,F,13,,aneurysmal bone cyst
+bone-penn-572,1,-,F,9,,aneurysmal bone cyst
+bone-penn-573,0,-,M,9,,inclusion body fibromatosis
+bone-penn-574,1,test,M,6,,giant cell reparative granuloma
+bone-penn-575,1,-,F,15,,giant cell tumor of bone
+bone-penn-576,1,-,F,16,,aneurysmal bone cyst 
+bone-penn-577,1,-,F,3,,aneurysmal bone cyst
+bone-penn-578,1,-,F,20,,giant cell tumor of bone.
+bone-penn-579,1,-,M,7,,giant cell rich lesion
+bone-penn-580,1,-,F,12,,giant cell tumor 
+bone-penn-581,1,-,F,7,,central giant cell granuloma
+bone-penn-582,1,test,F,9,,langerhans cell histiocytosis
+bone-penn-583,1,-,M,6,,chondromyxoid neoplasm with atypical features
+bone-penn-584,1,-,F,6,,aneurysmal bone cyst
+bone-penn-585,1,-,F,20,,osteoblastoma.
+bone-penn-586,0,-,M,10,,synovial chondromatosis.
+bone-penn-587,1,-,M,21,,osteoblastoma
+bone-penn-588,1,-,M,15,,osteoblastoma
+bone-penn-589,1,-,F,11,,osteoblastoma
+bone-penn-590,1,-,M,3,,langerhans cell histiocytosis.
+bone-penn-591,0,-,M,4,,osteoid osteoma
+bone-penn-592,1,-,F,9,,aneurysmal bone cyst
+bone-penn-593,1,-,M,14,,osteoblastoma
+bone-penn-594,1,test,M,6,,giant cell reparative granuloma
+bone-penn-595,1,-,F,6,,osteoid osteoma.
+bone-penn-596,2,-,F,13,,ewing sarcoma
+bone-penn-597,2,-,F,13,,ewing sarcoma
+bone-penn-598,2,-,F,23,,ewing sarcoma
+bone-penn-599,2,-,M,4,,ewing sarcoma
+bone-penn-600,2,-,M,11,,ewing sarcoma
+bone-penn-601,2,-,M,7,,ewing sarcoma
+bone-penn-602,2,-,F,3,,ewing sarcoma
+bone-penn-603,2,-,F,6,,ewing sarcoma
+bone-penn-604,2,-,M,17,,ewing sarcoma
+bone-penn-605,2,-,M,1.95,,ewing sarcoma
+bone-penn-606,2,-,M,5,,ewing sarcoma
+bone-penn-607,2,-,F,10,,ewing sarcoma
+bone-penn-608,2,-,F,11,,ewing sarcoma
+bone-penn-609,2,-,M,12,,ewing sarcoma
+bone-penn-610,2,-,M,23,,ewing sarcoma
+bone-penn-611,2,-,F,5,,ewing sarcoma
+bone-penn-612,0,-,F,4,,chordoma
+bone-penn-613,1,-,M,2,,langerhans cell histiocytosis
+bone-penn-614,2,-,F,10,,ewing sarcoma
+bone-penn-615,2,-,F,5,,embryonal rhabdomyosarcoma
+bone-penn-616,2,-,M,10,,ewing sarcoma
+bone-penn-617,2,-,F,17,,sclerosing epitheliod fibrosarcoma
+bone-penn-618,2,-,M,16,,ewing sarcoma
+bone-penn-619,1,-,M,5,,giant cell tumor 
+bone-penn-620,2,-,F,10,,ewing sarcoma
+bone-penn-621,2,-,M,21,,ewing sarcoma
+bone-penn-622,2,-,M,16,,ewing sarcoma
+bone-penn-623,2,-,M,18,,ewing sarcoma
+bone-penn-624,2,-,M,16,,ewing sarcoma
+bone-penn-625,2,-,M,0.94,," rhabdomyosarcoma,embryonal subtype "
+bone-penn-626,2,-,F,11,,metastatic ewing's sarcoma
+bone-penn-627,2,-,F,6,,ewing sarcoma
+bone-penn-628,2,-,F,14,,ewing sarcoma
+bone-penn-629,2,-,F,11,,ewing sarcoma
+bone-penn-630,1,-,F,8,, langerhans cell histiocytosis
+bone-penn-631,2,-,F,5,,conventional (high-grade) osteosarcoma
+bone-penn-632,2,-,F,4,,ewing sarcoma
+bone-penn-633,2,-,M,14,,ewing sarcoma
+bone-penn-634,2,-,F,8,,ewing sarcoma
+bone-penn-635,2,-,M,14,,ewing sarcoma
+bone-penn-636,2,-,F,14,,ewing sarcoma
+bone-penn-637,2,-,M,16,,ewing sarcoma
+bone-penn-638,2,test,F,14,,ewing sarcoma
+bone-penn-639,2,-,M,19,,ewing sarcoma
+bone-penn-640,2,-,M,6,,ewing sarcoma
+bone-penn-641,2,-,F,9,,ewing sarcoma
+bone-penn-642,2,-,F,8,,ewing sarcoma
+bone-penn-643,2,-,F,4,,ewing sarcoma
+bone-penn-644,2,-,M,3,,"rhabdomyosarcoma, alveolar subtype"
+bone-penn-645,2,-,M,7,,ewing sarcoma
+bone-penn-646,2,-,F,11,,ewing sarcoma
+bone-penn-647,2,-,M,5,,ewing sarcoma
+bone-penn-648,2,-,M,20,,ewing sarcoma
+bone-penn-649,2,test,M,22,,ewing sarcoma
+bone-penn-650,2,-,M,20,,ewing sarcoma
+bone-penn-651,2,-,M,16,,osteoid osteo
+bone-penn-652,2,-,F,8,,ewing sarcoma
+bone-penn-653,2,-,M,16,,ewing sarcoma
+bone-penn-654,2,-,M,3,,ewing sarcoma
+bone-china-001,0,-,F,20,,Fibrous histocytomas
+bone-china-002,0,-,M,70,,Langerhans cell histiocytosis
+bone-china-003,0,-,F,29,,Osteosarcoma
+bone-china-004,0,-,M,23,,Langerhans cell histiocytosis
+bone-china-005,0,-,F,45,,Giant cell of bone
+bone-china-006,0,-,F,14,,Giant cell of bone
+bone-china-007,0,test,M,37,,Giant cell of bone
+bone-china-008,0,-,M,46,,Giant cell of bone
+bone-china-009,0,-,F,47,,"Chondrosarcoma,grade I"
+bone-china-010,0,-,M,52,,Osteosarcoma
+bone-china-011,0,-,F,16,,Osteosarcoma
+bone-china-012,0,test,F,33,,Langerhans cell histiocytosis
+bone-china-013,0,test,M,24,,Osteosarcoma
+bone-china-014,0,-,M,2,,Chondroblastoma
+bone-china-015,0,-,M,15,,Osteosarcoma
+bone-china-016,0,-,M,17,,Osteosarcoma
+bone-china-017,0,-,F,41,,Osteosarcoma
+bone-china-018,0,test,M,13,,Giant cell of bone
+bone-china-019,0,-,M,12,,Giant cell of bone
+bone-china-020,0,-,F,48,,Osteosarcoma
+bone-china-021,0,-,M,24,,Osteosarcoma
+bone-china-022,0,-,F,43,,Giant cell of bone
+bone-china-023,0,-,M,53,,Chordoma
+bone-china-024,0,-,M,27,,Osteosarcoma
+bone-china-025,0,-,M,43,,Langerhans cell histiocytosis
+bone-china-026,0,-,M,12,,Plasma cell myeloma
+bone-china-027,0,-,M,37,,Osteosarcoma
+bone-china-028,0,-,M,5,,"Chondrosarcoma,grade II,III"
+bone-china-029,0,-,M,7,,Chondroblastoma
+bone-china-030,0,-,M,25,,"Chondrosarcoma,grade I"
+bone-china-031,0,-,F,56,,Osteoblastoma
+bone-china-032,0,-,M,41,,Plasma cell myeloma
+bone-china-033,0,-,M,51,,Langerhans cell histiocytosis
+bone-china-034,0,-,F,63,,"Chondrosarcoma,grade I"
+bone-china-035,0,-,M,18,,"Chondrosarcoma,grade I"
+bone-china-036,0,-,M,16,,Osteosarcoma
+bone-china-037,0,-,F,14,,Osteosarcoma
+bone-china-038,0,-,M,26,,Epithelioid haemangioma
+bone-china-039,0,-,M,62,,"Chondrosarcoma,grade I"
+bone-china-040,0,-,M,29,,Osteosarcoma
+bone-china-041,0,-,F,23,,"Chondrosarcoma,grade I"
+bone-china-042,0,-,M,14,,Osteosarcoma
+bone-china-043,0,-,F,46,,"Chondrosarcoma,grade II,III"
+bone-china-044,0,-,M,32,,Malignancy in giant cell tumor of bone
+bone-china-045,0,-,M,40,,Chordoma
+bone-china-046,0,-,F,10,,Osteosarcoma
+bone-china-047,0,-,M,10,,Adamantinoma
+bone-china-048,0,-,F,10,,Giant cell of bone
+bone-china-049,0,-,M,16,,Osteosarcoma
+bone-china-050,0,-,F,49,,Chondroblastoma
+bone-china-051,0,-,M,22,,Osteoblastoma
+bone-china-052,0,-,F,20,,"Chondrosarcoma,grade I"
+bone-china-053,0,-,F,10,,Ewing sarcoma
+bone-china-054,0,-,F,34,,Chondromyxoid fibroma
+bone-china-055,0,-,F,9,,Chordoma
+bone-china-056,0,-,M,12,,"Chondrosarcoma,grade I"
+bone-china-057,0,-,M,47,,Osteosarcoma
+bone-china-058,0,-,M,45,,Giant cell of bone
+bone-china-059,0,-,F,48,,Chondromyxoid fibroma
+bone-china-060,0,-,M,40,,Chondroblastoma
+bone-china-061,0,-,F,62,,Osteosarcoma
+bone-china-062,0,-,M,30,,Osteosarcoma
+bone-china-063,0,test,M,52,,Osteosarcoma
+bone-china-064,0,test,M,29,,Chondroblastoma
+bone-china-065,0,-,F,21,,Giant cell of bone
+bone-china-066,0,-,F,38,,Osteoblastoma
+bone-china-067,0,test,F,37,,"Chondrosarcoma,grade I"
+bone-china-068,0,-,M,8,,Desmoplastic fibroma of bone
+bone-china-069,0,-,M,13,,Osteosarcoma
+bone-china-070,0,-,F,22,,Osteosarcoma
+bone-china-071,0,-,M,22,,Giant cell of bone
+bone-china-072,0,-,M,66,,Aneurysmal bone cyst
+bone-china-073,0,-,M,49,,Langerhans cell histiocytosis
+bone-china-074,0,-,M,30,,Osteosarcoma
+bone-china-075,0,-,M,13,,Giant cell of bone
+bone-china-076,0,-,M,67,,"Chondrosarcoma,grade I"
+bone-china-077,0,-,F,43,,Aneurysmal bone cyst
+bone-china-078,0,-,M,17,,Chondroblastoma
+bone-china-079,0,-,F,25,,Osteosarcoma
+bone-china-080,0,-,F,10,,Giant cell of bone
+bone-china-081,0,-,F,35,,Osteosarcoma
+bone-china-082,0,test,M,27,,Giant cell of bone
+bone-china-083,0,-,F,43,,Osteosarcoma
+bone-china-084,0,-,M,28,,Aneurysmal bone cyst
+bone-china-085,0,-,F,45,,Giant cell of bone
+bone-china-086,0,-,F,39,,Osteosarcoma
+bone-china-087,0,-,F,41,,Chordoma
+bone-china-088,0,-,M,8,,Osteosarcoma
+bone-china-089,0,-,M,6,,Chordoma
+bone-china-090,0,test,M,36,,Osteoblastoma
+bone-china-091,1,-,F,19,,Giant cell of bone
+bone-china-092,1,-,M,6,,Giant cell of bone
+bone-china-093,1,-,F,10,,Osteosarcoma
+bone-china-094,1,test,M,31,,"Chondrosarcoma,grade II,III"
+bone-china-095,1,-,F,27,,Fibrosarcoma of bone
+bone-china-096,1,-,M,49,,Osteosarcoma
+bone-china-097,1,-,F,50,,Chordoma
+bone-china-098,1,-,F,61,,Giant cell of bone
+bone-china-099,1,-,F,11,,Osteosarcoma
+bone-china-100,1,-,M,4,,Langerhans cell histiocytosis
+bone-china-101,1,-,M,34,,Osteosarcoma
+bone-china-102,1,-,M,29,,"Chondrosarcoma,grade I"
+bone-china-103,1,-,M,45,,Chordoma
+bone-china-104,1,-,M,37,,Osteosarcoma
+bone-china-105,1,-,M,12,,Osteosarcoma
+bone-china-106,1,-,M,15,,Giant cell of bone
+bone-china-107,1,-,M,67,,Osteosarcoma
+bone-china-108,1,test,M,21,,Chordoma
+bone-china-109,1,-,F,7,,Chondroblastoma
+bone-china-110,1,-,M,25,,Giant cell of bone
+bone-china-111,1,-,F,47,,"Chondrosarcoma,grade I"
+bone-china-112,1,-,M,27,,Chondroblastoma
+bone-china-113,1,-,M,32,,Osteosarcoma
+bone-china-114,1,-,F,25,,Chondromyxoid fibroma
+bone-china-115,1,-,F,65,,Chordoma
+bone-china-116,1,-,F,,,"Chondrosarcoma,grade II,III"
+bone-china-117,1,-,M,22,,Giant cell of bone
+bone-china-118,1,-,M,43,,"Chondrosarcoma,grade II,III"
+bone-china-119,1,-,F,16,,Plasma cell myeloma
+bone-china-120,1,-,M,54,,Chondroblastoma
+bone-china-121,1,-,F,25,,"Chondrosarcoma,grade I"
+bone-china-122,1,-,F,27,,Osteoblastoma
+bone-china-123,1,-,M,13,,"Chondrosarcoma,grade I"
+bone-china-124,1,-,M,25,,Osteosarcoma
+bone-china-125,1,-,M,29,,Giant cell of bone
+bone-china-126,1,-,M,29,,Osteosarcoma
+bone-china-127,1,-,F,51,,Chordoma
+bone-china-128,1,-,F,18,,"Chondrosarcoma,grade I"
+bone-china-129,1,-,F,22,,Aneurysmal bone cyst
+bone-china-130,1,test,F,43,,Plasma cell myeloma
+bone-china-131,1,-,M,8,,Giant cell of bone
+bone-china-132,1,-,M,26,,Chondroblastoma
+bone-china-133,1,-,M,24,,Giant cell of bone
+bone-china-134,1,-,F,11,,Osteosarcoma
+bone-china-135,1,-,M,25,,Aneurysmal bone cyst
+bone-china-136,1,-,M,51,,Osteosarcoma
+bone-china-137,1,test,M,49,,Osteoblastoma
+bone-china-138,1,-,M,55,,Giant cell of bone
+bone-china-139,1,-,F,48,,Chordoma
+bone-china-140,1,-,F,52,,Plasma cell myeloma
+bone-china-141,1,test,F,53,,Osteoblastoma
+bone-china-142,1,test,M,35,,Malignancy in giant cell tumor of bone
+bone-china-143,1,-,M,51,,Osteoblastoma
+bone-china-144,1,-,F,53,,Osteosarcoma
+bone-china-145,1,-,M,44,,Giant cell of bone
+bone-china-146,1,-,M,34,,Osteosarcoma
+bone-china-147,1,-,F,29,,"Chondrosarcoma,grade I"
+bone-china-148,1,-,F,24,,Osteosarcoma
+bone-china-149,1,-,F,13,,Giant cell of bone
+bone-china-150,1,test,F,16,,Chondroblastoma
+bone-china-151,1,-,F,21,,Osteosarcoma
+bone-china-152,1,-,F,12,,Langerhans cell histiocytosis
+bone-china-153,1,-,F,25,,"Chondrosarcoma,grade I"
+bone-china-154,1,-,M,16,,Giant cell of bone
+bone-china-155,1,-,F,67,,Osteosarcoma
+bone-china-156,1,test,M,21,,Giant cell of bone
+bone-china-157,1,test,M,48,,Aneurysmal bone cyst
+bone-china-158,1,-,M,45,,
+bone-china-159,1,-,F,66,,
+bone-china-160,1,-,F,15,,
+bone-china-161,1,-,F,22,,
+bone-china-162,1,-,M,14,,
+bone-china-163,1,-,M,16,,
+bone-china-164,1,-,F,21,,
+bone-china-165,1,-,F,49,,
+bone-china-166,1,-,M,43,,
+bone-china-167,1,-,F,25,,
+bone-china-168,1,-,M,62,,
+bone-china-169,1,-,F,25,,
+bone-china-170,1,-,M,8,,
+bone-china-171,1,-,F,47,,
+bone-china-172,1,-,M,57,,
+bone-china-173,1,-,M,44,,
+bone-china-174,1,-,F,32,,
+bone-china-175,1,-,F,13,,
+bone-china-176,2,-,F,14,,
+bone-china-177,2,-,M,16,,
+bone-china-178,2,-,M,37,,
+bone-china-179,2,-,F,10,,
+bone-china-180,2,-,F,9,,
+bone-china-181,2,test,M,16,,
+bone-china-182,2,test,F,15,,
+bone-china-183,2,-,F,11,,
+bone-china-184,2,-,M,21,,
+bone-china-185,2,-,F,57,,
+bone-china-186,2,-,F,7,,
+bone-china-187,2,-,M,53,,
+bone-china-188,2,-,M,24,,
+bone-china-189,2,-,F,12,,
+bone-china-190,2,-,F,65,,
+bone-china-191,2,-,F,37,,
+bone-china-192,2,-,M,19,,
+bone-china-193,2,-,M,15,,
+bone-china-194,2,-,F,12,,
+bone-china-195,2,-,F,70,,
+bone-china-196,2,-,M,33,,
+bone-china-197,2,-,M,76,,
+bone-china-198,2,-,M,13,,
+bone-china-199,2,-,M,53,,
+bone-china-200,2,-,F,,,
+bone-china-201,2,-,M,32,,
+bone-china-202,2,test,F,42,,
+bone-china-203,2,-,F,15,,
+bone-china-204,2,-,M,62,,
+bone-china-205,2,-,M,52,,
+bone-china-206,2,test,M,81,,
+bone-china-207,2,-,F,18,,
+bone-china-208,2,test,M,21,,
+bone-china-209,2,-,M,19,,
+bone-china-210,2,-,M,19,,
+bone-china-211,2,-,M,18,,
+bone-china-212,2,-,M,8,,
+bone-china-213,2,-,M,15,,
+bone-china-214,2,-,M,63,,
+bone-china-215,2,-,M,12,,
+bone-china-216,2,-,M,88,,
+bone-china-217,2,-,M,17,,
+bone-china-218,2,-,M,40,,
+bone-china-219,2,-,F,66,,
+bone-china-220,2,-,M,17,,
+bone-china-221,2,-,M,74,,
+bone-china-222,2,-,M,15,,
+bone-china-223,2,-,M,17,,
+bone-china-224,2,-,M,50,,
+bone-china-225,2,-,M,12,,
+bone-china-226,2,-,F,12,,
+bone-china-227,2,-,M,20,,
+bone-china-228,2,-,M,67,,
+bone-china-229,2,test,M,14,,
+bone-china-230,2,-,M,69,,
+bone-china-231,2,-,F,45,,
+bone-china-232,2,test,F,49,,
+bone-china-233,2,test,M,63,,
+bone-china-234,2,-,M,19,,
+bone-china-235,2,test,M,21,,
+bone-china-236,2,-,M,47,,
+bone-china-237,2,-,F,33,,
+bone-china-238,2,-,F,11,,
+bone-china-239,2,-,F,17,,
+bone-china-240,2,-,M,45,,
+bone-china-241,2,test,F,61,,
+bone-china-242,2,-,F,41,,
+bone-china-243,2,-,F,43,,
+bone-china-244,2,-,M,16,,
+bone-china-245,2,-,F,14,,
+bone-china-246,2,-,F,62,,
+bone-china-247,2,-,F,11,,
+bone-hup-2,2,-,M  ,,,high grade pleomorphic sarcoma
 bone-hup-3,1,-,M  ,,,"multiple fragments of soft tissue showing mononuclear cell proliferation
 with presence of giant cells, foamy macrophages and pigment laden
 macrophages consistent with clinical history of pigmented villonodular
-synovitis.",
-bone-hup-22,2,-,M  ,,,metastatic adenocarcinoma most consistent with a lung primary,
-bone-hup-23,2,-,M  ,,,metastatic poorly differentiated carcinoma,
-bone-hup-30,1,-,M  ,,,multinucleated giant cells and mononuclear cells present,
+synovitis."
+bone-hup-22,2,-,M  ,,,metastatic adenocarcinoma most consistent with a lung primary
+bone-hup-23,2,-,M  ,,,metastatic poorly differentiated carcinoma
+bone-hup-30,1,-,M  ,,,multinucleated giant cells and mononuclear cells present
 bone-hup-39,2,-,F  ,,,"invasive, poorly differentiated carcinoma with tumor giant cells
 (anaplastic features), adjacent to prior biopsy site, 0.8 cm in greatest
 microscopic dimension (5h).
 - focal microcalcifications, and intraductal papilloma(s).
-- margins are free of tumor (>0.2 cm).",
+- margins are free of tumor (>0.2 cm)."
 bone-hup-48,1,-,F  ,,," giant cell lesion, consistent with aneurysmal bone cyst or giant cell
-tumor of bone with secondary aneurysmal bone cyst",
-bone-hup-50,1,test,M  ,,,giant cell tumor of bone,
+tumor of bone with secondary aneurysmal bone cyst"
+bone-hup-50,1,test,M  ,,,giant cell tumor of bone
 bone-hup-51,1,-,M  ,,,"giant cell rich neoplasm with focal fibrocollagenous features, most
-consistent with giant cell tumor of the bone",
-bone-hup-52,2,-,F  ,,,"metastatic poorly differentiated carcinoma in bone,",
-bone-hup-53,2,-,F  ,,,metatastatic carcinoma in bone and soft tissue,
-bone-hup-54,2,-,F  ,,,metastatic papillary thyroid carcinoma in bone,
-bone-hup-55,2,-,F  ,,,"adenoid cystic carcinoma in bone, consistent with metastatic carcinoma,",
-bone-hup-56,2,-,M  ,,,metastatic poorly differentiated carcinoma in bone,
-bone-hup-57,2,-,F  ,,,metastatic breast carcinoma to bone.,
-bone-hup-58,2,-,F  ,,,"bone with metastatic carcinoma, consistent with breast primary, ",
-bone-hup-59,2,-,F  ,,,"bone with metastatic carcinoma, consistent with breast primary. ",
-bone-hup-60,2,-,M  ,,, invasive squamous cell carcinoma,
-bone-hup-61,2,-,F  ,9,,"metastatic carcinoma in bone, consistent with a renal primary",
-bone-hup-62,2,-,M  ,,,"metastatic prostatic carcinoma,",
+consistent with giant cell tumor of the bone"
+bone-hup-52,2,-,F  ,,,"metastatic poorly differentiated carcinoma in bone,"
+bone-hup-53,2,-,F  ,,,metatastatic carcinoma in bone and soft tissue
+bone-hup-54,2,-,F  ,,,metastatic papillary thyroid carcinoma in bone
+bone-hup-55,2,-,F  ,,,"adenoid cystic carcinoma in bone, consistent with metastatic carcinoma,"
+bone-hup-56,2,-,M  ,,,metastatic poorly differentiated carcinoma in bone
+bone-hup-57,2,-,F  ,,,metastatic breast carcinoma to bone.
+bone-hup-58,2,-,F  ,,,"bone with metastatic carcinoma, consistent with breast primary, "
+bone-hup-59,2,-,F  ,,,"bone with metastatic carcinoma, consistent with breast primary. "
+bone-hup-60,2,-,M  ,,, invasive squamous cell carcinoma
+bone-hup-61,2,-,F  ,9,,"metastatic carcinoma in bone, consistent with a renal primary"
+bone-hup-62,2,-,M  ,,,"metastatic prostatic carcinoma,"
 bone-hup-63,2,-,F  ,,,"metastatic adenocarcinoma, morphologically consistent with prior
-material,",
-bone-hup-65,2,-,F  ,,,bone with metastatic carcinoma consistent with breast primary.,
-bone-hup-66,2,-,F  ,,,bone with metastatic carcinoma consistent with breast primary.,
-bone-hup-67,2,-,F  ,,,metastatic thyroid carcinoma in bone and peri-osseous soft tissue.,
-bone-hup-68,2,-,F  ,,,metastatic carcinoma with squamous differentiation,
-bone-hup-69,2,-,F  ,,,"bone with metastatic carcinoma, consistent with breast primary,",
-bone-hup-70,2,-,M  ,,,metastatic carcinoma with squamous differentiation,
+material,"
+bone-hup-65,2,-,F  ,,,bone with metastatic carcinoma consistent with breast primary.
+bone-hup-66,2,-,F  ,,,bone with metastatic carcinoma consistent with breast primary.
+bone-hup-67,2,-,F  ,,,metastatic thyroid carcinoma in bone and peri-osseous soft tissue.
+bone-hup-68,2,-,F  ,,,metastatic carcinoma with squamous differentiation
+bone-hup-69,2,-,F  ,,,"bone with metastatic carcinoma, consistent with breast primary,"
+bone-hup-70,2,-,M  ,,,metastatic carcinoma with squamous differentiation
 bone-hup-71,2,-,F  ,,,"metastatic carcinoma in bone, morphologically compatible with breast
-primary",
+primary"
 bone-hup-72,2,-,M  ,,,"invasive squamous cell carcinoma of skin, 14.0 cm, see synoptic report.
 the tumor spans the majority of the skin excision specimen, sparing the
-distal tip.",
-bone-hup-73,2,-,F  ,,,metastatic follicular carcinoma,
-bone-hup-74,2,-,F  ,,,"metastatic carcinoma in bone, consistent with breast primary",
+distal tip."
+bone-hup-73,2,-,F  ,,,metastatic follicular carcinoma
+bone-hup-74,2,-,F  ,,,"metastatic carcinoma in bone, consistent with breast primary"
 bone-hup-75,2,-,F  ,,,"carcinoma in bone, consistent with metastasis from a primary mammary
-carcinoma",
-bone-hup-76,2,-,F  ,,,"carcinoma in bone, consistent with metastatic breast carcinoma",
+carcinoma"
+bone-hup-76,2,-,F  ,,,"carcinoma in bone, consistent with metastatic breast carcinoma"
 bone-hup-77,2,-,M  ,,,"metastatic carcinoma to bone and fibrous tissue consistent with poorly
-differentiated  thyroid carcinoma.",
-bone-hup-78,2,-,F  ,,,"carcinoma in bone, consistent with metastatic breast cancer; ",
-bone-hup-79,2,-,M  ,,,"bone with metastatic 2 neoplasm, favor 2 melanoma",
-bone-hup-80,2,-,F  ,,,adenoid cystic carcinoma in bone,
-bone-hup-81,2,-,F  ,,,metastatic carcinoma in bone with associated acute fracture;,
-bone-hup-82,2,-,F  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-83,2,-,F  ,,,"undifferentiated pleomorphic sarcoma, high-grade",
-bone-hup-84,2,-,M  ,,,"undifferentiated pleomorphic sarcoma, high-grade (grade 3)",
+differentiated  thyroid carcinoma."
+bone-hup-78,2,-,F  ,,,"carcinoma in bone, consistent with metastatic breast cancer; "
+bone-hup-79,2,-,M  ,,,"bone with metastatic 2 neoplasm, favor 2 melanoma"
+bone-hup-80,2,-,F  ,,,adenoid cystic carcinoma in bone
+bone-hup-81,2,-,F  ,,,metastatic carcinoma in bone with associated acute fracture;
+bone-hup-82,2,-,F  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-83,2,-,F  ,,,"undifferentiated pleomorphic sarcoma, high-grade"
+bone-hup-84,2,-,M  ,,,"undifferentiated pleomorphic sarcoma, high-grade (grade 3)"
 bone-hup-85,2,-,F  ,,,"paget`s sarcoma, undifferentiated pleomorphic spindle cell type, high
-grade",
+grade"
 bone-hup-86,2,-,M  ,,,"poorly differentiated epithelioid malignancy most suggestive of
-undifferentiated pleomorphic sarcoma",
-bone-hup-87,2,test,M  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-88,2,-,M  ,,, completely necrotic tumor with osteoclast-like giant cells ,
-bone-hup-89,2,-,M  ,,,"high grade sarcoma, consistent with undifferentiated pleomorphic sarcoma",
-bone-hup-90,2,test,F  ,,, high grade sarcoma consistent with extraskeletal osteosarcoma,
-bone-hup-91,2,-,F  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-92,2,-,F  ,,,poorly differentiated sarcoma,
-bone-hup-93,2,-,F  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-94,2,-,M  ,,,"undifferentiated pleomorphic sarcoma, high-grade",
-bone-hup-95,2,-,F  ,,, high grade sarcoma,
-bone-hup-96,2,-,M  ,,,pleomorphic undifferentiated sarcoma,
-bone-hup-97,2,-,F  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-98,2,-,M  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-99,2,test,M  ,,,"high grade pleomorphic neoplasm consistent with undifferentiated
-pleomorphic sarcoma",
-bone-hup-100,2,-,F  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-101,2,-,F  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-102,2,-,M  ,,,recurrent high-grade undifferentiated pleomorphic sarcoma,
-bone-hup-103,2,-,M  ,,, undifferentiated pleomorphic sarcoma,
-bone-hup-104,2,-,F  ,,,"undifferentiated pleomorphic sarcoma, high grade",
-bone-hup-105,2,-,F  ,,,pleomorphic sarcoma,
-bone-hup-106,2,-,F  ,,,"pleomorphic tumor consistent with pleomorphic sarcoma,",
-bone-hup-107,2,-,M  ,,,high-grade sarcoma consistent with extraskeletal osteosarcoma,
-bone-hup-108,2,-,M  ,,," undifferentiated pleomorphic sarcoma, high grade",
-bone-hup-109,2,-,M  ,,,undifferentiated pleomorphic sarcoma,
-bone-hup-110,2,-,M  ,,,undifferentiated pleomorphic sarcoma,
+undifferentiated pleomorphic sarcoma"
+bone-hup-87,2,test,M  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-88,2,-,M  ,,, completely necrotic tumor with osteoclast-like giant cells 
+bone-hup-89,2,-,M  ,,,"high grade sarcoma, consistent with undifferentiated pleomorphic sarcoma"
+bone-hup-90,2,test,F  ,,, high grade sarcoma consistent with extraskeletal osteosarcoma
+bone-hup-91,2,-,F  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-92,2,-,F  ,,,poorly differentiated sarcoma
+bone-hup-93,2,-,F  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-94,2,-,M  ,,,"undifferentiated pleomorphic sarcoma, high-grade"
+bone-hup-95,2,-,F  ,,, high grade sarcoma
+bone-hup-96,2,-,M  ,,,pleomorphic undifferentiated sarcoma
+bone-hup-97,2,-,F  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-98,2,-,M  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-99,2,test,M  ,,,high grade pleomorphic neoplasm consistent with undifferentiated pleomorphic sarcoma
+bone-hup-100,2,-,F  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-101,2,-,F  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-102,2,-,M  ,,,recurrent high-grade undifferentiated pleomorphic sarcoma
+bone-hup-103,2,-,M  ,,, undifferentiated pleomorphic sarcoma
+bone-hup-104,2,-,F  ,,,"undifferentiated pleomorphic sarcoma, high grade"
+bone-hup-105,2,-,F  ,,,pleomorphic sarcoma
+bone-hup-106,2,-,F  ,,,"pleomorphic tumor consistent with pleomorphic sarcoma,"
+bone-hup-107,2,-,M  ,,,high-grade sarcoma consistent with extraskeletal osteosarcoma
+bone-hup-108,2,-,M  ,,," undifferentiated pleomorphic sarcoma, high grade"
+bone-hup-109,2,-,M  ,,,undifferentiated pleomorphic sarcoma
+bone-hup-110,2,-,M  ,,,undifferentiated pleomorphic sarcoma
 bone-hup-111,2,-,M  ,,,"high-grade pleomorphic sarcoma most suggestive of undifferentiated
-pleomorphic sarcoma",
-bone-hup-112,2,-,F  ,,,"undifferentiated pleomorphic sarcoma, high grade",
-bone-hup-113,2,-,M  ,,,undifferentiated pleomorphic sarcoma,
+pleomorphic sarcoma"
+bone-hup-112,2,-,F  ,,,"undifferentiated pleomorphic sarcoma, high grade"
+bone-hup-113,2,-,M  ,,,undifferentiated pleomorphic sarcoma
 bone-hup-114,2,test,M  ,,,"high grade (3 of 3) undifferentiated sarcoma with spindle and epithelioid
-features",
-bone-hup-115,2,-,F  ,,, undifferentiated pleomorphic sarcoma (mfh),
-bone-hup-116,0,-,,,,fibrous dysplasia,
-bone-hup-117,0,-,,,,osteoid osteoma,
-bone-hup-118,2,-,,,,"fibrosarcoma, low-grade",
-bone-hup-119,1,-,,,,"chondrosarcoma, low grade, 5.6 cm, arising from osteochondroma",
-bone-hup-120,1,test,,,,giant cell tumor with secondary aneurysmal bone cyst-like changes,
-bone-hup-121,1,-,,,,giant cell tumor of bone,
-bone-hup-122,1,-,,,,chondromyxoid fibroma,
-bone-hup-123,1,-,,,,chondromyxoid fibroma,
-bone-hup-124,0,-,,,,fibrous dysplasia,
-bone-hup-125,1,-,,,,chondromyxoid fibroma,
-bone-hup-126,1,-,,,,chondromyxoid fibroma,
-bone-hup-127,2,test,,,,ewing`s sarcoma,
-bone-hup-128,1,-,,,,chondromyxoid fibroma,
-bone-hup-129,1,-,,,,"chondrosarcoma, grade 1",
-bone-hup-130,1,test,,,,aneurysmal bone cyst,
-bone-hup-131,0,-,,,,osteochondroma,
-bone-hup-132,2,-,,,,osteosarcoma,
-bone-hup-133,2,-,,,,low grade central osteosarcoma,
-bone-hup-134,0,-,,,,enchondroma,
-bone-hup-135,0,-,,,,fibrous dysplasia,
-bone-hup-136,1,-,,,,osteoblastoma,
-bone-hup-137,0,test,,,,osteochondroma,
-bone-hup-138,2,-,,,,recurrent/residual ewing sarcoma,
-bone-hup-139,0,-,,,,osteoid osteoma,
-bone-hup-140,0,-,,,,osteochondroma,
-bone-hup-141,2,-,,,,ewing sarcoma,
-bone-hup-142,0,-,,,,osteochondroma,
-bone-hup-143,1,test,,,,aneurysmal bone cyst,
-bone-hup-144,2,-,,,,conventional osteosarcoma,
-bone-hup-145,0,-,,,,osteochondroma (exostosis),
-bone-hup-146,0,-,,,,enchondroma,
-bone-hup-147,0,-,,,,osteochondroma,
-bone-hup-148,2,-,,,,ewing`s sarcoma,
-bone-hup-149,2,-,,,,ewing`s sarcoma,
-bone-hup-150,0,-,,,,osteochondroma,
-bone-hup-151,0,-,,,,enchondroma,
-bone-hup-152,1,-,,,,chondroblastoma with secondary aneursysmal bone cyst-like formation,
-bone-hup-153,2,-,,,,ewing`s sarcoma,
-bone-hup-154,1,-,,,,aneurysmal bone cyst,
-bone-hup-155,0,-,,,,fibrous dysplasia,
-bone-hup-156,2,-,,,,ewing`s sarcoma,
-bone-hup-157,0,-,,,,fibrous dysplasia,
-bone-hup-158,1,-,,,,"chondrosarcoma, grade 1, secondary, arising in osteochondroma",
-bone-hup-159,0,-,,,,osteochondroma,
-bone-hup-160,2,-,,,,chondroblastic osteosarcoma,
-bone-hup-161,0,-,,,,osteoid osteoma,
-bone-hup-162,2,-,,,,"ewing sarcoma, predominantly extra-osseus",
-bone-hup-163,0,-,,,,osteoid osteoma,
-bone-hup-164,2,test,F  ,,,"plasma cell myeloma,",
-bone-hup-165,2,-,F  ,,,"residual/recurrent plasma cell myeloma (30%),",
+features"
+bone-hup-115,2,-,F  ,,, undifferentiated pleomorphic sarcoma (mfh)
+bone-hup-116,0,-,,,,fibrous dysplasia
+bone-hup-117,0,-,,,,osteoid osteoma
+bone-hup-118,2,-,,,,"fibrosarcoma, low-grade"
+bone-hup-119,1,-,,,,"chondrosarcoma, low grade, 5.6 cm, arising from osteochondroma"
+bone-hup-120,1,test,,,,giant cell tumor with secondary aneurysmal bone cyst-like changes
+bone-hup-121,1,-,,,,giant cell tumor of bone
+bone-hup-122,1,-,,,,chondromyxoid fibroma
+bone-hup-123,1,-,,,,chondromyxoid fibroma
+bone-hup-124,0,-,,,,fibrous dysplasia
+bone-hup-125,1,-,,,,chondromyxoid fibroma
+bone-hup-126,1,-,,,,chondromyxoid fibroma
+bone-hup-127,2,test,,,,ewing`s sarcoma
+bone-hup-128,1,-,,,,chondromyxoid fibroma
+bone-hup-129,1,-,,,,"chondrosarcoma, grade 1"
+bone-hup-130,1,test,,,,aneurysmal bone cyst
+bone-hup-131,0,-,,,,osteochondroma
+bone-hup-132,2,-,,,,osteosarcoma
+bone-hup-133,2,-,,,,low grade central osteosarcoma
+bone-hup-134,0,-,,,,enchondroma
+bone-hup-135,0,-,,,,fibrous dysplasia
+bone-hup-136,1,-,,,,osteoblastoma
+bone-hup-137,0,test,,,,osteochondroma
+bone-hup-138,2,-,,,,recurrent/residual ewing sarcoma
+bone-hup-139,0,-,,,,osteoid osteoma
+bone-hup-140,0,-,,,,osteochondroma
+bone-hup-141,2,-,,,,ewing sarcoma
+bone-hup-142,0,-,,,,osteochondroma
+bone-hup-143,1,test,,,,aneurysmal bone cyst
+bone-hup-144,2,-,,,,conventional osteosarcoma
+bone-hup-145,0,-,,,,osteochondroma (exostosis)
+bone-hup-146,0,-,,,,enchondroma
+bone-hup-147,0,-,,,,osteochondroma
+bone-hup-148,2,-,,,,ewing`s sarcoma
+bone-hup-149,2,-,,,,ewing`s sarcoma
+bone-hup-150,0,-,,,,osteochondroma
+bone-hup-151,0,-,,,,enchondroma
+bone-hup-152,1,-,,,,chondroblastoma with secondary aneursysmal bone cyst-like formation
+bone-hup-153,2,-,,,,ewing`s sarcoma
+bone-hup-154,1,-,,,,aneurysmal bone cyst
+bone-hup-155,0,-,,,,fibrous dysplasia
+bone-hup-156,2,-,,,,ewing`s sarcoma
+bone-hup-157,0,-,,,,fibrous dysplasia
+bone-hup-158,1,-,,,,"chondrosarcoma, grade 1, secondary, arising in osteochondroma"
+bone-hup-159,0,-,,,,osteochondroma
+bone-hup-160,2,-,,,,chondroblastic osteosarcoma
+bone-hup-161,0,-,,,,osteoid osteoma
+bone-hup-162,2,-,,,,"ewing sarcoma, predominantly extra-osseus"
+bone-hup-163,0,-,,,,osteoid osteoma
+bone-hup-164,2,test,F  ,,,"plasma cell myeloma,"
+bone-hup-165,2,-,F  ,,,"residual/recurrent plasma cell myeloma (30%),"
 bone-hup-166,2,-,F  ,,,"hypocellular marrow (20-30%) with trilineage hematopoiesis; suspicious for very low-level
-residual/recurrent plasma cell neoplasm (<1%)",
-bone-hup-167,2,-,M  ,,,plasma cell myeloma,
-bone-hup-168,2,-,M  ,,,persistent involvement by plasma cell myeloma (>90%),
+residual/recurrent plasma cell neoplasm (<1%)"
+bone-hup-167,2,-,M  ,,,plasma cell myeloma
+bone-hup-168,2,-,M  ,,,persistent involvement by plasma cell myeloma (>90%)
 bone-hup-169,2,-,M  ,,," hypercellular bone marrow (70%) involved by recurrent/relapsed plasma
-cell myeloma,",
+cell myeloma,"
 bone-hup-170,2,-,F  ,,,"hypercellular (>95%) marrow extensively involved by residual/recurrent
-plasma cell neoplasm (70%),",
-bone-hup-171,2,-,F  ,,,"plasma cell myeloma,",
-bone-hup-172,2,-,F  ,,,"plasma cell neoplasm, consistent with myeloma",
-bone-hup-173,2,-,M  ,,,"hypercellular bone marrow (80%) involved by plasma cell myeloma,",
-bone-hup-174,2,test,F  ,,,"plasma cell myeloma,",
-bone-hup-175,2,-,M  ,,,persistent plasma cell myeloma (~70% plasma cells),
-bone-hup-176,2,-,F  ,,,plasma cell neoplasm compatible with plasma cell myeloma,
-bone-hup-177,2,-,F  ,,,"persistent plasma cell myeloma, ",
-bone-hup-179,2,-,M  ,,," residual/recurrent plasma cell neoplasm,",
+plasma cell neoplasm (70%),"
+bone-hup-171,2,-,F  ,,,"plasma cell myeloma,"
+bone-hup-172,2,-,F  ,,,"plasma cell neoplasm, consistent with myeloma"
+bone-hup-173,2,-,M  ,,,"hypercellular bone marrow (80%) involved by plasma cell myeloma,"
+bone-hup-174,2,test,F  ,,,"plasma cell myeloma,"
+bone-hup-175,2,-,M  ,,,persistent plasma cell myeloma (~70% plasma cells)
+bone-hup-176,2,-,F  ,,,plasma cell neoplasm compatible with plasma cell myeloma
+bone-hup-177,2,-,F  ,,,"persistent plasma cell myeloma, "
+bone-hup-179,2,-,M  ,,," residual/recurrent plasma cell neoplasm,"
 bone-hup-180,2,-,M  ,,,"hypercellular marrow (85%) with decreased trilineage hematopoiesis,
-extensively involved (85%) by plasma cell myeloma,",
-bone-hup-181,2,-,M  ,,,"plasma cell myeloma,",
-bone-hup-182,2,test,M  ,,,recurrent/residual plasma cell myeloma,
-bone-hup-183,2,-,M  ,,,persistent plasma cell myeloma,
-bone-hup-184,2,-,F  ,,,persistent plasma cell myeloma,
+extensively involved (85%) by plasma cell myeloma,"
+bone-hup-181,2,-,M  ,,,"plasma cell myeloma,"
+bone-hup-182,2,test,M  ,,,recurrent/residual plasma cell myeloma
+bone-hup-183,2,-,M  ,,,persistent plasma cell myeloma
+bone-hup-184,2,-,F  ,,,persistent plasma cell myeloma
 bone-hup-185,2,-,F  ,,,"borderline quality specimen with a moderately hypocellular marrow (~10-
 20%) concerning for low level involvement by residual
-plasma cell myeloma,",
-bone-hup-186,2,-,F  ,,," plasma cell myeloma,",
+plasma cell myeloma,"
+bone-hup-186,2,-,F  ,,," plasma cell myeloma,"
 bone-hup-187,2,-,M  ,,,"hypercellular marrow (50%) with trilineage hematopoiesis, involved (30%)
-by plasma cell myeloma",
-bone-hup-188,2,-,M  ,,,plasma cell myeloma,
-bone-hup-189,2,-,M  ,,,"residual plasma cell myeloma,",
-bone-hup-190,2,test,F  ,,,plasma cell myeloma with plasmablastic features,
-bone-hup-191,2,-,M  ,,,"plasma cell myeloma (~90% plasma cells),",
-bone-hup-192,2,-,M  ,,,"residual/recurrent plasma cell neoplasm (3-5% involved),",
-bone-hup-193,2,-,M  ,,,"recurrent plasma cell myeloma,",
-bone-hup-194,2,-,M  ,,,multiple myeloma,
-bone-hup-195,2,test,M  ,,,"(minimal) residual plasma cell myeloma,",
-bone-hup-196,2,-,M  ,,,residual plasma cell myeloma,
-bone-hup-197,2,-,M  ,,,"persistent plasma cell myeloma,",
-bone-hup-198,2,-,M  ,,,plasma cell myeloma,
-bone-hup-199,2,-,M  ,,,extensive residual plasma cell myeloma,
-bone-hup-200,2,-,F  ,,,plasma cell myeloma,
+by plasma cell myeloma"
+bone-hup-188,2,-,M  ,,,plasma cell myeloma
+bone-hup-189,2,-,M  ,,,"residual plasma cell myeloma,"
+bone-hup-190,2,test,F  ,,,plasma cell myeloma with plasmablastic features
+bone-hup-191,2,-,M  ,,,"plasma cell myeloma (~90% plasma cells),"
+bone-hup-192,2,-,M  ,,,"residual/recurrent plasma cell neoplasm (3-5% involved),"
+bone-hup-193,2,-,M  ,,,"recurrent plasma cell myeloma,"
+bone-hup-194,2,-,M  ,,,multiple myeloma
+bone-hup-195,2,test,M  ,,,"(minimal) residual plasma cell myeloma,"
+bone-hup-196,2,-,M  ,,,residual plasma cell myeloma
+bone-hup-197,2,-,M  ,,,"persistent plasma cell myeloma,"
+bone-hup-198,2,-,M  ,,,plasma cell myeloma
+bone-hup-199,2,-,M  ,,,extensive residual plasma cell myeloma
+bone-hup-200,2,-,F  ,,,plasma cell myeloma
 bone-hup-201,2,-,M  ,,," normocellular bone marrow (~40%) with residual involvement by plasma cell
-myeloma",
+myeloma"
 bone-hup-202,2,-,M  ,,,"hypercellular marrow (65%) extensively  involved (>90%) by residual
-atypical cd20+ plasma cell myeloma,",
-bone-hup-203,2,-,M  ,,,plasma cell myeloma,
+atypical cd20+ plasma cell myeloma,"
+bone-hup-203,2,-,M  ,,,plasma cell myeloma
 bone-hup-204,2,-,F  ,,,"markedly hypercellular marrow (>95%), extensively involved (80-90%) by
-patient`s previously diagnosed plasma cell myeloma",
-bone-hup-205,2,-,M  ,,,persistent plasma cell myeloma,
+patient`s previously diagnosed plasma cell myeloma"
+bone-hup-205,2,-,M  ,,,persistent plasma cell myeloma
 bone-hup-207,2,-,M  ,,,"hypercellular marrow (90%) extensively involved (85%) by a
-residual/recurrent plasma cell myeloma with cytologic atypia",
-bone-hup-208,2,-,M  ,,,"cyclin d1-positive plasma cell myeloma (60% involved),",
+residual/recurrent plasma cell myeloma with cytologic atypia"
+bone-hup-208,2,-,M  ,,,"cyclin d1-positive plasma cell myeloma (60% involved),"
 bone-hup-209,2,-,F  ,,,"hypercellular marrow (60%) extensively involved by plasma cell myeloma
-(85%),",
+(85%),"
 bone-hup-210,2,-,M  ,,,"normocellular marrow (~40%) with recurrent/residual plasma cell myeloma
-(1-5% plasma cells)",
+(1-5% plasma cells)"
 bone-hup-211,2,-,M  ,,,"hypercellular bone marrow (>90%) extensively involved (>90%) by plasma
-cell myeloma",
-bone-hup-212,2,test,F  ,,,"residual/recurrent plasma cell myeloma (40%),",
+cell myeloma"
+bone-hup-212,2,test,F  ,,,"residual/recurrent plasma cell myeloma (40%),"
 bone-hup-213,2,-,F  ,,,"hypercellular marrow (85%) extensively involved (85%) by plasma cell
-myeloma,",
+myeloma,"
 bone-hup-214,2,-,F  ,,,"hypocellular marrow extensively involved (80%) by kappa-clonal plasma
-cell myeloma",
+cell myeloma"
 bone-hup-216,2,-,F  ,,,"hypocellular marrow (10-20%) with trilineage hematopoiesis and low degree
 of residual iga-lambda-restricted plasma cell myeloma
-(<2% of cellularity)",
+(<2% of cellularity)"
 bone-hup-218,2,-,F  ,,,"hypocellular marrow (5-15%) for age extensively involved by plasma cell
-myeloma (90%),",
-bone-hup-219,2,-,M  ,,,"consistent with plasma cell myeloma,",
-bone-hup-220,2,-,M  ,,,persistent plasma cell myeloma,
+myeloma (90%),"
+bone-hup-219,2,-,M  ,,,"consistent with plasma cell myeloma,"
+bone-hup-220,2,-,M  ,,,persistent plasma cell myeloma
 bone-hup-221,2,-,F  ,,,"hypercellular marrow (>95%) involved (>95%) by recurrent/residual plasma
-cell myeloma.",
+cell myeloma."
 bone-hup-222,2,-,F  ,,,"mildly hypercellular marrow (60% cellularity) involved (70%) by kappa
-restricted plasma cell myeloma",
+restricted plasma cell myeloma"
 bone-hup-223,2,-,M  ,,,"erythroid dominant-hypercellular marrow (70-80% of cellularity) involved
-(10-20%) by residual/recurrent plasma cell myeloma",
+(10-20%) by residual/recurrent plasma cell myeloma"
 bone-hup-224,2,-,F  ,,,"normocellular (35%) marrow with trilineage hematopoiesis, involved (5%)
-by residual/recurrent plasma cell myeloma,",
+by residual/recurrent plasma cell myeloma,"
 bone-hup-225,2,-,M  ,,,"normocellular marrow (40%) with trilineage hematopoiesis, involved (25%)
-by plasma cell myeloma;",
+by plasma cell myeloma;"
 bone-hup-226,2,-,M  ,,,"normocellular marrow (50%) with trilineage hematopoiesis, extensively
 involved (70-80%) by plasma cell myeloma, comprising a
-mixed population of plasma cells and plasmablasts,",
+mixed population of plasma cells and plasmablasts,"
 bone-hup-227,2,-,M  ,,,"normocellular marrow (40%) for age, involved by patient`s known plasma
-cell myeloma (40-50%)",
-bone-hup-228,2,-,M  ,,,"compatible with plasma cell myeloma,",
-bone-hup-229,2,-,F  ,,,"consistent with involvement by plasma cell myeloma,",
+cell myeloma (40-50%)"
+bone-hup-228,2,-,M  ,,,"compatible with plasma cell myeloma,"
+bone-hup-229,2,-,F  ,,,"consistent with involvement by plasma cell myeloma,"
 bone-hup-230,2,-,M  ,,,"normocellular marrow (35%) with trilineage hematopoiesis, involved (40%)
-by plasma cell myeloma",
-bone-hup-231,2,-,M  ,,,plasma cell myeloma,
-bone-hup-232,2,-,F  ,,,plasma cell myeloma in bone;,
-bone-hup-234,2,-,M  ,,,plasma cell myeloma,
+by plasma cell myeloma"
+bone-hup-231,2,-,M  ,,,plasma cell myeloma
+bone-hup-232,2,-,F  ,,,plasma cell myeloma in bone;
+bone-hup-234,2,-,M  ,,,plasma cell myeloma
 bone-hup-235,2,-,M  ,,,"multiple myeloma (100% of cellularity), with extensive marrow fibrosis,
-in leukemic phase",
+in leukemic phase"
 bone-hup-236,2,test,F  ,,,"hypercellular marrow (40%) with trilineage hematopoiesis, extensively
-involved (60%) by plasma cell myeloma",
-bone-hup-237,2,-,F  ,,,extensive residual plasma cell myeloma,
+involved (60%) by plasma cell myeloma"
+bone-hup-237,2,-,F  ,,,extensive residual plasma cell myeloma
 bone-hup-238,2,test,F  ,,," hypercellular marrow (>95%) with markedly decreased trilineage
-hematopoiesis extensively involved by a plasma cell myeloma (90%)",
+hematopoiesis extensively involved by a plasma cell myeloma (90%)"
 bone-hup-239,2,-,M  ,,,"cellular marrow with trilineage hematopoiesis and involvement (20%) by
-residual/recurrent plasma cell myeloma",
+residual/recurrent plasma cell myeloma"
 bone-hup-240,2,-,F  ,,,"hypercellular marrow (60%) with trilineage hematopoiesis, involved (75%)
-by plasma cell myeloma,",
+by plasma cell myeloma,"
 bone-hup-241,2,-,M  ,,,"normocellular marrow (50%) with trilineage hematopoiesis and an expansion
 of plasma cells (15%) that demonstrate kappa-restriction bias, consistent
-with plasma cell myeloma",
-bone-hup-243,2,-,F  ,,,plasma cell neoplasm compatible with plasma cell myeloma,
+with plasma cell myeloma"
+bone-hup-243,2,-,F  ,,,plasma cell neoplasm compatible with plasma cell myeloma
 bone-hup-244,2,-,F  ,,," markedly hypercellular (75%) extensively (60%) involved by plasma cell
-myeloma",
+myeloma"
 bone-hup-245,2,-,M  ,,,"hypocellular marrow (40%) with extensive (30%) involvement by a kappa-
-restricted plasma cell myeloma",
+restricted plasma cell myeloma"
 bone-hup-246,2,-,M  ,,,"hypercellular marrow (~60%) with an expansion (~30%) of kappa restricted
-plasma cells, compatible with plasma cell myeloma",
-bone-hup-247,2,-,M  ,,,variably cellular marrow involved by plasma cell myeloma (~50%),
-bone-hup-248,2,-,M  ,,,"mildly hypocellular marrow with trilineage
-               hematopoiesis and kappa restricted plasmacytosis (~15%),
-                 consistent with residual myeloma",
-bone-hup-249,2,-,M  ,,,"bone with reactive changes, with fibrosis and hemosiderin",
-bone-hup-252,2,-,F  ,,,"bone with adenocarcinoma,",
-bone-hup-257,0,-,M  ,,,osteomyelitis,
-bone-hup-258,1,-,M  ,,,"bone with myxoid stromal tissue in marrow spaces._separate fragments of bone and bone marrow with trilineage hematopoiesis
-and a few reactive lymphoid aggregates.",
-bone-hup-261,2,-,F  ,,,scant fragment of devitalized trabecular bone,
-bone-hup-262,2,-,F  ,,,bone with metastatic carcinoma consistent with breast primary.,
-bone-hup-263,2,-,F  ,,,"bone and bone marrow infiltrated by metastatic carcinoma, consistent with
-breast primary.",
-bone-hup-264,0,-,M  ,,,"cancellous bone containing fatty marrow showing focal intramedullary
+plasma cells, compatible with plasma cell myeloma"
+bone-hup-247,2,-,M  ,,,variably cellular marrow involved by plasma cell myeloma (~50%)
+bone-hup-248,2,-,M  ,,,"mildly hypocellular marrow with trilineage hematopoiesis and kappa restricted plasmacytosis (~15%), consistent with residual myeloma"
+bone-hup-249,2,-,M  ,,31113726,"bone with reactive changes, with fibrosis and hemosiderin"
+bone-hup-252,2,-,F  ,,30462532,"bone with adenocarcinoma,"
+bone-hup-257,0,-,M  ,,29016100,osteomyelitis
+bone-hup-258,1,-,M  ,,28563646,"bone with myxoid stromal tissue in marrow spaces._separate fragments of bone and bone marrow with trilineage hematopoiesis
+and a few reactive lymphoid aggregates."
+bone-hup-261,2,-,F  ,,27993736,scant fragment of devitalized trabecular bone
+bone-hup-262,2,-,F  ,,27810584,bone with metastatic carcinoma consistent with breast primary.
+bone-hup-263,2,-,F  ,,27777240,"bone and bone marrow infiltrated by metastatic carcinoma, consistent with breast primary."
+bone-hup-264,0,-,M  ,,27385497,"cancellous bone containing fatty marrow showing focal intramedullary
 fibrosis with rare possible pseudocysts.
 fibrous tissue with suture granuloma.
-no evidence of inflammation.",
-bone-hup-265,0,-,M  ,,," 0 lamellar bone with absence of nuclei in bony lacunae suggestive of
+no evidence of inflammation."
+bone-hup-265,0,-,M  ,,27115514," 0 lamellar bone with absence of nuclei in bony lacunae suggestive of
 necrosis of bone.
 bone marrow with intramedullary fibrosis with few very rare scattered acute
 and chronic inflammatory cells seen.
-fibrin with acute inflammatory cells present.",
-bone-hup-266,0,-,M  ,,,"cancellous bone containing fatty marrow showing focal intramedullary
+fibrin with acute inflammatory cells present."
+bone-hup-266,0,-,M  ,,26951537,"cancellous bone containing fatty marrow showing focal intramedullary
 fibrosis with remodeling.
 unremarkable marrow elements present.
  0 articular cartilage.
-fibrous tissue with no significant inflammation.",
-bone-hup-267,1,-,M  ,,,"fragments of partially necrotic, sclerotic bone,",
-bone-hup-269,0,-,M  ,,,"bone with tri-lineage hematopoiesis, remodeling changes including focal
-fibrosis,",
-bone-hup-271,0,-,F  ,,,osteomyelitis,
-bone-hup-272,0,-,M  ,,,osteomyelitis,
-bone-hup-273,2,-,F  ,,,squamous cell carcinoma,
-bone-hup-274,0,-,F  ,,,"bone with sclerotic change, hematopoietic marrow and focal fibrosis in marrow space_bone with sclerotic change and fatty marrow",
-bone-hup-275,0,-,M  ,,,osteomyelitis,
-bone-hup-276,0,-,F  ,,,"sections show trabecular bone and marrow elements with severe crush
-artifact, precluding morphologic evaluation.",
-bone-hup-277,2,-,M  ,,,precursor b lymphoblastic lymphoma/leukemia,
-bone-hup-278,1,-,M  ,,,"fragments of bone and dense slerosis with granulation tissue, marked acute
-and chronic inflammation, and foreign material.",
-bone-hup-279,2,-,M  ,,,invasive adenocarcinoma,
-bone-hup-281,0,-,M  ,,,"cortical bone with crush artifact, hemorrhage and scant marrow elements.
-- no overt evidence of a post-transplant lymphoproliferative disorder",
-bone-hup-283,2,-,F  ,,,sarcomatoid carcinoma,
-bone-hup-284,2,-,M  ,,,"metastatic poorly differentiated adenocarcinoma, in bone",
-bone-hup-287,0,-,M  ,,,acute osteomyelitis with associated lamellar bone.,
-bone-hup-290,0,-,M  ,,,osteomyelitis,
-bone-hup-291,0,-,M  ,,,osteomyelitis,
-bone-hup-292,0,-,,,,osteomyelitis,
-bone-hup-293,0,-,F  ,,,osteomyelitis,
-bone-hup-294,0,test,M  ,,,osteomyelitis,
-bone-hup-295,0,-,F  ,,,osteomyelitis,
-bone-hup-296,0,-,M  ,,,osteomyelitis,
-bone-hup-297,0,-,M  ,,,osteomyelitis,
-bone-hup-298,0,-,F  ,,,osteomyelitis,
-bone-hup-299,0,-,F  ,,,osteomyelitis,
-bone-hup-300,0,test,M  ,,,osteomyelitis,
-bone-hup-301,0,-,M  ,,,osteomyelitis,
-bone-hup-302,0,-,M  ,,,osteomyelitis,
-bone-hup-303,0,-,M  ,,,osteomyelitis,
-bone-hup-304,0,-,M  ,,,osteomyelitis,
-bone-hup-305,0,-,F  ,,,osteomyelitis,
-bone-hup-306,0,-,M  ,,,osteomyelitis,
-bone-hup-307,0,-,M  ,,,osteomyelitis,
-bone-hup-308,0,-,F  ,,,osteomyelitis,
-bone-hup-309,0,-,F  ,,,osteomyelitis,
-bone-hup-310,0,-,M  ,,,osteomyelitis,
-bone-hup-311,0,test,M  ,,,osteomyelitis,
-bone-hup-312,0,-,F  ,,,osteomyelitis,
-bone-hup-313,0,test,M  ,,,osteomyelitis,
-bone-hup-314,0,-,F  ,,,osteomyelitis,
-bone-hup-315,0,-,M  ,,,osteomyelitis,
-bone-hup-316,0,-,M  ,,,osteomyelitis,
-bone-hup-317,0,-,M  ,,,osteomyelitis,
-bone-hup-318,0,test,M  ,,,osteomyelitis,
-bone-hup-319,0,-,F  ,,,osteomyelitis,
-bone-hup-320,0,-,M  ,,,osteomyelitis,
-bone-hup-321,0,-,M  ,,,osteomyelitis,
-bone-hup-322,0,-,M  ,,,osteomyelitis,
-bone-hup-324,0,-,M  ,,,osteomyelitis,
-bone-hup-325,0,-,M  ,,,osteomyelitis,
-bone-hup-326,0,-,M  ,,,osteomyelitis,
-bone-hup-327,0,-,M  ,,,osteomyelitis,
-bone-hup-328,0,-,M  ,,,osteomyelitis,
-bone-hup-329,0,-,M  ,,,osteomyelitis,
-bone-hup-330,0,-,M  ,,,osteomyelitis,
+fibrous tissue with no significant inflammation."
+bone-hup-267,1,-,M  ,,26825521,"fragments of partially necrotic, sclerotic bone,"
+bone-hup-269,0,-,M  ,,26230796,"bone with tri-lineage hematopoiesis, remodeling changes including focal
+fibrosis,"
+bone-hup-271,0,-,F  ,,9127528,osteomyelitis
+bone-hup-272,0,-,M  ,,8932211,osteomyelitis
+bone-hup-273,2,-,F  ,,8695216,squamous cell carcinoma
+bone-hup-274,0,-,F  ,,7938783,"bone with sclerotic change, hematopoietic marrow and focal fibrosis in marrow space_bone with sclerotic change and fatty marrow"
+bone-hup-275,0,-,M  ,,7308742,osteomyelitis
+bone-hup-276,0,-,F  ,,7260990,"sections show trabecular bone and marrow elements with severe crush
+artifact, precluding morphologic evaluation."
+bone-hup-277,2,-,M  ,,7253713,precursor b lymphoblastic lymphoma/leukemia
+bone-hup-278,1,-,M  ,,7058173,"fragments of bone and dense slerosis with granulation tissue, marked acute
+and chronic inflammation, and foreign material."
+bone-hup-279,2,-,M  ,,7039934,invasive adenocarcinoma
+bone-hup-281,0,-,M  ,,6758499,"cortical bone with crush artifact, hemorrhage and scant marrow elements.- no overt evidence of a post-transplant lymphoproliferative disorder"
+bone-hup-283,2,-,F  ,,6052267,sarcomatoid carcinoma
+bone-hup-284,2,-,M  ,,5896550,"metastatic poorly differentiated adenocarcinoma, in bone"
+bone-hup-287,0,-,M  ,,4886365,acute osteomyelitis with associated lamellar bone.
+bone-hup-290,0,-,M  ,,5619859,osteomyelitis
+bone-hup-291,0,-,M  ,,5974081,osteomyelitis
+bone-hup-292,0,-,,,30903329,osteomyelitis
+bone-hup-293,0,-,F  ,,30320544,osteomyelitis
+bone-hup-294,0,test,M  ,,30159489,osteomyelitis
+bone-hup-295,0,-,F  ,,30137378,osteomyelitis
+bone-hup-296,0,-,M  ,,29854598,osteomyelitis
+bone-hup-297,0,-,M  ,,29759282,osteomyelitis
+bone-hup-298,0,-,F  ,,29637933,osteomyelitis
+bone-hup-299,0,-,F  ,,29560439,osteomyelitis
+bone-hup-300,0,test,M  ,,29455523,osteomyelitis
+bone-hup-301,0,-,M  ,,29410868,osteomyelitis
+bone-hup-302,0,-,M  ,,29143614,osteomyelitis
+bone-hup-303,0,-,M  ,,28953626,osteomyelitis
+bone-hup-304,0,-,M  ,,28918087,osteomyelitis
+bone-hup-305,0,-,F  ,,28885968,osteomyelitis
+bone-hup-306,0,-,M  ,,28822489,osteomyelitis
+bone-hup-307,0,-,M  ,,28780758,osteomyelitis
+bone-hup-308,0,-,F  ,,28755457,osteomyelitis
+bone-hup-309,0,-,F  ,,28693132,osteomyelitis
+bone-hup-310,0,-,M  ,,28664398,osteomyelitis
+bone-hup-311,0,test,M  ,,28213241,osteomyelitis
+bone-hup-312,0,-,F  ,,28205708,osteomyelitis
+bone-hup-313,0,test,M  ,,28095560,osteomyelitis
+bone-hup-314,0,-,F  ,,27965694,osteomyelitis
+bone-hup-315,0,-,M  ,,27817349,osteomyelitis
+bone-hup-316,0,-,M  ,,27633144,osteomyelitis
+bone-hup-317,0,-,M  ,,27578685,osteomyelitis
+bone-hup-318,0,test,M  ,,27436780,osteomyelitis
+bone-hup-319,0,-,F  ,,27321941,osteomyelitis
+bone-hup-320,0,-,M  ,,27258251,osteomyelitis
+bone-hup-321,0,-,M  ,,27070511,osteomyelitis
+bone-hup-322,0,-,M  ,,26903514,osteomyelitis
+bone-hup-324,0,-,M  ,,26656327,osteomyelitis
+bone-hup-325,0,-,M  ,,16176566,osteomyelitis
+bone-hup-326,0,-,M  ,,14054259,osteomyelitis
+bone-hup-327,0,-,M  ,,8924444,osteomyelitis
+bone-hup-328,0,-,M  ,,7539500,osteomyelitis
+bone-hup-329,0,-,M  ,,7397847,osteomyelitis
+bone-hup-330,0,-,M  ,,6895359,osteomyelitis

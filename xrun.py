@@ -237,23 +237,27 @@ if __name__ == '__main__':
         for h in headers:
             available[h] = []
         for row in reader:
-            available['pd'].append(row[0])
-            available['t1'].append(row[1])
-            available['t1c'].append(row[2])
-            available['t2'].append(row[3])
+            available['pd'].append(row[1])
+            available['t1'].append(row[2])
+            available['t1c'].append(row[3])
+            available['t2'].append(row[4])
+            available['t2-t1'].append(row[5])
+            available['t2-t1c'].append(row[6])
+
     input_form_map = {
         "all": lambda f: f[f.index.isin(available['t1']).isin(available['t2']).isin(available['t1c'])],
         "t1": lambda f: f[f.index.isin(available['t1'])],
         "t2": lambda f: f[f.index.isin(available['t2'])],
         "t1c": lambda f: f[f.index.isin(available['t1c'])],
-        "t1-t2": lambda f: f[f.index.isin(available['t1']) & f.index.isin(available['t2'])],
+        "t2-t1": lambda f: f[f.index.isin(available['t2-t1'])],
         "t1c-t2": lambda f: f[f.index.isin(available['t1c']) & f.index.isin(available['t2'])],
         "t1-features": lambda f: f[f.index.isin(available['t1'])],
         "t2-features": lambda f: f[f.index.isin(available['t2'])],
         "t1c-features": lambda f: f[f.index.isin(available['t1c'])],
         "features": lambda f: f
-    }
-    new_df = input_form_map[FLAGS.form](f) #[~f.patient.isin(df_List)]
+        }
+
+    new_df = input_form_map["t2-t1"](f) #[~f.patient.isin(df_List)]
     y = new_df[FLAGS.label].values
 
     # set up the k-fold process

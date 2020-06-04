@@ -644,10 +644,6 @@ def xdata(fold_number,
     test_features = relist(test_features)
     # holdouttest_features = relist(holdouttest_features)
 
-    train_labels = make_labels(train_labels, label_form)
-    validation_labels = make_labels(validation_labels, label_form)
-    tests_labels = make_labels(test_labels, label_form)
-
     three = (label_form == "outcome_3")
 
     train_generator = Dataset(

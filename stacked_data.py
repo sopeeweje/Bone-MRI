@@ -107,9 +107,7 @@ def stacked_data(
     for _ in range(epochs):
         train_labels += first_training.next()[1].tolist()
     for _ in range(math.ceil(len(first_validation)/config.BATCH_SIZE)):
-        add = first_validation.next()[1].tolist()
-        print(add)
-        validation_labels += add
+        validation_labels += first_validation.next()[1].tolist()
     for _ in range(math.ceil(len(first_training_fixed)/config.BATCH_SIZE)):
         training_fixed_labels += first_training_fixed.next()[1].tolist()
     for _ in range(math.ceil(len(first_test)/config.BATCH_SIZE)):

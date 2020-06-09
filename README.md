@@ -3,16 +3,16 @@
 <h2>About</h2>
 
 <h2>Training models</h2>
-        <h3>Quality Assurance</h3>
-        1. Place all raw files (folders for each patient containing image volumes of various sequences) into one directory
-        2. Run ***qa.py***. This file will generate a directory of png files to manually scan through to look for       abnormalities. Place the IDs of subjects that have abnormal images into the "SKIP" list in ***filenames.py***.
-        <h3>Set up local environment</h3>
-        **setup.sh**
-        1. Make sure pipenv is installed.
-        2. Run pipenv shell
-        3. Run setup.sh
-        <h3>Adjusting hyperparameters</h3>
-        <h3>Run model</h3>
+<h3>Quality Assurance</h3>
+1. Place all raw files (folders for each patient containing image volumes of various sequences) into one directory
+2. Run <b>qa.py</b>. This file will generate a directory of png files to manually scan through to look for       abnormalities. Place the IDs of subjects that have abnormal images into the "SKIP" list in <b>filenames.py</b>.
+<h3>Set up local environment</h3>
+**setup.sh**
+1. Make sure pipenv is installed.
+2. Run pipenv shell
+3. Run setup.sh
+<h3>Adjusting hyperparameters</h3>
+<h3>Run model</h3>
 **run.sh/xrun.sh**
 1. Edit ***config.py*** file to reconfigure where the appropriate directories are.
 2. Run ***calculate_features.py***. This file will create csv's for training and preprocessing in a sub-directory called "features". The inputs are derived from bone_features.csv in the bone_master directory. In bone_features.csv, there is currently only two columns - patientIDs and category (benign, malignant, intermediate). At this point the model will be trained only with image features; if at a future point clinical features such as age and sex become available, add them into bone_features.csv as well as "bone tumors", a spreadsheet simply for subject tracking that is not used for model generation. Given that age and sex are not being used, there are a number of lines commented out of ***calculate_features.py*** that can be activated if those features are eventually used. In addition, another column called "sort" can be added to bone_features.csv with "train", "test", and "validation" as possible values; this can be used if it is necessary to sort particular subjects into certain datasets. Otherwise it will be randomized.

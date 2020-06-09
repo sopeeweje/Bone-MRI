@@ -10,6 +10,8 @@ os.makedirs(config.TRAIN_DIR, exist_ok=True)
 os.makedirs(config.TEST_DIR, exist_ok=True)
 os.makedirs(config.VALIDATION_DIR, exist_ok=True)
 
+os.makedirs(config.NOTEBOOKS, exist_ok=True)
+os.makedirs(config.FIGURES, exist_ok=True)
 os.makedirs(config.OUTPUT, exist_ok=True)
 os.makedirs(config.MODEL_DIR, exist_ok=True)
 os.makedirs(config.STDOUT_DIR, exist_ok=True)

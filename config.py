@@ -37,6 +37,9 @@ class Config(object):
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")
     CROSSVAL_DIR = os.path.join(DATA, "crossval")
+    FIGURES = "figures/"
+
+    NOTEBOOKS = "notebooks/"
 
     FEATURES_DIR = "features/"
     NRRD_FEATURES = os.path.join(FEATURES_DIR, "nrrd-features.pkl")

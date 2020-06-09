@@ -11,7 +11,7 @@ class Config(object):
 
     TRIALS = 1
     BATCH_SIZE = 16
-    EPOCHS = 200
+    EPOCHS = 300
     PATIENCE = 100
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
@@ -37,6 +37,9 @@ class Config(object):
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")
     CROSSVAL_DIR = os.path.join(DATA, "crossval")
+    FIGURES = "figures/"
+
+    NOTEBOOKS = "notebooks/"
 
     FEATURES_DIR = "features/"
     NRRD_FEATURES = os.path.join(FEATURES_DIR, "nrrd-features.pkl")

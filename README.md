@@ -5,7 +5,7 @@
 <h2>Training models</h2>
 <h3>Setup</h3>
 <h4>Quality assurance</h4>
-Place all raw files into a single directory. Run <b>qa.py</b>. This file will generate a directory of png files to manually scan through to look for abnormalities. Place the IDs of subjects that have abnormal images into the "SKIP" list in <b>filenames.py</b>.
+Place all raw files into a single directory. Run qa.py. This file will generate a directory of png files to manually scan through to look for abnormalities. Place the IDs of subjects that have abnormal images into the "SKIP" list in filenames.py.
 <h4>Set up local environment</h4>
 Make sure pipenv is installed. Once installed, run:
 <pre>
@@ -17,7 +17,7 @@ Files - hyperparameters.json, xhyperparameters.json
 
 <h3>Run model</h3>
 <h4>Setting up run</h4>
-<b>run-model.sh</b> and <b>xrun-model.sh</b> contain the following type of commands:
+run-model.sh and xrun-model.sh contain the following type of commands:
 <pre>pipenv run python run.py --description $1 --model model --form form --label label --hyperparameters hyperparameters.json --split split</pre>
 Flags for this command:
 <ul>
@@ -47,17 +47,6 @@ bash xrun-model.sh $1
 where $1 is a unique run identifier.
 
 <h3>Evaluate models</h3>
-**evaluate.py**
-***run.py*** and ***xrun.py*** import evaluate from ***evaluate.py***. This is a function for evaluating the model with the test set. The get_results function is run within ***run.py*** and ***xrun.py***; the other functions can be executed by manually extracting data from the db as you perform analyses (or maybe there's a notebook for it?).
-ssh jupyter notebook
-https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/
-https://amber-md.github.io/pytraj/latest/tutorials/remote_jupyter_notebook
-**Results**
-app
-api
-config
-db
-error_analysis
-stacked_data
+Utilize evaluate-by-uuids-final.ipynb to create and evaluate ensembles of models trained on individual imaging modalities and the clinical features set and compare them to expert performance. evaluate-ensemble.ipynb contains the classifiers and parameters used to generate each ensemble. Find the desired model uuids in the results.db database.
 
 <h2>Utilize models</h2>

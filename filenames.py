@@ -30,12 +30,12 @@ SKIP = ["china-011", #error
         "02574281", #no data
         "55162100"] #no data
 
-reader = csv.reader(open(config.CHOP_IDS))
-CHOP = {}
-for row in reader:
-    key = row[1]
-    if len(key) == 7:
-        key = "0"+key
-    if key in CHOP:
-        pass
-    CHOP[key] = row[0]
+#reader = csv.reader(open(config.CHOP_IDS))
+#CHOP = {}
+#for row in reader:
+    #key = row[1]
+    #if len(key) == 7:
+        #key = "0"+key
+    #if key in CHOP:
+        #pass
+    #CHOP[key] = row[0]

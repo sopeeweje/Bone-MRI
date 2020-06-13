@@ -1,9 +1,3 @@
-#In order to run this successfully (i.e. get all of the libraries imported) you'll probably have to run it in a virtual envrionment. To do so, go to command line:
-#>>go to repo directory (cd path_to_directory)
-#>>pipenv shell
-#>>sh setup.sh
-#>>pipenv run python name_of_script.py
-
 import seaborn
 import pandas
 import matplotlib.pyplot as plt

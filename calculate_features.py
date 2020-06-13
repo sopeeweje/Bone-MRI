@@ -14,7 +14,7 @@ import pandas
 from sklearn import preprocessing as sklearn_preprocessing
 
 from config import config
-from filenames import ACCEPTED_FILENAMES, SKIP, CHOP
+from filenames import ACCEPTED_FILENAMES, SKIP
 from segmentation import calculate_volume
 
 #dictionary of the various arguments for calculate_features

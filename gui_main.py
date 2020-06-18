@@ -9,6 +9,10 @@ from segmentation import select_slice
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from models import models
+import v1
+import v2
+import v3
+import v4
 import keras
 import tensorflow
 
@@ -29,7 +33,7 @@ class GUI:
         self.rightFrame.grid(row=0, column=3, padx = 10, pady = 10)
         self.bottomFrame.grid(row=1, column=0, columnspan=4, padx=10, pady = 10)
 
-        loadButton = tk.Button(self.leftFrame, text="Select an Image to Upload", anchor='center', command=self.upload_nrrd, borderwidth=4, padx = 2, pady = 6)
+        loadButton = tk.Button(self.leftFrame, text="Select a .nrrd File to Upload", anchor='center', command=self.upload_nrrd, borderwidth=4, padx = 2, pady = 6)
         loadButton.pack(pady = 10)
 
         models = ["v1", "v2", "v3", "v4"]
@@ -38,8 +42,9 @@ class GUI:
         modelMenu = tk.OptionMenu(self.rightFrame, modelVar, *models)
         modelMenu.pack(pady=30)
 
-        runButton = tk.Button(self.rightFrame, text="RUN MODEL", anchor='center', command= lambda: self.predict_image(None, modelVar.get()),
-                               borderwidth=4, padx=2, pady=10, highlightbackground='#4EE814')
+        runButton = tk.Button(self.rightFrame, text="RUN MODEL", anchor='center',
+                              command=lambda: self.predict_image(root.image, modelVar.get()),
+                              borderwidth=4, padx=2, pady=10, highlightbackground='#4EE814')
         runButton.pack(pady=30)
 
     def predict_image(self, image, model):
@@ -47,15 +52,17 @@ class GUI:
         # keras models have a .predict() function, but I don't think we have an actual finalized model yet
         if model == "--CHOOSE MODEL--":
             tk.messagebox.showerror("No Model Chosen", "Please choose a model from the drop-down menu before proceeding")
-        print(model)
+        # print(model)
         modelString = str(model) #cast from stringVar to a string
-        model = models[modelString] #turns string into real model, using dict
-        # print(model.predict(image))
+        modelChoice = models[modelString]  # turns string into real model, using dict
+        # model = modelChoice.model()  # function that return model
+        # print(type(image))
+        # print(model.predict([image]))
 
         # print the results of the model (which idk how to get yet) in the bottom frame
         self.display_result(.6, .5)
 
-    def display_result(self, probability, threshold):
+    def display_result(self, probability, threshold=.5):
         if probability <= threshold:
             cancer = "BENIGN"
         else:

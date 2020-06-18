@@ -208,10 +208,24 @@ def plot_multiple_roc_curve(dataset, experts=[]):
                          markers=["o", "v", "s", "P"],
                          palette={ p["experts"]: "black" for p in points },
                          )
-    ax.plot([0, 1], [0, 1], linestyle='--')
+    ax.plot([0, 1], [0, 1], linestyle='--', color='#929c95')
     ax.set_ylim(-0.04, 1.04)
     ax.set_xlim(-0.04, 1.02)
-    ax.legend()
+    ax.set(xlabel="False Positive Rate", ylabel="True Positive Rate")
+    handles, labels = ax.get_legend_handles_labels()
+    # the below loops remove the labels and handles given by the hue argument for the modalities and experts
+    toRemove = set()
+    newLabels = []
+    newHandles = []
+    for idx, lab in enumerate(labels):
+        if lab == "modality" or lab == "experts":
+            toRemove.add(idx)
+        else:
+            newLabels.append(lab)
+    for idx, hand in enumerate(handles):
+        if idx not in toRemove:
+            newHandles.append(hand)
+    ax.legend(frameon=False, handles=newHandles, labels=newLabels)
     return fig
 
 def get_experts_for_names(features, names, experts=["expert1","expert2"], transform=int, default=0):
@@ -240,5 +254,5 @@ def get_experts_for_names(features, names, experts=["expert1","expert2"], transf
 if __name__ == '__main__':
     expert_features = all_features(files = ["experts.csv"])
     fig = plot_multiple_roc_curve(test_data, experts=get_experts_for_names(expert_features, names))
-    fig.savefig("put_name_here.png", bbox_inches = "tight")
+    fig.savefig("andystest3.png", bbox_inches="tight")
 

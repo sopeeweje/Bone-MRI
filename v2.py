@@ -56,7 +56,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     #skip for now
     if parameters["t2"]:
-        convnet = efn.EfficientNetB4(
+        # init EffNet
+        convnet = efn.EfficientNetB1(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -70,8 +71,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         outputs.append(out)
 
     if parameters["t1"]:
-        # init ResNet
-        convnet = efn.EfficientNetB4(
+        # init EffNet
+        convnet = efn.EfficientNetB1(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -85,8 +86,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         outputs.append(out)
         
     if parameters["t1c"]:
-        # init ResNet
-        convnet = efn.EfficientNetB4(
+        # init EffNet
+        convnet = efn.EfficientNetB1(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),

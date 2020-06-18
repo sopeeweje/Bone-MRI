@@ -440,7 +440,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
         "features": lambda f: f
         }
     print(len(f))
-    f = input_form_map["t2-t1"](f) #CSV with all training features for patients with given imaging modality
+    f = input_form_map[input_form](f) #CSV with all training features for patients with given imaging modality
     print(len(f))
     remaining = f.copy()
 

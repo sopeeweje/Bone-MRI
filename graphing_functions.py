@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import csv
 import numpy as np
 from sklearn.metrics import roc_curve, roc_auc_score, accuracy_score, confusion_matrix
+from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,
+                               AutoMinorLocator)
+
 plt.rcParams['svg.fonttype'] = 'none'
 
 #Data/inputs
@@ -208,10 +211,10 @@ def plot_multiple_roc_curve(dataset, experts=[]):
                          markers=["o", "v", "s", "P"],
                          palette={ p["experts"]: "black" for p in points },
                          )
+
     ax.plot([0, 1], [0, 1], linestyle='--', color='#929c95')
     ax.set_ylim(-0.04, 1.04)
     ax.set_xlim(-0.04, 1.02)
-    ax.set(xlabel="False Positive Rate", ylabel="True Positive Rate")
     handles, labels = ax.get_legend_handles_labels()
     # the below loops remove the labels and handles given by the hue argument for the modalities and experts
     toRemove = set()
@@ -225,6 +228,19 @@ def plot_multiple_roc_curve(dataset, experts=[]):
     for idx, hand in enumerate(handles):
         if idx not in toRemove:
             newHandles.append(hand)
+    ax.xaxis.set_minor_locator(MultipleLocator(.05))
+    ax.yaxis.set_minor_locator(MultipleLocator(.05))
+    for tick in ax.xaxis.get_major_ticks():
+        tick.label1.set_fontsize(12)
+        tick.label1.set_fontweight('bold')
+    for tick in ax.yaxis.get_major_ticks():
+        tick.label1.set_fontsize(12)
+        tick.label1.set_fontweight('bold')
+
+    plt.xlabel('False Positive Rate', fontsize=12, fontweight='bold')
+    plt.ylabel('True Positive Rate', fontsize=12, fontweight='bold')
+    fig.suptitle('ROC Curve', fontsize=16, fontweight='bold', y= .93)
+    plt.rcParams["axes.labelsize"] = 29
     ax.legend(frameon=False, handles=newHandles, labels=newLabels)
     return fig
 
@@ -254,5 +270,5 @@ def get_experts_for_names(features, names, experts=["expert1","expert2"], transf
 if __name__ == '__main__':
     expert_features = all_features(files = ["experts.csv"])
     fig = plot_multiple_roc_curve(test_data, experts=get_experts_for_names(expert_features, names))
-    fig.savefig("andystest3.png", bbox_inches="tight")
+    fig.savefig("exampleROC.png", bbox_inches="tight")
 

@@ -17,9 +17,16 @@ def z_test_proportions(acc1, acc2, n1, n2):
     return p_values
 
 def mcnemarTest(outputPath, bias="pos"):
+    '''
+    :param: bias (default="pos"), not yet implemented!
+    :param: outputPath: the path to the model results being tested against the experts
+    :return: p1 - the p-value representing the difference between the model and expert 1
+             p2 - the p-value representing the difference between the model and expert 2
+
+    '''
     testSet = pd.read_csv("test_set.csv")
     experts = pd.read_csv("experts.csv")
-    model = pd.read_csv(outputPath)
+    model = pd.read_csv(outputPath, error_bad_lines=False)
     skips = 0
     a1 = b1 = c1 = d1 = 0 #initialize confusion matrix to be 0 in all four cells (expert 1)
     a2 = b2 = c2 = d2 = 0 #initialize confusion matrix to be 0 in all four cells (expert 2)
@@ -73,12 +80,21 @@ def mcnemarTest(outputPath, bias="pos"):
                 else:
                     b2 += 1
         except:
+            # print("SKIPPED HERE:", currId)
             skips += 1
-    print(a1, b1, c1, d1)
-    print(a2, b2, c2, d2)
+    print("EX 1", a1, b1, c1, d1)
+    print("EX 2", a2, b2, c2, d2)
+    # print("ACC EX1: {}".format((a1+c1)/(a1+b1+c1+d1)))
+    # print("ACC EX2: {}".format((a2 + c2) / (a2 + b2 + c2 + d2)))
+    # print("ACC MOD: {}".format((a1 + b1) / (a1 + b1 + c1 + d1)))
+    # print("ACC MOD: {}".format((a2 + b2) / (a2 + b2 + c2 + d2)))
+    # print("Z SCORE 1 vs Mod!: {}".format(z_test_proportions((a1 + b1) / (a1 + b1 + c1 + d1), (a1+c1)/(a1+b1+c1+d1), (a1+b1+c1+d1), (a1+b1+c1+d1))))
+    # print("Z SCORE 2 vs Mod!: {}".format(z_test_proportions((a2 + b2) / (a2 + b2 + c2 + d2),
+    #                                      (a2 + c2) / (a2 + b2 + c2 + d2), (a2 + b2 + c2 + d2), (a2 + b2 + c2 + d2))))
     chi1, p1 = stats.chisquare([b1, c1])  #calculate chi squared statistic using b and c value from matrix
     chi2, p2 = stats.chisquare([b2, c2]) #TODO check that the chi square stat is same is mcnemar by hand
-    print(chi1, p1, chi2, p2)
+    # print("P1: {}\nP2: {}".format(p1, p2))
+    # print("CHI1: {}\nCHI2: {}".format(chi1, chi2))
     return p1, p2
 
 
@@ -90,3 +106,4 @@ if __name__ == "__main__":
 #     print(z_test_proportions(228/600, 132/400, 600, 400))
 #     print(z_test_proportions(40/200, 20/200, 200, 200))
     mcnemarTest("output/test_results/0dc80db6-a8be-494d-bf8a-3f436bf32aa1-v2.csv")
+    pass

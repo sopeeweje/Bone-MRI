@@ -1,6 +1,7 @@
 import math
 from scipy import stats
 import pandas as pd
+from statsmodels.stats.contingency_tables import mcnemar
 
 def z_test_proportions(acc1, acc2, n1, n2):
     '''
@@ -82,19 +83,12 @@ def mcnemarTest(outputPath, bias="pos"):
         except:
             # print("SKIPPED HERE:", currId)
             skips += 1
-    print("EX 1", a1, b1, c1, d1)
-    print("EX 2", a2, b2, c2, d2)
-    # print("ACC EX1: {}".format((a1+c1)/(a1+b1+c1+d1)))
-    # print("ACC EX2: {}".format((a2 + c2) / (a2 + b2 + c2 + d2)))
-    # print("ACC MOD: {}".format((a1 + b1) / (a1 + b1 + c1 + d1)))
-    # print("ACC MOD: {}".format((a2 + b2) / (a2 + b2 + c2 + d2)))
-    # print("Z SCORE 1 vs Mod!: {}".format(z_test_proportions((a1 + b1) / (a1 + b1 + c1 + d1), (a1+c1)/(a1+b1+c1+d1), (a1+b1+c1+d1), (a1+b1+c1+d1))))
-    # print("Z SCORE 2 vs Mod!: {}".format(z_test_proportions((a2 + b2) / (a2 + b2 + c2 + d2),
-    #                                      (a2 + c2) / (a2 + b2 + c2 + d2), (a2 + b2 + c2 + d2), (a2 + b2 + c2 + d2))))
-    chi1, p1 = stats.chisquare([b1, c1])  #calculate chi squared statistic using b and c value from matrix
-    chi2, p2 = stats.chisquare([b2, c2]) #TODO check that the chi square stat is same is mcnemar by hand
-    # print("P1: {}\nP2: {}".format(p1, p2))
-    # print("CHI1: {}\nCHI2: {}".format(chi1, chi2))
+    table1 = [[a1, b1],
+              [c1, d1]]
+    table2 = [[a2, b2],
+              [c2, d2]]
+    stat1, p1 = mcnemar(table1, exact=True).statistic, mcnemar(table1, exact=True).pvalue  #calculate test stat using exact binomial test
+    stat2, p2 = mcnemar(table2, exact=True).statistic, mcnemar(table2, exact=True).pvalue
     return p1, p2
 
 
@@ -105,5 +99,5 @@ def mcnemarTest(outputPath, bias="pos"):
 if __name__ == "__main__":
 #     print(z_test_proportions(228/600, 132/400, 600, 400))
 #     print(z_test_proportions(40/200, 20/200, 200, 200))
-    mcnemarTest("output/test_results/0dc80db6-a8be-494d-bf8a-3f436bf32aa1-v2.csv")
+#     print(mcnemarTest("output/test_results/0dc80db6-a8be-494d-bf8a-3f436bf32aa1-v2.csv"))
     pass

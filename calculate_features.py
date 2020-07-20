@@ -1,4 +1,4 @@
-3#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Fri Oct 25 16:25:26 2019
@@ -12,6 +12,7 @@ import glob
 import nrrd
 import pandas
 from sklearn import preprocessing as sklearn_preprocessing
+from keras.utils import to_categorical
 
 from config import config
 from filenames import ACCEPTED_FILENAMES, SKIP
@@ -32,9 +33,10 @@ clinical_feature_functions = {
     "outcome_pos": lambda f: 1 if f["category"] == "2" else 0, #positive bias = intermediate is benign
     "outcome_neg": lambda f: 1 if f["category"] == "2" or f["category"] == "1" else 0, #negative bias = intermediate is malignant
     "outcome_3": lambda f: int(f["category"]), #2-mal, 1-int, 0-ben
-#    "age": lambda f: int(f["age"]),
-#    "sex": lambda f: 1 if f["sex"] == "M" else 0,
-    "sort": lambda f: f["sort"]
+    "age": lambda f: float(f["age"]), #integer age
+    "sex": lambda f: 1 if f["sex"] == "M" else 0, #1=male, 0=female
+    "location": lambda f: get_location(f["location"]), #one-hot encoded location
+    "sort": lambda f: f["sort"] #train, test, or validation
 }
 
 #functions to drive each clinical feature from the nrrd
@@ -42,7 +44,29 @@ image_feature_functions = {
     "volume": calculate_volume, #size
 }
 
-def get_features_dict(file="/Volumes/external/bone_master/bone_features.csv", id_name="patientID"):
+def get_location(location):
+    all_locations_map = {
+            "Clavicle": 0,
+            "Cranium": 1,
+            "Femur": 2, 
+            "Foot": 3, 
+            "Forearm": 4,
+            "Hand": 5,
+            "Hip": 6,
+            "Humerus": 7,
+            "Knee": 8,
+            "Leg (Tibia/Fibula)": 9,
+            "Mandible": 10,
+            "Rib/Chest wall": 11,
+            "Scapula": 12,
+            "Spine": 13
+        }
+    all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+    all_locations_1hot = to_categorical(all_locations_int) #make one-hot vector for each location
+    this_location = all_locations_1hot[all_locations_map[location]] #pulls one-hot vector for input location
+    return list(this_location)
+
+def get_features_dict(file="/Volumes/external/bone_features.csv", id_name="patientID"):
     """
     Param:
         file - single csv with all features for all patients
@@ -59,7 +83,8 @@ def get_features_dict(file="/Volumes/external/bone_master/bone_features.csv", id
             #{d[id_name]: d for d in l} - dictionary with key=patientID, value=dictionary of all data for that patient
             #by_patientID = all_data organized by patientID
                 #{patient1: {'PatientID':patient1, 'Age':50, 'Weight':200...},
-                # patient2: {'PatientID':patient2, 'Age':67, 'Weight':143...}}
+                # patient2: {'PatientID':patient2, 'Age':67, 'Weight':143...},
+                #...}
     return by_patientID
 
 def all_features(files=["./features.csv"], id_name="patientID"):
@@ -159,7 +184,7 @@ def features(df, filetype = 'segMask_tumor.nrrd'):
     modality and filetype don't matter, just need one per patient
     """
     df = df.drop_duplicates(["patientID","modality","filename"], 'first')
-    df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "sort"]]#, "volume"]]
+    df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "age", "sex", "location", "sort"]]#, "volume"]]
     df = df.drop_duplicates(["patientID"], 'first')
     df = df.set_index("patientID")
     df = df.dropna()
@@ -183,14 +208,14 @@ def run(folder, features_files, out, save=True, nrrd_pickle="", features_pickle=
     all_features = pandas.DataFrame(
         [{
             **get_filename_features(n), #patientID, modality, filename, path (4)
-            **get_clinical_features(feat, n)#, #outcome_pos, outcome_neg, outcome_3, age, sex (3)
-            #**get_image_features(n) #nrrd volume (1)
+            **get_clinical_features(feat, n)#, #outcome_pos, outcome_neg, outcome_3, age, sex, location (6)
+            #**get_image_features(n) #nrrd volume (1); not confident in volume calc so omitting
         } for n in nrrds])
     all_features = filter_filenames(all_features)
     #all_features = normalize_column(all_features, column="volume")
     
-    features_to_use = features(all_features)
-    to_preprocess = preprocessing(all_features)
+    features_to_use = features(all_features) #training features
+    to_preprocess = preprocessing(all_features) #preprocessing features
 
     if save:
         all_features.to_csv(os.path.join(out, "all_features.csv"))
@@ -217,6 +242,7 @@ if __name__ == '__main__':
             FLAGS = known arguments (what you've actually given values to)
             unparsed = unknown arguments (what you haven't given values to, ignored. Should be empty since there is a default)
     """
+    #run("/Volumes/external/bone_raw", "/Volumes/external/features.csv", "/Volumes/external/")
     parser = argparse.ArgumentParser()
     for argument in arguments:
         parser.add_argument(

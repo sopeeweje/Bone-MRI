@@ -70,10 +70,11 @@ def processFiles(path):
     Param: path to raw images
     Returns: all png's to folder to look through for QA
     """
-    save_path = "bone_qa/"
+    save_path = "/Volumes/external/bone_master/bone_qa/"
     messed_up = []
     
-    available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[], 'none':[], 't2-t1c':[], 't2-t1':[], 'all_patients':[]}
+    #available_sequences = {'t1':[],'t2':[],'t1c':[],'pd':[], 'none':[], 't2-t1c':[], 't2-t1':[], 'all_patients':[]}
+    seq_by_ID = [["patientID", "t1", "t1c", "t2"]]
     
     print("Loading images...")
     
@@ -97,65 +98,116 @@ def processFiles(path):
         
         for data_patient in data_source: #for each patient
             total_patients += 1
+            new_input = [data_patient,0,0,0]
             if data_patient == '.DS_Store' or data_patient == '._.DS_Store':#or data_patient in SKIP:
                 continue
+            print(data_patient)
             patient_views = os.listdir(path + "/" + source + "/" + data_patient)
-            added_views = 0
-            duplicate = 0
+            #added_views = 0
+            t1_dup = 0
+            t2_dup = 0
+            t1c_dup = 0
             for view in patient_views:
-                if view == '.DS_Store':
+                view_path = path + "/" + source + "/" + data_patient + "/" + view + "/"
+                if view == '.DS_Store' or not os.path.isdir(view_path):
                     continue
-                try:
-                    if data_patient not in available_sequences[view]:
-                        available_sequences[view].append(data_patient)
-                        added_views += 1 
-                except:
+                
+                imageVolume = view_path + "imagingVolume.nrrd"
+                segMask = view_path + "segMask_tumor.nrrd"
+                segMask_GTV = view_path + "segMask_GTV.nrrd"
+                if os.path.isfile(segMask_GTV):
+                    os.rename(view_path + "segMask_GTV.nrrd", view_path + "segMask_tumor.nrrd")
+                has_volumes = True
+                if not (os.path.isfile(imageVolume) and os.path.isfile(segMask)):
+                    has_volumes = False
+                    nrrds = []
+                    for file in os.listdir(view_path):
+                        if file.endswith(".nrrd"):
+                            nrrds.append(file)
+                    print("{}, {}, {}".format(data_patient, view, nrrds))
+                    continue
+                
+                if "t1" in view and has_volumes:
+                    if "t1c" in view:
+                        new_input[2] = 1
+                        try:
+                            os.rename(view_path, path + "/" + source + "/" + data_patient + "/t1c")
+                        except:
+                            os.rename(view_path, path + "/" + source + "/" + data_patient + "/t1c" + "_{}".format(str(t1c_dup)))
+                            t1c_dup += 1
+                    else:
+                        new_input[1] = 1
+                        try:
+                            os.rename(view_path, path + "/" + source + "/" + data_patient + "/t1")
+                        except:
+                            os.rename(view_path, path + "/" + source + "/" + data_patient + "/t1" + "_{}".format(str(t1_dup)))
+                            t1_dup += 1
+                            
+                elif "t2" in view and has_volumes:
+                    new_input[3] = 1
+                    try:
+                        os.rename(view_path, path + "/" + source + "/" + data_patient + "/t2")
+                    except:
+                        os.rename(view_path, path + "/" + source + "/" + data_patient + "/t2" + "_{}".format(str(t2_dup)))
+                        t2_dup += 1
+                else:
                     pass
-                                        
-                #imageVolume = path + "/" + source + "/" + data_patient + "/" + view + "/" + "imagingVolume.nrrd"
-                #segMask = path + "/" + source + "/" + data_patient + "/" + view + "/" + "segMask_tumor.nrrd"
-                #if not (os.path.isfile(imageVolume) and os.path.isfile(segMask)):
-                    #continue
+                seq_by_ID.append(new_input)
                 #try:
-                    #images = [load_image(imageVolume, segMask, i) for i in range(3)]
+                    #if data_patient not in available_sequences[view]:
+                        #available_sequences[view].append(data_patient)
+                        #added_views += 1 
                 #except:
-                    #messed_up.append(data_patient)
-                    #continue
+                    #pass
+                                        
+                #if not (os.path.isfile(imageVolume) and os.path.isfile(segMask)):
+                #    continue
+                #try:
+                #    images = [load_image(imageVolume, segMask, i) for i in range(3)]
+                #    plt.imsave(save_path+data_patient+"_"+view+"_"+"0.png", images[0])
+                #    plt.imsave(save_path+data_patient+"_"+view+"_"+"1.png", images[1])
+                #    plt.imsave(save_path+data_patient+"_"+view+"_"+"2.png", images[2])
+                #except:
+                #    messed_up.append(data_patient)
+                #    continue
                 #if not os.path.isfile(save_path+data_patient+"_"+view+"_"+"0.png"): 
                     #plt.imsave(save_path+data_patient+"_"+view+"_"+"0.png", images[0])
                     #plt.imsave(save_path+data_patient+"_"+view+"_"+"1.png", images[1])
                     #plt.imsave(save_path+data_patient+"_"+view+"_"+"2.png", images[2])
             
-            available_sequences['all_patients'].append(data_patient)
-            if not added_views:
-                available_sequences['none'].append(patientID)  
-            completed = completed + 1
+            #available_sequences['all_patients'].append(data_patient)
+            #if not added_views:
+                #available_sequences['none'].append(patientID)  
+            #completed = completed + 1
             if completed/num_patients*100 > threshold:
                 print(str(threshold) + "% complete")
                 threshold = threshold + 10
                 
-    keys = sorted(available_sequences.keys())
-    t1_available = available_sequences['t1']
-    t1c_available = available_sequences['t1c']
-    t2_available = available_sequences['t2']
-    for patient in t2_available:
-       if patient in t1c_available:
-            available_sequences['t2-t1c'].append(patient)
-       if patient in t1_available:
-            available_sequences['t2-t1'].append(patient)
-    keys = sorted(available_sequences.keys())
-    print("total sources = {}".format(str(num_sources)))
-    print("total patients = {}".format(str(total_patients)))
-    print("%t1 = {}%".format(str(len(available_sequences["t1"])/total_patients*100)))
-    print("%t2 = {}%".format(str(len(available_sequences["t2"])/total_patients*100)))
-    print("%t1c = {}%".format(str(len(available_sequences["t1c"])/total_patients*100)))
-    with open(config.SEQ_AVAIL, "w") as outfile:
-       writer = csv.writer(outfile, delimiter = ",")
-       writer.writerow(keys)
-       writer.writerows(itertools.zip_longest(*[available_sequences[key] for key in keys]))
-            
+    #keys = sorted(available_sequences.keys())
+    #t1_available = available_sequences['t1']
+    #t1c_available = available_sequences['t1c']
+    #t2_available = available_sequences['t2']
+    #for patient in t2_available:
+       #if patient in t1c_available:
+    #        available_sequences['t2-t1c'].append(patient)
+    #   if patient in t1_available:
+    #        available_sequences['t2-t1'].append(patient)
+    #keys = sorted(available_sequences.keys())
+    #print("total sources = {}".format(str(num_sources)))
+    #print("total patients = {}".format(str(total_patients)))
+    #print("%t1 = {}%".format(str(len(available_sequences["t1"])/total_patients*100)))
+    #print("%t2 = {}%".format(str(len(available_sequences["t2"])/total_patients*100)))
+    #print("%t1c = {}%".format(str(len(available_sequences["t1c"])/total_patients*100)))
+    #with open(config.SEQ_AVAIL, "w") as outfile:
+    #   writer = csv.writer(outfile, delimiter = ",")
+    #   writer.writerow(keys)
+    #   writer.writerows(itertools.zip_longest(*[available_sequences[key] for key in keys]))  
+    with open('output.csv', 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerows(seq_by_ID)   
+    print(messed_up)
 
 #Test code
-path = "/home/user1/Documents/Bone-MRI/bone_raw"
+path = "/Volumes/external/bone_raw"#"/home/user1/Documents/Bone-MRI/bone_raw"
 processFiles(path)
 

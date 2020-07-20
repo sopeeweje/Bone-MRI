@@ -17,7 +17,7 @@ axis_plane = {
 
 def calculate_percentile_slice(segmentation, percentile=100, axis=2):
     """
-    Pass in 3D numpy array and return the index of the segmentation section at the requested precentile of size
+    Pass in 3D numpy array and return the index of the segmentation section at the requested percentile of size
     """
     i, j = axis_sum[axis]
     sum_on_plane = segmentation.sum(i).sum(j)
@@ -25,6 +25,33 @@ def calculate_percentile_slice(segmentation, percentile=100, axis=2):
     sum_on_plane[sum_on_plane == 0] = np.nan # this is necessary if we want to ignore all empty segmentation slices
     plane = np.where(sum_on_plane==np.nanpercentile(sum_on_plane, percentile, interpolation='nearest'))[0][0]
     return plane
+
+def calculate_top3_slices(segmentation, axis=2):
+    """
+    Pass in 3D numpy array and return the indices of the 3 largest segmentation sections
+    """
+    i, j = axis_sum[axis]
+    sum_on_plane = segmentation.sum(i).sum(j)
+    sum_on_plane = sum_on_plane.astype('float')
+    sum_on_plane[sum_on_plane == 0] = np.nan # this is necessary if we want to ignore all empty segmentation slices
+    
+    plane1 = np.where(sum_on_plane==np.nanpercentile(sum_on_plane, 100, interpolation='nearest'))[0][0]
+    sum_on_plane[plane1] = np.nan
+    
+    try:
+        plane2 = np.where(sum_on_plane==np.nanpercentile(sum_on_plane, 100, interpolation='nearest'))[0][0]
+        sum_on_plane[plane2] = np.nan
+    except:
+        plane2 = plane1
+        plane3 = plane1
+    
+    try:
+        plane3 = np.where(sum_on_plane==np.nanpercentile(sum_on_plane, 100, interpolation='nearest'))[0][0]
+        sum_on_plane[plane3] = np.nan
+    except:
+        plane3 = plane1
+    #print("{}, {}, {}".format(plane1, plane2, plane3))
+    return plane1, plane2, plane3
 
 def calculate_largest_slice(segmentation, axis=2):
     """

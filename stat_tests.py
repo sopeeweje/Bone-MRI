@@ -2,6 +2,48 @@ import math
 from scipy import stats
 import pandas as pd
 from statsmodels.stats.contingency_tables import mcnemar
+import numpy as np
+import pandas as pd
+from statsmodels.stats.libqsturng import psturng
+
+def games_howell(benign_list, intermediate_list, malignant_list):
+    '''
+    given three lists of ages, return the p value for the difference using games-howell test
+    lists must be inputted in correct order!
+    '''
+    benign_mean = sum(benign_list)/len(benign_list)
+    intermediate_mean = sum(intermediate_list) / len(intermediate_list)
+    malignant_mean = sum(malignant_list) / len(malignant_list)
+    k = 3 #number of classes
+    benign_var = sum([(age - benign_mean) ** 2 for age in benign_list]) / (len(benign_list)-1)
+    intermediate_var = sum([(age - intermediate_mean) ** 2 for age in intermediate_list]) / (len(intermediate_list) - 1)
+    malignant_var = sum([(age - malignant_mean) ** 2 for age in malignant_list]) / (len(malignant_list) - 1)
+
+    group_means = {'benign':benign_mean, 'intermediate':intermediate_mean, 'malignant':malignant_mean}
+    group_var = {'benign': benign_var, 'intermediate': intermediate_var, 'malignant': malignant_var}
+    group_obs = {'benign': len(benign_list), 'intermediate': len(intermediate_list), 'malignant': len(malignant_list)}
+
+    combs = [('benign', 'intermediate'), ('intermediate', 'malignant'), ('benign', 'malignant')]
+    # print(group_means, group_var, group_obs)
+    results = {}
+    for comb in combs:
+        diff = group_means[comb[1]] - group_means[comb[0]]
+        # t-value of each group combination
+        t_val = np.abs(diff) / np.sqrt((group_var[comb[0]] / group_obs[comb[0]]) +
+                                       (group_var[comb[1]] / group_obs[comb[1]]))
+        # Numerator of the Welch-Satterthwaite equation
+        df_num = (group_var[comb[0]] / group_obs[comb[0]] + group_var[comb[1]] / group_obs[comb[1]]) ** 2
+        # Denominator of the Welch-Satterthwaite equation
+        df_denom = ((group_var[comb[0]] / group_obs[comb[0]]) ** 2 / (group_obs[comb[0]] - 1) +
+                    (group_var[comb[1]] / group_obs[comb[1]]) ** 2 / (group_obs[comb[1]] - 1))
+        # Degrees of freedom
+        df = df_num / df_denom
+        # p-value of the group comparison
+        p_val = psturng(t_val * np.sqrt(2), k, df)
+        results[comb] = p_val
+    return results
+
+
 
 def z_test_proportions(acc1, acc2, n1, n2):
     '''

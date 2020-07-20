@@ -8,12 +8,21 @@ import SimpleITK as sitk
 from config import config
 
 from filenames import IMAGE, SEGMENTATION, T1, T2, T1C
+from segmentation import bounding_box, crop
 
-def n4_bias_correction(image):
-    import ants
-    as_ants = ants.from_numpy(image)
-    corrected = ants.n4_bias_field_correction(as_ants)
-    return corrected.numpy()
+def n4_bias_correction(image, mask):
+    inputImage = sitk.GetImageFromArray(image)
+    maskImage = sitk.GetImageFromArray(mask)
+    inputImage = sitk.Cast(inputImage,sitk.sitkFloat32)
+    maskImage = sitk.Cast(maskImage,sitk.sitkUInt8)
+    corrector = sitk.N4BiasFieldCorrectionImageFilter();
+    output = corrector.Execute(inputImage,maskImage)
+    #sitk.WriteImage(output,"bone-penn-161/n4biascorrection_" + image[-7:])
+    return sitk.GetArrayFromImage(output)
+    #import ants
+    #as_ants = ants.from_numpy(image)
+    #corrected = ants.n4_bias_field_correction(as_ants)
+    #return corrected.numpy()
 
 def registration(reference, image, segmentation):
     import ants
@@ -37,21 +46,25 @@ def intensity_normalization(reference, image):
     output = matcher.Execute(image_as_sitk, reference_as_sitk)
     return np.array(sitk.GetArrayViewFromImage(output))
 
-def preprocess_pack(reference, images_w_segmentations, use_n4_bias=False, use_registration=False):
-    final_images = list()
+def preprocess_pack(ref_img, ref_seg, image, segmentation, use_n4_bias=False, use_registration=False):
     if use_n4_bias:
-        reference = n4_bias_correction(reference)
-    for (image, segmentation) in images_w_segmentations:
-        if use_n4_bias:
-            image = n4_bias_correction(image)
-        if use_registration:
-            image, segmentation = registration(reference, image, segmentation)
-        image = intensity_normalization(reference, image)
-        final_images.append((image, segmentation))
-    return reference, final_images
+        reference = n4_bias_correction(ref_img, ref_img*ref_seg)
+        image = n4_bias_correction(image, image*segmentation)
+    if use_registration:
+        image, segmentation = registration(reference, image, segmentation)
+    image = intensity_normalization(reference, image)
+    return image, segmentation
 
 def run(files, out, use_n4_bias=False, use_registration=False):
     f = pandas.read_pickle(files)
+    t1_ref_img, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1/imagingVolume.nrrd")
+    t1_ref_seg, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1/segMask_tumor.nrrd")
+    
+    t1c_ref_img, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1c/imagingVolume.nrrd")
+    t1c_ref_seg, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1c/segMask_tumor.nrrd")
+    
+    t2_ref_img, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t2/imagingVolume.nrrd")
+    t2_ref_seg, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t2/segMask_tumor.nrrd")
     
     for index, row in f.iterrows():
         print("working on {} {}".format(index, "-" * 40))
@@ -68,6 +81,7 @@ def run(files, out, use_n4_bias=False, use_registration=False):
                 """.format(t1, t1_seg))
                 t1_nrrd, _ = nrrd.read(t1)
                 t1_seg_nrrd, _ = nrrd.read(t1_seg)
+                t1_nrrd, t1_seg_nrrd = preprocess_pack(t1_ref_img, t1_ref_seg, t1_nrrd, t1_seg_nrrd, use_n4_bias=True, use_registration=False)
                 print("""SHAPES
                       t1: {}
                       t1 seg: {}""".format(t1_nrrd.shape, t1_seg_nrrd.shape))
@@ -94,6 +108,7 @@ def run(files, out, use_n4_bias=False, use_registration=False):
                 """.format(t1c, t1c_seg))
                 t1c_nrrd, _ = nrrd.read(t1c)
                 t1c_seg_nrrd, _ = nrrd.read(t1c_seg)
+                t1c_nrrd, t1c_seg_nrrd = preprocess_pack(t1c_ref_img, t1c_ref_seg, t1c_nrrd, t1c_seg_nrrd, use_n4_bias=True, use_registration=False)
                 print("""SHAPES
                       t1c: {}
                       t1c seg: {}""".format(t1c_nrrd.shape, t1c_seg_nrrd.shape))
@@ -120,6 +135,7 @@ def run(files, out, use_n4_bias=False, use_registration=False):
                 """.format(t2, t2_seg))
                 t2_nrrd, _ = nrrd.read(t2)
                 t2_seg_nrrd, _ = nrrd.read(t2_seg)
+                t2_nrrd, t2_seg_nrrd = preprocess_pack(t2_ref_img, t2_ref_seg, t2_nrrd, t2_seg_nrrd, use_n4_bias=True, use_registration=False)
                 print("""SHAPES
                       t2: {}
                       t2 seg: {}""".format(t2_nrrd.shape, t2_seg_nrrd.shape))
@@ -151,3 +167,26 @@ if __name__ == '__main__':
         help='output')
     FLAGS, unparsed = parser.parse_known_args()
     run(FLAGS.preprocess, FLAGS.out, FLAGS.n4, FLAGS.registration)
+    
+    #ref, _ = nrrd.read("bone-penn-161/t1/imagingVolume.nrrd")
+    #ref_seg, _ = nrrd.read("bone-penn-161/t1/segMask_tumor.nrrd")
+    #bounds = bounding_box(ref_seg)
+    #ref, ref_seg = crop(ref, ref_seg, bounds)
+    #ref_masked = ref*ref_seg
+    #nrrd.write("bone-penn-161/t1.nrrd", ref)
+    #nrrd.write("bone-penn-161/t1_masked.nrrd", ref_masked)
+    
+    
+    #image, _ = nrrd.read("bone-penn-161/t2/imagingVolume.nrrd")
+    #image_seg, _ = nrrd.read("bone-penn-161/t2/segMask_tumor.nrrd")
+    #bounds = bounding_box(image_seg)
+    #image, image_seg = crop(image, image_seg, bounds)
+    #image_masked = image*image_seg
+    #nrrd.write("bone-penn-161/t2.nrrd", image)
+    #nrrd.write("bone-penn-161/t2_masked.nrrd", image_masked)
+    
+    #normalized = intensity_normalization(image, ref)
+    #nrrd.write("bone-penn-161/normalized.nrrd", normalized)
+    
+    #n4biascorrection_t1 = n4_bias_correction("bone-penn-161/t1.nrrd", "bone-penn-161/t1_masked.nrrd")
+    #n4biascorrection_t2 = n4_bias_correction("bone-penn-161/t2.nrrd", "bone-penn-161/t2_masked.nrrd")

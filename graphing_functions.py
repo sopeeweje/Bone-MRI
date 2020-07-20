@@ -4,6 +4,12 @@ import matplotlib.pyplot as plt
 import csv
 import numpy as np
 from sklearn.metrics import roc_curve, roc_auc_score, accuracy_score, confusion_matrix
+<<<<<<< HEAD
+=======
+from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,
+                               AutoMinorLocator)
+
+>>>>>>> 1c4fdb6b18aa1e0788a29570c187e4f48e409c8b
 plt.rcParams['svg.fonttype'] = 'none'
 
 #Data/inputs
@@ -34,6 +40,10 @@ test_data = {
 
 names = ['bone-hup-137', 'bone-hup-130', 'bone-hup-120', 'bone-hup-143', 'bone-hup-127', 'bone-penn-295', 'bone-penn-594', 'bone-penn-582', 'bone-penn-574', 'bone-penn-125', 'bone-penn-407', 'bone-penn-432', 'bone-penn-117', 'bone-penn-393', 'bone-penn-389', 'bone-penn-387', 'bone-penn-229', 'bone-hup-174', 'bone-hup-190', 'bone-hup-238', 'bone-hup-164', 'bone-hup-212', 'bone-hup-195', 'bone-hup-236', 'bone-hup-182', 'bone-penn-290', 'bone-penn-202', 'bone-penn-184', 'bone-penn-208', 'bone-penn-175', 'bone-penn-185', 'bone-penn-103', 'bone-penn-102', 'bone-penn-80', 'bone-hup-114', 'bone-hup-87', 'bone-hup-99', 'bone-hup-90', 'bone-penn-544', 'bone-penn-547', 'bone-penn-135', 'bone-penn-145', 'bone-penn-366', 'bone-penn-383', 'bone-penn-519', 'bone-penn-540', 'bone-penn-524', 'bone-penn-539', 'bone-china-137', 'bone-china-150', 'bone-china-141', 'bone-china-142', 'bone-china-156', 'bone-china-157', 'bone-china-094', 'bone-china-108', 'bone-china-130', 'bone-hup-294', 'bone-hup-318', 'bone-hup-300', 'bone-hup-313', 'bone-hup-311', 'bone-penn-326', 'bone-china-067', 'bone-china-082', 'bone-china-090', 'bone-china-012', 'bone-china-064', 'bone-china-063', 'bone-china-007', 'bone-china-018', 'bone-china-013', 'bone-hup-50', 'bone-penn-638', 'bone-penn-649', 'bone-china-206', 'bone-china-235', 'bone-china-232', 'bone-china-182', 'bone-china-229', 'bone-china-208', 'bone-china-181', 'bone-china-202', 'bone-china-241', 'bone-china-233', 'bone-penn-469', 'bone-penn-486', 'bone-penn-505', 'bone-penn-513', 'bone-penn-499', 'bone-penn-470', 'bone-penn-510', 'bone-penn-475', 'bone-penn-493', 'bone-penn-559', 'bone-penn-569', 'bone-penn-554', 'bone-penn-566', 'bone-penn-557']
 
+<<<<<<< HEAD
+=======
+#test by andy to see if this appears
+>>>>>>> 1c4fdb6b18aa1e0788a29570c187e4f48e409c8b
 #functions
 def transform_binary_predictions(results):
     predictions = 1 * (results.flatten() > 0.5)
@@ -207,10 +217,44 @@ def plot_multiple_roc_curve(dataset, experts=[]):
                          markers=["o", "v", "s", "P"],
                          palette={ p["experts"]: "black" for p in points },
                          )
+<<<<<<< HEAD
     ax.plot([0, 1], [0, 1], linestyle='--')
     ax.set_ylim(-0.04, 1.04)
     ax.set_xlim(-0.04, 1.02)
     ax.legend()
+=======
+
+    ax.plot([0, 1], [0, 1], linestyle='--', color='#929c95')
+    ax.set_ylim(-0.04, 1.04)
+    ax.set_xlim(-0.04, 1.02)
+    handles, labels = ax.get_legend_handles_labels()
+    # the below loops remove the labels and handles given by the hue argument for the modalities and experts
+    toRemove = set()
+    newLabels = []
+    newHandles = []
+    for idx, lab in enumerate(labels):
+        if lab == "modality" or lab == "experts":
+            toRemove.add(idx)
+        else:
+            newLabels.append(lab)
+    for idx, hand in enumerate(handles):
+        if idx not in toRemove:
+            newHandles.append(hand)
+    ax.xaxis.set_minor_locator(MultipleLocator(.05))
+    ax.yaxis.set_minor_locator(MultipleLocator(.05))
+    for tick in ax.xaxis.get_major_ticks():
+        tick.label1.set_fontsize(12)
+        tick.label1.set_fontweight('bold')
+    for tick in ax.yaxis.get_major_ticks():
+        tick.label1.set_fontsize(12)
+        tick.label1.set_fontweight('bold')
+
+    plt.xlabel('False Positive Rate', fontsize=12, fontweight='bold')
+    plt.ylabel('True Positive Rate', fontsize=12, fontweight='bold')
+    fig.suptitle('ROC Curve', fontsize=16, fontweight='bold', y= .93)
+    plt.rcParams["axes.labelsize"] = 29
+    ax.legend(frameon=False, handles=newHandles, labels=newLabels)
+>>>>>>> 1c4fdb6b18aa1e0788a29570c187e4f48e409c8b
     return fig
 
 def get_experts_for_names(features, names, experts=["expert1","expert2"], transform=int, default=0):
@@ -239,5 +283,9 @@ def get_experts_for_names(features, names, experts=["expert1","expert2"], transf
 if __name__ == '__main__':
     expert_features = all_features(files = ["experts.csv"])
     fig = plot_multiple_roc_curve(test_data, experts=get_experts_for_names(expert_features, names))
+<<<<<<< HEAD
     fig.savefig("put_name_here.png", bbox_inches = "tight")
+=======
+    fig.savefig("exampleROC.png", bbox_inches="tight")
+>>>>>>> 1c4fdb6b18aa1e0788a29570c187e4f48e409c8b
 

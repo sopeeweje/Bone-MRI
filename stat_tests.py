@@ -4,9 +4,9 @@ import pandas as pd
 from statsmodels.stats.contingency_tables import mcnemar
 import numpy as np
 import pandas as pd
-from statsmodels.stats.libqsturng import psturng
+from statsmodels.stats.libqsturng import psturng, qsturng
 
-def games_howell(benign_list, intermediate_list, malignant_list):
+def games_howell(benign_list, intermediate_list, malignant_list, alpha=.05):
     '''
     given three lists of ages, return the p value for the difference using games-howell test
     lists must be inputted in correct order!
@@ -24,8 +24,16 @@ def games_howell(benign_list, intermediate_list, malignant_list):
     group_obs = {'benign': len(benign_list), 'intermediate': len(intermediate_list), 'malignant': len(malignant_list)}
 
     combs = [('benign', 'intermediate'), ('intermediate', 'malignant'), ('benign', 'malignant')]
-    # print(group_means, group_var, group_obs)
-    results = {}
+
+    group_comps = []
+    mean_differences = []
+    degrees_freedom = []
+    t_values = []
+    p_values = []
+    std_err = []
+    up_conf = []
+    low_conf = []
+
     for comb in combs:
         diff = group_means[comb[1]] - group_means[comb[0]]
         # t-value of each group combination
@@ -40,8 +48,30 @@ def games_howell(benign_list, intermediate_list, malignant_list):
         df = df_num / df_denom
         # p-value of the group comparison
         p_val = psturng(t_val * np.sqrt(2), k, df)
-        results[comb] = p_val
-    return results
+        # Standard error of each group combination
+        se = np.sqrt(0.5 * (group_var[comb[0]] / group_obs[comb[0]] +
+                            group_var[comb[1]] / group_obs[comb[1]]))
+        # Upper and lower confidence intervals
+        upper_conf = diff + qsturng(1 - alpha, k, df)
+        lower_conf = diff - qsturng(1 - alpha, k, df)
+        # Append the computed values to their respective lists.
+        mean_differences.append(diff)
+        degrees_freedom.append(df)
+        t_values.append(t_val)
+        p_values.append(p_val)
+        std_err.append(se)
+        up_conf.append(upper_conf)
+        low_conf.append(lower_conf)
+        group_comps.append(str(comb[0]) + ' : ' + str(comb[1]))
+
+    result_df = pd.DataFrame({'groups': group_comps,
+                              'mean_difference': mean_differences,
+                              'std_error': std_err,
+                              't_value': t_values,
+                              'p_value': p_values,
+                              'upper_limit': up_conf,
+                              'lower limit': low_conf})
+    return result_df
 
 
 

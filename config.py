@@ -11,7 +11,7 @@ class Config(object):
 
     TRIALS = 1
     BATCH_SIZE = 16
-    EPOCHS = 300
+    EPOCHS = 500
     PATIENCE = 100
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
@@ -25,14 +25,12 @@ class Config(object):
     SECRET = "example secret key"
     LOG_LEVEL = logging.DEBUG
 
-    CHOP_IDS = 'chopIDs.csv'
-
-    RAW_NRRD_ROOT = "bone_raw/"
-    RAW_FEATURES = "bone_features.csv"
-    SEQ_AVAIL = "sequence_summary.csv" #which patients have which sequences
+    RAW_NRRD_ROOT = "/Volumes/external/bone_raw" #"bone_raw/"
+    RAW_FEATURES = "/Volumes/external/bone_features.csv" #"bone_features.csv"
+    #SEQ_AVAIL = "sequence_summary.csv" #which patients have which sequences
 
     DATA = "data_dir/"
-    PREPROCESSED_DIR = os.path.join(DATA, "preprocessed")
+    PREPROCESSED_DIR = "/Volumes/external/preprocessed"#os.path.join(DATA, "preprocessed")
     TRAIN_DIR = os.path.join(DATA, "train")
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")
@@ -46,7 +44,7 @@ class Config(object):
     FEATURES = os.path.join(FEATURES_DIR, "training-features.pkl")
     PREPROCESS = os.path.join(FEATURES_DIR, "preprocess.pkl")
 
-    INPUT_FORM = "t1c-features"
+    INPUT_FORM = "t2"
 
     OUTPUT = "output/"
     DB_URL = "sqlite:///{}/results.db".format(OUTPUT)

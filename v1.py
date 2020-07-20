@@ -12,19 +12,9 @@ import datetime as datetime
 
 from config import config
 from data_gen import data, INPUT_FORM_PARAMETERS
+from my_optimizers import OPTIMIZERS
 
 MODEL_NAME = "v1"
-
-OPTIMIZERS = {
-    "sgd-01-0.9": lambda: optimizers.SGD(lr=0.01, momentum=0.9),
-    "sgd-001-0.9": lambda: optimizers.SGD(lr=0.001, momentum=0.9),
-    "sgd-0001-0.9": lambda: optimizers.SGD(lr=0.0001, momentum=0.9),
-    "sgd-01-0.9-nesterov": lambda: optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True),
-    "sgd-001-0.9-nesterov": lambda: optimizers.SGD(lr=0.001, momentum=0.9, nesterov=True),
-    "sgd-0001-0.9-nesterov": lambda: optimizers.SGD(lr=0.0001, momentum=0.9, nesterov=True),
-    "adam": lambda: "adam",
-    "nadam": lambda: "nadam",
-}
 
 def model(input_form="all", aux_size=0, hyperparameters=dict()):
     print("using the following hyperparameters: {}".format(hyperparameters))

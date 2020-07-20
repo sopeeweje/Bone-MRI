@@ -17,7 +17,7 @@ from data_gen import data
 
 from config import config
 
-def test_model(model, train, validation, test):
+def test_model(model, train, validation, test, label_form):
 
     loss, accuracy = model.evaluate_generator(validation, steps=math.ceil(len(validation)/config.BATCH_SIZE))
     train_loss, train_accuracy = model.evaluate_generator(train, steps=math.ceil(len(train)/config.BATCH_SIZE))
@@ -28,12 +28,17 @@ def test_model(model, train, validation, test):
     test.reset()
 
     results = evaluate.get_results(model, validation)
-    probabilities = list(evaluate.transform_binary_probabilities(results))
     labels = list(evaluate.get_labels(validation))
 
     test_results = evaluate.get_results(model, test)
-    test_probabilities = list(evaluate.transform_binary_probabilities(test_results))
     test_labels = list(evaluate.get_labels(test))
+    
+    if label_form == "outcome_3":
+        probabilities = list(results)
+        test_probabilities = list(test_results)
+    else:
+        probabilities = list(evaluate.transform_binary_probabilities(results))
+        test_probabilities = list(evaluate.transform_binary_probabilities(test_results))
 
     train.reset()
     validation.reset()
@@ -82,7 +87,7 @@ def run(model, description, input_form, label_form="outcome", split_id=None, loa
     train_data_stats = characterize_data(train)
     validation_data_stats = characterize_data(validation)
     test_data_stats = characterize_data(test)
-    results = test_model(model_instance, train, validation, test)
+    results = test_model(model_instance, train, validation, test, label_form)
     training.reset()
     validation.reset()
     test.reset()

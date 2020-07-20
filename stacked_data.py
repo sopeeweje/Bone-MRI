@@ -90,9 +90,6 @@ def stacked_data(
         training[result.input_form] = t
         training_fixed[result.input_form] = tf
         validation[result.input_form] = v
-        for name in v.names:
-            print(name)
-        print(len(v.names))
         test[result.input_form] = te
     # generate labels
     train_labels = list()
@@ -126,8 +123,6 @@ def stacked_data(
         t = training[result.input_form]
         tf = training_fixed[result.input_form]
         v = validation[result.input_form]
-        print(len(v))
-        print(v.names)
         te = test[result.input_form]
         train_predictions.append(model.predict_generator(t, steps=epochs).flatten())
         train_fixed_predictions.append(model.predict_generator(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())

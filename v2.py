@@ -12,23 +12,11 @@ from keras.regularizers import l1_l2
 import efficientnet.keras as efn
 import datetime as datetime
 
-
 from config import config
 from data_gen import data, INPUT_FORM_PARAMETERS
+from my_optimizers import OPTIMIZERS
 
 MODEL_NAME = "v2"
-
-OPTIMIZERS = {
-    "sgd-01-0.9": lambda: optimizers.SGD(lr=0.01, momentum=0.9),
-    "sgd-001-0.9": lambda: optimizers.SGD(lr=0.001, momentum=0.9),
-    "sgd-0001-0.9": lambda: optimizers.SGD(lr=0.0001, momentum=0.9),
-    "sgd-01-0.9-nesterov": lambda: optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True),
-    "sgd-001-0.9-nesterov": lambda: optimizers.SGD(lr=0.001, momentum=0.9, nesterov=True),
-    "sgd-0001-0.9-nesterov": lambda: optimizers.SGD(lr=0.0001, momentum=0.9, nesterov=True),
-    "sgd-e6-0.9-nesterov": lambda: optimizers.SGD(lr=1e-6, momentum=0.9, nesterov=True),
-    "adam": lambda: "adam",
-    "nadam": lambda: "nadam",
-}
 
 def apply_layer_freeze(convnet, percent=0.0):
     trainable_layers = [l for l in convnet.layers if len(l.trainable_weights) > 0]
@@ -57,7 +45,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
     #skip for now
     if parameters["t2"]:
         # init EffNet
-        convnet = efn.EfficientNetB1(
+        convnet = efn.EfficientNetB2(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -72,7 +60,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     if parameters["t1"]:
         # init EffNet
-        convnet = efn.EfficientNetB1(
+        convnet = efn.EfficientNetB2(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -87,7 +75,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         
     if parameters["t1c"]:
         # init EffNet
-        convnet = efn.EfficientNetB1(
+        convnet = efn.EfficientNetB2(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -122,9 +110,33 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         out = Dropout(rate=DROPOUT)(out)
 
     if parameters["features"]:
-        aux_input = Input(shape=(aux_size,), name='aux_input')
-        inputs.append(aux_input)
-        out = concatenate([out, aux_input])
+        # define two sets of inputs
+        agesex_input = Input(shape=(2,)) #age, sex
+        location_input = Input(shape=(14,)) #location
+        inputs.append(agesex_input)
+        inputs.append(location_input)
+        reg=l1_l2(l1=0.00, l2=0.01)
+        
+        # age and sex network branch
+        agesex_1 = Dense(20, kernel_regularizer=reg, activation="relu")(agesex_input)
+        agesex_1a = Dropout(rate=0.5)(agesex_1)
+        agesex_2 = Dense(20, kernel_regularizer=reg, activation="relu")(agesex_1a)
+        agesex_2a = Dropout(rate=0.5)(agesex_2)
+        agesex_3 = Dense(20, kernel_regularizer=reg, activation="relu")(agesex_2a)
+        predictions_agesex = Dense(1, kernel_regularizer=reg, activation="sigmoid")(agesex_3)
+        agesex = Model(inputs=agesex_input, outputs=predictions_agesex)
+        
+        # location network branch
+        location_1 = Dense(20, kernel_regularizer=reg, activation="relu")(location_input)
+        location_1a = Dropout(rate=0.5)(location_1)
+        location_2 = Dense(20, kernel_regularizer=reg, activation="relu")(location_1a)
+        location_2a = Dropout(rate=0.5)(location_2)
+        location_3 = Dense(20, kernel_regularizer=reg, activation="relu")(location_2a)
+        predictions_location = Dense(1, kernel_regularizer=reg, activation="sigmoid")(location_3)
+        location = Model(inputs=location_input, outputs=predictions_location)
+        
+        combined = concatenate([agesex.output, location.output])
+        out = concatenate([out, combined])
 
     out = Dense(16, activation="relu", kernel_regularizer=l1_l2(l1=0.01, l2=0.01))(out)
     out = BatchNormalization()(out)
@@ -146,10 +158,39 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
 def features_model(aux_size, hyperparameters):
     OPTIMIZER = hyperparameters.get("optimizer", "sgd-0001-0.9")
-    aux_input = Input(shape=(aux_size,), name='aux_input')
     reg=l1_l2(l1=0.00, l2=0.01)
-    predictions = Dense(1, kernel_regularizer=reg, activation="sigmoid")(aux_input)
-    model = Model(inputs=aux_input, outputs=predictions)
+    #aux_input = Input(shape=(aux_size,), name='aux_input')
+    # define two sets of inputs
+    agesex_input = Input(shape=(2,)) #age, sex
+    location_input = Input(shape=(14,)) #location
+    
+    # age and sex network branch
+    agesex_1 = Dense(20, kernel_regularizer=reg, activation="relu")(agesex_input)
+    agesex_1a = Dropout(rate=0.5)(agesex_1)
+    agesex_2 = Dense(20, kernel_regularizer=reg, activation="relu")(agesex_1a)
+    agesex_2a = Dropout(rate=0.5)(agesex_2)
+    agesex_3 = Dense(20, kernel_regularizer=reg, activation="relu")(agesex_2a)
+    predictions_agesex = Dense(1, kernel_regularizer=reg, activation="sigmoid")(agesex_3)
+    agesex = Model(inputs=agesex_input, outputs=predictions_agesex)
+    
+    # location network branch
+    location_1 = Dense(20, kernel_regularizer=reg, activation="relu")(location_input)
+    location_1a = Dropout(rate=0.5)(location_1)
+    location_2 = Dense(20, kernel_regularizer=reg, activation="relu")(location_1a)
+    location_2a = Dropout(rate=0.5)(location_2)
+    location_3 = Dense(20, kernel_regularizer=reg, activation="relu")(location_2a)
+    predictions_location = Dense(1, kernel_regularizer=reg, activation="sigmoid")(location_3)
+    location = Model(inputs=location_input, outputs=predictions_location)
+    
+    # combine the output of the two branches
+    combined = concatenate([agesex.output, location.output])
+    
+    # apply a FC layer and then a regression prediction on the combined outputs
+    z = Dense(2, activation="relu")(combined)
+    final_output = Dense(1, kernel_regularizer=reg, activation="sigmoid")(z)
+    
+    # our model will accept the inputs of the two branches and then output a single value
+    model = Model(inputs=[agesex.input, location.input], outputs=final_output)
     model.compile(
         loss="binary_crossentropy",
         optimizer=OPTIMIZERS[OPTIMIZER](),
@@ -159,7 +200,7 @@ def features_model(aux_size, hyperparameters):
 def class_weight(training):
     unique, counts = np.unique(training.classes, return_counts=True)
     raw_counts = dict(zip(unique, counts))
-    return { k: len(training.classes)/v for k, v in raw_counts.items() }
+    return { l: len(training.classes)/v for l, v in raw_counts.items() }
 
 def train(model, training, validation, run_id, monitor, hyperparameters):
     # callbacks
@@ -214,6 +255,7 @@ def run(run_id=None, mode='normal', loaded_data=None, split_id=None, input_form=
         model_instance = model(input_form, aux_size=training.features_size, hyperparameters=hyperparameters)
         # return trained model
         return train(model_instance, training, validation, run_id, 'val_loss', hyperparameters=hyperparameters)
+    
     elif mode == 'cross':
         # training, validation, test, holdout_test = loaded_data
         training, validation, test = loaded_data

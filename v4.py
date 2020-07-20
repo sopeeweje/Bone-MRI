@@ -12,23 +12,11 @@ from keras.regularizers import l1_l2
 import efficientnet.keras as efn
 import datetime as datetime
 
-
 from config import config
 from data_gen import data, INPUT_FORM_PARAMETERS
+from my_optimizers import OPTIMIZERS
 
 MODEL_NAME = "v4"
-
-OPTIMIZERS = {
-    "sgd-01-0.9": lambda: optimizers.SGD(lr=0.01, momentum=0.9),
-    "sgd-001-0.9": lambda: optimizers.SGD(lr=0.001, momentum=0.9),
-    "sgd-0001-0.9": lambda: optimizers.SGD(lr=0.0001, momentum=0.9),
-    "sgd-01-0.9-nesterov": lambda: optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True),
-    "sgd-001-0.9-nesterov": lambda: optimizers.SGD(lr=0.001, momentum=0.9, nesterov=True),
-    "sgd-0001-0.9-nesterov": lambda: optimizers.SGD(lr=0.0001, momentum=0.9, nesterov=True),
-    "sgd-e6-0.9-nesterov": lambda: optimizers.SGD(lr=1e-6, momentum=0.9, nesterov=True),
-    "adam": lambda: "adam",
-    "nadam": lambda: "nadam",
-}
 
 def apply_layer_freeze(convnet, percent=0.0):
     trainable_layers = [l for l in convnet.layers if len(l.trainable_weights) > 0]

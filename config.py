@@ -46,7 +46,7 @@ class Config(object):
 
     INPUT_FORM = "t2"
 
-    OUTPUT = "output/"
+    OUTPUT = "output"
     DB_URL = "sqlite:///{}/results.db".format(OUTPUT)
     MODEL_DIR = os.path.join(OUTPUT, "models")
     STDOUT_DIR = os.path.join(OUTPUT, "stdout")

@@ -4,8 +4,8 @@ import numpy as np
 import json
 import math
 
-from vis.visualization import visualize_cam, visualize_saliency, overlay
-from vis.utils.utils import load_img, normalize, find_layer_idx
+#from vis.visualization import visualize_cam, visualize_saliency, overlay
+#from vis.utils.utils import load_img, normalize, find_layer_idx
 from keras.models import load_model, Model
 from sklearn.metrics import auc, precision_recall_curve, roc_curve, confusion_matrix, roc_auc_score
 from sklearn import manifold
@@ -275,116 +275,116 @@ def plot_confusion_matrix_ensemble(labels, predictions, class_labels):
     plt.ylabel('label', axes=ax)
     return fig
 
-def plot_tsne(model, layer_name, data, labels, fieldnames=None, perplexity=5):
-    figures = list()
-    intermediate_layer_model = Model(
-        inputs=model.input, outputs=model.get_layer(layer_name).output)
-    intermediate_output = intermediate_layer_model.predict_generator(data, steps=math.ceil(len(data)/config.BATCH_SIZE))
-    embedding = manifold.TSNE(
-        perplexity=perplexity).fit_transform(intermediate_output)
-    for i, label in enumerate(labels):
-        labelname = "label"
-        if fieldnames is not None:
-            labelname = fieldnames[i]
-        pd = pandas.DataFrame.from_dict({
-            "x": [d[0] for d in embedding],
-            "y": [d[1] for d in embedding],
-            labelname: label,
-        })
-        fig, ax = plt.subplots()
-        sns.scatterplot(
-            x="x",
-            y="y",
-            data=pd,
-            hue=labelname,
-            hue_order=np.unique(label),
-            ax=ax)
-        ax.axis('off')
-        ax.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
-        figures.append(fig)
-        plt.show()
-    return figures
+# def plot_tsne(model, layer_name, data, labels, fieldnames=None, perplexity=5):
+#     figures = list()
+#     intermediate_layer_model = Model(
+#         inputs=model.input, outputs=model.get_layer(layer_name).output)
+#     intermediate_output = intermediate_layer_model.predict_generator(data, steps=math.ceil(len(data)/config.BATCH_SIZE))
+#     embedding = manifold.TSNE(
+#         perplexity=perplexity).fit_transform(intermediate_output)
+#     for i, label in enumerate(labels):
+#         labelname = "label"
+#         if fieldnames is not None:
+#             labelname = fieldnames[i]
+#         pd = pandas.DataFrame.from_dict({
+#             "x": [d[0] for d in embedding],
+#             "y": [d[1] for d in embedding],
+#             labelname: label,
+#         })
+#         fig, ax = plt.subplots()
+#         sns.scatterplot(
+#             x="x",
+#             y="y",
+#             data=pd,
+#             hue=labelname,
+#             hue_order=np.unique(label),
+#             ax=ax)
+#         ax.axis('off')
+#         ax.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+#         figures.append(fig)
+#         plt.show()
+#     return figures
 
-def plot_grad_cam(image_file, model, layer, filter_idx=None, backprop_modifier="relu"):
-    image = load_img(image_file, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
-    grad = visualize_cam(model, find_layer_idx(model, layer), filter_idx, normalize(image), backprop_modifier=backprop_modifier)
-    fig, ax = plt.subplots(1, 2)
-    ax[0].imshow(overlay(grad, image))
-    ax[0].axis('off')
-    ax[1].imshow(image)
-    ax[1].axis('off')
-    return fig
+# def plot_grad_cam(image_file, model, layer, filter_idx=None, backprop_modifier="relu"):
+#     image = load_img(image_file, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
+#     grad = visualize_cam(model, find_layer_idx(model, layer), filter_idx, normalize(image), backprop_modifier=backprop_modifier)
+#     fig, ax = plt.subplots(1, 2)
+#     ax[0].imshow(overlay(grad, image))
+#     ax[0].axis('off')
+#     ax[1].imshow(image)
+#     ax[1].axis('off')
+#     return fig
 
-def plot_multiple_grad_cam(
-        images,
-        model,
-        layer,
-        penultimate_layer=None,
-        filter_idx=None,
-        backprop_modifier=None,
-        grad_modifier=None,
-        experts=None,
-        expert_spacing=0.1,
-):
-    rows = 2
-    if experts is not None:
-        rows = 3
-    fig, ax = plt.subplots(
-        rows, len(images), figsize=(4 * len(images), 4 * rows))
-    ax = ax.flatten()
-    penultimate_layer_idx = None
-    if penultimate_layer:
-        penultimate_layer_idx = find_layer_idx(model, penultimate_layer)
-    for i, filename in enumerate(images):
-        image = load_img(
-            filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
-        ax[i].imshow(image)
-        ax[i].axis('off')
-    for i, filename in enumerate(images):
-        image = load_img(
-            filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
-        grad = visualize_cam(
-            model,
-            find_layer_idx(model, layer),
-            filter_idx,
-            normalize(image),
-            penultimate_layer_idx=penultimate_layer_idx,
-            backprop_modifier=backprop_modifier,
-            grad_modifier=grad_modifier)
-        ax[i + len(images)].imshow(overlay(grad, image))
-        ax[i + len(images)].axis('off')
-    if experts:
-        for i, filename in enumerate(images):
-            for j, expert in enumerate(experts):
-                if i == 0:
-                    message = "expert {}: {}".format(j + 1, expert[i])
-                    ax[i + 2 * len(images)].text(
-                        0.3,
-                        1 - (expert_spacing * j),
-                        message,
-                        horizontalalignment='left',
-                        verticalalignment='center')
-                else:
-                    message = "{}".format(expert[i])
-                    ax[i + 2 * len(images)].text(
-                        0.5,
-                        1 - (expert_spacing * j),
-                        message,
-                        horizontalalignment='center',
-                        verticalalignment='center')
-            ax[i + 2 * len(images)].axis('off')
-    return fig, ax
+# def plot_multiple_grad_cam(
+#         images,
+#         model,
+#         layer,
+#         penultimate_layer=None,
+#         filter_idx=None,
+#         backprop_modifier=None,
+#         grad_modifier=None,
+#         experts=None,
+#         expert_spacing=0.1,
+# ):
+#     rows = 2
+#     if experts is not None:
+#         rows = 3
+#     fig, ax = plt.subplots(
+#         rows, len(images), figsize=(4 * len(images), 4 * rows))
+#     ax = ax.flatten()
+#     penultimate_layer_idx = None
+#     if penultimate_layer:
+#         penultimate_layer_idx = find_layer_idx(model, penultimate_layer)
+#     for i, filename in enumerate(images):
+#         image = load_img(
+#             filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
+#         ax[i].imshow(image)
+#         ax[i].axis('off')
+#     for i, filename in enumerate(images):
+#         image = load_img(
+#             filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
+#         grad = visualize_cam(
+#             model,
+#             find_layer_idx(model, layer),
+#             filter_idx,
+#             normalize(image),
+#             penultimate_layer_idx=penultimate_layer_idx,
+#             backprop_modifier=backprop_modifier,
+#             grad_modifier=grad_modifier)
+#         ax[i + len(images)].imshow(overlay(grad, image))
+#         ax[i + len(images)].axis('off')
+#     if experts:
+#         for i, filename in enumerate(images):
+#             for j, expert in enumerate(experts):
+#                 if i == 0:
+#                     message = "expert {}: {}".format(j + 1, expert[i])
+#                     ax[i + 2 * len(images)].text(
+#                         0.3,
+#                         1 - (expert_spacing * j),
+#                         message,
+#                         horizontalalignment='left',
+#                         verticalalignment='center')
+#                 else:
+#                     message = "{}".format(expert[i])
+#                     ax[i + 2 * len(images)].text(
+#                         0.5,
+#                         1 - (expert_spacing * j),
+#                         message,
+#                         horizontalalignment='center',
+#                         verticalalignment='center')
+#             ax[i + 2 * len(images)].axis('off')
+#     return fig, ax
 
-def plot_multiple_saliency(images, model, layer, filter_idx=None, backprop_modifier=None, grad_modifier=None):
-    fig, ax = plt.subplots(2, len(images), figsize=(4 * len(images), 4))
-    ax = ax.flatten()
-    for i, filename in enumerate(images):
-        image = load_img(filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
-        ax[i].imshow(image)
-        ax[i].axis('off')
-    for i, filename in enumerate(images):
-        grad = visualize_saliency(model, find_layer_idx(model, layer), filter_idx, normalize(image), backprop_modifier=backprop_modifier, grad_modifier=grad_modifier)
-        image = load_img(filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
-        ax[i + len(images)].imshow(overlay(grad, image))
-        ax[i + len(images)].axis('off')
-    return fig
+# def plot_multiple_saliency(images, model, layer, filter_idx=None, backprop_modifier=None, grad_modifier=None):
+#     fig, ax = plt.subplots(2, len(images), figsize=(4 * len(images), 4))
+#     ax = ax.flatten()
+#     for i, filename in enumerate(images):
+#         image = load_img(filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
+#         ax[i].imshow(image)
+#         ax[i].axis('off')
+#     for i, filename in enumerate(images):
+#         grad = visualize_saliency(model, find_layer_idx(model, layer), filter_idx, normalize(image), backprop_modifier=backprop_modifier, grad_modifier=grad_modifier)
+#         image = load_img(filename, target_size=(config.IMAGE_SIZE, config.IMAGE_SIZE))
+#         ax[i + len(images)].imshow(overlay(grad, image))
+#         ax[i + len(images)].axis('off')
+#     return fig

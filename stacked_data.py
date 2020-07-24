@@ -4,7 +4,9 @@ from keras.models import load_model
 from keras import backend as K
 import efficientnet.keras
 import math
+import pickle
 from uuid import uuid4, UUID
+from clinical_data_models import features_data
 
 from db import Result, XResult
 
@@ -14,8 +16,13 @@ from sklearn.model_selection import train_test_split
 import pandas
 
 def load(result):
-    path = "{}/models/{}-{}.h5".format(config.OUTPUT, result.uuid, result.model)
-    return load_model(path)
+    if result.input_form != "features":
+        path = "{}/models/{}-{}.h5".format(config.OUTPUT, result.uuid, result.model)
+        return load_model(path)
+    else:
+        path = "{}/models/{}_features.sav".format(config.OUTPUT, result.uuid)
+        print(path)
+        return pickle.load(open(path, 'rb'))
 
 def xload(result):
     path = "{}/models/{}-{}.h5".format(config.OUTPUT, result.run_id, result.model)
@@ -58,6 +65,7 @@ def stacked_data(
         uuids=[],
         epochs=config.EPOCHS,
         ):
+    
     results = [ Result.query.filter(Result.uuid == uuid).first() for uuid in uuids ]
     assert len(results) > 0, "no models found"
     assert len(set([result.split_uuid for result in results])) == 1, "all models must be trained on the same split"
@@ -66,6 +74,7 @@ def stacked_data(
     training_fixed = dict()
     validation = dict()
     test = dict()
+    
     for result in results:
         if result.input_form in training:
             continue
@@ -99,7 +108,6 @@ def stacked_data(
     first_training = list(training.values())[0]
     first_training_fixed = list(training_fixed.values())[0]
     first_validation = list(validation.values())[0]
-    print(first_validation)
     first_test = list(test.values())[0]
     for _ in range(epochs):
         train_labels += first_training.next()[1].tolist()
@@ -124,15 +132,22 @@ def stacked_data(
         tf = training_fixed[result.input_form]
         v = validation[result.input_form]
         te = test[result.input_form]
-        train_predictions.append(model.predict_generator(t, steps=epochs).flatten())
-        train_fixed_predictions.append(model.predict_generator(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())
-        validation_predictions.append(model.predict_generator(v, steps=math.ceil(len(v)/config.BATCH_SIZE)).flatten())
-        test_predictions.append(model.predict_generator(te, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
-        t.reset()
-        tf.reset()
-        v.reset()
-        te.reset()
-        K.clear_session()
+        if result.input_form != "features":
+            train_predictions.append(model.predict_generator(t, steps=epochs).flatten())
+            train_fixed_predictions.append(model.predict_generator(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())
+            validation_predictions.append(model.predict_generator(v, steps=math.ceil(len(v)/config.BATCH_SIZE)).flatten())
+            test_predictions.append(model.predict_generator(te, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
+            t.reset()
+            tf.reset()
+            v.reset()
+            te.reset()
+            K.clear_session()
+        else:
+            train_features, _, validation_features, _, test_features, _ = features_data(t,v,te)
+            train_predictions.append(model.predict(train_features))
+            train_fixed_predictions.append(model.predict(train_features))
+            validation_predictions.append(model.predict(validation_features))
+            test_predictions.append(model.predict(test_features))
         del model
     return train_predictions, validation_predictions, test_predictions, train_labels, validation_labels, test_labels, train_fixed_predictions, training_fixed_labels
 

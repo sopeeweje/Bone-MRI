@@ -51,7 +51,7 @@ def preprocess_pack(ref_img, ref_seg, image, segmentation, use_n4_bias=False, us
         reference = n4_bias_correction(ref_img, ref_img*ref_seg)
         image = n4_bias_correction(image, image*segmentation)
     if use_registration:
-        image, segmentation = registration(reference, image, segmentation)
+        image, segmentation = registration(ref_img, image, segmentation)
     image = intensity_normalization(reference, image)
     return image, segmentation
 

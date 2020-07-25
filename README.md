@@ -29,24 +29,22 @@ Flags for this command:
         <li>--hyperparameters - json with hyperparameters for run</li>
         <li>--trials - number of trials</li>
 </ul>
-<h4>Executing straight run</h4>
+<h4>Executing image data run</h4>
 Run <code>sh run.sh $1</code> to execute the below commands:
 <pre>
 pipenv run python calculate_features.py
 pipenv run python preprocess.py
 bash run-model.sh $1
 </pre>
-where $1 is a unique run identifier.
-<h4>Executing cross-validation run </h4>
-Run <code>sh xrun.sh $1</code> to execute the below commands:
-<pre>
-pipenv run python calculate_features.py
-pipenv run python preprocess.py
-bash xrun-model.sh $1
-</pre>
-where $1 is a unique run identifier.
+where $1 is a unique run identifier. Feature calculation and preprocessing should typically only be run during the initial run and upon the introduction of new data.
+<h4>Executing clinical data run </h4>
 
 <h3>Evaluate models</h3>
+<h4>Evaluating specific models</h4>
+
+<h4>Creating ensemble models</h4>
+
+<h4>Comparing ensemble models to expert evaluations</h4>
 Utilize evaluate-by-uuids-final.ipynb to create and evaluate ensembles of models trained on individual imaging modalities and the clinical features set and compare them to expert performance. evaluate-ensemble.ipynb contains the classifiers and parameters used to generate each ensemble. Find the desired model uuids in the results.db database.
 
 <h2>Utilize models</h2>

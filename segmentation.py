@@ -1,5 +1,5 @@
 import numpy as np
-#from PIL import Image
+from PIL import Image
 from scipy.misc import imresize
 
 

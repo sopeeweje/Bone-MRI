@@ -1,5 +1,5 @@
 {
-  "dropout": [0,0.1],
+  "dropout": [0],
   "optimizer": ["sgd-001-0.9-nesterov"],
   "deep-dense-top": [true],
   "convnet-freeze-percent": [0]

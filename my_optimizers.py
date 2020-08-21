@@ -9,10 +9,12 @@ OPTIMIZERS = {
     "sgd-01-0.9-nesterov": lambda: optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True),
     "sgd-001-0.9-nesterov": lambda: optimizers.SGD(lr=0.001, momentum=0.9, nesterov=True),
     "sgd-0001-0.9-nesterov": lambda: optimizers.SGD(lr=0.0001, momentum=0.9, nesterov=True),
+    "sgd-00001-0.9-nesterov": lambda: optimizers.SGD(lr=0.00001, momentum=0.9, nesterov=True),
     "sgd-e6-0.9-nesterov": lambda: optimizers.SGD(lr=1e-6, momentum=0.9, nesterov=True),
     "sgd-01-0.9-expdecay": lambda: optimizers.SGD(lr=0.01, momentum=0.9, decay=0.01/500),
     "adam": lambda: "adam",
     "nadam": lambda: "nadam",
+    "clr": lambda: clr
 }
 
 def step_decay(epoch):

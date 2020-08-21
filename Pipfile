@@ -31,6 +31,7 @@ flask-migrate = "*"
 flask = "*"
 seaborn = "*"
 papermill = {version = "==0.10.1"}
+nteract-scrapbook = "*"
 tqdm = "*"
 ipython = "*"
 typing = "*"
@@ -38,4 +39,4 @@ typing = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.6.1"

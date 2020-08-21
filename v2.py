@@ -229,7 +229,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         mode='auto',
     )
     # Cyclic learning rate
-    clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=8*38, mode='triangular')
+    clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=8*76*2, mode='triangular') #mode='exp_range', gamma=0.99995) # mode='triangular')
 
     sms = SMS("9107506884")
 
@@ -241,7 +241,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         validation_data=validation,
         validation_steps=math.ceil(validation.n / config.BATCH_SIZE),
         class_weight=class_weight(training),
-        callbacks=[checkpoint, early, clr, sms],
+        callbacks=[checkpoint, early, clr, sms], #[checkpoint, early, sms] 
     )
     return history.history
 

@@ -355,10 +355,14 @@ def load_image(image_path, segmentation_path, verbose=False):
         image: {}
         seg: {}
 """.format(image.shape, segmentation.shape))
-    #[mask_image_percentile(image, segmentation, 100, a) for a in (2, 2, 2)] #3 masked images, 1 for each axis. changed to use the "actual" image on each channel, cuts lack appropriate resolution
-    return multicut_1axis_mask(image, segmentation, axis=2)
+    return [mask_image_percentile(image, segmentation, 100, a) for a in (0, 1, 2)] #3 masked images, 1 for each axis. changed to use the "actual" image on each channel, cuts lack appropriate resolution
+    #return multicut_1axis_mask(image, segmentation, axis=2)
 
 def mask_image_percentile(image, segmentation, percentile=100, axis=2):
+    if image.ndim == 4:
+        print("4dim")
+        image = image[0]
+
     plane = calculate_percentile_slice(segmentation, percentile, axis) #find largest slice
     image, segmentation = select_slice(image, segmentation, plane, axis) #select the largest slide
 
@@ -373,6 +377,7 @@ def mask_image_percentile(image, segmentation, percentile=100, axis=2):
 def multicut_1axis_mask(image, segmentation, axis=2):
     plane1, plane2, plane3 = calculate_top3_slices(segmentation, axis) #find largest slice
     if image.ndim == 4:
+        print("4dim")
         image = image[0]
     
     image1, segmentation1 = select_slice(image, segmentation, plane1, axis) #select the largest slice

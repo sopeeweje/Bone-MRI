@@ -62,7 +62,7 @@ def test_model(model, train, validation, test):  # , holdout_test):
     test_binary_predictions = list(evaluate.transform_binary_predictions(test_results))
     # get f1 score
     test_f1_result = f1_score(test_labels, test_binary_predictions)
-    # holdout_f1_result = f1_score(holdout_test_labels, holdout_binary_predictions)
+    holdout_f1_result = f1_score(holdout_test_labels, holdout_binary_predictions)
 
     return {
         "train_accuracy": float(train_accuracy),
@@ -71,20 +71,20 @@ def test_model(model, train, validation, test):  # , holdout_test):
         "loss": float(loss),
         "test_accuracy": float(test_accuracy),
         "test_loss": float(test_loss),
-        # "holdout_test_accuracy": float(holdout_test_accuracy),
-        # "holdout_test_loss": float(holdout_test_loss),
+        "holdout_test_accuracy": float(holdout_test_accuracy),
+        "holdout_test_loss": float(holdout_test_loss),
         "holdout_test_accuracy": float(0),
         "holdout_test_loss": float(0),
         "probabilities": probabilities,
         "labels": labels,
         "test_probabilities": test_probabilities,
         "test_labels": test_labels,
-        # "holdout_test_probabilities": holdout_test_probabilities,
-        # "holdout_test_labels": holdout_test_labels,
+        "holdout_test_probabilities": holdout_test_probabilities,
+        "holdout_test_labels": holdout_test_labels,
         "holdout_test_probabilities": 'na',
         "holdout_test_labels": 'na',
         "test_f1_result": test_f1_result,
-        # "holdout_f1_result": holdout_f1_result,
+        "holdout_f1_result": holdout_f1_result,
         "holdout_f1_result": float(0),
     }
 
@@ -112,22 +112,22 @@ def xrun(fold, loaded_data, model, description, input_form, label_form="outcome"
         "{}-{}.h5".format(str(run_id), model.MODEL_NAME),
         ))
 
-    # fold_train, fold_validation, fold_test, fold_holdout_test = loaded_data
-    fold_train, fold_validation, fold_test = loaded_data
+    fold_train, fold_validation, fold_test, fold_holdout_test = loaded_data
+    # fold_train, fold_validation, fold_test = loaded_data
 
     fold_train.reset()
     fold_validation.reset()
     fold_test.reset()
-    # fold_holdout_test.reset()
+    fold_holdout_test.reset()
 
     train_data_stats = characterize_data(fold_train)
     validation_data_stats = characterize_data(fold_validation)
     test_data_stats = characterize_data(fold_test)
-    # holdout_test_data_stats = characterize_data(fold_holdout_test)
+    holdout_test_data_stats = characterize_data(fold_holdout_test)
 
     # testing of the data
-    # results = test_model(model_instance, fold_train, fold_validation, fold_test, fold_holdout_test)
-    results = test_model(model_instance, fold_train, fold_validation, fold_test)
+    results = test_model(model_instance, fold_train, fold_validation, fold_test, fold_holdout_test)
+    # results = test_model(model_instance, fold_train, fold_validation, fold_test)
     fold_train.reset()
     fold_validation.reset()
     fold_test.reset()
@@ -257,7 +257,7 @@ if __name__ == '__main__':
         "features": lambda f: f
         }
 
-    new_df = input_form_map["t2-t1"](f) #[~f.patient.isin(df_List)]
+    new_df = f #input_form_map["t2-t1"](f) #[~f.patient.isin(df_List)]
     y = new_df[FLAGS.label].values
 
     # set up the k-fold process
@@ -270,21 +270,24 @@ if __name__ == '__main__':
         # get the training and testing set for the fold
         X_train, testing = new_df.iloc[train_index], new_df.iloc[test_index]
         y_train, y_test = y[train_index], y[test_index]
+
         #append multiple lesions into training/validation
         #X_train = X_train.append(multiple, ignore_index=False)
         #y_train = numpy.concatenate((y_train, multiple_y))
 
         # split the training into training and validation
         training, validation, result_train, result_test = train_test_split(X_train, y_train, test_size=config.SPLIT_TRAINING_INTO_VALIDATION, stratify=y_train, random_state=int(split) % 2 ** 32)
+
         # get the data
-        # training_data, validation_data, testing_data, holdout_test_data = xdata(fold_number, training, validation, testing, holdout_test, split, input_form=FLAGS.form, label_form=FLAGS.label)
-        training_data, validation_data, testing_data = xdata(fold_number, training, validation, testing, split, input_form=FLAGS.form, label_form=FLAGS.label)
+        training_data, validation_data, testing_data, holdout_test_data = xdata(fold_number, training, validation, testing, holdout_test, split, input_form=FLAGS.form, label_form=FLAGS.label)
+        # training_data, validation_data, testing_data = xdata(fold_number, training, validation, testing, split, input_form=FLAGS.form, label_form=FLAGS.label)
+
         # run the training, each trial
         for _ in range(FLAGS.trials):
             # in each trial, run for each hyperparameter combination
             for hyperparameters in parameters:
-                # xrun(fold_number, (training_data, validation_data, testing_data, holdout_test_data), model, FLAGS.description, FLAGS.form, FLAGS.label, split, hyperparameters=hyperparameters)
-                xrun(fold_number, (training_data, validation_data, testing_data), model,
+                xrun(fold_number, (training_data, validation_data, testing_data, holdout_test_data), model, FLAGS.description, FLAGS.form, FLAGS.label, split, hyperparameters=hyperparameters)
+                # xrun(fold_number, (training_data, validation_data, testing_data), model,
                      FLAGS.description, FLAGS.form, FLAGS.label, split, hyperparameters=hyperparameters)
                 K.clear_session()
 

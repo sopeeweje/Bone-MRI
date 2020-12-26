@@ -172,7 +172,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
-    #features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_3", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")
     #features_run("outcome_neg", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")

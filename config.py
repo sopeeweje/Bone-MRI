@@ -10,9 +10,9 @@ class Config(object):
     IMAGE_SIZE = 200
 
     TRIALS = 1
-    BATCH_SIZE = 16
-    EPOCHS = 500
-    PATIENCE = 100
+    BATCH_SIZE = 4
+    EPOCHS = 200
+    PATIENCE = 200
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
     OUTCOME_BIAS = "pos"
@@ -25,12 +25,12 @@ class Config(object):
     SECRET = "example secret key"
     LOG_LEVEL = logging.DEBUG
 
-    RAW_NRRD_ROOT = "/Volumes/external/bone_raw" #"bone_raw/"
-    RAW_FEATURES = "/Volumes/external/bone_features.csv" #"bone_features.csv"
+    RAW_NRRD_ROOT = "bone_raw/"
+    RAW_FEATURES = "bone_features.csv"
     #SEQ_AVAIL = "sequence_summary.csv" #which patients have which sequences
 
     DATA = "data_dir/"
-    PREPROCESSED_DIR = "/Volumes/external/preprocessed"#os.path.join(DATA, "preprocessed")
+    PREPROCESSED_DIR = os.path.join(DATA, "preprocessed")
     TRAIN_DIR = os.path.join(DATA, "train")
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")

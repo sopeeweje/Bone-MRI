@@ -11,6 +11,8 @@ from keras.layers.normalization import BatchNormalization
 from keras.regularizers import l1_l2
 import efficientnet.keras as efn
 import datetime as datetime
+from clr_callback import *
+from SMS_callback import SMS
 
 from config import config
 from data_gen import data, INPUT_FORM_PARAMETERS
@@ -45,7 +47,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
     #skip for now
     if parameters["t2"]:
         # init EffNet
-        convnet = efn.EfficientNetB3(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -60,7 +62,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
 
     if parameters["t1"]:
         # init EffNet
-        convnet = efn.EfficientNetB3(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -75,7 +77,7 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
         
     if parameters["t1c"]:
         # init EffNet
-        convnet = efn.EfficientNetB3(
+        convnet = efn.EfficientNetB0(
             weights="imagenet",
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
@@ -226,6 +228,11 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         verbose=1,
         mode='auto',
     )
+    # Cyclic learning rate
+    clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=8*76*2, mode='triangular') #mode='exp_range', gamma=0.99995) # mode='triangular')
+
+    sms = SMS("9107506884")
+
     # Train the model - fit_generator from keras
     history = model.fit_generator(
         training,
@@ -234,7 +241,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         validation_data=validation,
         validation_steps=math.ceil(validation.n / config.BATCH_SIZE),
         class_weight=class_weight(training),
-        callbacks=[checkpoint, early],
+        callbacks=[checkpoint, early, clr, sms], #[checkpoint, early, sms] 
     )
     return history.history
 

@@ -10,3 +10,4 @@ features/
 .ipynb_checkpoints/
 data_dir/
 spreadsheets/
+.idea

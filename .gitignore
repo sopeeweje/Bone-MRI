@@ -9,3 +9,4 @@ features/
 .DS_Store
 .ipynb_checkpoints/
 data_dir/
+spreadsheets/

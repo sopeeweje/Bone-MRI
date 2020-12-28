@@ -35,6 +35,7 @@ nteract-scrapbook = "*"
 tqdm = "*"
 ipython = "*"
 typing = "*"
+h5py = {version = "<3.0.0"}
 
 [dev-packages]
 

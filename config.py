@@ -10,8 +10,8 @@ class Config(object):
     IMAGE_SIZE = 200
 
     TRIALS = 1
-    BATCH_SIZE = 4
-    EPOCHS = 200
+    BATCH_SIZE = 64
+    EPOCHS = 1
     PATIENCE = 200
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1

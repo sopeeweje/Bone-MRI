@@ -15,7 +15,6 @@ import nrrd
 import glob
 import argparse
 import random
-#from PIL import Image
 import csv
 from shutil import rmtree
 from collections import defaultdict
@@ -30,6 +29,7 @@ import evaluate
 from models import models
 import json
 from keras import backend as K
+from PIL import Image
 
 from filenames import IMAGE, SEGMENTATION, T1, T2, T1C
 
@@ -69,8 +69,8 @@ def largest_slice(image, segmentation, percentile=100, axis=2):
     sum_on_plane = image.sum(i).sum(j)
     largest_plane = np.argmax(sum_on_plane) #find largest slice
     image = select_slice(image, largest_plane, axis) #select the largest slide
-    #image = np.array(Image.fromarray(image).resize((config.IMAGE_SIZE, config.IMAGE_SIZE)))
-    image = resize(image, (config.IMAGE_SIZE, config.IMAGE_SIZE)) #resize
+    image = np.array(Image.fromarray(image).resize((config.IMAGE_SIZE, config.IMAGE_SIZE)))
+    #image = resize(image, (config.IMAGE_SIZE, config.IMAGE_SIZE)) #resize
     return image
 
 def generate_from_features(df, source="/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/pretraining/"):

@@ -1,6 +1,6 @@
 import numpy as np
-#from PIL import Image
-from scipy.misc import imresize
+from PIL import Image
+#from scipy.misc import imresize
 
 
 axis_sum = {
@@ -82,8 +82,8 @@ def crop(image, segmentation, bounds):
     return cropped_image, cropped_segmentation
 
 def resize(image, size):
-    #return np.array(Image.fromarray(image).resize(size))
-    return imresize(image, size, interp="bilinear")
+    return np.array(Image.fromarray(image).resize(size))
+    #return imresize(image, size, interp="bilinear")
 
 def calculate_length(vector):
     out = 0

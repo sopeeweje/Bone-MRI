@@ -15,7 +15,7 @@ import nrrd
 import glob
 import argparse
 import random
-from PIL import Image
+#from PIL import Image
 import csv
 from shutil import rmtree
 from collections import defaultdict
@@ -25,7 +25,6 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from segmentation import resize 
 from config import config
-from PIL import Image
 from uuid import uuid4, UUID
 import evaluate
 from models import models

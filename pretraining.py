@@ -58,7 +58,7 @@ def load_image(directory_path):
         all_images = [axial, coronal, sagittal]
         return [largest_slice(image, 100, 2) for image in all_images]
     else:
-        image, _ = nrrd.read("{}/volume.nrrd".format(directory_path)) #import image nrrd
+        image, _ = nrrd.read("{}volume.nrrd".format(directory_path)) #import image nrrd
         return [largest_slice(image, 100, a) for a in (0, 1, 2)]
 
 def largest_slice(image, segmentation, percentile=100, axis=2):

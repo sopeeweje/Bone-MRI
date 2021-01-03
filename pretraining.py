@@ -30,6 +30,7 @@ from models import models
 import json
 from keras import backend as K
 from PIL import Image
+import cv2
 
 from filenames import IMAGE, SEGMENTATION, T1, T2, T1C
 
@@ -61,7 +62,7 @@ def load_image(directory_path):
         image, _ = nrrd.read("{}/volume.nrrd".format(directory_path)) #import image nrrd
         return [largest_slice(image, 100, a) for a in (0, 1, 2)]
 
-def largest_slice(image, segmentation, percentile=100, axis=2):
+def largest_slice(image, percentile=100, axis=2):
     if image.ndim == 4:
         print("4dim")
         image = image[0]
@@ -69,7 +70,8 @@ def largest_slice(image, segmentation, percentile=100, axis=2):
     sum_on_plane = image.sum(i).sum(j)
     largest_plane = np.argmax(sum_on_plane) #find largest slice
     image = select_slice(image, largest_plane, axis) #select the largest slide
-    image = np.array(Image.fromarray(image).resize((config.IMAGE_SIZE, config.IMAGE_SIZE)))
+    #image = np.array(Image.fromarray(image, mode="I;16").resize((config.IMAGE_SIZE, config.IMAGE_SIZE)))
+    image = cv2.resize(image, (config.IMAGE_SIZE, config.IMAGE_SIZE))
     #image = resize(image, (config.IMAGE_SIZE, config.IMAGE_SIZE)) #resize
     return image
 

@@ -73,7 +73,7 @@ def largest_slice(image, segmentation, percentile=100, axis=2):
     #image = resize(image, (config.IMAGE_SIZE, config.IMAGE_SIZE)) #resize
     return image
 
-def generate_from_features(df, source="/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/pretraining/"):
+def generate_from_features(df, source="data_dir/pretraining/"):
     for index, row in tqdm(df.iterrows(), total=len(df)): #for each patient
         label = row["outcome"]
         name = row["patientID"]
@@ -205,7 +205,7 @@ validation_generator = Dataset(
         )
 
 # Load hyperparameters
-with open("/Users/Sope/Documents/GitHub/Bone-MRI/hyperparameters.json") as f:
+with open("hyperparameters.json") as f:
     parameters = json.load(f)
     parameters = explode_parameters(parameters)
 

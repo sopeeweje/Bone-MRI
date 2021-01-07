@@ -52,8 +52,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
         )
-        for layer in convnet.layers:
-            layer.name = "{}_t2".format(layer.name)
+#        for layer in convnet.layers:
+#            rename(convnet, layer, "{}_t2".format(layer.name))
         apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
         out = convnet.output
         out = Flatten()(out)
@@ -67,8 +67,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
         )
-        for layer in convnet.layers:
-            layer.name = "{}_t1".format(layer.name)
+#        for layer in convnet.layers:
+#            rename(convnet, layer, "{}_t1".format(layer.name))
         apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
         out = convnet.output
         out = Flatten()(out)
@@ -82,8 +82,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
         )
-        for layer in convnet.layers:
-            layer.name = "{}_t1c".format(layer.name)
+#        for layer in convnet.layers:
+#            rename(convnet, layer, "{}_t1c".format(layer.name))
         apply_layer_freeze(convnet, CONVNET_FREEZE_PERCENT)
         out = convnet.output
         out = Flatten()(out)
@@ -231,17 +231,17 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
     # Cyclic learning rate
     clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=8*76*2, mode='triangular') #mode='exp_range', gamma=0.99995) # mode='triangular')
 
-    sms = SMS("9107506884")
+    # sms = SMS("9107506884")
 
     # Train the model - fit_generator from keras
-    history = model.fit_generator(
+    history = model.fit( #changed from fit_generator
         training,
         steps_per_epoch=training.n / config.BATCH_SIZE,
         epochs=config.EPOCHS,
         validation_data=validation,
         validation_steps=math.ceil(validation.n / config.BATCH_SIZE),
         class_weight=class_weight(training),
-        callbacks=[checkpoint, early, clr, sms], #[checkpoint, early, sms] 
+        callbacks=[checkpoint, early], #[checkpoint, early, sms] 
     )
     return history.history
 

@@ -57,14 +57,14 @@ def preprocess_pack(ref_img, ref_seg, image, segmentation, use_n4_bias=False, us
 
 def run(files, out, use_n4_bias=False, use_registration=False):
     f = pandas.read_pickle(files)
-    t1_ref_img, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1/imagingVolume.nrrd")
-    t1_ref_seg, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1/segMask_tumor.nrrd")
+    t1_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1-imagingVolume.nrrd")
+    t1_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1-imagingVolume.nrrd")
     
-    t1c_ref_img, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1c/imagingVolume.nrrd")
-    t1c_ref_seg, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t1c/segMask_tumor.nrrd")
+    t1c_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1c-imagingVolume.nrrd")
+    t1c_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1c-imagingVolume.nrrd")
     
-    t2_ref_img, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t2/imagingVolume.nrrd")
-    t2_ref_seg, _ = nrrd.read("/Volumes/external/bone_raw/CHOP/bone-penn-332/t2/segMask_tumor.nrrd")
+    t2_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t2-imagingVolume.nrrd")
+    t2_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t2-imagingVolume.nrrd")
     
     for index, row in f.iterrows():
         print("working on {} {}".format(index, "-" * 40))

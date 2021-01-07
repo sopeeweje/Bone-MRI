@@ -109,7 +109,7 @@ def all_features(files=["./features.csv"], id_name="patientID"):
         combined[i] = c
     return combined
 
-def get_all_nrrds(folder="/Volumes/external/bone_master/bone_raw"):
+def get_all_nrrds(folder="/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/bone_brown&china/"):
     """
     Param:
         Folder with all raw data (specifically raw NRRDs)

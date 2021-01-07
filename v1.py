@@ -39,8 +39,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
         )
-        for layer in convnet.layers:
-            layer.name = "{}_t2".format(layer.name)
+        #for layer in convnet.layers:
+        #    layer.name = "{}_t2".format(layer.name)
         out = convnet.output
         out = Flatten()(out)
         inputs.append(convnet.input)
@@ -53,8 +53,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
         )
-        for layer in convnet.layers:
-            layer.name = "{}_t1".format(layer.name)
+        #for layer in convnet.layers:
+        #    layer.name = "{}_t1".format(layer.name)
         out = convnet.output
         out = Flatten()(out)
         inputs.append(convnet.input)
@@ -67,8 +67,8 @@ def model(input_form="all", aux_size=0, hyperparameters=dict()):
             include_top=False,
             input_shape=(config.IMAGE_SIZE, config.IMAGE_SIZE, 3),
         )
-        for layer in convnet.layers:
-            layer.name = "{}_t1c".format(layer.name)
+        #for layer in convnet.layers:
+        #    layer.name = "{}_t1c".format(layer.name)
         out = convnet.output
         out = Flatten()(out)
         inputs.append(convnet.input)

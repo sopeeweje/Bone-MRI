@@ -372,6 +372,7 @@ def mask_image_percentile(image, segmentation, percentile=100, axis=2):
     masked = image * segmentation #mask everything in image except what was segmented
     masked = resize(masked, (config.IMAGE_SIZE, config.IMAGE_SIZE)) #resize to desired image size
     #plt.imsave("data_gen_images/" + str(uuid.uuid4()) + ".png", masked)
+    print(np.isnan(masked).any())
     return masked
 
 def multicut_1axis_mask(image, segmentation, axis=2):

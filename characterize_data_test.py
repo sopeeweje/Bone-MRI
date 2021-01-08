@@ -11,6 +11,7 @@ import uuid
 import json
 
 def default(o):
+    if isinstance(o, numpy.int64): return int(o)
     if isinstance(o, numpy.int32): return int(o)
     if isinstance(o, numpy.float64): return float(o)
     if isinstance(o, numpy.float32): return float(o)
@@ -19,7 +20,7 @@ def default(o):
 def characterize_data(data):
     unique, counts = numpy.unique(data.classes, return_counts=True)
     index_to_count = dict(zip(unique, counts))
-    characterization = { c: index_to_count[data.class_indices[c]] for c in data.class_indices }
+    characterization = { int(c): index_to_count[data.class_indices[c]] for c in data.class_indices }
     return characterization
 
 train, validation, test = data(uuid.uuid4(), label_form="outcome_pos")

@@ -25,4 +25,5 @@ def characterize_data(data):
 
 train, validation, test = data(uuid.uuid4(), label_form="outcome_pos")
 train_data_stats = characterize_data(train)
+print(train_data_stats)
 train_data_stats_test = json.dumps(train_data_stats, default=default)

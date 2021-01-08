@@ -60,7 +60,7 @@ def test_model(model, train, validation, test, label_form):
 def characterize_data(data):
     unique, counts = np.unique(data.classes, return_counts=True)
     index_to_count = dict(zip(unique, counts))
-    characterization = { c: index_to_count[data.class_indices[c]] for c in data.class_indices }
+    characterization = { int(c): index_to_count[data.class_indices[c]] for c in data.class_indices }
     return characterization
 
 def run(model, description, input_form, label_form="outcome", split_id=None, loaded_data=None, hyperparameters=dict()):

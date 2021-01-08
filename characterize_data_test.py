@@ -11,7 +11,6 @@ import uuid
 import json
 
 def default(o):
-    if isinstance(o, numpy.int64): return int(o)
     if isinstance(o, numpy.int32): return int(o)
     if isinstance(o, numpy.float64): return float(o)
     if isinstance(o, numpy.float32): return float(o)

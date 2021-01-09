@@ -237,7 +237,7 @@ if __name__ == '__main__':
     y = new_df[FLAGS.label].values
 
     # set up the k-fold process
-    skf = StratifiedKFold(n_splits=config.NUMBER_OF_FOLDS, random_state=int(split) % 2 ** 32)
+    skf = StratifiedKFold(n_splits=config.NUMBER_OF_FOLDS, shuffle=True, random_state=int(split) % 2 ** 32)
 
     # get the folds and loop over each fold
     fold_number = 0

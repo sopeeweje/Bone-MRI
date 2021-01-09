@@ -256,7 +256,7 @@ def run(run_id=None, mode='normal', loaded_data=None, split_id=None, input_form=
     if mode == 'normal':
         if loaded_data is None:
             # create the data objects
-            training, validation, test = data(split_id, input_form=input_form, label_form=label_form)
+            training, validation, test, _ = data(split_id, input_form=input_form, label_form=label_form)
         else:
             training, validation, test = loaded_data
         model_instance = model(input_form, aux_size=training.features_size, hyperparameters=hyperparameters)
@@ -264,8 +264,8 @@ def run(run_id=None, mode='normal', loaded_data=None, split_id=None, input_form=
         return train(model_instance, training, validation, run_id, 'val_loss', hyperparameters=hyperparameters)
     
     elif mode == 'cross':
-        # training, validation, test, holdout_test = loaded_data
-        training, validation, test = loaded_data
+        training, validation, test, holdout_test = loaded_data
+        # training, validation, test = loaded_data
         model_instance = model(input_form, aux_size=training.features_size, hyperparameters=hyperparameters)
         return train(model_instance, training, validation, run_id, 'val_loss', hyperparameters=hyperparameters)
 

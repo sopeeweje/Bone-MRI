@@ -573,7 +573,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     print("")
     print("Testing points = " + str(len(test)))
     print("Benign: " + str(len(test[test[label_form] == 0])) + ", Malignant: " + str(len(test[test[label_form] == 1])))
-    print("External points = " + str(len(test)))
+    print("External points = " + str(len(external)))
     print("Benign: " + str(len(external[external[label_form] == 0])) + ", Malignant: " + str(len(external[external[label_form] == 1])))
     
     #CSV format:

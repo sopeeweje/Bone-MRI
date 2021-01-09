@@ -20,44 +20,44 @@ def analyze_averages(parameters, description, model, input_form, split):
         averaged_test_f1 = db.session.query(func.avg(XResult.holdout_f1_result)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
         averaged_test_accuracy = db.session.query(func.avg(XResult.test_accuracy)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
         averaged_test_loss = db.session.query(func.avg(XResult.test_loss)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
-        # averaged_holdout_f1 = db.session.query(func.avg(XResult.holdout_f1_result)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
-        # averaged_holdout_accuracy = db.session.query(func.avg(XResult.holdout_test_accuracy)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
-        # averaged_holdout_loss = db.session.query(func.avg(XResult.holdout_test_loss)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
+        averaged_holdout_f1 = db.session.query(func.avg(XResult.holdout_f1_result)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
+        averaged_holdout_accuracy = db.session.query(func.avg(XResult.holdout_test_accuracy)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
+        averaged_holdout_loss = db.session.query(func.avg(XResult.holdout_test_loss)).filter(XResult.description == description, XResult.hyperparameters == json_hyperparameter, XResult.input_form == input_form, XResult.split == split).scalar()
 
         # Ensembling the k-fold models by minimum loss
-        # min_loss_f1, min_loss_accuracy, min_loss_test_acc, min_loss_test_loss = ensemble_folds(json_hyperparameter, description, "min", input_form)
+        min_loss_f1, min_loss_accuracy, min_loss_test_acc, min_loss_test_loss = ensemble_folds(json_hyperparameter, description, "min", input_form)
         # Ensembling the k-fold models by maximum accuracy
-        # max_acc_f1, max_acc_accuracy, max_acc_test_acc, max_acc_test_loss = ensemble_folds(json_hyperparameter, description, "max", input_form)
+        max_acc_f1, max_acc_accuracy, max_acc_test_acc, max_acc_test_loss = ensemble_folds(json_hyperparameter, description, "max", input_form)
 
         # save it all
         result = CalculatedResult(
             str(split),
             model,
-            # min_loss_f1,
-            float(0),
-            # min_loss_accuracy,
-            float(0),
-            # min_loss_test_acc,
-            float(0),
-            # min_loss_test_loss,
-            float(0),
-            # max_acc_f1,
-            float(0),
-            # max_acc_accuracy,
-            float(0),
-            # max_acc_test_acc,
-            float(0),
-            # max_acc_test_loss,
-            float(0),
+            min_loss_f1,
+            # float(0),
+            min_loss_accuracy,
+            # float(0),
+            min_loss_test_acc,
+            # float(0),
+            min_loss_test_loss,
+            # float(0),
+            max_acc_f1,
+            # float(0),
+            max_acc_accuracy,
+            # float(0),
+            max_acc_test_acc,
+            # float(0),
+            max_acc_test_loss,
+            # float(0),
             averaged_test_f1,
             averaged_test_accuracy,
             averaged_test_loss,
-            # averaged_holdout_f1,
-            float(0),
-            # averaged_holdout_accuracy,
-            float(0),
-            # averaged_holdout_loss,
-            float(0),
+            averaged_holdout_f1,
+            # float(0),
+            averaged_holdout_accuracy,
+            # float(0),
+            averaged_holdout_loss,
+            # float(0),
             hyperparameter,
             description,
             input_form

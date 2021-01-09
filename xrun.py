@@ -26,17 +26,17 @@ from sklearn.metrics import f1_score
 import xanalyze
 
 
-def test_model(model, train, validation, test):  # , holdout_test):
+def test_model(model, train, validation, test, holdout_test):
 
     train_loss, train_accuracy = model.evaluate_generator(train, steps=math.ceil(len(train) / config.BATCH_SIZE))
     loss, accuracy = model.evaluate_generator(validation, steps=math.ceil(len(validation)/config.BATCH_SIZE))
     test_loss, test_accuracy = model.evaluate_generator(test, steps=math.ceil(len(test)/config.BATCH_SIZE))
-    # holdout_test_loss, holdout_test_accuracy = model.evaluate_generator(holdout_test, steps=math.ceil(len(holdout_test)/config.BATCH_SIZE))
+    holdout_test_loss, holdout_test_accuracy = model.evaluate_generator(holdout_test, steps=math.ceil(len(holdout_test)/config.BATCH_SIZE))
 
     train.reset()
     validation.reset()
     test.reset()
-    # holdout_test.reset()
+    holdout_test.reset()
 
     # labels - ground truths
     # results - predicted results from model
@@ -48,17 +48,17 @@ def test_model(model, train, validation, test):  # , holdout_test):
     test_probabilities = list(evaluate.transform_binary_probabilities(test_results))
     test_labels = list(evaluate.get_labels(test))
 
-    # holdout_test_results = evaluate.get_results(model, holdout_test)
-    # holdout_test_probabilities = list(evaluate.transform_binary_probabilities(holdout_test_results))
-    # holdout_test_labels = list(evaluate.get_labels(holdout_test))
+    holdout_test_results = evaluate.get_results(model, holdout_test)
+    holdout_test_probabilities = list(evaluate.transform_binary_probabilities(holdout_test_results))
+    holdout_test_labels = list(evaluate.get_labels(holdout_test))
 
     train.reset()
     validation.reset()
     test.reset()
-    # holdout_test.reset()
+    holdout_test.reset()
 
     # get binary predictions
-    # holdout_binary_predictions = list(evaluate.transform_binary_predictions(holdout_test_results))
+    holdout_binary_predictions = list(evaluate.transform_binary_predictions(holdout_test_results))
     test_binary_predictions = list(evaluate.transform_binary_predictions(test_results))
     # get f1 score
     test_f1_result = f1_score(test_labels, test_binary_predictions)
@@ -73,19 +73,19 @@ def test_model(model, train, validation, test):  # , holdout_test):
         "test_loss": float(test_loss),
         "holdout_test_accuracy": float(holdout_test_accuracy),
         "holdout_test_loss": float(holdout_test_loss),
-        "holdout_test_accuracy": float(0),
-        "holdout_test_loss": float(0),
+        #"holdout_test_accuracy": float(0),
+        #"holdout_test_loss": float(0),
         "probabilities": probabilities,
         "labels": labels,
         "test_probabilities": test_probabilities,
         "test_labels": test_labels,
         "holdout_test_probabilities": holdout_test_probabilities,
         "holdout_test_labels": holdout_test_labels,
-        "holdout_test_probabilities": 'na',
-        "holdout_test_labels": 'na',
+        #"holdout_test_probabilities": 'na',
+        #"holdout_test_labels": 'na',
         "test_f1_result": test_f1_result,
         "holdout_f1_result": holdout_f1_result,
-        "holdout_f1_result": float(0),
+        #"holdout_f1_result": float(0),
     }
 
 def characterize_data(data):
@@ -131,7 +131,7 @@ def xrun(fold, loaded_data, model, description, input_form, label_form="outcome"
     fold_train.reset()
     fold_validation.reset()
     fold_test.reset()
-    # fold_holdout_test.reset()
+    fold_holdout_test.reset()
 
     holdout_test_data_stats = 'na'
 
@@ -230,34 +230,10 @@ if __name__ == '__main__':
     #df_List = list(put_In_Training['ID'])
     #multiple = f[f['patient'].isin(df_List)]
     #multiple_y = multiple[FLAGS.label].values
-    available = {}
-    with open(config.SEQ_AVAIL) as seq_avail:
-        reader = csv.reader(seq_avail)
-        headers = next(reader, None)
-        for h in headers:
-            available[h] = []
-        for row in reader:
-            available['pd'].append(row[1])
-            available['t1'].append(row[2])
-            available['t1c'].append(row[3])
-            available['t2'].append(row[4])
-            available['t2-t1'].append(row[5])
-            available['t2-t1c'].append(row[6])
-
-    input_form_map = {
-        "all": lambda f: f[f.index.isin(available['t1']).isin(available['t2']).isin(available['t1c'])],
-        "t1": lambda f: f[f.index.isin(available['t1'])],
-        "t2": lambda f: f[f.index.isin(available['t2'])],
-        "t1c": lambda f: f[f.index.isin(available['t1c'])],
-        "t2-t1": lambda f: f[f.index.isin(available['t2-t1'])],
-        "t1c-t2": lambda f: f[f.index.isin(available['t1c']) & f.index.isin(available['t2'])],
-        "t1-features": lambda f: f[f.index.isin(available['t1'])],
-        "t2-features": lambda f: f[f.index.isin(available['t2'])],
-        "t1c-features": lambda f: f[f.index.isin(available['t1c'])],
-        "features": lambda f: f
-        }
 
     new_df = f #input_form_map["t2-t1"](f) #[~f.patient.isin(df_List)]
+    holdout_test = new_df[new_df["sort"] == "external"]
+    new_df = new_df[new_df["sort"] != "external"]
     y = new_df[FLAGS.label].values
 
     # set up the k-fold process
@@ -287,8 +263,7 @@ if __name__ == '__main__':
             # in each trial, run for each hyperparameter combination
             for hyperparameters in parameters:
                 xrun(fold_number, (training_data, validation_data, testing_data, holdout_test_data), model, FLAGS.description, FLAGS.form, FLAGS.label, split, hyperparameters=hyperparameters)
-                # xrun(fold_number, (training_data, validation_data, testing_data), model,
-                     FLAGS.description, FLAGS.form, FLAGS.label, split, hyperparameters=hyperparameters)
+                # xrun(fold_number, (training_data, validation_data, testing_data), model, FLAGS.description, FLAGS.form, FLAGS.label, split, hyperparameters=hyperparameters)
                 K.clear_session()
 
     # independent testing across trials * folds

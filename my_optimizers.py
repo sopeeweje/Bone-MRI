@@ -13,8 +13,7 @@ OPTIMIZERS = {
     "sgd-e6-0.9-nesterov": lambda: optimizers.SGD(lr=1e-6, momentum=0.9, nesterov=True),
     "sgd-01-0.9-expdecay": lambda: optimizers.SGD(lr=0.01, momentum=0.9, decay=0.01/500),
     "adam": lambda: "adam",
-    "nadam": lambda: "nadam",
-    "clr": lambda: clr
+    "nadam": lambda: "nadam"
 }
 
 def step_decay(epoch):

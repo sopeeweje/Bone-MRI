@@ -501,6 +501,12 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
         "validation": validation_fraction,
         "test": test_fraction,
     }
+    
+    # external sort
+    all_external = list()
+    external = f[f["sort"] == "external"] #all patients pre-assigned to training 
+    all_external.append(external)
+    remaining = remaining.drop(external.index)
 
     # calculate goal numbers for train/validation/test by label properties
     labels = f[label_form].unique() # 1 (malignant) or 0 (benign)
@@ -557,15 +563,18 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     train = pandas.concat(all_train)
     validation = pandas.concat(all_validation)
     test = pandas.concat(all_test)
+    external = pandas.concat(all_external)
 
     print("Training points = " + str(len(train)))
-    print("Benign: " + str(len(train[train[label_form] == 0])) + ", Intermediate: " + str(len(train[train[label_form] == 1])) + ", Malignant: " + str(len(train[train[label_form] == 2])))
+    print("Benign: " + str(len(train[train[label_form] == 0])) + ", Malignant: " + str(len(train[train[label_form] == 1])))
     print("")
     print("Validation points = " + str(len(validation)))
-    print("Benign: " + str(len(validation[validation[label_form] == 0])) + ", Intermediate: " + str(len(validation[validation[label_form] == 1])) + ", Malignant: " + str(len(validation[validation[label_form] == 2])))
+    print("Benign: " + str(len(validation[validation[label_form] == 0])) + ", Malignant: " + str(len(validation[validation[label_form] == 1])))
     print("")
     print("Testing points = " + str(len(test)))
-    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Intermediate: " + str(len(test[test[label_form] == 1])) + ", Malignant: " + str(len(test[test[label_form] == 2])))
+    print("Benign: " + str(len(test[test[label_form] == 0])) + ", Malignant: " + str(len(test[test[label_form] == 1])))
+    print("External points = " + str(len(test)))
+    print("Benign: " + str(len(external[external[label_form] == 0])) + ", Malignant: " + str(len(external[external[label_form] == 1])))
     
     #CSV format:
     #[[patientID	, outcome_pos, outcome_neg, outcome_3, age, sex, location, sort]
@@ -575,8 +584,8 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     train.to_csv(os.path.join(config.TRAIN_DIR, "{}-train.csv".format(str(seed))))
     validation.to_csv(os.path.join(config.VALIDATION_DIR, "{}-validation.csv".format(str(seed))))
     test.to_csv(os.path.join(config.TEST_DIR, "{}-test.csv".format(str(seed))))
-
-    return train, validation, test #return dataframes
+    external.to_csv(os.path.join(config.EXTERNAL_DIR, "{}-external.csv".format(str(seed))))
+    return train, validation, test, external #return dataframes
 
 def relist(l):
     l = list(l)
@@ -599,21 +608,20 @@ def data(seed=None,
         ):
     
     #sort which points go into which dataset
-    train, validation, test = sort(validation_split, test_split, seed, label_form, input_form)
+    train, validation, test, external = sort(validation_split, test_split, seed, label_form, input_form)
     
     #generate images, features, labels, and name (patientIDs). relist makes list of yielded values
     train_images, train_features, train_labels, train_names = relist(generate_from_features(train, input_form=input_form, label_form=label_form, verbose=verbose))
     validation_images, validation_features, validation_labels, validation_names = relist(generate_from_features(validation, input_form=input_form, label_form=label_form, verbose=verbose))
     test_images, test_features, test_labels, test_names = relist(generate_from_features(test, input_form=input_form, label_form=label_form, verbose=verbose))
-
+    external_images, external_features, external_labels, external_names = relist(generate_from_features(external, input_form=input_form, label_form=label_form, verbose=verbose))
+    
     train_features = relist(train_features)
     validation_features = relist(validation_features)
     test_features = relist(test_features)
+    external_features = relist(external_features)
 
     three = (label_form == "outcome_3")
-    print(len(train_images))
-    print(len(test_images))
-    print(len(validation_images))
     train_generator = Dataset(
             train_images,
             train_features,
@@ -647,7 +655,18 @@ def data(seed=None,
             seed=seed,
             three=three
         )
-    return train_generator, validation_generator, test_generator
+    external_generator = Dataset(
+            external_images,
+            external_features,
+            external_labels,
+            external_names,
+            augment=test_augment,
+            shuffle=test_shuffle,
+            input_form=input_form,
+            seed=seed,
+            three=three
+        )
+    return train_generator, validation_generator, test_generator, external_generator
 
 def load_from_features(
         features,

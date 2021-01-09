@@ -77,7 +77,7 @@ def run(model, description, input_form, label_form="outcome", split_id=None, loa
         ))
 
     if loaded_data is None:
-        train, validation, test = data(split_id, input_form=input_form, label_form=label_form)
+        train, validation, test, _ = data(split_id, input_form=input_form, label_form=label_form)
     else:
         train, validation, test = loaded_data
         train.reset()
@@ -172,7 +172,7 @@ if __name__ == '__main__':
         split = uuid4()
     else:
         split = UUID(split)
-    training, validation, test = data(split, input_form=FLAGS.form, label_form=FLAGS.label)
+    training, validation, test, _ = data(split, input_form=FLAGS.form, label_form=FLAGS.label)
     for _ in range(FLAGS.trials):
         for hyperparameters in parameters:
             run(model, FLAGS.description, FLAGS.form, FLAGS.label, split, loaded_data=(training, validation, test), hyperparameters=hyperparameters)

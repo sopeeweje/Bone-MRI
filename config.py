@@ -34,6 +34,7 @@ class Config(object):
     TRAIN_DIR = os.path.join(DATA, "train")
     TEST_DIR = os.path.join(DATA, "test")
     VALIDATION_DIR = os.path.join(DATA, "validation")
+    EXTERNAL_DIR = os.path.join(DATA, "external")
     CROSSVAL_DIR = os.path.join(DATA, "crossval")
     FIGURES = "figures/"
 

@@ -11,7 +11,7 @@ class Config(object):
 
     TRIALS = 1
     BATCH_SIZE = 64
-    EPOCHS = 1
+    EPOCHS = 200
     PATIENCE = 100
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1

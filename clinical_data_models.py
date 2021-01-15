@@ -26,14 +26,13 @@ best_models = []
 
 def features_data(training_data, validation_data, testing_data, external_data):
     #get data from keras dataset generators
-    training_features = training_data.features
-    print(training_features)
+    training_features = training_data.features.strip('][').split(', ') 
     training_labels = training_data.labels
-    validation_features = validation_data.features
+    validation_features = validation_data.features.strip('][').split(', ') 
     validation_labels = validation_data.labels
-    testing_features = testing_data.features
+    testing_features = testing_data.features.strip('][').split(', ') 
     testing_labels = testing_data.labels
-    external_features = external_data.features
+    external_features = external_data.features.strip('][').split(', ') 
     external_labels = external_data.labels
     
     #lists for data to be given to logistic regression

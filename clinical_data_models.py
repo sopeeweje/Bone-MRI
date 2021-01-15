@@ -42,8 +42,8 @@ def features_data(training_data, validation_data, testing_data, external_data):
     val_labels = []
     test_set = []
     test_labels = []
-    external_set = []
-    external_labels = []
+    ext_set = []
+    ext_labels = []
 
 
     #create training data
@@ -87,15 +87,15 @@ def features_data(training_data, validation_data, testing_data, external_data):
         addition = [age, sex]
         for e in location:
             addition.append(e)
-        external_set.append(addition)
-        external_labels.append(external_labels[i])
+        ext_set.append(addition)
+        ext_labels.append(external_labels[i])
     
     train_set = preprocessing.scale(train_set)
     val_set = preprocessing.scale(val_set)
     test_set = preprocessing.scale(test_set)
-    external_set = preprocessing.scale(external_set)
+    ext_set = preprocessing.scale(ext_set)
     
-    return train_set, train_labels, val_set, val_labels, test_set, test_labels
+    return train_set, train_labels, val_set, val_labels, test_set, test_labels, ext_set, ext_labels
 
 def characterize_data(data):
     unique, counts = np.unique(data.classes, return_counts=True)

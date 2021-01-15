@@ -12,6 +12,7 @@ from keras.regularizers import l1_l2
 import efficientnet.keras as efn
 import datetime as datetime
 from clr_callback import *
+from clr import OneCycleLR
 from SMS_callback import SMS
 
 from config import config
@@ -231,6 +232,9 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
     # Cyclic learning rate
     clr = CyclicLR(base_lr=0.001, max_lr=0.01, step_size=8*11*2, mode='triangular') #mode='exp_range', gamma=0.99995) # mode='triangular')
 
+    # Superconvergence
+    superconv = OneCycleLR(num_samples=len(training), batch_size=config.BATCH_SIZE, max_lr=0.01)
+    
     # sms = SMS("9107506884")
 
     # Train the model - fit_generator from keras
@@ -241,7 +245,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         validation_data=validation,
         validation_steps=math.ceil(validation.n / config.BATCH_SIZE),
         class_weight=class_weight(training),
-        callbacks=[checkpoint, early, clr], #[checkpoint, early, sms] 
+        callbacks=[checkpoint, early, superconv], #[checkpoint, early, sms] 
     )
     return history.history
 

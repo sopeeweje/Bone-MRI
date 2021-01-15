@@ -142,6 +142,7 @@ def stacked_data(
         tf = training_fixed[result.input_form]
         v = validation[result.input_form]
         te = test[result.input_form]
+        ex = external[result.input_form]
         if result.input_form != "features":
             train_predictions.append(model.predict_generator(t, steps=epochs).flatten())
             train_fixed_predictions.append(model.predict_generator(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())

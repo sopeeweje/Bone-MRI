@@ -94,7 +94,6 @@ def features_data(training_data, validation_data, testing_data, external_data):
     val_set = preprocessing.scale(val_set)
     test_set = preprocessing.scale(test_set)
     ext_set = preprocessing.scale(ext_set)
-    print(ext_set)
     
     return train_set, train_labels, val_set, val_labels, test_set, test_labels, ext_set, ext_labels
 

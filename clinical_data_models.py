@@ -26,13 +26,13 @@ best_models = []
 
 def features_data(training_data, validation_data, testing_data, external_data):
     #get data from keras dataset generators
-    training_features = training_data.features.strip('][').split(', ') 
+    training_features = training_data.features
     training_labels = training_data.labels
-    validation_features = validation_data.features.strip('][').split(', ') 
+    validation_features = validation_data.features
     validation_labels = validation_data.labels
-    testing_features = testing_data.features.strip('][').split(', ') 
+    testing_features = testing_data.features
     testing_labels = testing_data.labels
-    external_features = external_data.features.strip('][').split(', ') 
+    external_features = external_data.features
     external_labels = external_data.labels
     
     #lists for data to be given to logistic regression
@@ -50,7 +50,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(training_features)):
         age = training_features[i][0]
         sex = training_features[i][1]
-        location = training_features[i][2]
+        location = training_features[i][2].strip('][').split(', ') 
         addition = [age, sex]
         for e in location:
             addition.append(e)
@@ -61,7 +61,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(validation_features)):
         age = validation_features[i][0]
         sex = validation_features[i][1]
-        location = validation_features[i][2]
+        location = validation_features[i][2].strip('][').split(', ') 
         addition = [age, sex]
         for e in location:
             addition.append(e)
@@ -72,7 +72,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(testing_features)):
         age = testing_features[i][0]
         sex = testing_features[i][1]
-        location = testing_features[i][2]
+        location = testing_features[i][2].strip('][').split(', ') 
         addition = [age, sex]
         for e in location:
             addition.append(e)
@@ -83,7 +83,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(external_features)):
         age = external_features[i][0]
         sex = external_features[i][1]
-        location = external_features[i][2]
+        location = external_features[i][2].strip('][').split(', ') 
         addition = [age, sex]
         for e in location:
             addition.append(e)

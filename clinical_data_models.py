@@ -100,7 +100,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
 def characterize_data(data):
     unique, counts = np.unique(data.classes, return_counts=True)
     index_to_count = dict(zip(unique, counts))
-    characterization = { c: index_to_count[data.class_indices[c]] for c in data.class_indices }
+    characterization = { int(c): index_to_count[data.class_indices[c]] for c in data.class_indices }
     return characterization
 
 def features_run(label_form, classifier, split_id=None, model="n/a"):

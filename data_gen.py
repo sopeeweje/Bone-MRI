@@ -478,7 +478,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
 def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outcome", input_form="all"):
     f = pandas.read_pickle(config.FEATURES) #pickle with all training features for all available patients
     print(len(f))
-    f = f[f["patientID"] != "bone-penn-479"]
+    f.drop('bone-penn-479')
     print(len(f))
     train_fraction = 1 - validation_fraction - test_fraction #fraction of points going to training set
     

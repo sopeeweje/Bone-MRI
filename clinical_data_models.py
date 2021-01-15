@@ -90,6 +90,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
         ext_set.append(addition)
         ext_labels.append(external_labels[i])
     
+    print(train_set)
     train_set = preprocessing.scale(train_set)
     val_set = preprocessing.scale(val_set)
     test_set = preprocessing.scale(test_set)

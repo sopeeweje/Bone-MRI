@@ -479,7 +479,7 @@ def sort(validation_fraction=0.2, test_fraction=0.1, seed=None, label_form="outc
     f = pandas.read_pickle(config.FEATURES) #pickle with all training features for all available patients
     print(f)
     print(len(f))
-    f.drop('bone-penn-479')
+    f = f.drop('bone-penn-479')
     print(len(f))
     train_fraction = 1 - validation_fraction - test_fraction #fraction of points going to training set
     

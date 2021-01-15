@@ -27,6 +27,7 @@ best_models = []
 def features_data(training_data, validation_data, testing_data, external_data):
     #get data from keras dataset generators
     training_features = training_data.features
+    print(training_features)
     training_labels = training_data.labels
     validation_features = validation_data.features
     validation_labels = validation_data.labels
@@ -90,7 +91,6 @@ def features_data(training_data, validation_data, testing_data, external_data):
         ext_set.append(addition)
         ext_labels.append(external_labels[i])
     
-    print(train_set)
     train_set = preprocessing.scale(train_set)
     val_set = preprocessing.scale(val_set)
     test_set = preprocessing.scale(test_set)

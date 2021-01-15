@@ -78,7 +78,7 @@ def stacked_data(
     for result in results:
         if result.input_form in training:
             continue
-        t, v, te = data(
+        t, v, te, ex = data(
                 seed=UUID(result.split_uuid),
                 input_form=result.input_form,
                 label_form=result.label_form,
@@ -87,7 +87,7 @@ def stacked_data(
                 train_augment=True,
                 validation_augment=False,
             )
-        tf, _, _ = data(
+        tf, _, _, _ = data(
                 seed=UUID(result.split_uuid),
                 input_form=result.input_form,
                 label_form=result.label_form,
@@ -100,6 +100,7 @@ def stacked_data(
         training_fixed[result.input_form] = tf
         validation[result.input_form] = v
         test[result.input_form] = te
+        test[result.input_form] = ex
     # generate labels
     train_labels = list()
     training_fixed_labels = list()

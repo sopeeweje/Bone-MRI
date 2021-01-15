@@ -10,9 +10,6 @@ from sklearn.linear_model import LogisticRegression, SGDClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier, BaggingClassifier
 from tqdm import tqdm
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
 import numpy as np
 from db import db, Result
 from uuid import uuid4, UUID
@@ -27,7 +24,7 @@ best_acc = 0
 best_model = None
 best_models = []
 
-def features_data(training_data, validation_data, testing_data):
+def features_data(training_data, validation_data, testing_data, external_data):
     #get data from keras dataset generators
     training_features = training_data.features
     training_labels = training_data.labels
@@ -35,14 +32,19 @@ def features_data(training_data, validation_data, testing_data):
     validation_labels = validation_data.labels
     testing_features = testing_data.features
     testing_labels = testing_data.labels
+    external_features = external_data.features
+    external_labels = external_data.labels
     
-    #lists for data to be given to decision tree
+    #lists for data to be given to logistic regression
     train_set = []
     train_labels = []
     val_set = []
     val_labels = []
     test_set = []
     test_labels = []
+    external_set = []
+    external_labels = []
+
 
     #create training data
     for i in range(len(training_features)):
@@ -76,10 +78,22 @@ def features_data(training_data, validation_data, testing_data):
             addition.append(e)
         test_set.append(addition)
         test_labels.append(testing_labels[i])
+        
+    #create external data
+    for i in range(len(external_features)):
+        age = external_features[i][0]
+        sex = external_features[i][1]
+        location = external_features[i][2]
+        addition = [age, sex]
+        for e in location:
+            addition.append(e)
+        external_set.append(addition)
+        external_labels.append(external_labels[i])
     
     train_set = preprocessing.scale(train_set)
     val_set = preprocessing.scale(val_set)
     test_set = preprocessing.scale(test_set)
+    external_set = preprocessing.scale(external_set)
     
     return train_set, train_labels, val_set, val_labels, test_set, test_labels
 
@@ -96,7 +110,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         split_id = run_id 
     
     #create initial data
-    training_data, validation_data, testing_data = data(seed=split_id,
+    training_data, validation_data, testing_data, external_data = data(seed=split_id,
         input_form="features",
         label_form=label_form,
         train_shuffle=False,
@@ -110,7 +124,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         verbose=True,
         )
 
-    train_set, train_labels, val_set, val_labels, test_set, test_labels = features_data(training_data, validation_data, testing_data)
+    train_set, train_labels, val_set, val_labels, test_set, test_labels, external_set, external_labels = features_data(training_data, validation_data, testing_data, external_data)
     
     history = []
     best_acc = 0
@@ -172,7 +186,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
-    features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    #features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_3", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")
     #features_run("outcome_neg", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")

@@ -63,10 +63,12 @@ for hyperparameter in parameters:
 fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
 t1_df = pd.DataFrame.from_dict(t1)
 t1_df = t1_df.pivot_table( index='optimizer', columns='dropout', values='comparison' )
+print(t1_df)
 p1 = sns.heatmap(t1_df, ax=ax1)
 ax1.set_title('T1')
 
 t2_df = pd.DataFrame.from_dict(t2)
 t2_df = t2_df.pivot_table( index='optimizer', columns='dropout', values='comparison' )
+print(t2_df)
 p2 = sns.heatmap(t2_df, ax=ax2)
 ax2.set_title('T2')

@@ -74,6 +74,7 @@ def stacked_data(
     training_fixed = dict()
     validation = dict()
     test = dict()
+    external = dict()
     
     for result in results:
         if result.input_form in training:
@@ -100,16 +101,19 @@ def stacked_data(
         training_fixed[result.input_form] = tf
         validation[result.input_form] = v
         test[result.input_form] = te
-        test[result.input_form] = ex
+        external[result.input_form] = ex
+    
     # generate labels
     train_labels = list()
     training_fixed_labels = list()
     validation_labels = list()
     test_labels = list()
+    external_labels = list()
     first_training = list(training.values())[0]
     first_training_fixed = list(training_fixed.values())[0]
     first_validation = list(validation.values())[0]
     first_test = list(test.values())[0]
+    first_external = list(external.values())[0]
     for _ in range(epochs):
         train_labels += first_training.next()[1].tolist()
     for _ in range(math.ceil(len(first_validation)/config.BATCH_SIZE)):
@@ -118,15 +122,20 @@ def stacked_data(
         training_fixed_labels += first_training_fixed.next()[1].tolist()
     for _ in range(math.ceil(len(first_test)/config.BATCH_SIZE)):
         test_labels += first_test.next()[1].tolist()
+    for _ in range(math.ceil(len(first_external)/config.BATCH_SIZE)):
+        external_labels += first_external.next()[1].tolist()    
     first_training.reset()
     first_training_fixed.reset()
     first_validation.reset()
     first_test.reset()
+    first_external.reset()
+    
     # generate predictions
     train_predictions = list()
     train_fixed_predictions = list()
     validation_predictions = list()
     test_predictions = list()
+    external_predictions = list()
     for result in results:
         model = load(result)
         t = training[result.input_form]
@@ -138,19 +147,22 @@ def stacked_data(
             train_fixed_predictions.append(model.predict_generator(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())
             validation_predictions.append(model.predict_generator(v, steps=math.ceil(len(v)/config.BATCH_SIZE)).flatten())
             test_predictions.append(model.predict_generator(te, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
+            external_predictions.append(model.predict_generator(ex, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
             t.reset()
             tf.reset()
             v.reset()
             te.reset()
+            ex.reset()
             K.clear_session()
         else:
-            train_features, _, validation_features, _, test_features, _ = features_data(t,v,te)
+            train_features, _, validation_features, _, test_features, _, external_features, _ = features_data(t,v,te,ex)
             train_predictions.append(model.predict(train_features))
             train_fixed_predictions.append(model.predict(train_features))
             validation_predictions.append(model.predict(validation_features))
             test_predictions.append(model.predict(test_features))
+            external_predictions.append(model.predict(external_features))
         del model
-    return train_predictions, validation_predictions, test_predictions, train_labels, validation_labels, test_labels, train_fixed_predictions, training_fixed_labels
+    return train_predictions, validation_predictions, test_predictions, train_labels, validation_labels, test_labels, train_fixed_predictions, training_fixed_labels, external_predictions, external_labels
 
 def xstacked_data(
         uuids=[],

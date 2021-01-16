@@ -7,7 +7,7 @@ import logging
 
 
 class Config(object):
-    IMAGE_SIZE = 200
+    IMAGE_SIZE = 192
 
     TRIALS = 1
     BATCH_SIZE = 64

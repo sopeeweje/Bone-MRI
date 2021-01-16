@@ -230,7 +230,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         mode='auto',
     )
     # Cyclic learning rate
-    clr = CyclicLR(base_lr=0.001, max_lr=0.01, step_size=8*11*2, mode='triangular') #mode='exp_range', gamma=0.99995) # mode='triangular')
+    clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=8*11*2, mode='triangular') #mode='exp_range', gamma=0.99995) # mode='triangular')
 
     # Superconvergence
     superconv = OneCycleLR(num_samples=len(training), batch_size=config.BATCH_SIZE, max_lr=0.01)
@@ -245,7 +245,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         validation_data=validation,
         validation_steps=math.ceil(validation.n / config.BATCH_SIZE),
         class_weight=class_weight(training),
-        callbacks=[checkpoint, early], #[checkpoint, early, sms] 
+        callbacks=[checkpoint, early, clr], #[checkpoint, early, sms] 
     )
     return history.history
 

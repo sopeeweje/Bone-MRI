@@ -157,11 +157,11 @@ def stacked_data(
             K.clear_session()
         else:
             train_features, _, validation_features, _, test_features, _, external_features, _ = features_data(t,v,te,ex)
-            train_predictions.append(model.predict_proba(train_features))
-            train_fixed_predictions.append(model.predict_proba(train_features))
-            validation_predictions.append(model.predict_proba(validation_features))
-            test_predictions.append(model.predict_proba(test_features))
-            external_predictions.append(model.predict_proba(external_features))
+            train_predictions.append([i[1] for i in model.predict_proba(train_features)])
+            train_fixed_predictions.append([i[1] for i in model.predict_proba(train_features)])
+            validation_predictions.append([i[1] for i in model.predict_proba(validation_features)])
+            test_predictions.append([i[1] for i in model.predict_proba(test_features)])
+            external_predictions.append([i[1] for i in model.predict_proba(external_features)])
         del model
     return train_predictions, validation_predictions, test_predictions, train_labels, validation_labels, test_labels, train_fixed_predictions, training_fixed_labels, external_predictions, external_labels
 

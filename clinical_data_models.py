@@ -145,7 +145,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
             #model_best = clf
         history.append(score)
 
-    print(best_model.get_params())
+    print(best_model.coef_)
     #tree_plot = plt.figure(2)
     #tree.plot_tree(best_model)
     #tree_plot.savefig("/Volumes/external/featuremodel.png")

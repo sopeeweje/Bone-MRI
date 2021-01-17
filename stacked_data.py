@@ -144,11 +144,11 @@ def stacked_data(
         te = test[result.input_form]
         ex = external[result.input_form]
         if result.input_form != "features":
-            train_predictions.append(model.predict_generator(t, steps=epochs).flatten())
-            train_fixed_predictions.append(model.predict_generator(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())
-            validation_predictions.append(model.predict_generator(v, steps=math.ceil(len(v)/config.BATCH_SIZE)).flatten())
-            test_predictions.append(model.predict_generator(te, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
-            external_predictions.append(model.predict_generator(ex, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
+            train_predictions.append(model.predict_proba(t, steps=epochs).flatten())
+            train_fixed_predictions.append(model.predict_proba(tf, steps=math.ceil(len(tf)/config.BATCH_SIZE)).flatten())
+            validation_predictions.append(model.predict_proba(v, steps=math.ceil(len(v)/config.BATCH_SIZE)).flatten())
+            test_predictions.append(model.predict_proba(te, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
+            external_predictions.append(model.predict_proba(ex, steps=math.ceil(len(te)/config.BATCH_SIZE)).flatten())
             t.reset()
             tf.reset()
             v.reset()

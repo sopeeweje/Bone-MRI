@@ -1,7 +1,5 @@
 import math
 from scipy import stats
-<<<<<<< HEAD
-=======
 import pandas as pd
 from statsmodels.stats.contingency_tables import mcnemar
 import numpy as np
@@ -75,9 +73,6 @@ def games_howell(benign_list, intermediate_list, malignant_list, alpha=.05):
                               'lower limit': low_conf})
     return result_df
 
-
->>>>>>> 1c4fdb6b18aa1e0788a29570c187e4f48e409c8b
-
 def z_test_proportions(acc1, acc2, n1, n2):
     '''
     :param acc1: accuracy (between 0 and 1) of model of interest
@@ -92,11 +87,9 @@ def z_test_proportions(acc1, acc2, n1, n2):
     p_values = stats.norm.sf(abs(z)) # 1-sided test
     return p_values
 
-<<<<<<< HEAD
 # if __name__ == "__main__":
 #     print(z_test_proportions(228/600, 132/400, 600, 400))
 #     print(z_test_proportions(40/200, 20/200, 200, 200))
-=======
 def mcnemarTest(outputPath, bias="pos"):
     '''
     :param: bias (default="pos"), not yet implemented!
@@ -106,40 +99,22 @@ def mcnemarTest(outputPath, bias="pos"):
 
     '''
     testSet = pd.read_csv("test_set.csv")
-    experts = pd.read_csv("experts.csv")
+    experts = pd.read_csv("expert.csv")
     model = pd.read_csv(outputPath, error_bad_lines=False)
     skips = 0
     a1 = b1 = c1 = d1 = 0 #initialize confusion matrix to be 0 in all four cells (expert 1)
     a2 = b2 = c2 = d2 = 0 #initialize confusion matrix to be 0 in all four cells (expert 2)
-
     for idx, row in testSet.iterrows():
         try:
             currId = row['patientID'] #CURRENT PATIENT
             expertRow = experts.query('patientID == "%s"' % currId)
             expertOne = expertRow['expert1'].values[0] #Expert one prediction
-            expertTwo = expertRow['expert2'].values[0] #Expert two prediction
-            modelRow = model.query('PatientID == "%s"' % currId)
-            modelPred = modelRow['Predicted label'].values[0] #Model's prediction
+            expertTwo = expertRow['committee'].values[0] #Expert two prediction
+            modelRow = model.query('patientID == "%s"' % currId)
+            modelPred = modelRow['prediction'].values[0] #Model's prediction
             trueRow = testSet.query('patientID == "%s"' % currId)
-            if bias == "pos":
-                if expertOne == 2:
-                    expertOne = 1
-                else:
-                    expertOne = 0
-                if expertTwo == 2:
-                    expertTwo = 1
-                else:
-                    expertTwo = 0
-                truth = trueRow['outcome_pos'].values[0]
-            if bias == "neg":
-                if expertOne == 2:
-                    expertOne = 1
-                if expertTwo == 2:
-                    expertTwo = 1
-                truth = trueRow['outcome_neg'].values[0]
-            if bias == "3":
-                truth = trueRow['outcome_3'].values[0]
-            # print(expertOne, expertTwo, modelPred)
+            truth = trueRow['outcome_pos'].values[0]
+            
             if expertOne == modelPred:
                 if expertOne == truth:
                     a1 += 1
@@ -161,8 +136,7 @@ def mcnemarTest(outputPath, bias="pos"):
                 else:
                     b2 += 1
         except:
-            # print("SKIPPED HERE:", currId)
-            skips += 1
+            continue
     table1 = [[a1, b1],
               [c1, d1]]
     table2 = [[a2, b2],
@@ -179,6 +153,4 @@ def mcnemarTest(outputPath, bias="pos"):
 if __name__ == "__main__":
 #     print(z_test_proportions(228/600, 132/400, 600, 400))
 #     print(z_test_proportions(40/200, 20/200, 200, 200))
-#     print(mcnemarTest("output/test_results/0dc80db6-a8be-494d-bf8a-3f436bf32aa1-v2.csv"))
-    pass
->>>>>>> 1c4fdb6b18aa1e0788a29570c187e4f48e409c8b
+     print(mcnemarTest("model_results.csv"))

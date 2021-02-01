@@ -51,12 +51,12 @@ This script takes age, sex, and one-hot encoded location data and trials a numbe
 <pre>
 pipenv run python clinical_data_models.py
 </pre>
-<h3>Evaluate models</h3>
-<h4>Evaluating specific models</h4>
+<h2>Evaluate models</h2>
+<h3>Evaluating specific models</h3>
 Identify the uuid of the model you would like to evaluate in ouput/results.db. Run the evaluate-specific-model.ipynb notebook.
-<h4>Creating ensemble models</h4>
+<h3>Creating ensemble models</h3>
 Identify the uuid of the models you would like to would like to include as part of the ensemble in ouput/results.db. Run the evaluate-ensemble.ipynb notebook.
-<h4>Comparing ensemble models to expert evaluations</h4>
+<h3>Comparing ensemble models to expert evaluations</h3>
 Utilize evaluate-by-uuids-final.ipynb to create and evaluate ensembles of models trained on individual imaging modalities and the clinical features set and compare them to expert performance. evaluate-ensemble.ipynb contains the classifiers and parameters used to generate each ensemble. Find the desired model uuids in the results.db database.
 
 <h2>Utilize models</h2>

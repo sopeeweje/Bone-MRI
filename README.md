@@ -1,7 +1,4 @@
 <h1>Deep Learning for evaluation of bone tumors on MRI</h1>
-
-<h2>About</h2>
-
 <h2>Training models</h2>
 <h3>Setup</h3>
 <h4>Config</h4>

@@ -1,7 +1,12 @@
+bone_features.csv
+voting_threshold.csv
+test_set.csv
+expert.csv
 notebooks/
 migrations/             
 bone_qa/
 output/models
+output/results.db
 bone_raw/                       
 __pycache__/
 features/

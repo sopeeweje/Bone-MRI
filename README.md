@@ -4,8 +4,18 @@
 
 <h2>Training models</h2>
 <h3>Setup</h3>
+<h4>Config</h4>
+Runs can be configured by editing parameters in config.py. This includes:
+<ul>
+        <li>Epochs/patience</li>
+        <li>Train/Validation/Test split</li>
+        <li>Image size</li>
+        <li>Batch size</li>
+        <li>Directory locations</li>
+        <li>Cross validation setup (# of folds, train/validation split</li>
+</ul>
 <h4>Data setup</h4>
-Place all raw image data files into the "raw_data" directory. The image and segmentation volumes should be structured as shown in the example data. The example data is real, segmented MRI data from the CHAOS grand challenge (https://chaos.grand-challenge.org/) as the data from our study is not being made publicly available.
+Place all raw image data files into the "raw_data" directory. The image and segmentation volumes should be structured as shown in the example data. The example data is real, segmented MRI data from the CHAOS grand challenge (https://chaos.grand-challenge.org/) as the data from our study is not being made publicly available. Each representative subject was randomly given faux age, sex, tumor, location, and malignancy categorization data, described in "features.csv". Category "0" refers to tumors that are benign according to the WHO histological categories for bone tumors, "1" is intermediate, and "2" is malignant. In accordance with standard clinical practice, tumors in the intermediate category are assigned as benign for the binary classification task. This is done with the OUTCOME_BIAS parameter in the config file. Changing this parameter to "neg" and rerunning the feature generation will make intermediate tumors group with malignant.
 <h4>Set up local environment</h4>
 Make sure pipenv is installed. Once installed, run:
 <pre>

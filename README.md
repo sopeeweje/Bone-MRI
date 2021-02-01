@@ -38,7 +38,10 @@ bash run-model.sh $1
 </pre>
 where $1 is a unique run identifier. Feature calculation and preprocessing should typically only be run during the initial run and upon the introduction of new data.
 <h4>Executing clinical data run </h4>
-
+This script takes age, sex, and one-hot encoded location data and trials a number of model types (logistic regression, decision trees, gradient boosting, etc.) to predict malignancy with these clinical features.
+<pre>
+pipenv run python clinical_data_models.py
+</pre>
 <h3>Evaluate models</h3>
 <h4>Evaluating specific models</h4>
 

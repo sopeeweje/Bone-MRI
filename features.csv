@@ -1,0 +1,21 @@
+﻿patientID,category,sort,sex,age,location
+1,0,train,M,13,Leg (Tibia/Fibula)
+2,0,validation,M,13,Leg (Tibia/Fibula)
+3,0,train,F,21,Femur
+5,1,validation,M,21,Femur
+8,1,train,M,22,Femur
+10,1,train,M,40,Femur
+13,0,train,M,43,Humerus
+15,0,test,F,37,Hand
+19,1,train,M,36,Foot
+20,1,train,F,60,Forearm
+21,2,train,M,49,Foot
+22,2,validation,F,28,Leg (Tibia/Fibula)
+31,2,validation,M,29,Femur
+32,2,train,M,8,Femur
+33,1,train,M,32,Spine
+34,0,external,F,13,Femur
+36,2,test,M,53,Femur
+37,2,train,M,15,Femur
+38,2,train,M,12,Femur
+39,2,external,M,6,Femur

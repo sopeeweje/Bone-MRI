@@ -47,24 +47,24 @@ def intensity_normalization(reference, image):
     return np.array(sitk.GetArrayViewFromImage(output))
 
 def preprocess_pack(ref_img, ref_seg, image, segmentation, use_n4_bias=False, use_registration=False):
-    if use_n4_bias:
-        reference = n4_bias_correction(ref_img, ref_img*ref_seg)
-        image = n4_bias_correction(image, image*segmentation)
-    if use_registration:
-        image, segmentation = registration(ref_img, image, segmentation)
-    image = intensity_normalization(reference, image)
+    #if use_n4_bias:
+    #    reference = n4_bias_correction(ref_img, ref_img*ref_seg)
+    #    image = n4_bias_correction(image, image*segmentation)
+    #if use_registration:
+    #    image, segmentation = registration(ref_img, image, segmentation)
+    #image = intensity_normalization(reference, image)
     return image, segmentation
 
 def run(files, out, use_n4_bias=False, use_registration=False):
     f = pandas.read_pickle(files)
-    t1_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1-imagingVolume.nrrd")
-    t1_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1-imagingVolume.nrrd")
+    t1_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/raw_data/1/t1/imagingVolume.nrrd")
+    t1_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/raw_data/1/t1/segMask_tumor.nrrd")
     
-    t1c_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1c-imagingVolume.nrrd")
-    t1c_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t1c-imagingVolume.nrrd")
+    t1c_ref_img, _ = (0,0)
+    t1c_ref_seg, _ = (0,0)
     
-    t2_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t2-imagingVolume.nrrd")
-    t2_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/preprocessed/bone-penn-332-t2-imagingVolume.nrrd")
+    t2_ref_img, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/raw_data/1/t2/imagingVolume.nrrd")
+    t2_ref_seg, _ = nrrd.read("/Users/Sope/Documents/GitHub/Bone-MRI/raw_data/1/t2/segMask_tumor.nrrd")
     
     for index, row in f.iterrows():
         print("working on {} {}".format(index, "-" * 40))

@@ -109,14 +109,14 @@ def all_features(files=["./features.csv"], id_name="patientID"):
         combined[i] = c
     return combined
 
-def get_all_nrrds(folder="/Users/Sope/Documents/GitHub/Bone-MRI/data_dir/bone_brown&china/"):
+def get_all_nrrds(folder=""):
     """
     Param:
         Folder with all raw data (specifically raw NRRDs)
     Returns:
         List of all NRRDs found in that folder
     """
-    all_nrrds = glob.glob("{}/**/**/**/*.nrrd".format(folder), recursive=False)
+    all_nrrds = glob.glob("{}/**/**/*.nrrd".format(folder), recursive=False)
     return all_nrrds
 
 def get_image_features(filename):

@@ -12,7 +12,6 @@ from keras.regularizers import l1_l2
 import efficientnet.keras as efn
 import datetime as datetime
 from clr_callback import *
-from SMS_callback import SMS
 
 from config import config
 from data_gen import data, INPUT_FORM_PARAMETERS
@@ -231,7 +230,6 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
     # Cyclic learning rate
     clr = CyclicLR(base_lr=0.0001, max_lr=0.001, step_size=8*76*2, mode='triangular') #mode='exp_range', gamma=0.99995) # mode='triangular')
 
-    sms = SMS("9107506884")
 
     # Train the model - fit_generator from keras
     history = model.fit_generator(
@@ -241,7 +239,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         validation_data=validation,
         validation_steps=math.ceil(validation.n / config.BATCH_SIZE),
         class_weight=class_weight(training),
-        callbacks=[checkpoint, early, clr, sms], #[checkpoint, early, sms] 
+        callbacks=[checkpoint, early], #[checkpoint, early, sms] 
     )
     return history.history
 

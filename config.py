@@ -11,7 +11,7 @@ class Config(object):
 
     TRIALS = 1
     BATCH_SIZE = 64
-    EPOCHS = 200
+    EPOCHS = 1
     PATIENCE = 200
     VALIDATION_SPLIT = 0.2
     TEST_SPLIT = 0.1
@@ -25,9 +25,8 @@ class Config(object):
     SECRET = "example secret key"
     LOG_LEVEL = logging.DEBUG
 
-    RAW_NRRD_ROOT = "bone_raw/"
-    RAW_FEATURES = "bone_features.csv"
-    #SEQ_AVAIL = "sequence_summary.csv" #which patients have which sequences
+    RAW_NRRD_ROOT = "raw_data/"
+    RAW_FEATURES = "features.csv"
 
     DATA = "data_dir/"
     PREPROCESSED_DIR = os.path.join(DATA, "preprocessed")

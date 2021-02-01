@@ -1,12 +1,4 @@
-notebooks/
-migrations/             
-bone_qa/
-output/models
-bone_raw/                       
 __pycache__/
-features/
 .DS_Store
 .ipynb_checkpoints/
-data_dir/
-spreadsheets/
 .idea

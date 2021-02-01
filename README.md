@@ -4,8 +4,8 @@
 
 <h2>Training models</h2>
 <h3>Setup</h3>
-<h4>Quality assurance</h4>
-Place all raw files into a single directory. Run qa.py. This file will generate a directory of png files to manually scan through to look for abnormalities. Place the IDs of subjects that have abnormal images into the "SKIP" list in filenames.py.
+<h4>Data setup</h4>
+Place all raw image data files into the "raw_data" directory. The image and segmentation volumes should be structured as shown in the example data. The example data is real, segmented MRI data from the CHAOS grand challenge (https://chaos.grand-challenge.org/) as the data from our study is not being made publicly available.
 <h4>Set up local environment</h4>
 Make sure pipenv is installed. Once installed, run:
 <pre>

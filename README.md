@@ -15,11 +15,9 @@ Runs can be configured by editing parameters in config.py. This includes:
         <li>Cross validation setup (# of folds, train/validation split</li>
 </ul>
 <h4>Data setup</h4>
-Place all raw image data files into the "raw_data" directory. The image and segmentation volumes should be structured as shown in the example data. The example data is real, segmented MRI data from the CHAOS grand challenge (https://chaos.grand-challenge.org/) as the data from our study is not being made publicly available. Each representative subject was randomly given faux age, sex, tumor, location, and malignancy categorization data, described in "features.csv". 
-
-Category "0" refers to tumors that are benign according to the WHO histological categories for bone tumors, "1" is intermediate, and "2" is malignant. In accordance with standard clinical practice, tumors in the intermediate category are assigned as benign for the binary classification task. This is done with the OUTCOME_BIAS parameter in the config file. Changing this parameter to "neg" and rerunning the feature generation will make intermediate tumors group with malignant.
-
-Locations are one-hot encoded according to the categories described in calculate_features.py (all_locations_map, line 48)
+<p>Place all raw image data files into the "raw_data" directory. The image and segmentation volumes should be structured as shown in the example data. The example data is real, segmented MRI data from the CHAOS grand challenge (https://chaos.grand-challenge.org/) as the data from our study is not being made publicly available. Each representative subject was randomly given faux age, sex, tumor, location, and malignancy categorization data, described in "features.csv".</p> 
+<p>Category "0" refers to tumors that are benign according to the WHO histological categories for bone tumors, "1" is intermediate, and "2" is malignant. In accordance with standard clinical practice, tumors in the intermediate category are assigned as benign for the binary classification task. This is done with the OUTCOME_BIAS parameter in the config file. Changing this parameter to "neg" and rerunning the feature generation will make intermediate tumors group with malignant.</p>
+<p>Locations are one-hot encoded according to the categories described in calculate_features.py (all_locations_map, line 48).</p>
 <h4>Set up local environment</h4>
 Make sure pipenv is installed. Once installed, run:
 <pre>
@@ -58,9 +56,9 @@ pipenv run python clinical_data_models.py
 </pre>
 <h3>Evaluate models</h3>
 <h4>Evaluating specific models</h4>
-
+Identify the uuid of the model you would like to evaluate in ouput/results.db. Run the evaluate-specific-model.ipynb notebook.
 <h4>Creating ensemble models</h4>
-
+Identify the uuid of the models you would like to would like to include as part of the ensemble in ouput/results.db. Run the evaluate-ensemble.ipynb notebook.
 <h4>Comparing ensemble models to expert evaluations</h4>
 Utilize evaluate-by-uuids-final.ipynb to create and evaluate ensembles of models trained on individual imaging modalities and the clinical features set and compare them to expert performance. evaluate-ensemble.ipynb contains the classifiers and parameters used to generate each ensemble. Find the desired model uuids in the results.db database.
 

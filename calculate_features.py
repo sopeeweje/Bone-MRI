@@ -54,14 +54,14 @@ def get_location(location):
             "Hand": 5,
             "Hip": 6,
             "Humerus": 7,
-            "Knee": 8,
-            "Leg (Tibia/Fibula)": 9,
-            "Mandible": 10,
-            "Rib/Chest wall": 11,
-            "Scapula": 12,
-            "Spine": 13
+            #"Knee": 8,
+            "Leg (Tibia/Fibula)": 8,
+            "Mandible": 9,
+            "Rib/Chest wall": 10,
+            "Scapula": 11,
+            "Spine": 12
         }
-    all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+    all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12]
     all_locations_1hot = to_categorical(all_locations_int) #make one-hot vector for each location
     this_location = all_locations_1hot[all_locations_map[location]] #pulls one-hot vector for input location
     return list(this_location)
@@ -156,8 +156,8 @@ def get_filename_features(path):
             "path": "skipped",
         }
 
-def get_clinical_features(feat, filename):
-    patient = get_filename_features(filename)["patientID"]
+def get_clinical_features(feat, patient):#filename):
+    # patient = get_filename_features(filename)["patientID"]
     clinical = feat.get(patient, None) #all data for patient=patientID, if that pt doesn't exist return None
     if clinical is None:
         #print("missing from clinical feature sheet: {}".format(patient))
@@ -195,40 +195,67 @@ def preprocessing(df):
     df = df.set_index(["patientID", "filename", "modality"]).unstack().unstack()
     return df
 
+def get_name(n):
+    return {"patientID": n}
+
 def run(folder, features_files, out, save=True, nrrd_pickle="", features_pickle="", to_preprocess_pickle=""):
     """
     PARAM:
         folder - folder with all NRRD files
         feature_files
     """
-    nrrds = get_all_nrrds(folder) #get all nrrd files
+    # nrrds = get_all_nrrds(folder) #get all nrrd files
     feat = get_features_dict(features_files) 
-
+    patient_names = []
+    with open(config.RAW_FEATURES, newline='') as csvfile:
+        spamreader = csv.reader(csvfile)
+        for row in spamreader:
+            if row[1] == "category":
+                continue
+            patient_names.append(row[0])
+    
+    # all_features = pandas.DataFrame(
+    #     [{
+    #         data["patientID"],
+    #         data["outcome_pos"],
+    #         data["age"],
+    #         data["sex"],
+    #         data["location"],
+    #         data["sort"]
+    #     } for n in data])
+    # all_features = all_features.set_index("patientID")
+    
     # create all features
     all_features = pandas.DataFrame(
         [{
-            **get_filename_features(n), #patientID, modality, filename, path (4)
-            **get_clinical_features(feat, n)#, #outcome_pos, outcome_neg, outcome_3, age, sex, location (6)
+            **get_name(n),
+            #**get_filename_features(n), #patientID, modality, filename, path (4)
+            **get_clinical_features(feat, n)#, #outcome_pos, outcome_neg, outcome_3, age, sex, location, sort (6)
             #**get_image_features(n) #nrrd volume (1); not confident in volume calc so omitting
-        } for n in nrrds])
-    all_features = filter_filenames(all_features)
+        } for n in patient_names]) #nrrds])
+    
+    #all_features = filter_filenames(all_features)
     #all_features = normalize_column(all_features, column="volume")
     
-    features_to_use = features(all_features) #training features
-    to_preprocess = preprocessing(all_features) #preprocessing features
-
+    #features_to_use = features(all_features) #training features
+    #to_preprocess = preprocessing(all_features) #preprocessing features
+    
     if save:
-        all_features.to_csv(os.path.join(out, "all_features.csv"))
-        all_features.to_pickle(nrrd_pickle)
-        features_to_use.to_csv(os.path.join(out, "training_features.csv"))
-        features_to_use.to_pickle(features_pickle)
-        to_preprocess.to_csv(os.path.join(out, "preprocess.csv"))
-        to_preprocess.to_pickle(to_preprocess_pickle)
-    else:
-        print(to_preprocess.head())
-        print(all_features.head())
-        print(features_to_use.head())
-    return all_features, features_to_use, to_preprocess
+        all_features.to_csv(os.path.join(out, "training_features.csv"))
+        all_features.to_pickle(features_pickle)
+    
+    # if save:
+    #     all_features.to_csv(os.path.join(out, "all_features.csv"))
+    #     all_features.to_pickle(nrrd_pickle)
+    #     features_to_use.to_csv(os.path.join(out, "training_features.csv"))
+    #     features_to_use.to_pickle(features_pickle)
+    #     to_preprocess.to_csv(os.path.join(out, "preprocess.csv"))
+    #     to_preprocess.to_pickle(to_preprocess_pickle)
+    # else:
+    #     print(to_preprocess.head())
+    #     print(all_features.head())
+    #     print(features_to_use.head())
+    # return all_features, features_to_use, to_preprocess
 
 if __name__ == '__main__':
     """

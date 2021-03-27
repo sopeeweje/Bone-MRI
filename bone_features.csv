@@ -42,7 +42,7 @@ bone-china-295,0,external,M,17,Femur
 bone-china-296,0,external,M,14,Femur
 bone-china-298,0,external,M,13,Femur
 bone-china-299,0,external,M,13,Femur
-bone-china-300,0,external,M,3,Knee
+bone-china-300,0,external,M,3,Femur
 bone-china-303,2,external,F,51,Spine
 bone-china-304,2,external,M,59,Spine
 bone-china-306,2,external,F,65,Spine
@@ -187,7 +187,7 @@ bone-penn-569,0,test,F,13,Femur
 bone-penn-574,1,test,M,6,Foot
 bone-penn-591,0,test,M,4,Femur
 bone-penn-594,1,test,M,6,Foot
-bone-penn-638,2,test,F,14,Knee
+bone-penn-638,2,test,F,14,Femur
 bone-penn-649,2,test,M,22,Spine
 bone-brown-1,0,train,M,52,Hip
 bone-brown-100,2,train,M,22,Spine
@@ -270,7 +270,7 @@ bone-brown-95,2,train,F,52,Spine
 bone-brown-96,0,train,M,51,Foot
 bone-brown-97,2,train,M,63,Hip
 bone-brown-99,2,train,F,19,Leg (Tibia/Fibula)
-bone-china-002,0,train,M,70,Knee
+bone-china-002,0,train,M,70,Femur
 bone-china-004,0,train,M,23,Hip
 bone-china-005,0,train,F,45,Femur
 bone-china-006,0,train,F,14,Leg (Tibia/Fibula)
@@ -287,7 +287,7 @@ bone-china-023,0,train,M,53,Rib/Chest wall
 bone-china-027,0,train,M,37,Humerus
 bone-china-028,0,train,M,5,Femur
 bone-china-029,0,train,M,7,Forearm
-bone-china-031,0,train,F,56,Knee
+bone-china-031,0,train,F,56,Femur
 bone-china-033,0,train,M,51,Hip
 bone-china-035,0,train,M,18,Humerus
 bone-china-037,0,train,F,14,Femur
@@ -321,7 +321,7 @@ bone-china-074,0,train,M,30,Femur
 bone-china-075,0,train,M,13,Femur
 bone-china-076,0,train,M,67,Hip
 bone-china-079,0,train,F,25,Femur
-bone-china-080,0,train,F,10,Knee
+bone-china-080,0,train,F,10,Leg (Tibia/Fibula)
 bone-china-081,0,train,F,35,Spine
 bone-china-083,0,train,F,43,Femur
 bone-china-084,0,train,M,28,Femur
@@ -411,7 +411,7 @@ bone-china-234,2,train,M,19,Humerus
 bone-china-242,2,train,F,41,Femur
 bone-china-243,2,train,F,43,Hip
 bone-hup-101,2,train,F  ,62,Cranium
-bone-hup-102,2,train,M  ,31,Knee
+bone-hup-102,2,train,M  ,31,Femur
 bone-hup-103,2,train,M  ,34,Femur
 bone-hup-104,2,train,F  ,79,Humerus
 bone-hup-108,2,train,F,34,Femur
@@ -558,7 +558,7 @@ bone-penn-042,1,train,F,26,Forearm
 bone-penn-045,0,train,M,64,Hand
 bone-penn-047,0,train,F,19,Foot
 bone-penn-048,2,train,M,20,Femur
-bone-penn-051,1,train,F,34,Knee
+bone-penn-051,1,train,F,34,Femur
 bone-penn-052,2,train,F,71,Cranium
 bone-penn-053,2,train,M,32,Scapula
 bone-penn-054,1,train,M,27,Forearm
@@ -794,7 +794,7 @@ bone-penn-528,0,train,M,12,Leg (Tibia/Fibula)
 bone-penn-529,1,train,M,6,Foot
 bone-penn-530,0,train,M,16,Leg (Tibia/Fibula)
 bone-penn-535,0,train,F,11,Leg (Tibia/Fibula)
-bone-penn-536,0,train,M,18,Knee
+bone-penn-536,0,train,M,18,Femur
 bone-penn-538,0,train,M,18,Leg (Tibia/Fibula)
 bone-penn-541,0,train,F,17,Humerus
 bone-penn-546,2,train,M,18,Spine
@@ -901,7 +901,7 @@ bone-china-003,0,validation,F,29,Femur
 bone-china-016,0,validation,M,17,Leg (Tibia/Fibula)
 bone-china-017,0,validation,F,41,Spine
 bone-china-025,0,validation,M,43,Femur
-bone-china-026,0,validation,M,12,Knee
+bone-china-026,0,validation,M,12,Femur
 bone-china-030,0,validation,M,25,Spine
 bone-china-034,0,validation,F,63,Humerus
 bone-china-036,0,validation,M,16,Hand

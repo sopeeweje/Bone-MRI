@@ -625,6 +625,11 @@ def data(seed=None,
     test_features = relist(test_features)
     external_features = relist(external_features)
 
+    print("Training: {}".format(len(train_labels)))
+    print("Validation: {}".format(len(validation_labels)))
+    print("Testing: {}".format(len(test_labels)))
+    print("External: {}".format(len(external_labels)))
+
     three = (label_form == "outcome_3")
     train_generator = Dataset(
             train_images,

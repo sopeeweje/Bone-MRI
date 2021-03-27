@@ -105,15 +105,15 @@ def mcnemarTest(outputPath, bias="pos"):
     a1 = b1 = c1 = d1 = 0 #initialize confusion matrix to be 0 in all four cells (expert 1)
     a2 = b2 = c2 = d2 = 0 #initialize confusion matrix to be 0 in all four cells (expert 2)
     for idx, row in testSet.iterrows():
-        try:
-            currId = row['patientID'] #CURRENT PATIENT
+        currId = row['patientID'] #CURRENT PATIENT
+        trueRow = testSet.query('patientID == "%s"' % currId)
+        truth = trueRow['outcome_pos'].values[0]
+        if truth==0:
             expertRow = experts.query('patientID == "%s"' % currId)
-            expertOne = expertRow['expert1'].values[0] #Expert one prediction
+            expertOne = expertRow['expert3'].values[0] #Expert one prediction
             expertTwo = expertRow['committee'].values[0] #Expert two prediction
             modelRow = model.query('patientID == "%s"' % currId)
             modelPred = modelRow['prediction'].values[0] #Model's prediction
-            trueRow = testSet.query('patientID == "%s"' % currId)
-            truth = trueRow['outcome_pos'].values[0]
             
             if expertOne == modelPred:
                 if expertOne == truth:
@@ -135,12 +135,15 @@ def mcnemarTest(outputPath, bias="pos"):
                     c2 += 1
                 else:
                     b2 += 1
-        except:
+        else:
             continue
     table1 = [[a1, b1],
               [c1, d1]]
     table2 = [[a2, b2],
               [c2, d2]]
+    print(table1)
+    print(table2)
+    print(skips)
     stat1, p1 = mcnemar(table1, exact=True).statistic, mcnemar(table1, exact=True).pvalue  #calculate test stat using exact binomial test
     stat2, p2 = mcnemar(table2, exact=True).statistic, mcnemar(table2, exact=True).pvalue
     return p1, p2

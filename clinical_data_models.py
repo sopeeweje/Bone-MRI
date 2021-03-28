@@ -50,6 +50,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(training_features)):
         age = training_features[i][0]
         sex = training_features[i][1]
+        print(training_features[i])
         location = training_features[i][2].strip('][').split(', ') 
         addition = [age, sex]
         for e in location:

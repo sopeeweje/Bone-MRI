@@ -9,7 +9,6 @@ figures/
 output/
 bone_raw/                       
 __pycache__/
-features/
 .DS_Store
 .ipynb_checkpoints/
 data_dir/

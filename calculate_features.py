@@ -183,9 +183,9 @@ def features(df, filetype = 'segMask_tumor.nrrd'):
     get all of the clinical features you will actually be using
     modality and filetype don't matter, just need one per patient
     """
-    df = df.drop_duplicates(["patientID","modality","filename"], 'first')
-    df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "age", "sex", "location", "sort"]]#, "volume"]]
-    df = df.drop_duplicates(["patientID"], 'first')
+    #df = df.drop_duplicates(["patientID","modality","filename"], 'first')
+    #df = df[df.filename==filetype][["patientID", "outcome_pos", "outcome_neg", "outcome_3", "age", "sex", "location", "sort"]]#, "volume"]]
+    #df = df.drop_duplicates(["patientID"], 'first')
     df = df.set_index("patientID")
     df = df.dropna()
     return df
@@ -237,12 +237,12 @@ def run(folder, features_files, out, save=True, nrrd_pickle="", features_pickle=
     #all_features = filter_filenames(all_features)
     #all_features = normalize_column(all_features, column="volume")
     
-    #features_to_use = features(all_features) #training features
+    features_to_use = features(all_features) #training features
     #to_preprocess = preprocessing(all_features) #preprocessing features
     
     if save:
-        all_features.to_csv(os.path.join(out, "training_features.csv"))
-        all_features.to_pickle(features_pickle)
+        features_to_use.to_csv(os.path.join(out, "training_features.csv"))
+        features_to_use.to_pickle(features_pickle)
     
     # if save:
     #     all_features.to_csv(os.path.join(out, "all_features.csv"))

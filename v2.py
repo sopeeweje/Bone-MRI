@@ -245,7 +245,7 @@ def train(model, training, validation, run_id, monitor, hyperparameters):
         validation_data=validation,
         validation_steps=math.ceil(validation.n / config.BATCH_SIZE),
         class_weight=class_weight(training),
-        callbacks=[checkpoint, early, clr], #[checkpoint, early, sms] 
+        callbacks=[checkpoint, early], #[checkpoint, early, sms] 
     )
     return history.history
 

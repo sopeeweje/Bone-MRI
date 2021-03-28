@@ -61,7 +61,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(validation_features)):
         age = validation_features[i][0]
         sex = validation_features[i][1]
-        location = validation_features[i][2].strip('][').split(', ') 
+        location = validation_features[i][2] #.strip('][').split(', ') 
         addition = [age, sex]
         for e in location:
             addition.append(e)
@@ -72,7 +72,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(testing_features)):
         age = testing_features[i][0]
         sex = testing_features[i][1]
-        location = testing_features[i][2].strip('][').split(', ') 
+        location = testing_features[i][2] #.strip('][').split(', ') 
         addition = [age, sex]
         for e in location:
             addition.append(e)
@@ -83,7 +83,7 @@ def features_data(training_data, validation_data, testing_data, external_data):
     for i in range(len(external_features)):
         age = external_features[i][0]
         sex = external_features[i][1]
-        location = external_features[i][2].strip('][').split(', ') 
+        location = external_features[i][2] #.strip('][').split(', ') 
         addition = [age, sex]
         for e in location:
             addition.append(e)

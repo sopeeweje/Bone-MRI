@@ -18,6 +18,7 @@ import pickle
 from config import config
 from data_gen import data
 from sklearn.neural_network import MLPClassifier
+import matplotlib.pyplot as plt
 
 input_data = "features/training_features.csv"
 all_data = []
@@ -149,9 +150,10 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
     #print(best_model.coef_)
     print(best_model.score(test_set, test_labels))
-    #tree_plot = plt.figure(2)
-    #tree.plot_tree(best_model)
-    #tree_plot.savefig("/Volumes/external/featuremodel.png")
+    tree_plot = plt.figure(2)
+    tree.plot_tree(best_model)
+    tree_plot.savefig("featuremodel.png")
+    
     probabilities=best_model.predict_proba(val_set).tolist()
     probabilities = [i[1] for i in probabilities]
     test_probabilities=best_model.predict_proba(test_set).tolist()

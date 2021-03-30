@@ -6,7 +6,7 @@ Created on Sun Jul 12 20:22:00 2020
 @author: Sope
 """
 from sklearn import tree, preprocessing
-from sklearn.linear_model import LogisticRegression, SGDClassifier
+from sklearn.linear_model import LogisticRegression, SGDClassifier, ElasticNet
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier, BaggingClassifier
 from tqdm import tqdm
@@ -187,6 +187,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    features_run("outcome_pos", ElasticNet, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")
     #features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_3", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")

@@ -17,6 +17,7 @@ from uuid import uuid4, UUID
 import pickle
 from config import config
 from data_gen import data
+from sklearn.neural_network import MLPClassifier
 
 input_data = "features/training_features.csv"
 all_data = []
@@ -189,6 +190,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")
     #features_run("outcome_pos", SGDClassifier(loss="log", penalty="elasticnet"), UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")
     #features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")

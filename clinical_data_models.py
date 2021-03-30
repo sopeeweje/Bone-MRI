@@ -127,7 +127,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     train_set, train_labels, val_set, val_labels, test_set, test_labels, external_set, external_labels = features_data(training_data, validation_data, testing_data, external_data)
     
     history = []
-    best_acc = 0
+    best_acc = -100
     best_model = None
     c = classifier
     #model_best = 0
@@ -188,7 +188,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
-    features_run("outcome_pos", ElasticNet, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")
+    features_run("outcome_pos", SGDClassifier(loss="log", penalty="elasticnet"), UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")
     #features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_3", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")

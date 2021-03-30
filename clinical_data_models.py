@@ -147,6 +147,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         history.append(score)
 
     print(best_model.coef_)
+    print(best_model.score(test_set, test_labels))
     #tree_plot = plt.figure(2)
     #tree.plot_tree(best_model)
     #tree_plot.savefig("/Volumes/external/featuremodel.png")

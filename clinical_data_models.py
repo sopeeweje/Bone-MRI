@@ -134,9 +134,9 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     c = classifier
     #model_best = 0
     model_acc = 0
-    for i in tqdm(range(1000)): 
+    for i in tqdm(range(10)): 
         #clf = c(random_state=i, **(PARAMETERS[j]))
-        clf = c(random_state=i)#, kernel="linear", probability=True)
+        clf = c(random_state=i, max_iter=1000)#, kernel="linear", probability=True)
         clf.fit(train_set, train_labels)
         score = clf.score(val_set, val_labels)
         if score > best_acc:
@@ -189,7 +189,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     pickle.dump(best_model, open(filename, 'wb'))
 
 if __name__ == '__main__':
-    features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")
     #features_run("outcome_pos", SGDClassifier(loss="log", penalty="elasticnet"), UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")

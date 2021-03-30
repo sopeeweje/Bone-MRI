@@ -136,7 +136,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     model_acc = 0
     for i in tqdm(range(10)): 
         #clf = c(random_state=i, **(PARAMETERS[j]))
-        clf = c(random_state=i, max_iter=1000)#, kernel="linear", probability=True)
+        clf = c(random_state=i, max_depth=3, max_features=5)#max_iter=1000)#, kernel="linear", probability=True)
         clf.fit(train_set, train_labels)
         score = clf.score(val_set, val_labels)
         if score > best_acc:
@@ -190,7 +190,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
 if __name__ == '__main__':
     #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
-    features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
+    #features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")
     #features_run("outcome_pos", SGDClassifier(loss="log", penalty="elasticnet"), UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")
     #features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
@@ -198,7 +198,7 @@ if __name__ == '__main__':
     #features_run("outcome_pos", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")
     #features_run("outcome_neg", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")
     #features_run("outcome_3", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")
-    #features_run("outcome_pos", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")
+    features_run("outcome_pos", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")
     #features_run("outcome_neg", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")
     #features_run("outcome_3", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")
     #features_run("outcome_neg", tree.DecisionTreeClassifier)

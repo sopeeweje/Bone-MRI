@@ -137,6 +137,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         clf = c(random_state=i)
         clf.fit(train_set, train_labels)
         score = clf.score(val_set, val_labels)
+        print(score)
         if score > best_acc:
             best_acc = score
             best_model = clf

@@ -134,7 +134,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     model_acc = 0
     for i in tqdm(range(1000)): 
         #clf = c(random_state=i, **(PARAMETERS[j]))
-        clf = c(random_state=i)
+        clf = c #(random_state=i)
         clf.fit(train_set, train_labels)
         score = clf.score(val_set, val_labels)
         if score > best_acc:
@@ -186,7 +186,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     pickle.dump(best_model, open(filename, 'wb'))
 
 if __name__ == '__main__':
-    features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     features_run("outcome_pos", SGDClassifier(loss="log", penalty="elasticnet"), UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")
     #features_run("outcome_neg", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_3", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")

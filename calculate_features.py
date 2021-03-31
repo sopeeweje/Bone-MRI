@@ -194,9 +194,9 @@ def filter_filenames(df):
     return df
 
 def normalize_column(df, column=""):
-    min_max_scaler = sklearn_preprocessing.MinMaxScaler()
+    #min_max_scaler = sklearn_preprocessing.MinMaxScaler()
     x = df[[column]].values.astype(float)
-    x_scaled = min_max_scaler.fit_transform(x)
+    x_scaled = sklearn_preprocessing.scale(x) #min_max_scaler.fit_transform(x)
     x_scaled = list(zip(*list(x_scaled)))[0]
     df[column] = pandas.Series(x_scaled, index=df.index)
     return df

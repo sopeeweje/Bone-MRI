@@ -136,18 +136,19 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     c = classifier
     #model_best = 0
     model_acc = 0
-    for i in tqdm(range(1000)): 
-        #clf = c(random_state=i, **(PARAMETERS[j]))
-        clf = c(random_state=i, max_depth=2, max_features=10)#max_iter=1000)#, kernel="linear", probability=True)
-        clf.fit(train_set, train_labels)
-        score = clf.score(val_set, val_labels)
-        if score > best_acc:
-            best_acc = score
-            best_model = clf
-        if score > model_acc:
-            model_acc = score
-            #model_best = clf
-        history.append(score)
+    for depth in range(2, 10):
+        for i in tqdm(range(1000)): 
+            #clf = c(random_state=i, **(PARAMETERS[j]))
+            clf = c(random_state=i, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
+            clf.fit(train_set, train_labels)
+            score = clf.score(val_set, val_labels)
+            if score > best_acc:
+                best_acc = score
+                best_model = clf
+            if score > model_acc:
+                model_acc = score
+                #model_best = clf
+            history.append(score)
 
     #print(best_model.coef_)
     print(best_model.score(test_set, test_labels))

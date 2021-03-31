@@ -138,7 +138,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     model_acc = 0
     for i in tqdm(range(1000)): 
         #clf = c(random_state=i, **(PARAMETERS[j]))
-        clf = c(random_state=i, max_depth=3, max_features=10)#max_iter=1000)#, kernel="linear", probability=True)
+        clf = c(random_state=i, max_depth=2, max_features=10)#max_iter=1000)#, kernel="linear", probability=True)
         clf.fit(train_set, train_labels)
         score = clf.score(val_set, val_labels)
         if score > best_acc:

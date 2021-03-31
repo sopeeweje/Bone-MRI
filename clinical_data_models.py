@@ -136,27 +136,24 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     c = classifier
     #model_best = 0
     model_acc = 0
-    for depth in range(2, 10):
-        for features in range (2, 8):
-            for i in tqdm(range(1000)): 
-                #clf = c(random_state=i, **(PARAMETERS[j]))
-                clf = c(random_state=i, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
-                clf.fit(train_set, train_labels)
-                score = clf.score(val_set, val_labels)
-                if score > best_acc:
-                    best_acc = score
-                    best_model = clf
-                if score > model_acc:
-                    model_acc = score
-                    #model_best = clf
-                history.append(score)
-            print("Depth: {}, Features: {}".format(str(depth), str(features)))
-            print(best_model.score(test_set, test_labels))
+    for i in tqdm(range(1000)): 
+        #clf = c(random_state=i, **(PARAMETERS[j]))
+        clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
+        clf.fit(train_set, train_labels)
+        score = clf.score(val_set, val_labels)
+        if score > best_acc:
+            best_acc = score
+            best_model = clf
+        if score > model_acc:
+            model_acc = score
+            #model_best = clf
+        history.append(score)
+    print(best_model.score(test_set, test_labels))
     #print(best_model.coef_)
     #print(best_model.score(test_set, test_labels))
-    tree_plot = plt.figure(2)
-    tree.plot_tree(best_model)
-    tree_plot.savefig("featuremodel.png")
+    #tree_plot = plt.figure(2)
+    #tree.plot_tree(best_model)
+    #tree_plot.savefig("featuremodel.png")
     
     probabilities=best_model.predict_proba(val_set).tolist()
     probabilities = [i[1] for i in probabilities]
@@ -195,10 +192,10 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     pickle.dump(best_model, open(filename, 'wb'))
 
 if __name__ == '__main__':
-    #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")
-    features_run("outcome_pos", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")
+    #features_run("outcome_pos", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")
     #features_run("outcome_pos", SGDClassifier(loss="log", penalty="elasticnet"), UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "elastic net")   
     #features_run("outcome_neg", BaggingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "bagging")
 

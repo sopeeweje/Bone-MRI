@@ -150,6 +150,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
                     model_acc = score
                     #model_best = clf
                 history.append(score)
+            print("Depth: {}, Features: {}".format(str(depth), str(features)))
             print(best_model.score(test_set, test_labels))
     #print(best_model.coef_)
     #print(best_model.score(test_set, test_labels))

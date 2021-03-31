@@ -258,7 +258,7 @@ def run(folder, features_files, out, save=True, nrrd_pickle="", features_pickle=
         } for n in patient_names]) #nrrds])
     
     #all_features = filter_filenames(all_features)
-    #all_features = normalize_column(all_features, column="volume")
+    all_features = normalize_column(all_features, column="age")
     
     features_to_use = features(all_features) #training features
     #to_preprocess = preprocessing(all_features) #preprocessing features

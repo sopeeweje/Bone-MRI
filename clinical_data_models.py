@@ -99,7 +99,6 @@ def features_data(training_data, validation_data, testing_data, external_data):
     val_set = preprocessing.scale(val_set)
     test_set = preprocessing.scale(test_set)
     ext_set = preprocessing.scale(ext_set)
-    print(test_set)
     
     return train_set, train_labels, val_set, val_labels, test_set, test_labels, ext_set, ext_labels
 
@@ -179,7 +178,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
                 train_accuracy=best_model.score(train_set, train_labels),
                 train_loss=0,
                 accuracy=best_model.score(val_set, val_labels),
-                loss=0,
+                loss=j,
                 test_accuracy=best_model.score(test_set, test_labels),
                 test_loss=0,
                 probabilities=probabilities,
@@ -195,7 +194,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         filename = '{}/models/{}_features.sav'.format(config.OUTPUT, str(run_id))
         pickle.dump(best_model, open(filename, 'wb'))
         
-        print("Number of Features: {}, Validation AUC: {}".format(str(i), str(roc_auc_score(val_labels, probabilities))))
+        print("Number of Features: {}, Validation AUC: {}".format(str(j), str(roc_auc_score(val_labels, probabilities))))
 
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")

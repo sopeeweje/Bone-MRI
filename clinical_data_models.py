@@ -174,7 +174,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
                 input_form="features",
                 label=label_form,
                 hyperparameters="",
-                history=history,
+                history=best_model.coef_,
                 train_accuracy=best_model.score(train_set, train_labels),
                 train_loss=0,
                 accuracy=best_model.score(val_set, val_labels),

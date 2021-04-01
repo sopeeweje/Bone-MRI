@@ -109,7 +109,7 @@ def characterize_data(data):
     characterization = { int(c): index_to_count[data.class_indices[c]] for c in data.class_indices }
     return characterization
 
-def features_run(label_form, classifier, num_features, split_id=None, model="n/a"):
+def features_run(label_form, classifier, split_id=None, model="n/a"):
     #create split id and run id
     run_id = uuid4()
     if split_id is None:
@@ -132,74 +132,73 @@ def features_run(label_form, classifier, num_features, split_id=None, model="n/a
 
     train_set, train_labels, val_set, val_labels, test_set, test_labels, external_set, external_labels = features_data(training_data, validation_data, testing_data, external_data)
     
-    history = []
-    best_acc = -100
-    best_model = None
-    c = classifier
-    #model_best = 0
-    model_acc = 0
-    for i in tqdm(range(1000)): 
-        #clf = c(random_state=i, **(PARAMETERS[j]))
-        clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
-        clf = RFE(clf, n_features_to_select=num_features, step=1)
-        clf.fit(train_set, train_labels)
-        score = clf.score(val_set, val_labels)
-        if score > best_acc:
-            best_acc = score
-            best_model = clf
-        if score > model_acc:
-            model_acc = score
-            #model_best = clf
-        history.append(score)
-    #print(best_model.score(test_set, test_labels))
-    #print(best_model.coef_)
-    #print(best_model.score(test_set, test_labels))
-    #tree_plot = plt.figure(2)
-    #tree.plot_tree(best_model)
-    #tree_plot.savefig("featuremodel.png")
+    for j in range(1,24):
+        history = []
+        best_acc = -100
+        best_model = None
+        c = classifier
+        #model_best = 0
+        model_acc = 0
+        for i in tqdm(range(1)): 
+            #clf = c(random_state=i, **(PARAMETERS[j]))
+            clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
+            clf = RFE(clf, n_features_to_select=j, step=1)
+            clf.fit(train_set, train_labels)
+            score = clf.score(val_set, val_labels)
+            if score > best_acc:
+                best_acc = score
+                best_model = clf
+            if score > model_acc:
+                model_acc = score
+                #model_best = clf
+            history.append(score)
+        #print(best_model.score(test_set, test_labels))
+        #print(best_model.coef_)
+        #print(best_model.score(test_set, test_labels))
+        #tree_plot = plt.figure(2)
+        #tree.plot_tree(best_model)
+        #tree_plot.savefig("featuremodel.png")
+        
+        probabilities=best_model.predict_proba(val_set).tolist()
+        probabilities = [i[1] for i in probabilities]
+        test_probabilities=best_model.predict_proba(test_set).tolist()
+        test_probabilities = [i[1] for i in test_probabilities]
+        
+        result = Result(
+                model=model,
+                uuid=str(run_id),
+                split_uuid=str(split_id),
+                train_data_stats=characterize_data(training_data),
+                validation_data_stats=characterize_data(validation_data),
+                test_data_stats=characterize_data(testing_data),
+                description=str(best_model),
+                input_form="features",
+                label=label_form,
+                hyperparameters="",
+                history=history,
+                train_accuracy=best_model.score(train_set, train_labels),
+                train_loss=0,
+                accuracy=best_model.score(val_set, val_labels),
+                loss=0,
+                test_accuracy=best_model.score(test_set, test_labels),
+                test_loss=0,
+                probabilities=probabilities,
+                labels=best_model.predict(val_set).tolist(),
+                test_probabilities=test_probabilities,
+                test_labels=best_model.predict(test_set).tolist(),
+                )
     
-    probabilities=best_model.predict_proba(val_set).tolist()
-    probabilities = [i[1] for i in probabilities]
-    test_probabilities=best_model.predict_proba(test_set).tolist()
-    test_probabilities = [i[1] for i in test_probabilities]
-    
-    result = Result(
-            model=model,
-            uuid=str(run_id),
-            split_uuid=str(split_id),
-            train_data_stats=characterize_data(training_data),
-            validation_data_stats=characterize_data(validation_data),
-            test_data_stats=characterize_data(testing_data),
-            description=str(best_model),
-            input_form="features",
-            label=label_form,
-            hyperparameters="",
-            history=history,
-            train_accuracy=best_model.score(train_set, train_labels),
-            train_loss=0,
-            accuracy=best_model.score(val_set, val_labels),
-            loss=0,
-            test_accuracy=best_model.score(test_set, test_labels),
-            test_loss=0,
-            probabilities=probabilities,
-            labels=best_model.predict(val_set).tolist(),
-            test_probabilities=test_probabilities,
-            test_labels=best_model.predict(test_set).tolist(),
-            )
-
-    history = db.Column(db.String)
-    db.session.add(result)
-    db.session.commit()
-    
-    filename = '{}/models/{}_features.sav'.format(config.OUTPUT, str(run_id))
-    pickle.dump(best_model, open(filename, 'wb'))
-    
-    return roc_auc_score(val_labels, probabilities)
+        history = db.Column(db.String)
+        db.session.add(result)
+        db.session.commit()
+        
+        filename = '{}/models/{}_features.sav'.format(config.OUTPUT, str(run_id))
+        pickle.dump(best_model, open(filename, 'wb'))
+        
+        print("Number of Features: {}, Validation AUC: {}".format(str(i), str(roc_auc_score(val_labels, probabilities))))
 
 if __name__ == '__main__':
-    for i in range(0,24):
-        auc = features_run("outcome_pos", LogisticRegression, i, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
-        print("Number of Features: {}, Validation AUC: {}".format(str(i), str(auc)))
+    features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")
     #features_run("outcome_pos", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")

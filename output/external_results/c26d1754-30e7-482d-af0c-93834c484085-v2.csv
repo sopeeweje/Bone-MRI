@@ -1,0 +1,8 @@
+PatientID,True label,Predicted label,Probability
+bone-china-321,0,0,0.08683522
+bone-china-272,1,0,0.08527864
+bone-china-286,0,0,0.082963526
+bone-china-309,1,0,0.08650991
+bone-china-318,0,0,0.10420104
+bone-china-341,0,0,0.09400285
+bone-china-353,0,0,0.08676808

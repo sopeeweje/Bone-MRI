@@ -6,6 +6,7 @@ notebooks/
 migrations/             
 bone_qa/
 figures/
+output/models
 bone_raw/                       
 __pycache__/
 .DS_Store

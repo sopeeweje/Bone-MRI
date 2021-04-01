@@ -174,7 +174,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
                 input_form="features",
                 label=label_form,
                 hyperparameters="",
-                history=best_model.estimator_.coef_,
+                history="",
                 train_accuracy=best_model.score(train_set, train_labels),
                 train_loss=0,
                 accuracy=best_model.score(val_set, val_labels),
@@ -195,7 +195,9 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         pickle.dump(best_model, open(filename, 'wb'))
         
         print("Number of Features: {}, Validation AUC: {}".format(str(j), str(roc_auc_score(val_labels, probabilities))))
-        print(best_model.ranking_)
+        print("Rankings: {}".format(best_model.ranking_))
+        print("Coefficients: {}".format(best_model.estimator_.coef_))
+        print("")
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")

@@ -9,6 +9,7 @@ from sklearn import tree, preprocessing
 from sklearn.linear_model import LogisticRegression, SGDClassifier, ElasticNet
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier, BaggingClassifier
+from sklearn.feature_selection import RFE
 from sklearn.svm import SVC
 from tqdm import tqdm
 import numpy as np
@@ -19,6 +20,7 @@ from config import config
 from data_gen import data
 from sklearn.neural_network import MLPClassifier
 import matplotlib.pyplot as plt
+from sklearn.metrics import roc_auc_score
 
 input_data = "features/training_features.csv"
 all_data = []
@@ -107,7 +109,7 @@ def characterize_data(data):
     characterization = { int(c): index_to_count[data.class_indices[c]] for c in data.class_indices }
     return characterization
 
-def features_run(label_form, classifier, split_id=None, model="n/a"):
+def features_run(label_form, classifier, num_features, split_id=None, model="n/a"):
     #create split id and run id
     run_id = uuid4()
     if split_id is None:
@@ -139,6 +141,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     for i in tqdm(range(1000)): 
         #clf = c(random_state=i, **(PARAMETERS[j]))
         clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
+        clf = RFE(clf, n_features_to_select=num_features, step=1)
         clf.fit(train_set, train_labels)
         score = clf.score(val_set, val_labels)
         if score > best_acc:
@@ -148,8 +151,8 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
             model_acc = score
             #model_best = clf
         history.append(score)
-    print(best_model.score(test_set, test_labels))
-    print(best_model.coef_)
+    #print(best_model.score(test_set, test_labels))
+    #print(best_model.coef_)
     #print(best_model.score(test_set, test_labels))
     #tree_plot = plt.figure(2)
     #tree.plot_tree(best_model)
@@ -190,9 +193,13 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     
     filename = '{}/models/{}_features.sav'.format(config.OUTPUT, str(run_id))
     pickle.dump(best_model, open(filename, 'wb'))
+    
+    return roc_auc_score(val_labels, probabilities)
 
 if __name__ == '__main__':
-    features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    for i in range(0,24):
+        auc = features_run("outcome_pos", LogisticRegression, i, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+        print("Number of Features: {}, Validation AUC: {}".format(str(i), str(auc)))
     #features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")
     #features_run("outcome_pos", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")

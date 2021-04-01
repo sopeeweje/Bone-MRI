@@ -1,5 +1,6 @@
 import math
 from scipy import stats
+from scipy.stats import chisquare, chi2_contingency
 import pandas as pd
 from statsmodels.stats.contingency_tables import mcnemar
 import numpy as np
@@ -148,12 +149,100 @@ def mcnemarTest(outputPath, bias="pos"):
     stat2, p2 = mcnemar(table2, exact=True).statistic, mcnemar(table2, exact=True).pvalue
     return p1, p2
 
+points = []
+locations = [
+            "Clavicle",
+            "Cranium",
+            "Proximal femur",
+            "Distal femur",
+            "Foot",
+            "Proximal radius",
+            "Distal radius",
+            "Proximal ulna",
+            "Distal ulna",
+            "Hand",
+            "Hip",
+            "Proximal humerus",
+            "Distal humerus",
+            "Proximal tibia",
+            "Distal tibia",
+            "Proximal fibula",
+            "Distal fibula",
+            "Mandible",
+            "Rib/Chest wall",
+            "Scapula",
+            "Spine",
+        ]
+d = open("bone_features.csv", 'r', encoding="utf-8-sig")
+for line in d:
+    values = line.strip().split(',')
+    if values[0]=='patientID':
+        continue
+    points.append(
+        {
+            "patientID": values[0],
+            "category": int(values[1]),
+            "sort": values[2],
+            "location": values[5],
+        }
+        )
+
+#Benign vs malignant location comparison
+#Actual
+actual_benign = [i["location"] for i in points if i["category"] < 2]
+actual_malignant = [i["location"] for i in points if i["category"] == 2]
+all_location = [i["location"] for i in points]
+num_ben = len(actual_benign)
+num_mal = len(actual_malignant)
+total = len(points)
+actual = []
+expected = []
+for location in locations:
+    actual.append([sum(i == location for i in actual_benign), sum(i == location for i in actual_malignant)])
+    #expected.append([num_ben/total*sum(i == location for i in all_location), num_mal/total*sum(i == location for i in all_location)])
+
+_, p, _, expected_array = chi2_contingency(actual)
+print("Location by benign/malignant: {}".format(str(p)))
+
+#Vs all others
+for location in locations:
+    actual = [[sum(i == location for i in actual_benign), sum(i == location for i in actual_malignant)],
+              [sum(i != location for i in actual_benign), sum(i != location for i in actual_malignant)]
+              ]
+    _, p, _, expected_array = chi2_contingency(actual)
+    #print(str(p))
+    #print(actual)
+    print("{} vs. all others: {}".format(location, str(p)))
 
 
+#Train/val vs. internal vs. external location comparison
+actual_trainval = [i["location"] for i in points if i["sort"] == ("train" or "validation")]
+actual_test = [i["location"] for i in points if i["sort"] == "test"]
+actual_ext = [i["location"] for i in points if i["sort"] == "external"]
 
+all_location = [i["location"] for i in points]
+num_trainval = len(actual_trainval)
+num_test = len(actual_test)
+num_ext = len(actual_ext)
+total = len(points)
+actual = []
+expected = []
+for location in locations:
+    actual.append([sum(i == location for i in actual_trainval), sum(i == location for i in actual_test), sum(i == location for i in actual_ext)])
+    
+_, p, _, expected_array = chi2_contingency(actual)
+print("Location by trainval/test/ext: {}".format(str(p)))
 
-
-if __name__ == "__main__":
+#Vs all others
+for location in locations:
+    actual = [[sum(i == location for i in actual_trainval), sum(i == location for i in actual_test), sum(i == location for i in actual_ext)],
+              [sum(i != location for i in actual_trainval), sum(i != location for i in actual_test), sum(i != location for i in actual_ext)]
+              ]
+    _, p, _, expected_array = chi2_contingency(actual)
+    print(str(p))
+    #print(actual)
+    #print("{} vs. all others: {}".format(location, str(p)))
+#if __name__ == "__main__":
 #     print(z_test_proportions(228/600, 132/400, 600, 400))
 #     print(z_test_proportions(40/200, 20/200, 200, 200))
-     print(mcnemarTest("model_results.csv"))
+#     print(mcnemarTest("model_results.csv"))

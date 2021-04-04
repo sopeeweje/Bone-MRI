@@ -6,7 +6,7 @@ Created on Sun Jul 12 20:22:00 2020
 @author: Sope
 """
 from sklearn import tree, preprocessing
-from sklearn.linear_model import LogisticRegression, SGDClassifier, ElasticNet
+from sklearn.linear_model import LogisticRegression, SGDClassifier, ElasticNet, LogisticRegressionCV
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier, BaggingClassifier
 from sklearn.feature_selection import RFE, RFECV
@@ -143,10 +143,10 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
             #clf = c(random_state=i, **(PARAMETERS[j]))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
             clf.fit(train_set, train_labels)
-            clf = RFECV(clf, cv=5, step=1) #n_features_to_select=j, 
+            #clf = RFECV(clf, cv=5, step=1) #n_features_to_select=j, 
             #train_set = np.concatenate((train_set, val_set))
             #train_labels = np.concatenate((train_labels, val_labels))
-            clf.fit(train_set, train_labels)
+            #clf.fit(train_set, train_labels)
             score = clf.score(val_set, val_labels)
             if score > best_acc:
                 best_acc = score
@@ -205,7 +205,8 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         print("")
 if __name__ == '__main__':
     #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
-    features_run("outcome_pos", GradientBoostingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "gradient boosting")
+    features_run("outcome_pos", LogisticRegressionCV, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    #features_run("outcome_pos", GradientBoostingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "gradient boosting")
     #features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")
     #features_run("outcome_pos", tree.DecisionTreeClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "decision tree")

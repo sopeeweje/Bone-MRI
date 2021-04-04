@@ -45,29 +45,29 @@ image_feature_functions = {
 }
 
 def get_location(location):
-    # all_locations_map = {
-    #         "Clavicle": 0,
-    #         "Cranium": 1,
-    #         "Proximal femur": 2,
-    #         "Distal femur": 2,
-    #         "Foot": 3,
-    #         "Proximal radius": 4,
-    #         "Distal radius": 4,
-    #         "Proximal ulna": 4,
-    #         "Distal ulna": 4,
-    #         "Hand": 5,
-    #         "Hip": 6,
-    #         "Proximal humerus": 7,
-    #         "Distal humerus": 7,
-    #         "Proximal tibia": 8,
-    #         "Distal tibia": 8,
-    #         "Proximal fibula": 8,
-    #         "Distal fibula": 8,
-    #         "Mandible": 9,
-    #         "Rib/Chest wall": 10,
-    #         "Scapula": 11,
-    #         "Spine": 12,
-    #     }
+    all_locations_map = {
+            "Clavicle": 0,
+            "Cranium": 1,
+            "Proximal femur": 2,
+            "Distal femur": 2,
+            "Foot": 3,
+            "Proximal radius": 4,
+            "Distal radius": 4,
+            "Proximal ulna": 4,
+            "Distal ulna": 4,
+            "Hand": 5,
+            "Hip": 6,
+            "Proximal humerus": 7,
+            "Distal humerus": 7,
+            "Proximal tibia": 8,
+            "Distal tibia": 8,
+            "Proximal fibula": 8,
+            "Distal fibula": 8,
+            "Mandible": 9,
+            "Rib/Chest wall": 10,
+            "Scapula": 11,
+            "Spine": 12,
+        }
     # all_locations_map = {
     #         "Clavicle": 0,
     #         "Cranium": 1,
@@ -91,31 +91,31 @@ def get_location(location):
     #         "Scapula": 11,
     #         "Spine": 12,
     #     }
-    all_locations_map = {
-            "Clavicle": 0,
-            "Cranium": 1,
-            "Proximal femur": 2,
-            "Distal femur": 3,
-            "Foot": 4,
-            "Proximal radius": 5,
-            "Distal radius": 6,
-            "Proximal ulna": 7,
-            "Distal ulna": 8,
-            "Hand": 9,
-            "Hip": 10,
-            "Proximal humerus": 11,
-            "Distal humerus": 12,
-            "Proximal tibia": 13,
-            "Distal tibia": 14,
-            "Proximal fibula": 15,
-            "Distal fibula": 16,
-            "Mandible": 17,
-            "Rib/Chest wall": 18,
-            "Scapula": 19,
-            "Spine": 20,
-        }
-    all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    #all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12]#,13,14]#,13,14,15]
+    # all_locations_map = {
+    #         "Clavicle": 0,
+    #         "Cranium": 1,
+    #         "Proximal femur": 2,
+    #         "Distal femur": 3,
+    #         "Foot": 4,
+    #         "Proximal radius": 5,
+    #         "Distal radius": 6,
+    #         "Proximal ulna": 7,
+    #         "Distal ulna": 8,
+    #         "Hand": 9,
+    #         "Hip": 10,
+    #         "Proximal humerus": 11,
+    #         "Distal humerus": 12,
+    #         "Proximal tibia": 13,
+    #         "Distal tibia": 14,
+    #         "Proximal fibula": 15,
+    #         "Distal fibula": 16,
+    #         "Mandible": 17,
+    #         "Rib/Chest wall": 18,
+    #         "Scapula": 19,
+    #         "Spine": 20,
+    #     }
+    #all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12]#,13,14]#,13,14,15]
     all_locations_1hot = to_categorical(all_locations_int) #make one-hot vector for each location
     this_location = all_locations_1hot[all_locations_map[location]] #pulls one-hot vector for input location
     return list(this_location)

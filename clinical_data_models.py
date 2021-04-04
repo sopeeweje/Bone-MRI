@@ -161,7 +161,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         #tree_plot = plt.figure(2)
         #tree.plot_tree(best_model)
         #tree_plot.savefig("featuremodel.png")
-        
+        print(best_model.score(external_set, external_labels))
         probabilities=best_model.predict_proba(val_set).tolist()
         probabilities = [i[1] for i in probabilities]
         test_probabilities=best_model.predict_proba(test_set).tolist()

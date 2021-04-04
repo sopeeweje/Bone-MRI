@@ -131,7 +131,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
     train_set, train_labels, val_set, val_labels, test_set, test_labels, external_set, external_labels = features_data(training_data, validation_data, testing_data, external_data)
     
-    for j in range(1,2):
+    for j in range(1,11):
         run_id = uuid4()
         history = []
         best_acc = -100
@@ -204,8 +204,8 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         #print("Coefficients: {}".format(best_model.estimator.coef_))
         print("")
 if __name__ == '__main__':
-    #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
-    features_run("outcome_pos", LogisticRegressionCV, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
+    #features_run("outcome_pos", LogisticRegressionCV, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")
     #features_run("outcome_pos", GradientBoostingClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "gradient boosting")
     #features_run("outcome_pos", MLPClassifier, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "mlp")
     #features_run("outcome_pos", SVC, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "support vector machine")

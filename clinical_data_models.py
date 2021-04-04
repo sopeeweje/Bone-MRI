@@ -131,7 +131,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
     train_set, train_labels, val_set, val_labels, test_set, test_labels, external_set, external_labels = features_data(training_data, validation_data, testing_data, external_data)
     
-    for j in range(2,24):
+    for j in range(1,24):
         run_id = uuid4()
         history = []
         best_acc = -100

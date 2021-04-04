@@ -197,7 +197,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         
         print("Number of Features: {}, Validation AUC: {}".format(str(j), str(roc_auc_score(val_labels, probabilities))))
         #print("Rankings: {}".format(best_model.ranking_))
-        #print("Coefficients: {}".format(best_model.estimator.feature_importances_))
+        print("Coefficients: {}".format(best_model.estimator.feature_importances_))
         #print("Coefficients: {}".format(best_model.estimator_.coef_))
         print("")
 if __name__ == '__main__':

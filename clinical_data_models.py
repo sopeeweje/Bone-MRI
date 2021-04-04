@@ -131,7 +131,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
     train_set, train_labels, val_set, val_labels, test_set, test_labels, external_set, external_labels = features_data(training_data, validation_data, testing_data, external_data)
     
-    for j in range(1,24):
+    for j in range(2,24):
         run_id = uuid4()
         history = []
         best_acc = -100
@@ -142,12 +142,12 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         for i in tqdm(range(1)): 
             #clf = c(random_state=i, **(PARAMETERS[j]))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
-            rfe = RFE(clf, n_features_to_select=j, step=1)
-            rfe.fit(train_set, train_labels)
-            score = rfe.score(val_set, val_labels)
+            clf = RFE(clf, n_features_to_select=j, step=1)
+            clf.fit(train_set, train_labels)
+            score = clf.score(val_set, val_labels)
             if score > best_acc:
                 best_acc = score
-                best_model = rfe
+                best_model = clf
             if score > model_acc:
                 model_acc = score
                 #model_best = clf

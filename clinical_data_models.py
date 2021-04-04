@@ -144,8 +144,8 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
             clf.fit(train_set, train_labels)
             clf = RFECV(clf, step=1) #n_features_to_select=j, 
-            train_set = train_set.extend(val_set)
-            train_labels = train_labels.extend(val_labels)
+            train_set = np.concatenate((train_set, val_set))
+            train_labels = np.concatenate((train_labels, val_labels))
             clf.fit(train_set, train_labels)
             score = clf.score(val_set, val_labels)
             if score > best_acc:

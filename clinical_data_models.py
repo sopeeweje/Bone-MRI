@@ -133,25 +133,26 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
     
     for j in range(2,24):
         run_id = uuid4()
-        history = []
+        #history = []
         best_acc = -100
         best_model = None
         c = classifier
         #model_best = 0
-        model_acc = 0
+        #model_acc = 0
         for i in tqdm(range(1)): 
             #clf = c(random_state=i, **(PARAMETERS[j]))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
             clf = RFE(clf, n_features_to_select=j, step=1)
             clf.fit(train_set, train_labels)
-            score = clf.score(val_set, val_labels)
-            if score > best_acc:
-                best_acc = score
-                best_model = clf
-            if score > model_acc:
-                model_acc = score
-                #model_best = clf
-            history.append(score)
+            print("Coefficients: {}".format(clf.estimator.feature_importances_))
+            #score = clf.score(val_set, val_labels)
+            #if score > best_acc:
+            #    best_acc = score
+            #    best_model = clf
+            #if score > model_acc:
+            #    model_acc = score
+            #    #model_best = clf
+            #history.append(score)
         #print(best_model.score(test_set, test_labels))
         #print(best_model.coef_)
         #print(best_model.score(test_set, test_labels))
@@ -188,7 +189,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
                 test_labels=best_model.predict(test_set).tolist(),
                 )
     
-        history = db.Column(db.String)
+        #history = db.Column(db.String)
         db.session.add(result)
         db.session.commit()
         
@@ -197,7 +198,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         
         print("Number of Features: {}, Validation AUC: {}".format(str(j), str(roc_auc_score(val_labels, probabilities))))
         #print("Rankings: {}".format(best_model.ranking_))
-        print("Coefficients: {}".format(best_model.estimator.feature_importances_))
+        #print("Coefficients: {}".format(best_model.estimator.feature_importances_))
         #print("Coefficients: {}".format(best_model.estimator_.coef_))
         print("")
 if __name__ == '__main__':

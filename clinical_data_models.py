@@ -142,7 +142,8 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         for i in tqdm(range(1)): 
             #clf = c(random_state=i, **(PARAMETERS[j]))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
-            clf = RFECV(clf, cv=10, verbose=1, step=1) #n_features_to_select=j, 
+            clf.fit(train_set, train_labels)
+            clf = RFECV(clf, cv=10, step=1) #n_features_to_select=j, 
             #train_set = np.concatenate((train_set, val_set))
             #train_labels = np.concatenate((train_labels, val_labels))
             clf.fit(train_set, train_labels)

@@ -9,7 +9,7 @@ from sklearn import tree, preprocessing
 from sklearn.linear_model import LogisticRegression, SGDClassifier, ElasticNet
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier, BaggingClassifier
-from sklearn.feature_selection import RFE
+from sklearn.feature_selection import RFE, RFECV
 from sklearn.svm import SVC
 from tqdm import tqdm
 import numpy as np
@@ -143,7 +143,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
             #clf = c(random_state=i, **(PARAMETERS[j]))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
             clf.fit(train_set, train_labels)
-            clf = RFE(clf, n_features_to_select=j, step=1)
+            clf = RFECV(clf, n_features_to_select=j, step=1)
             clf.fit(train_set, train_labels)
             score = clf.score(val_set, val_labels)
             if score > best_acc:
@@ -198,8 +198,8 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         
         print("Number of Features: {}, Validation AUC: {}".format(str(j), str(roc_auc_score(val_labels, probabilities))))
         print("Rankings: {}".format(best_model.ranking_))
-        print("Coefficients: {}".format(best_model.estimator.feature_importances_))
-        #print("Coefficients: {}".format(best_model.estimator_.coef_))
+        #print("Coefficients: {}".format(best_model.estimator.feature_importances_))
+        print("Coefficients: {}".format(best_model.estimator_.coef_))
         print("")
 if __name__ == '__main__':
     #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")

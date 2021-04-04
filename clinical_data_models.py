@@ -142,6 +142,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         for i in tqdm(range(1)): 
             #clf = c(random_state=i, **(PARAMETERS[j]))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
+            clf.fit(train_set, train_labels)
             clf = RFE(clf, n_features_to_select=j, step=1)
             clf.fit(train_set, train_labels)
             print("Coefficients: {}".format(clf.estimator.feature_importances_))

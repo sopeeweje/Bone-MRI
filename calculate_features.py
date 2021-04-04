@@ -114,7 +114,30 @@ def get_location(location):
             "Scapula": 19,
             "Spine": 20,
         }
-    all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    all_locations_map = {
+            "Clavicle": 0,
+            "Cranium": 1,
+            "Proximal femur": 2,
+            "Distal femur": 3,
+            "Foot": 4,
+            "Proximal radius": 5,
+            "Distal radius": 6,
+            "Proximal ulna": 5,
+            "Distal ulna": 6,
+            "Hand": 7,
+            "Hip": 8,
+            "Proximal humerus": 9,
+            "Distal humerus": 10,
+            "Proximal tibia": 11,
+            "Distal tibia": 12,
+            "Proximal fibula": 11,
+            "Distal fibula": 12,
+            "Mandible": 13,
+            "Rib/Chest wall": 14,
+            "Scapula": 15,
+            "Spine": 16,
+        }
+    all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]#,17,18,19,20]
     #all_locations_int = [0,1,2,3,4,5,6,7,8,9,10,11,12]#,13,14]#,13,14,15]
     all_locations_1hot = to_categorical(all_locations_int) #make one-hot vector for each location
     this_location = all_locations_1hot[all_locations_map[location]] #pulls one-hot vector for input location

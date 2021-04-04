@@ -199,7 +199,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         print("Number of Features: {}, Validation AUC: {}".format(str(j), str(roc_auc_score(val_labels, probabilities))))
         print("Rankings: {}".format(best_model.ranking_))
         #print("Coefficients: {}".format(best_model.estimator.feature_importances_))
-        print("Coefficients: {}".format(best_model.importance_getter))
+        print("Coefficients: {}".format(best_model.estimator.coef_))
         print("")
 if __name__ == '__main__':
     #features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")

@@ -430,7 +430,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
                 if verbose:
                     print(SHAPES_OUTPUT.format("t1"))
                 t1_masked = load_image(t1_image_file, t1_seg_file, verbose=verbose)
-                t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
+                #t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
             except Exception as e:
                 print()
                 print("#" * 80)
@@ -445,7 +445,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
                 if verbose:
                     print(SHAPES_OUTPUT.format("t2"))
                 t2_masked = load_image(t2_image_file, t2_seg_file, verbose=verbose)
-                t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
+                #t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
                 print("I'm doing the thing.")
                 #if verbose:
                 #    print(SHAPES_OUTPUT.format("t1c"))
@@ -463,7 +463,7 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
                 print("I'm doing the thing.")
                 if verbose:
                     print(SHAPES_OUTPUT.format("t1c"))
-                t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
+                #t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
             except Exception as e:
                 print()
                 print("#" * 80)
@@ -472,19 +472,19 @@ def generate_from_features(df, input_form=config.INPUT_FORM, label_form="outcome
                 print(traceback.format_exc())
                 continue
         
-        if parameters["features"]:
-            try:
-                print("I'm doing the thing.")
-                if verbose:
-                    print(SHAPES_OUTPUT.format("t1c"))
-                t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
-            except Exception as e:
-                print()
-                print("#" * 80)
-                print("Exception occurred for: {}\n{}".format(row, e))
-                print("T1C image unavailable")
-                print(traceback.format_exc())
-                continue
+        # if parameters["features"]:
+        #     try:
+        #         print("I'm doing the thing.")
+        #         if verbose:
+        #             print(SHAPES_OUTPUT.format("t1c"))
+        #         t1c_masked = load_image(t1c_image_file, t1c_seg_file, verbose=verbose)
+        #     except Exception as e:
+        #         print()
+        #         print("#" * 80)
+        #         print("Exception occurred for: {}\n{}".format(row, e))
+        #         print("T1C image unavailable")
+        #         print(traceback.format_exc())
+        #         continue
         #ex. (1, [32, 0, [0,0,0,0,1,0,0,0,0,0,0,0,0,0]], "bone-penn-453")
         labels, features, name = get_label_features(row, label=label_form)
 

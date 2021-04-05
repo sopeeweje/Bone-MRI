@@ -131,7 +131,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
 
     train_set, train_labels, val_set, val_labels, test_set, test_labels, external_set, external_labels = features_data(training_data, validation_data, testing_data, external_data)
     
-    for j in range(1,11):
+    for j in range(1,2):
         run_id = uuid4()
         history = []
         best_acc = -100
@@ -141,12 +141,12 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         model_acc = 0
         for i in tqdm(range(1)): 
             #clf = c(random_state=i, **(PARAMETERS[j]))
+            train_set = np.concatenate((train_set, val_set))
+            train_labels = np.concatenate((train_labels, val_labels))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
             clf.fit(train_set, train_labels)
-            #clf = RFECV(clf, cv=5, step=1) #n_features_to_select=j, 
-            #train_set = np.concatenate((train_set, val_set))
-            #train_labels = np.concatenate((train_labels, val_labels))
-            #clf.fit(train_set, train_labels)
+            clf = RFECV(clf, cv=5, step=1) #n_features_to_select=j, 
+            clf.fit(train_set, train_labels)
             score = clf.score(val_set, val_labels)
             if score > best_acc:
                 best_acc = score
@@ -161,7 +161,6 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         #tree_plot = plt.figure(2)
         #tree.plot_tree(best_model)
         #tree_plot.savefig("featuremodel.png")
-        print(best_model.score(external_set, external_labels))
         probabilities=best_model.predict_proba(val_set).tolist()
         probabilities = [i[1] for i in probabilities]
         test_probabilities=best_model.predict_proba(test_set).tolist()
@@ -197,11 +196,12 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         
         filename = '{}/models/{}_features.sav'.format(config.OUTPUT, str(run_id))
         pickle.dump(best_model, open(filename, 'wb'))
-        
-        print("Number of Features: {}, Validation AUC: {}".format(str(j), str(roc_auc_score(val_labels, probabilities))))
+        print(best_model.score(external_set, external_labels))
+        print(best_model.grid_scores_)
+        print("Number of Features: {}, Validation AUC: {}".format(str(best_model.n_features_), str(roc_auc_score(val_labels, probabilities))))
         #print("Rankings: {}".format(best_model.ranking_))
         #print("Coefficients: {}".format(best_model.estimator.feature_importances_))
-        #print("Coefficients: {}".format(best_model.estimator.coef_))
+        print("Coefficients: {}".format(best_model.estimator.coef_))
         print("")
 if __name__ == '__main__':
     features_run("outcome_pos", LogisticRegression, UUID("84a64c17-fe3e-440c-aaaf-e1bd5b02576f"), "logistic regression")

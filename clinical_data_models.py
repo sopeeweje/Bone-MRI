@@ -141,11 +141,11 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         model_acc = 0
         for i in tqdm(range(10)): 
             #clf = c(random_state=i, **(PARAMETERS[j]))
-            #train_set = np.concatenate((train_set, val_set))
-            #train_labels = np.concatenate((train_labels, val_labels))
+            train_set = np.concatenate((train_set, val_set))
+            train_labels = np.concatenate((train_labels, val_labels))
             clf = c(random_state=i)#, max_depth=depth) #max_iter=1000)#, kernel="linear", probability=True)
             clf.fit(train_set, train_labels)
-            clf = RFECV(clf, cv=5, step=1) #n_features_to_select=j, 
+            clf = RFECV(clf, cv=10, step=1) #n_features_to_select=j, 
             clf.fit(train_set, train_labels)
             score = clf.score(val_set, val_labels)
             if score > best_acc:
@@ -199,7 +199,7 @@ def features_run(label_form, classifier, split_id=None, model="n/a"):
         print(best_model.score(external_set, external_labels))
         print(best_model.grid_scores_)
         print("Number of Features: {}, Validation AUC: {}".format(str(best_model.n_features_), str(roc_auc_score(val_labels, probabilities))))
-        #print("Rankings: {}".format(best_model.ranking_))
+        print("Rankings: {}".format(best_model.ranking_))
         #print("Coefficients: {}".format(best_model.estimator.feature_importances_))
         print("Coefficients: {}".format(best_model.estimator.coef_))
         print("")
